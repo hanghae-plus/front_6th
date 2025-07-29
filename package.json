@@ -1,0 +1,56 @@
+{
+  "name": "front-6th",
+  "private": true,
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -F @hanghae-plus/shopping dev",
+    "build": "pnpm run -r build",
+    "lint:fix": "pnpm run -r lint:fix",
+    "tsc": "pnpm run -r tsc",
+    "prettier:write": "prettier --write ./packages/*/src",
+    "preview": "pnpm -F @hanghae-plus/shopping preview",
+    "test": "pnpm -F @hanghae-plus/lib test",
+    "test:basic": "pnpm -F @hanghae-plus/lib test:basic",
+    "test:advanced": "pnpm -F @hanghae-plus/lib test:advanced",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "npx playwright show-report",
+    "test:generate": "playwright codegen localhost:5173",
+    "prepare": "husky",
+    "gh-pages": "pnpm -F @hanghae-plus/shopping build && gh-pages -d ./packages/app/dist"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-transform-react-jsx": "latest",
+    "@eslint/js": "^9.16.0",
+    "@playwright/test": "latest",
+    "@testing-library/dom": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/node": "^24.0.13",
+    "@vitest/coverage-v8": "latest",
+    "@vitest/ui": "latest",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.3.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0",
+    "vite": "npm:rolldown-vite@latest",
+    "vitest": "latest"
+  }
+}
