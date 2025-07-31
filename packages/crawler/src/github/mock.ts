@@ -432,5 +432,3 @@ export const MOCK_PR = {
   auto_merge: null,
   active_lock_reason: null,
 };
-
-export type GithubPullRequest = typeof MOCK_PR;

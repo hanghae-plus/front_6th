@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
-import { GithubPullRequest, MOCK_PR } from './mock';
+import { GithubPullRequest, GithubUser } from './types';
 
 @Injectable()
 export class GithubService {
@@ -35,5 +35,13 @@ export class GithubService {
     return this.#client
       .get<GithubPullRequest>(`/repos/${path}/pulls/${number}`)
       .then((res) => res.data);
+  }
+
+  getUser(pull: GithubPullRequest): GithubUser {
+    return {
+      id: pull.user.login,
+      image: pull.user.avatar_url,
+      link: pull.user.html_url,
+    };
   }
 }
