@@ -13,8 +13,12 @@ type AssignmentPath = (typeof assignments)[number]["path"];
 
 export const fetchAssignments = async (path: AssignmentPath): Promise<Assignment[]> => {
   const { default: data } = await import(`../../../../../docs/data/${path}/pulls.json`);
-  console.log(data);
-  return data.map((item: GithubPullRequest) => pick(item, ["user", "url", "title", "body"]));
+  return data.map((item: GithubPullRequest) => ({
+    ...pick(item, ["id", "user", "title", "body"]),
+    url: item.html_url,
+    createdAt: new Date(item.created_at),
+    updatedAt: new Date(item.updated_at),
+  }));
 };
 
 export const fetchAllAssignments = async () => {

@@ -1,9 +1,8 @@
 import type { GithubUser } from "@hanghae-plus/domain";
 import { BookOpen, Github, Users } from "lucide-react";
-import { useUsers } from "@/features";
+import { type Assignment, useAllAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
 import { Badge, Card } from "@/components";
-import { type Assignment, useAllAssignments } from "@/features/assignments";
 import { Suspense, useMemo } from "react";
 
 const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: number }) => {
