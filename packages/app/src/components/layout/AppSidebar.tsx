@@ -9,13 +9,14 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/Sidebar";
-import { Users, BookOpen } from "lucide-react";
+} from "../ui";
+import { BookOpen, Users } from "lucide-react";
+import { cn } from "@/lib";
 
 const navigationItems = [
   {
     title: "수강생 목록",
-    url: "/students",
+    url: "/",
     icon: Users,
   },
   {
@@ -32,14 +33,9 @@ export function AppSidebar() {
 
   const collapsed = state === "collapsed";
 
-  const isActive = (path: string) => {
-    if (path === "/students") {
-      return currentPath === "/students" || currentPath.startsWith("/students/");
-    }
-    return currentPath === path;
-  };
+  const isActive = (path: string) => currentPath === path;
 
-  const getNavCls = (path: string) =>
+  const getActiveClassName = (path: string) =>
     isActive(path)
       ? "bg-primary text-primary-foreground shadow-glow font-medium"
       : "text-foreground hover:bg-secondary hover:text-secondary-foreground";
@@ -47,18 +43,18 @@ export function AppSidebar() {
   return (
     <Sidebar className={collapsed ? "w-16" : "w-64"}>
       <SidebarContent className="bg-card border-r border-border">
-        <div className="p-4">
+        <NavLink to="/" className="p-4">
           <div className="flex items-center space-x-2 mb-6">
             {!collapsed && (
               <>
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">항</span>
+                  <span className="text-white font-bold text-sm">6기</span>
                 </div>
-                <h1 className="text-lg font-bold text-primary">항해99 플러스</h1>
+                <h1 className="text-lg font-bold text-primary">항해플러스 프론트엔드</h1>
               </>
             )}
           </div>
-        </div>
+        </NavLink>
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground px-4">{!collapsed && "학습 관리"}</SidebarGroupLabel>
@@ -67,7 +63,10 @@ export function AppSidebar() {
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild className="h-12">
-                    <NavLink to={item.url} className={`${getNavCls(item.url)} rounded-lg transition-all duration-300`}>
+                    <NavLink
+                      to={item.url}
+                      className={cn(getActiveClassName(item.url), "rounded-lg transition-all duration-300")}
+                    >
                       <item.icon className="h-5 w-5" />
                       {!collapsed && <span className="ml-3">{item.title}</span>}
                     </NavLink>

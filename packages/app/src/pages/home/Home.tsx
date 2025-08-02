@@ -7,7 +7,7 @@ import { Badge, Card } from "@/components";
 const CompactStudentCard = ({ id, link, image }: GithubUser) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
-      <Link to={`/user/${id}`} className="block">
+      <Link to={`/@${id}`} className="block">
         <div className="p-3">
           {/* 프로필 섹션 */}
           <div className="flex flex-col items-center text-center space-y-2">
@@ -22,7 +22,6 @@ const CompactStudentCard = ({ id, link, image }: GithubUser) => {
               <h3 className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors break-words leading-tight">
                 {id}
               </h3>
-              <p className="text-xs text-slate-400 mt-1">프론트엔드 6기</p>
             </div>
 
             <Badge

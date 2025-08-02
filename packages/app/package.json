@@ -12,8 +12,7 @@
     "tsc": "tsc --noEmit",
     "lint:fix": "eslint --fix",
     "prettier:write": "prettier --write ./src",
-    "preview": "vite preview",
-    "gh-pages": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hanghae-plus/domain": "workspace:*",
@@ -26,6 +25,7 @@
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "es-toolkit": "^1.39.8",
     "lucide-react": "^0.536.0",
     "react": "latest",
     "react-dom": "latest",

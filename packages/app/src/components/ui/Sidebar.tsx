@@ -3,14 +3,14 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
 
-import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Separator } from "@/components/ui/Separator";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/Sheet";
-import { Skeleton } from "@/components/ui/Skeleton";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
+import { Button } from "./Button";
+import { Input } from "./Input";
+import { Separator } from "./Separator";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "./Sheet";
+import { Skeleton } from "./Skeleton";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./Tooltip";
+import { useMobile } from "@/hooks";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -25,7 +25,7 @@ type SidebarContextProps = {
   setOpen: (open: boolean) => void;
   openMobile: boolean;
   setOpenMobile: (open: boolean) => void;
-  isMobile: boolean;
+  mobile: boolean;
   toggleSidebar: () => void;
 };
 
@@ -53,7 +53,7 @@ function SidebarProvider({
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }) {
-  const isMobile = useIsMobile();
+  const mobile = useMobile();
   const [openMobile, setOpenMobile] = React.useState(false);
 
   // This is the internal state of the sidebar.
@@ -77,8 +77,8 @@ function SidebarProvider({
 
   // Helper to toggle the sidebar.
   const toggleSidebar = React.useCallback(() => {
-    return isMobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
-  }, [isMobile, setOpen, setOpenMobile]);
+    return mobile ? setOpenMobile((open) => !open) : setOpen((open) => !open);
+  }, [mobile, setOpen, setOpenMobile]);
 
   // Adds a keyboard shortcut to toggle the sidebar.
   React.useEffect(() => {
@@ -102,12 +102,12 @@ function SidebarProvider({
       state,
       open,
       setOpen,
-      isMobile,
+      mobile,
       openMobile,
       setOpenMobile,
       toggleSidebar,
     }),
-    [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar],
+    [state, open, setOpen, mobile, openMobile, setOpenMobile, toggleSidebar],
   );
 
   return (
@@ -144,7 +144,7 @@ function Sidebar({
   variant?: "sidebar" | "floating" | "inset";
   collapsible?: "offcanvas" | "icon" | "none";
 }) {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
+  const { mobile, state, openMobile, setOpenMobile } = useSidebar();
 
   if (collapsible === "none") {
     return (
@@ -158,7 +158,7 @@ function Sidebar({
     );
   }
 
-  if (isMobile) {
+  if (mobile) {
     return (
       <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetContent
@@ -474,7 +474,7 @@ function SidebarMenuButton({
   tooltip?: string | React.ComponentProps<typeof TooltipContent>;
 } & VariantProps<typeof sidebarMenuButtonVariants>) {
   const Comp = asChild ? Slot : "button";
-  const { isMobile, state } = useSidebar();
+  const { mobile, state } = useSidebar();
 
   const button = (
     <Comp
@@ -500,7 +500,7 @@ function SidebarMenuButton({
   return (
     <Tooltip>
       <TooltipTrigger asChild>{button}</TooltipTrigger>
-      <TooltipContent side="right" align="center" hidden={state !== "collapsed" || isMobile} {...tooltip} />
+      <TooltipContent side="right" align="center" hidden={state !== "collapsed" || mobile} {...tooltip} />
     </Tooltip>
   );
 }
