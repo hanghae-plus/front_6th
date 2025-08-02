@@ -3,8 +3,10 @@ import { BookOpen, Github, Users } from "lucide-react";
 import { useUsers } from "@/features";
 import { Link } from "react-router";
 import { Badge, Card } from "@/components";
+import { type Assignment, useAllAssignments } from "@/features/assignments";
+import { Suspense, useMemo } from "react";
 
-const CompactStudentCard = ({ id, link, image }: GithubUser) => {
+const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: number }) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
       <Link to={`/@${id}`} className="block">
@@ -22,6 +24,9 @@ const CompactStudentCard = ({ id, link, image }: GithubUser) => {
               <h3 className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors break-words leading-tight">
                 {id}
               </h3>
+              <p>
+                <span className="text-xs text-slate-400">과제 제출: {assignments}개</span>
+              </p>
             </div>
 
             <Badge
@@ -41,11 +46,31 @@ const CompactStudentCard = ({ id, link, image }: GithubUser) => {
   );
 };
 
-export const Home = () => {
-  const users = useUsers();
+const UsersGrid = ({ users, assignments }: { users: GithubUser[]; assignments: Assignment[] }) => {
+  const usersWithAssignments = useMemo(
+    () =>
+      users.map((user) => {
+        const userAssignments = assignments.filter((assignment) => assignment.user.login === user.id);
+        return { ...user, assignments: userAssignments };
+      }),
+    [assignments, users],
+  );
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      {usersWithAssignments.map(({ assignments, ...user }) => (
+        <UserCard key={user.id} {...user} assignments={assignments.length} />
+      ))}
+    </div>
+  );
+};
+
+export const Home = () => {
+  const users = useUsers();
+  const assignments = useAllAssignments();
+
+  return (
+    <main className="px-4 py-6">
       {/* 상단 통계 */}
       <div className="mb-6 space-y-4">
         <div className="flex items-center justify-between">
@@ -84,11 +109,9 @@ export const Home = () => {
       </div>
 
       {/* 수강생 그리드 */}
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        {users.items.map((user) => (
-          <CompactStudentCard key={user.id} {...user} />
-        ))}
-      </div>
+      <Suspense>
+        <UsersGrid users={users.items} assignments={assignments.data} />
+      </Suspense>
     </main>
   );
 };

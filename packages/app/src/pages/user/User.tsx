@@ -7,7 +7,7 @@ export const User = () => {
   const userId = useUserIdByParam();
   const posts = useAssignmentsByUser(userId);
   return (
-    <main className="max-w-7xl mx-auto px-4 py-4">
+    <main className="px-4 py-4">
       {/* 상단 통계 */}
       <div className="mb-4 space-y-4">
         {/* 통계 카드 */}
