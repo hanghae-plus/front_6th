@@ -1,6 +1,6 @@
+import { GithubPullRequest, GithubUser } from '@hanghae-plus/domain';
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
-import { GithubPullRequest, GithubUser } from './types';
 
 @Injectable()
 export class GithubService {

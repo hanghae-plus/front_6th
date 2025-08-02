@@ -1,4 +1,4 @@
-import { MOCK_PR } from './mock';
+import { MOCK_PR } from "./mock";
 
 export type GithubPullRequest = typeof MOCK_PR;
 

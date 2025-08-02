@@ -1,0 +1,29 @@
+{
+  "name": "@hanghae-plus/domain",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc --noEmit",
+    "lint:fix": "eslint --fix",
+    "prettier:write": "prettier --write ./src"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "globals": "^16.0.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}
