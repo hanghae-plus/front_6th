@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { HanghaeService } from './Hanghae.service';
+import { HanghaeService } from './hanghae.service';
 
 @Module({
   imports: [],
