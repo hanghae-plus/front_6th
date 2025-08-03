@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "pnpm run build:client && pnpm run build:server",
-    "build:client": "vite build --ssrManifest --outDir dist/client && cp ./dist/client/index.html ./dist/client/template.html",
+    "build:client": "vite build --ssrManifest --outDir dist/client && cp ./dist/client/index.html ./dist/client/template.html && cp ./dist/client/index.html ./dist/client/404.html",
     "build:server": "vite build --ssr src/main-server.tsx --outDir dist/server",
     "tsc": "tsc --noEmit",
     "lint:fix": "eslint --fix",
