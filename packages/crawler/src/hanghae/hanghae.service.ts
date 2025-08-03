@@ -6,7 +6,7 @@ import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 
 @Injectable()
-export class HangheaService {
+export class HanghaeService {
   readonly #client: AxiosInstance;
 
   constructor() {
