@@ -1,4 +1,4 @@
-import { queryClient } from "@/client";
+import { queryClient } from "@/clients";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router";
 import * as Pages from "@/pages";

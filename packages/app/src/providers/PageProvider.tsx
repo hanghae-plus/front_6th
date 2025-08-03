@@ -1,8 +1,8 @@
-import { createContext, type PropsWithChildren, useContext } from "react";
+import { createContext, type PropsWithChildren, type ReactNode, useContext } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Props<T = any> {
-  title: string;
+  title: string | ReactNode;
   data: T;
 }
 
