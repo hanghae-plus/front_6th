@@ -5,10 +5,11 @@ import * as Pages from "@/pages";
 import { BASE_URL } from "@/constants";
 import { withBaseLayout } from "@/components";
 
-const Home = withBaseLayout("수강생 목록", Pages.Home);
-const User = withBaseLayout("수강생 상세페이지", Pages.User);
-const Assignments = withBaseLayout("과제 목록", () => <div className="p-6">전체 과제 목록입니다</div>);
-const NotFound = withBaseLayout("404 NotFound", () => <div className="p-6">404 - 페이지를 찾을 수 없습니다</div>);
+const Home = withBaseLayout(Pages.Home);
+const User = withBaseLayout(Pages.User);
+const Assignments = withBaseLayout(() => <div className="p-6">전체 과제 목록입니다</div>);
+const NotFound = withBaseLayout(() => <div className="p-6">404 - 페이지를 찾을 수 없습니다</div>);
+const AssignmentDetail = withBaseLayout(() => <div className="p-6">과제 상세페이지</div>);
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
           <Route path="/" Component={Home} />
           <Route path="/assignments" Component={Assignments} />
           <Route path="/:id" Component={User} />
+          <Route path="/:id/assignment/:assignmentId" Component={AssignmentDetail} />
           <Route path="*" Component={NotFound} />
         </Routes>
       </BrowserRouter>

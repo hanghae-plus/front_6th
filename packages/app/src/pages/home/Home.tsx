@@ -3,7 +3,8 @@ import { BookOpen, Github, Users } from "lucide-react";
 import { type Assignment, useAllAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
 import { Badge, Card } from "@/components";
-import { Suspense, useMemo } from "react";
+import { type PropsWithChildren, Suspense, useMemo } from "react";
+import { PageProvider, usePageData } from "@/providers";
 
 const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: number }) => {
   return (
@@ -64,9 +65,21 @@ const UsersGrid = ({ users, assignments }: { users: GithubUser[]; assignments: A
   );
 };
 
-export const Home = () => {
+const HomeProvider = ({ children }: PropsWithChildren) => {
   const users = useUsers();
   const assignments = useAllAssignments();
+
+  const contextValue = useMemo(() => ({ users: users.items, assignments: assignments.data }), [users, assignments]);
+
+  return (
+    <PageProvider title="수강생 목록" data={contextValue}>
+      {children}
+    </PageProvider>
+  );
+};
+
+const HomePage = () => {
+  const { users, assignments } = usePageData<{ users: GithubUser[]; assignments: Assignment[] }>();
 
   return (
     <main className="px-4 py-6">
@@ -75,7 +88,7 @@ export const Home = () => {
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-white">수강생 명단</h2>
           <Badge variant="secondary" className="text-sm bg-slate-700">
-            총 {users.items.length}명
+            총 {users.length}명
           </Badge>
         </div>
 
@@ -87,7 +100,7 @@ export const Home = () => {
                 <Users className="w-5 h-5 text-orange-400" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-white">{users.items.length}</div>
+                <div className="text-2xl font-bold text-white">{users.length}</div>
                 <div className="text-sm text-slate-400">총 수강생</div>
               </div>
             </div>
@@ -109,8 +122,12 @@ export const Home = () => {
 
       {/* 수강생 그리드 */}
       <Suspense>
-        <UsersGrid users={users.items} assignments={assignments.data} />
+        <UsersGrid users={users} assignments={assignments} />
       </Suspense>
     </main>
   );
 };
+
+export const Home = Object.assign(HomePage, {
+  Provider: HomeProvider,
+});

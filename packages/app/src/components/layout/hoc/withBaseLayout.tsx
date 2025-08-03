@@ -1,13 +1,22 @@
-import type { ComponentProps } from "react";
+import type { ComponentProps, FunctionComponent, PropsWithChildren } from "react";
+import type { AnyFunction } from "@/types";
 import { BaseLayout } from "../BaseLayout";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function withBaseLayout<T extends (...args: any[]) => any>(title: string, Component: T) {
+const DefaultProvider = ({ children }: PropsWithChildren) => {
+  return <>{children}</>;
+};
+
+export function withBaseLayout<T extends AnyFunction>(
+  Component: T & { Provider?: FunctionComponent<PropsWithChildren> },
+) {
   return function WrappedComponent(props: ComponentProps<T>) {
+    const Provider = Component.Provider ?? DefaultProvider;
     return (
-      <BaseLayout title={title}>
-        <Component {...props} />
-      </BaseLayout>
+      <Provider>
+        <BaseLayout>
+          <Component {...props} />
+        </BaseLayout>
+      </Provider>
     );
   };
 }

@@ -1,10 +1,11 @@
 import type { GithubUser } from "@hanghae-plus/domain";
-import { Suspense, useMemo } from "react";
+import { type PropsWithChildren, useMemo } from "react";
 import { Link } from "react-router";
 import { Calendar, Clock, Github } from "lucide-react";
 import { type Assignment, useAssignmentsByUser, useUser, useUserIdByParam } from "@/features";
 import { Badge, Card } from "@/components";
 import { formatDate } from "@/lib";
+import { PageProvider, usePageData } from "@/providers";
 
 const UserProfile = ({ id, image, link }: GithubUser) => {
   return (
@@ -33,7 +34,7 @@ const UserProfile = ({ id, image, link }: GithubUser) => {
 const AssignmentCard = ({ id, title, url, createdAt }: Assignment) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer group bg-card border border-border">
-      <Link to={`/assignment/${id}`} className="block">
+      <Link to={`./assignment/${id}`} className="block">
         <div className="p-6">
           <div className="flex flex-col space-y-3">
             {/* 과제 제목 */}
@@ -114,44 +115,42 @@ const UserStats = ({ assignmentCount }: { assignmentCount: number }) => {
   );
 };
 
-export const User = () => {
+const UserProvider = ({ children }: PropsWithChildren) => {
   const userId = useUserIdByParam();
   const assignments = useAssignmentsByUser(userId);
-  const currentUser = useUser(userId);
+  const user = useUser(userId);
+
+  const contextValue = useMemo(() => ({ ...user, assignments: assignments.data ?? [] }), [user, assignments]);
 
   return (
-    <main className="px-4 py-6">
-      <div className="lg:flex lg:gap-8">
-        {/* 왼쪽 프로필 영역 */}
-        <div className="lg:w-[300px]">
-          <UserProfile {...currentUser} />
-        </div>
-
-        {/* 오른쪽 과제 목록 영역 */}
-        <div className="lg:flex-1">
-          <Suspense
-            fallback={
-              <div className="space-y-4">
-                {[...Array(3)].map((_, i) => (
-                  <Card key={i} className="p-6 bg-slate-800/50 border-slate-700">
-                    <div className="animate-pulse">
-                      <div className="h-6 bg-slate-700 rounded mb-2"></div>
-                      <div className="h-4 bg-slate-700 rounded mb-4"></div>
-                      <div className="flex space-x-4">
-                        <div className="h-4 bg-slate-700 rounded w-20"></div>
-                        <div className="h-4 bg-slate-700 rounded w-16"></div>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            }
-          >
-            <UserStats assignmentCount={assignments.data.length} />
-            <AssignmentsList items={assignments.data} />
-          </Suspense>
-        </div>
-      </div>
-    </main>
+    <PageProvider title={`${user.id} 님의 상세페이지`} data={contextValue}>
+      {children}
+    </PageProvider>
   );
 };
+
+export const User = Object.assign(
+  () => {
+    const { assignments, ...user } = usePageData<GithubUser & { assignments: Assignment[] }>();
+
+    return (
+      <main className="px-4 py-6">
+        <div className="lg:flex lg:gap-8">
+          {/* 왼쪽 프로필 영역 */}
+          <div className="lg:w-[300px]">
+            <UserProfile {...user} />
+          </div>
+
+          {/* 오른쪽 과제 목록 영역 */}
+          <div className="lg:flex-1">
+            <UserStats assignmentCount={assignments.length} />
+            <AssignmentsList items={assignments} />
+          </div>
+        </div>
+      </main>
+    );
+  },
+  {
+    Provider: UserProvider,
+  },
+);
