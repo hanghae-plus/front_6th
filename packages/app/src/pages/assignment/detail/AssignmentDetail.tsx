@@ -1,14 +1,15 @@
 import { PageProvider, usePageData } from "@/providers";
 import { type PropsWithChildren, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router";
-import { type Assignment, useAssignmentById } from "@/features";
+import { type Assignment, useAssignmentById, useUserIdByParam } from "@/features";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { IconGithub } from "@/assets";
 import { Card } from "@/components";
 
 const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { assignmentId = "" } = useParams<{ assignmentId: string }>();
-  const { data: assignment } = useAssignmentById(assignmentId);
+  const userId = useUserIdByParam();
+  const { data: assignment } = useAssignmentById(userId, assignmentId);
   const title = assignment ? (
     <>
       <Link to={`/@${assignment.user.login}/`}>{assignment.user.login} 님의 상세페이지</Link> ＞ {assignment.title}
