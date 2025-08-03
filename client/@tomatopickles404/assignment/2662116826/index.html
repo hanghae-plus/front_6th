@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-BPKhrmXb.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-RfpZMXx9.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@tomatopickles404/" data-discover="true">tomatopickles404<!-- --> 님의 상세페이지</a> ＞ <!-- -->[9팀 권지호] Chapter 1-1. 프레임워크 없이 SPA 만들기</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter1-1/pull/29" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[9팀 권지호] Chapter 1-1. 프레임워크 없이 SPA 만들기</h3><span class="px-2 py-1 text-xs bg-green-600 text-white rounded-full flex-shrink-0">Open</span></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->tomatopickles404</span><span>2025. 7. 6.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h2>
+<h3 id="배포-링크"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포-링크"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포 링크</h3>
+<p><a href="https://tomatopickles404.github.io/front_6th_chapter1-1/">https://tomatopickles404.github.io/front_6th_chapter1-1/</a></p>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<h4 id="상품목록"><a class="anchor" aria-hidden="true" tabindex="-1" href="#상품목록"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>상품목록</h4>
+<p><strong>상품 목록 로딩</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 페이지 접속 시 로딩 상태가 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 데이터 로드 완료 후 상품 목록이 렌더링된다</li>
+</ul>
+<p><strong>상품 목록 조회</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 상품의 기본 정보(이미지, 상품명, 가격)가 카드 형태로 표시된다</li>
+</ul>
+<p><strong>한 페이지에 보여질 상품 수 선택</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 드롭다운에서 10, 20, 50, 100개 중 선택할 수 있으며 기본 값은 20개 이다.</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 선택 변경 시 즉시 목록에 반영된다</li>
+</ul>
+<p><strong>상품 정렬 기능</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품을 가격순/인기순으로 오름차순/내림차순 정렬을 할 수 있다.</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 드롭다운을 통해 정렬 기준을 선택할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 정렬 변경 시 즉시 목록에 반영된다</li>
+</ul>
+<p><strong>무한 스크롤 페이지네이션</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 페이지 하단 근처 도달 시 다음 페이지 데이터가 자동 로드된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 스크롤에 따라 계속해서 새로운 상품들이 목록에 추가된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새 데이터 로드 중일 때 로딩 인디케이터와 스켈레톤 UI가 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 홈 페이지에서만 무한 스크롤이 활성화된다</li>
+</ul>
+<p><strong>상품을 장바구니에 담기</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 상품에 장바구니 추가 버튼이 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 버튼 클릭 시 해당 상품이 장바구니에 추가된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 추가 완료 시 사용자에게 알림이 표시된다</li>
+</ul>
+<p><strong>상품 검색</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품명 기반 검색을 위한 텍스트 입력 필드가 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Enter 키로 검색이 수행된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 검색어와 일치하는 상품들만 목록에 표시된다</li>
+</ul>
+<p><strong>카테고리 선택</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> 사용 가능한 카테고리들을 선택할 수 있는 UI가 제공된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 선택된 카테고리에 해당하는 상품들만 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 전체 상품 보기로 돌아갈 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 2단계 카테고리 구조를 지원한다 (1depth, 2depth)</li>
+</ul>
+<p><strong>카테고리 네비게이션</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> 현재 선택된 카테고리 경로가 브레드크럼으로 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 브레드크럼의 각 단계를 클릭하여 상위 카테고리로 이동할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> &quot;전체&quot; &gt; &quot;1depth 카테고리&quot; &gt; &quot;2depth 카테고리&quot; 형태로 표시된다</li>
+</ul>
+<p><strong>현재 상품 수 표시</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> 현재 조건에서 조회된 총 상품 수가 화면에 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 검색이나 필터 적용 시 상품 수가 실시간으로 업데이트된다</li>
+</ul>
+<h4 id="장바구니"><a class="anchor" aria-hidden="true" tabindex="-1" href="#장바구니"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>장바구니</h4>
+<p><strong>장바구니 모달</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 장바구니 아이콘 클릭 시 모달 형태로 장바구니가 열린다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> X 버튼이나 배경 클릭으로 모달을 닫을 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> ESC 키로 모달을 닫을 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 모달에서 장바구니의 모든 기능을 사용할 수 있다</li>
+</ul>
+<p><strong>장바구니 수량 조절</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 장바구니 상품의 수량을 증가할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 장바구니 상품의 수량을 감소할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 수량 변경 시 총 금액이 실시간으로 업데이트된다</li>
+</ul>
+<p><strong>장바구니 삭제</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 상품에 삭제 버튼이 배치되어 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 삭제 버튼 클릭 시 해당 상품이 장바구니에서 제거된다</li>
+</ul>
+<p><strong>장바구니 선택 삭제</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 각 상품에 선택을 위한 체크박스가 제공된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 선택 삭제 버튼이 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 체크된 상품들만 일괄 삭제된다</li>
+</ul>
+<p><strong>장바구니 전체 선택</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 모든 상품을 한 번에 선택할 수 있는 마스터 체크박스가 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 전체 선택 시 모든 상품의 체크박스가 선택된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 전체 해제 시 모든 상품의 체크박스가 해제된다</li>
+</ul>
+<p><strong>장바구니 비우기</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 장바구니에 있는 모든 상품을 한 번에 삭제할 수 있다</li>
+</ul>
+<h4 id="상품-상세"><a class="anchor" aria-hidden="true" tabindex="-1" href="#상품-상세"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>상품 상세</h4>
+<p><strong>상품 클릭시 상세 페이지 이동</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 목록에서 상품 이미지나 상품 정보 클릭 시 상세 페이지로 이동한다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> URL이 <code>/product/{productId}</code> 형태로 변경된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품의 자세한 정보가 전용 페이지에서 표시된다</li>
+</ul>
+<p><strong>상품 상세 페이지 기능</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 이미지, 설명, 가격 등의 상세 정보가 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 전체 화면을 활용한 상세 정보 레이아웃이 제공된다</li>
+</ul>
+<p><strong>상품 상세 - 장바구니 담기</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 상세 페이지에서 해당 상품을 장바구니에 추가할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 페이지 내에서 수량을 선택하여 장바구니에 추가할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 수량 증가/감소 버튼이 제공된다</li>
+</ul>
+<p><strong>관련 상품 기능</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 상세 페이지에서 관련 상품들이 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 같은 카테고리(category2)의 다른 상품들이 관련 상품으로 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 관련 상품 클릭 시 해당 상품의 상세 페이지로 이동한다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 현재 보고 있는 상품은 관련 상품에서 제외된다</li>
+</ul>
+<p><strong>상품 상세 페이지 내 네비게이션</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 상세에서 상품 목록으로 돌아가는 버튼이 제공된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 브레드크럼을 통해 카테고리별 상품 목록으로 이동할 수 있다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> SPA 방식으로 페이지 간 이동이 부드럽게 처리된다</li>
+</ul>
+<h4 id="사용자-피드백-시스템"><a class="anchor" aria-hidden="true" tabindex="-1" href="#사용자-피드백-시스템"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>사용자 피드백 시스템</h4>
+<p><strong>토스트 메시지</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 장바구니 추가 시 성공 메시지가 토스트로 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 장바구니 삭제, 선택 삭제, 전체 삭제 시 알림 메시지가 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 토스트는 3초 후 자동으로 사라진다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 토스트에 닫기 버튼이 제공된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 토스트 타입별로 다른 스타일이 적용된다 (success, info, error)</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<h4 id="spa-네비게이션-및-url-관리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#spa-네비게이션-및-url-관리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SPA 네비게이션 및 URL 관리</h4>
+<p><strong>페이지 이동</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 어플리케이션 내의 모든 페이지 이동(뒤로가기/앞으로가기를 포함)은 하여 새로고침이 발생하지 않아야 한다.</li>
+</ul>
+<p><strong>상품 목록 - URL 쿼리 반영</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 검색어가 URL 쿼리 파라미터에 저장된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 카테고리 선택이 URL 쿼리 파라미터에 저장된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 옵션이 URL 쿼리 파라미터에 저장된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 정렬 조건이 URL 쿼리 파라미터에 저장된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 조건 변경 시 URL이 자동으로 업데이트된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> URL을 통해 현재 검색/필터 상태를 공유할 수 있다</li>
+</ul>
+<p><strong>상품 목록 - 새로고침 시 상태 유지</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후 URL 쿼리에서 검색어가 복원된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후 URL 쿼리에서 카테고리가 복원된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후 URL 쿼리에서 옵션 설정이 복원된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후 URL 쿼리에서 정렬 조건이 복원된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 복원된 조건에 맞는 상품 데이터가 다시 로드된다</li>
+</ul>
+<p><strong>장바구니 - 새로고침 시 데이터 유지</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 장바구니 내용이 브라우저에 저장된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후에도 이전 장바구니 내용이 유지된다</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 장바구니의 선택 상태도 함께 유지된다</li>
+</ul>
+<p><strong>상품 상세 - URL에 ID 반영</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 상품 상세 페이지 이동 시 상품 ID가 URL 경로에 포함된다 (<code>/product/{productId}</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> URL로 직접 접근 시 해당 상품의 상세 페이지가 자동으로 로드된다</li>
+</ul>
+<p><strong>상품 상세 - 새로고침시 유지</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 새로고침 후에도 URL의 상품 ID를 읽어서 해당 상품 상세 페이지가 유지된다</li>
+</ul>
+<p><strong>404 페이지</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> 존재하지 않는 경로 접근 시 404 에러 페이지가 표시된다</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 홈으로 돌아가기 버튼이 제공된다</li>
+</ul>
+<h4 id="ai로-한-번-더-구현하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#ai로-한-번-더-구현하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>AI로 한 번 더 구현하기</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled=""/> 기존에 구현한 기능을 AI로 다시 구현한다.</li>
+<li class="task-list-item"><input type="checkbox" disabled=""/> 이 과정에서 직접 가공하는 것은 최대한 지양한다.</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<ol>
+<li>
+<p>바이브 코딩을 했습니다.
+처음부터 그럴 계획은 아니었습니다. ㅠㅠ 이번주에는 물리적으로 투자할 수 있는 시간이 부족해서 처음에는 포기할까 고민도 했었는데요.
+spa 동작원리, 라우터 설계, 상태 관리 등등 충분히 고민해보면서 작성해보고 싶었는데 이러다가는 과제 통과는 커녕 반도 완성을 못할 것 같았습니다. 평소에 제 생산성에 대한 고민을 많이 해왔던 터라, 또 같은 패턴을 반복하고 싶지 않았습니다.
+서론이 길었지만, 결론은 완주(과제 통과)를 목표로 하고, <strong>&quot;ai를 최대한 다루면서 ai가 짠 코드에 의문이 있다면 하나라도 그냥 넘어가지 않고 많이 물어보자&quot;</strong> 를 경험하기로 했습니다.
+어떻게든 만들어 내야된다는 집착(?)으로 ai로 점점 원하는 결과를 내는 정확도가 올라갔습니다. 활용능력 + 10..</p>
+</li>
+<li>
+<p>자바스크립트
+돌이켜보면 실무에서도 자바스크립트를 사용할 일은 거의 없었고 시간 내서 스스로 책을 보고 공부해야 겨우 까먹지 않는 정도였으며, 그렇게 알고 있던 이론은 체화되지 않았던 것이 느껴지는 한 주였습니다.
+실제로 SPA 가 어떤 흐름을 가지고 동작하는지 만들어보면서 파편화 되어있는 이론들이 조립되는 것 같았습니다. (아주 조금)
+회고를 작성하는 시점까지 코드맥락 일부가 파악 되고 있지 않은 부분들도 있어 리팩토링 하는 과정에서 더 많이 공부가 될 것 같습니다.</p>
+</li>
+<li>
+<p>테스트 코드
+저는 실무에서도 테스트 코드 경험은 없었고, 기본적인 문법 정도만 가지고 단위테스트랑 playwright를 작성해본 경험이 있습니다.
+이번 과제에서 테스트 코드에 대해 생각해본 점이 많은데, 테스트 코드에 과제의 의도(어떤 구현과 흐름을 만들었으면 좋겠는지와 같은)를 드러내려고 하신 것 처럼 느꼈습니다.
+그 전까지는 단순히 코드와 프로덕트의 안정성을 위한 도구라고 생각했었는데, <strong>문서화</strong>의 개념으로 쓰일 수도 있겠구나 생각했습니다.
+그래서 초반에 테스트 의도를 최대한 파악해서, 수정 없이 의도대로 구현하려고 했습니다.
+그 다음에 테스트 코드가 깨지지 않는지 돌려가면서 리팩토링을 일부 하기도 했는데, 저는 개인적으로 이 과정이 가장 재밌었습니다!</p>
+</li>
+</ol>
+<p>++
+구현 과정에서 무한스크롤을 IntersectionObser API를 사용했습니다.
+그래서 테스트를 위해 폴리필을 추가해 일부 변경했습니다!</p>
+<h3 id="자랑하고-싶은-코드"><a class="anchor" aria-hidden="true" tabindex="-1" href="#자랑하고-싶은-코드"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>자랑하고 싶은 코드</h3>
+<h4 id="상태-관리-패턴-구현"><a class="anchor" aria-hidden="true" tabindex="-1" href="#상태-관리-패턴-구현"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>상태 관리 패턴 구현</h4>
+<ul>
+<li>스토어 패턴을 구현하고자 했습니다.</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">const</span> cartStore <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">addToCart</span><span class="token punctuation">(</span><span class="token parameter">product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token comment">// 상태 업데이트</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token comment">// 로컬 스토리지 동기화</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">saveToLocalStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token comment">// UI 자동 업데이트</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">updateCartBadge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token comment">// 사용자 피드백</span>
+</span><span class="code-line">    toastService<span class="token punctuation">.</span><span class="token method function property-access">show</span><span class="token punctuation">(</span><span class="token string">&quot;장바구니에 추가되었습니다&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="export const cartStore = {
+  addToCart(product) {
+    // 상태 업데이트
+    this.state.items.push(product);
+    // 로컬 스토리지 동기화
+    this.saveToLocalStorage();
+    // UI 자동 업데이트
+    this.updateCartBadge();
+    // 사용자 피드백
+    toastService.show(&quot;장바구니에 추가되었습니다&quot;, &quot;success&quot;);
+  }
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>단방향 플로우와 상태 관리에 대한 개념을 이해하게 되었습니다.</li>
+</ul>
+<h4 id="eventbus-패턴"><a class="anchor" aria-hidden="true" tabindex="-1" href="#eventbus-패턴"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>EventBus 패턴</h4>
+<ul>
+<li>EventBus 패턴이라는 것을 알게 되었습니다.</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">EventBus</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">on</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">events</span><span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token comment">// 구독 해제 함수 반환 (메모리 누수 방지)</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">off</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">emit</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">events</span><span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token function">callback</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span> <span class="token keyword control-flow">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Error in event handler for </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>event<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="class EventBus {
+  on(event, callback) {
+    this.events[event].push(callback);
+    // 구독 해제 함수 반환 (메모리 누수 방지)
+    return () =&gt; this.off(event, callback);
+  }
+  
+  emit(event, data) {
+    this.events[event].forEach((callback) =&gt; {
+      try {
+        callback(data);
+      } catch (error) {
+        console.error(`Error in event handler for ${event}:`, error);
+      }
+    });
+  }
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>Pub/Sub 패턴에 대해 학습할 수 있었습니다.</li>
+<li>Observer 패턴과 함께 이벤트 기반 아키텍처에 대해 알게 되었습니다.</li>
+<li>구현에 여유가 되면 장바구니 업데이트에 적용하고 싶었으나, 아직 적용하지 못했습니다.</li>
+</ul>
+<p><strong>[적용해 볼 수 있는 부분]</strong></p>
+<ul>
+<li>장바구니 업데이트</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line">cartStore<span class="token punctuation">.</span><span class="token method function property-access">addToCart</span><span class="token punctuation">(</span><span class="token parameter">product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">saveToLocalStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line"><span class="token comment">// 이벤트 발행</span>
+</span><span class="code-line">  eventBus<span class="token punctuation">.</span><span class="token method function property-access">emit</span><span class="token punctuation">(</span><span class="token string">&#x27;cart:updated&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token literal-property property">items</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token literal-property property">totalCount</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">.</span><span class="token property-access">length</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// Header 컴포넌트</span>
+</span><span class="code-line">eventBus<span class="token punctuation">.</span><span class="token method function property-access">on</span><span class="token punctuation">(</span><span class="token string">&#x27;cart:updated&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">updateCartBadge</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">totalCount</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// CartModal 컴포넌트</span>
+</span><span class="code-line">eventBus<span class="token punctuation">.</span><span class="token method function property-access">on</span><span class="token punctuation">(</span><span class="token string">&#x27;cart:updated&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">refreshCartModal</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">items</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="cartStore.addToCart(product) {
+  this.state.items.push(product);
+  this.saveToLocalStorage();
+  
+// 이벤트 발행
+  eventBus.emit(&#x27;cart:updated&#x27;, {
+    items: this.state.items,
+    totalCount: this.state.items.length
+  });
+}
+
+// Header 컴포넌트
+eventBus.on(&#x27;cart:updated&#x27;, (data) =&gt; {
+  updateCartBadge(data.totalCount);
+});
+
+// CartModal 컴포넌트
+eventBus.on(&#x27;cart:updated&#x27;, (data) =&gt; {
+  refreshCartModal(data.items);
+});
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="개선이-필요하다고-생각하는-코드"><a class="anchor" aria-hidden="true" tabindex="-1" href="#개선이-필요하다고-생각하는-코드"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>개선이 필요하다고 생각하는 코드</h3>
+<h4 id="1-이벤트-위임의-복잡성과-중복-처리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-이벤트-위임의-복잡성과-중복-처리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 이벤트 위임의 복잡성과 중복 처리</h4>
+<p><strong>[이유]</strong></p>
+<ul>
+<li>eventService.js와 각 페이지별 setupEventListeners()에서 동일한 이벤트를 중복 처리하는 구조</li>
+<li>가독성 저하 -&gt; 단일 함수에 모든 이벤트 로직이 집중되어 유지보수 어려움이 있었습니다.</li>
+</ul>
+<p><strong>[개선 방안]</strong></p>
+<ul>
+<li>이벤트 핸들러를 모듈화하여 기능별로 이벤트 핸들러 분리</li>
+<li>컴포넌트별 이벤트 관리 -&gt; 각 컴포넌트가 자신의 이벤트만 관리</li>
+<li>이벤트 버스 활용</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">class</span> <span class="token class-name">CartEventHandler</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">static</span> <span class="token function">handleAddToCart</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>e<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token method function property-access">matches</span><span class="token punctuation">(</span><span class="token string">&quot;.add-to-cart-btn&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">    
+</span><span class="code-line">    e<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> productId <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">dataset</span><span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> product <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">extractProductData</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    cartStore<span class="token punctuation">.</span><span class="token method function property-access">addToCart</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token keyword">static</span> <span class="token function">extractProductData</span><span class="token punctuation">(</span><span class="token parameter">button</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> productCard <span class="token operator">=</span> button<span class="token punctuation">.</span><span class="token method function property-access">closest</span><span class="token punctuation">(</span><span class="token string">&quot;.product-card&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token literal-property property">productId</span><span class="token operator">:</span> button<span class="token punctuation">.</span><span class="token property-access">dataset</span><span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">title</span><span class="token operator">:</span> productCard<span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;h3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">textContent</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">brand</span><span class="token operator">:</span> productCard<span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">textContent</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">image</span><span class="token operator">:</span> productCard<span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;img&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">src</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">lprice</span><span class="token operator">:</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>productCard<span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;.text-lg&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">textContent</span><span class="token punctuation">.</span><span class="token method function property-access">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex"><span class="token char-class"><span class="token char-class-punctuation punctuation">[</span><span class="token char-class-negation operator">^</span><span class="token range">0<span class="token range-punctuation operator">-</span>9</span><span class="token char-class-punctuation punctuation">]</span></span></span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">function</span> <span class="token function">setupProductGridEvents</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token maybe-class-name">CartEventHandler</span><span class="token punctuation">.</span><span class="token property-access">handleAddToCart</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="export class CartEventHandler {
+  static handleAddToCart(e) {
+    if (!e.target.matches(&quot;.add-to-cart-btn&quot;)) return;
+    
+    e.preventDefault();
+    const productId = e.target.dataset.productId;
+    const product = this.extractProductData(e.target);
+    cartStore.addToCart(product);
+  }
+  
+  static extractProductData(button) {
+    const productCard = button.closest(&quot;.product-card&quot;);
+    return {
+      productId: button.dataset.productId,
+      title: productCard.querySelector(&quot;h3&quot;).textContent,
+      brand: productCard.querySelector(&quot;p&quot;).textContent,
+      image: productCard.querySelector(&quot;img&quot;).src,
+      lprice: parseInt(productCard.querySelector(&quot;.text-lg&quot;).textContent.replace(/[^0-9]/g, &quot;&quot;)),
+    };
+  }
+}
+
+
+export function setupProductGridEvents() {
+  document.addEventListener(&quot;click&quot;, CartEventHandler.handleAddToCart);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ol start="2">
+<li>상태 관리 분산과 일관성 부족</li>
+</ol>
+<p><strong>[이유]</strong></p>
+<ul>
+<li>상태 분산</li>
+<li>컴포넌트 간 상태 동기화를 처리는 것에 어려움을 느꼈습니다.</li>
+<li>이벤트 리스너의 관리가 제대로 되지 않는 것 같습니다.</li>
+</ul>
+<p><strong>[개선 방안]</strong></p>
+<ul>
+<li>단일 스토어 관리 방식</li>
+<li>라이프 사이클을 관리해 컴포넌트 마운트/언마운트 표현</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">class</span> <span class="token class-name">AppStore</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token literal-property property">products</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">cart</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">filters</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token keyword null nil">null</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">subscribers</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">subscribers</span><span class="token punctuation">.</span><span class="token method function property-access">add</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">subscribers</span><span class="token punctuation">.</span><span class="token method function property-access">delete</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">subscribers</span><span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token parameter">callback</span> <span class="token arrow operator">=&gt;</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">setState</span><span class="token punctuation">(</span><span class="token parameter">newState</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token spread operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">,</span> <span class="token spread operator">...</span>newState <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">addToCart</span><span class="token punctuation">(</span><span class="token parameter">product</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> existingItem <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">cart</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token arrow operator">=&gt;</span> item<span class="token punctuation">.</span><span class="token property-access">productId</span> <span class="token operator">===</span> product<span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>existingItem<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      existingItem<span class="token punctuation">.</span><span class="token property-access">quantity</span> <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">state</span><span class="token punctuation">.</span><span class="token property-access">cart</span><span class="token punctuation">.</span><span class="token method function property-access">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token spread operator">...</span>product<span class="token punctuation">,</span> <span class="token literal-property property">quantity</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// src/components/Component.js</span>
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">class</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">container<span class="token punctuation">,</span> store</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">container</span> <span class="token operator">=</span> container<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">store</span> <span class="token operator">=</span> store<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">unsubscribe</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token property-access">store</span><span class="token punctuation">.</span><span class="token method function property-access">subscribe</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">render</span><span class="token punctuation">.</span><span class="token method function property-access">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token method function property-access">unsubscribe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token comment">// 컴포넌트별 렌더링 로직</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="export class AppStore {
+  constructor() {
+    this.state = {
+      products: [],
+      cart: [],
+      filters: {},
+      loading: false,
+      error: null
+    };
+    this.subscribers = new Set();
+  }
+  
+  subscribe(callback) {
+    this.subscribers.add(callback);
+    return () =&gt; this.subscribers.delete(callback);
+  }
+  
+  notify() {
+    this.subscribers.forEach(callback =&gt; callback(this.state));
+  }
+  
+  setState(newState) {
+    this.state = { ...this.state, ...newState };
+    this.notify();
+  }
+  
+  addToCart(product) {
+    const existingItem = this.state.cart.find(item =&gt; item.productId === product.productId);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      this.state.cart.push({ ...product, quantity: 1 });
+    }
+    this.notify();
+  }
+}
+
+// src/components/Component.js
+export class Component {
+  constructor(container, store) {
+    this.container = container;
+    this.store = store;
+    this.unsubscribe = this.store.subscribe(this.render.bind(this));
+  }
+  
+  destroy() {
+    this.unsubscribe();
+  }
+  
+  render(state) {
+    // 컴포넌트별 렌더링 로직
+  }
+}
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h3>
+<p>자바스크립트로 렌더링을 하기 위해 DOM구조에 대해 공부하고, 싱글 페이지에서의 동작을 위해 라우팅에 대해 만들면서 고민해보고 새로고침 없이 어떻게 상태를 변경할지에 대한 고민을 하는 것 자체가 자바스크립트에 대한 깊은 공부를 하게 하는 것 같습니다.</p>
+<h3 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h3>
+<p>초반에 테스트 케이스에 대해 질문이 많아서 테스트가 실패되면 제 코드에서 먼저 문제를 찾는게 아니라, &#x27;이것도 언급된 테스트 케이스인가?&#x27; 라는 생각을 먼저 했던 것 같습니다 .ㅎㅎ</p>
+<h3 id="ai-활용-경험-공유하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#ai-활용-경험-공유하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>AI 활용 경험 공유하기</h3>
+<h4 id="사용기술"><a class="anchor" aria-hidden="true" tabindex="-1" href="#사용기술"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>사용기술</h4>
+<p>claude code cli, gemini cli, cursor ai</p>
+<p>주로 cursor ai를 활용하여 설계 및 병목을 해결했습니다.
+이왕 이렇게 된 거 ai를 활용해서 최대한 빨리 만들어 보는 것으로 뱡향을 전환했고, 처음엔 갈아 엎어야 싶을 정도로 이상한 방향으로 흘러가서 결국엔 직접 생각해서 작성한 코드의 비율이 높았는데, 질문이 정확하면 원하는 결과물이 얻어지는 경험을 몇 번 하다보니 생산성이 높아짐을 체감했습니다. 창준님이 공유해주신 cursor rules을 적용하고 정확도가 많이 올라갔습니다. (샤라웃 투 창준님..)</p>
+<p><strong>프롬프트 작성하는 법을 물어보는 프롬프트를 작성해</strong>보라는 코치님의 조언이 기억에 많이 남아 적극 활용해보고자 했습니다. ㅎㅎ
+제가 무엇을 알고 싶은지 먼저 정확하게 표현할 줄 알아야 답변의 정확도가 만족스럽게 나온다는 것을 느꼈습니다.</p>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<h3 id="라우팅-설계에-대해-코멘트-들어보고-싶습니다"><a class="anchor" aria-hidden="true" tabindex="-1" href="#라우팅-설계에-대해-코멘트-들어보고-싶습니다"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>라우팅 설계에 대해 코멘트 들어보고 싶습니다!</h3>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Router</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">let</span> notFoundComponent <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">registerRoute</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> component<span class="token punctuation">,</span> initializer <span class="token operator">=</span> <span class="token keyword null nil">null</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    routes<span class="token punctuation">[</span>path<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> component<span class="token punctuation">,</span> initializer <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">setNotFoundComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">component</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    notFoundComponent <span class="token operator">=</span> component<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">navigateTo</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">history</span><span class="token punctuation">.</span><span class="token method function property-access">pushState</span><span class="token punctuation">(</span><span class="token keyword null nil">null</span><span class="token punctuation">,</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span> <span class="token function">getFullPath</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 동적 경로 매칭 함수</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">matchRoute</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token comment">// 정확한 매칭 먼저 시도</span>
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>routes<span class="token punctuation">[</span>path<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">route</span><span class="token operator">:</span> routes<span class="token punctuation">[</span>path<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token comment">// 동적 경로 매칭 시도</span>
+</span><span class="code-line">    <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> routePath <span class="token keyword">in</span> routes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>routePath<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span><span class="token string">&quot;:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> pattern <span class="token operator">=</span> routePath<span class="token punctuation">.</span><span class="token method function property-access">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">:<span class="token char-class"><span class="token char-class-punctuation punctuation">[</span><span class="token char-class-negation operator">^</span>/<span class="token char-class-punctuation punctuation">]</span></span><span class="token quantifier number">+</span></span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;([^/]+)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> regex <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">^</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pattern<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">$</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> match <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token method function property-access">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword">const</span> paramNames <span class="token operator">=</span> routePath<span class="token punctuation">.</span><span class="token method function property-access">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">:<span class="token char-class"><span class="token char-class-punctuation punctuation">[</span><span class="token char-class-negation operator">^</span>/<span class="token char-class-punctuation punctuation">]</span></span><span class="token quantifier number">+</span></span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">          paramNames<span class="token punctuation">.</span><span class="token method function property-access">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">paramName<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token keyword">const</span> key <span class="token operator">=</span> paramName<span class="token punctuation">.</span><span class="token method function property-access">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &#x27;:&#x27; 제거</span>
+</span><span class="code-line">            params<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> match<span class="token punctuation">[</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">          <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">route</span><span class="token operator">:</span> routes<span class="token punctuation">[</span>routePath<span class="token punctuation">]</span><span class="token punctuation">,</span> params <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword control-flow">return</span> <span class="token keyword null nil">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">router</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">getAppPath</span><span class="token punctuation">(</span><span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">location</span><span class="token punctuation">.</span><span class="token property-access">pathname</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> match <span class="token operator">=</span> <span class="token function">matchRoute</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> <span class="token punctuation">{</span> route<span class="token punctuation">,</span> params <span class="token punctuation">}</span> <span class="token operator">=</span> match<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token comment">// 전역 파라미터 설정 (컴포넌트에서 사용할 수 있도록)</span>
+</span><span class="code-line">      <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">routeParams</span> <span class="token operator">=</span> params<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> route<span class="token punctuation">.</span><span class="token method function property-access">component</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>route<span class="token punctuation">.</span><span class="token property-access">initializer</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        route<span class="token punctuation">.</span><span class="token method function property-access">initializer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token comment">// 404 처리</span>
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>notFoundComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> <span class="token function">notFoundComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;popstate&quot;</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;DOMContentLoaded&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token property-access">body</span><span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token method function property-access">matches</span><span class="token punctuation">(</span><span class="token string">&quot;[data-link]&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        e<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token function">navigateTo</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span><span class="token property-access">target</span><span class="token punctuation">.</span><span class="token property-access">href</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">router</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    registerRoute<span class="token punctuation">,</span>
+</span><span class="code-line">    setNotFoundComponent<span class="token punctuation">,</span>
+</span><span class="code-line">    navigateTo<span class="token punctuation">,</span>
+</span><span class="code-line">    router<span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="export function Router() {
+  const routes = {};
+  let notFoundComponent = &quot;&quot;;
+
+  const registerRoute = (path, component, initializer = null) =&gt; {
+    routes[path] = { component, initializer };
+  };
+
+  const setNotFoundComponent = (component) =&gt; {
+    notFoundComponent = component;
+  };
+
+  const navigateTo = (path) =&gt; {
+    window.history.pushState(null, null, getFullPath(path));
+    router();
+  };
+
+  // 동적 경로 매칭 함수
+  const matchRoute = (path) =&gt; {
+    // 정확한 매칭 먼저 시도
+    if (routes[path]) {
+      return { route: routes[path], params: {} };
+    }
+
+    // 동적 경로 매칭 시도
+    for (const routePath in routes) {
+      if (routePath.includes(&quot;:&quot;)) {
+        const pattern = routePath.replace(/:[^/]+/g, &quot;([^/]+)&quot;);
+        const regex = new RegExp(`^${pattern}<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-BPKhrmXb.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-RfpZMXx9.css">
+</head>
+<body>
+<div id="root">);
+        const match = path.match(regex);
+
+        if (match) {
+          const params = {};
+          const paramNames = routePath.match(/:[^/]+/g) || [];
+          paramNames.forEach((paramName, index) =&gt; {
+            const key = paramName.slice(1); // &#x27;:&#x27; 제거
+            params[key] = match[index + 1];
+          });
+
+          return { route: routes[routePath], params };
+        }
+      }
+    }
+
+    return null;
+  };
+
+  const router = () =&gt; {
+    const path = getAppPath(window.location.pathname);
+    const match = matchRoute(path);
+
+    if (match) {
+      const { route, params } = match;
+
+      // 전역 파라미터 설정 (컴포넌트에서 사용할 수 있도록)
+      window.routeParams = params;
+
+      document.getElementById(&quot;root&quot;).innerHTML = route.component();
+
+      if (route.initializer) {
+        route.initializer();
+      }
+    } else {
+      // 404 처리
+      if (notFoundComponent) {
+        document.getElementById(&quot;root&quot;).innerHTML = notFoundComponent();
+      }
+    }
+  };
+
+  window.addEventListener(&quot;popstate&quot;, router);
+  document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+    document.body.addEventListener(&quot;click&quot;, (e) =&gt; {
+      if (e.target.matches(&quot;[data-link]&quot;)) {
+        e.preventDefault();
+        navigateTo(e.target.href);
+      }
+    });
+    router();
+  });
+
+  return {
+    registerRoute,
+    setNotFoundComponent,
+    navigateTo,
+    router,
+  };
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>[구현 의도]</strong></p>
+<ul>
+<li>SPA 환경에서 라우팅 기능을 직접 구현하기 위해, 팩토리 함수 패턴 기반의 커스텀Router를 설계했습니다.</li>
+<li>내부 상태는 클로저를 통해 캡슐화하고, 필요한 메서드만 외부에 노출하여 커스텀 훅과 유사한 구조를 구현했습니다. 이는 React의 상태 관리 흐름과 유사한 설계를 통해 직관적인 유지보수와 확장성을 고려한 결정이었습니다.</li>
+<li>인스턴스를 생성할 수 있는 구조이지만, 실제 사용에서는 싱글톤처럼 하나의 Router 인스턴스를 중심으로 사용했습니다.</li>
+<li>pushState, popstate, DOMContentLoaded 이벤트를 바탕으로 SPA의 기본 라우팅 흐름을 구성하고, 전체 페이지 갱신 없이 url을 변경하여 해당 경로에 맞는 콘텐츠만 렌더링하도록 의도 했습니다.</li>
+</ul>
+<p><strong>[궁금한 점]</strong></p>
+<ul>
+<li>다른 분들은 어떻게 구현하셨을지, 혹은 코치님이 생각하시는 best practice가 무엇인지 궁금합니다.</li>
+<li>SPA에 적절한 설계를 한 것인지 잘 모르겠습니다(?)</li>
+</ul></div></div></div></main></div></div></div></div>
+</body>
+</html>
