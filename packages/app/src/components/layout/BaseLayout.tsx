@@ -12,7 +12,7 @@ export function BaseLayout({ children }: PropsWithChildren) {
         <div className="flex-1">
           <header className="h-12 flex items-center border-b border-border bg-card px-4">
             <SidebarTrigger className="mr-4 text-white" />
-            <h1 className="text-lg font-semibold ">{title}</h1>
+            <h4 className="text-lg font-semibold ">{title}</h4>
           </header>
           <main className="p-6">{children}</main>
         </div>

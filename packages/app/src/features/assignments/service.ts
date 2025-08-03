@@ -30,3 +30,8 @@ export const fetchAssignmentsByUser = async (userId: string) => {
   const assignments = await fetchAllAssignments();
   return assignments.filter((assignment) => assignment.user.login === userId);
 };
+
+export const fetchAssignmentById = async (id: number) => {
+  const assignments = await fetchAllAssignments();
+  return assignments.find((assignment) => assignment.id === id);
+};
