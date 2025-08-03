@@ -1,5 +1,5 @@
 import { PageProvider, usePageData } from "@/providers";
-import type { PropsWithChildren } from "react";
+import { type PropsWithChildren, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router";
 import { type Assignment, useAssignmentById } from "@/features";
 import MarkdownPreview from "@uiw/react-markdown-preview";
@@ -27,8 +27,27 @@ const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
 export const AssignmentDetail = Object.assign(
   () => {
     const data = usePageData<Assignment>();
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const $el = ref.current;
+      if (!$el) {
+        return undefined;
+      }
+
+      const $script = document.createElement("script");
+      $script.setAttribute("issue-term", "pathname");
+      $script.setAttribute("theme", "github-light");
+      $script.setAttribute("repo", `hanghae-plus/front_6th`);
+      $script.type = "text/javascript";
+      $script.async = true;
+      $script.crossOrigin = "anonymous";
+      $script.src = "https://utteranc.es/client.js";
+      $el.appendChild($script);
+    }, []);
+
     return (
-      <div>
+      <div ref={ref}>
         <div className="card-wrap">
           <Card className="mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg">
             <a href={data.url} target="_blank">
