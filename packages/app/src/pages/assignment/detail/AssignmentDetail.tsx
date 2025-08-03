@@ -11,7 +11,7 @@ const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { data: assignment } = useAssignmentById(assignmentId);
   const title = assignment ? (
     <>
-      <Link to={`/@${assignment.user.login}`}>{assignment.user.login} 님의 상세페이지</Link> ＞ {assignment.title}
+      <Link to={`/@${assignment.user.login}/`}>{assignment.user.login} 님의 상세페이지</Link> ＞ {assignment.title}
     </>
   ) : (
     "과제 상세페이지"

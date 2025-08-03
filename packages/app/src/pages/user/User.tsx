@@ -34,7 +34,7 @@ const UserProfile = ({ id, image, link }: GithubUser) => {
 const AssignmentCard = ({ id, title, url, createdAt }: Assignment) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer group bg-card border border-border">
-      <Link to={`./assignment/${id}`} className="block">
+      <Link to={`./assignment/${id}/`} className="block">
         <div className="p-6">
           <div className="flex flex-col space-y-3">
             {/* 과제 제목 */}

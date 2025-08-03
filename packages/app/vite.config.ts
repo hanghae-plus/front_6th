@@ -4,14 +4,15 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import svgr from "vite-plugin-svgr";
 
-const base: string = process.env.NODE_ENV === "production" ? "/front_6th/" : "";
-
 export default createViteConfig({
-  base,
+  base: "/front_6th/",
   plugins: [react(), tailwindcss(), svgr()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  ssr: {
+    noExternal: ["@uiw/react-markdown-preview"],
   },
 });

@@ -9,7 +9,7 @@ import { PageProvider, usePageData } from "@/providers";
 const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: number }) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
-      <Link to={`/@${id}`} className="block">
+      <Link to={`/@${id}/`} className="block">
         <div className="p-3">
           {/* 프로필 섹션 */}
           <div className="flex flex-col items-center text-center space-y-2">
