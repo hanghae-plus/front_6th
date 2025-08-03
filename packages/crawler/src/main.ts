@@ -5,6 +5,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { INestApplication } from '@nestjs/common';
 import { GithubPullRequest } from '@hanghae-plus/domain';
+import { HangheaService } from './hanghea/hanghea.service';
 
 const organization = 'hanghae-plus';
 const repos = [
@@ -70,10 +71,34 @@ const generateUsers = (app: App) => {
   fs.writeFileSync(filename, JSON.stringify(users, null, 2), 'utf-8');
 };
 
+const generateUserAssignmentInfos = async (app: App) => {
+  const filename = path.join(dataDir, 'user-assignment-infos.json');
+  const hangheaService = app.get(HangheaService);
+
+  const assignments = await hangheaService.getAssignments();
+
+  const results = await Promise.all(
+    assignments.map((assignment) =>
+      hangheaService
+        .getAssignmentUsersTotalStatus(assignment.assignmentId)
+        .then((userTotalStatus) => {
+          return userTotalStatus.map((v) => ({
+            ...v,
+            assignmentId: assignment.assignmentId,
+            assignmentName: assignment.name,
+          }));
+        }),
+    ),
+  ).then((v) => v.flat());
+
+  fs.writeFileSync(filename, JSON.stringify(results, null, 2), 'utf-8');
+};
+
 const main = async () => {
   const app = await createApp();
   await generatePulls(app);
   generateUsers(app);
+  await generateUserAssignmentInfos(app);
 };
 
 main();
