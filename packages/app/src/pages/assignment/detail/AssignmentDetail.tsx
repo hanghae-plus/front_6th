@@ -29,32 +29,38 @@ export const AssignmentDetail = Object.assign(
     const data = usePageData<Assignment>();
     return (
       <div>
-        <Card className="mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg">
-          <a href={data.url} target="_blank">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <IconGithub fill="white" className="w-8 h-8" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="text-lg font-semibold text-white truncate">{data.title}</h3>
-                  <span className="px-2 py-1 text-xs bg-green-600 text-white rounded-full">Open</span>
+        <div className="card-wrap">
+          <Card className="mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg">
+            <a href={data.url} target="_blank">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <IconGithub fill="white" className="w-8 h-8" />
                 </div>
-                <div className="flex items-center gap-4 text-xs text-gray-500">
-                  <span>by {data.user.login}</span>
-                  <span>{new Date(data.createdAt).toLocaleDateString("ko-KR")}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-lg font-semibold text-white truncate">{data.title}</h3>
+                    <span className="px-2 py-1 text-xs bg-green-600 text-white rounded-full flex-shrink-0">Open</span>
+                  </div>
+                  <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <span>by {data.user.login}</span>
+                    <span>{new Date(data.createdAt).toLocaleDateString("ko-KR")}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </Card>
+            </a>
+          </Card>
+        </div>
 
-        <div>
+        <div className="overflow-auto">
           <MarkdownPreview
             source={data.body}
-            className="p-6 w-full"
+            className="p-6 max-w-full"
             wrapperElement={{
               "data-color-mode": "dark",
+            }}
+            style={{
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
             }}
           />
         </div>

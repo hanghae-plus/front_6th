@@ -134,7 +134,7 @@ export const User = Object.assign(
     const { assignments, ...user } = usePageData<GithubUser & { assignments: Assignment[] }>();
 
     return (
-      <main className="px-4 py-6">
+      <div className="px-4 py-6">
         <div className="lg:flex lg:gap-8">
           {/* 왼쪽 프로필 영역 */}
           <div className="lg:w-[300px]">
@@ -147,7 +147,7 @@ export const User = Object.assign(
             <AssignmentsList items={assignments} />
           </div>
         </div>
-      </main>
+      </div>
     );
   },
   {

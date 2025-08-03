@@ -82,7 +82,7 @@ const HomePage = () => {
   const { users, assignments } = usePageData<{ users: GithubUser[]; assignments: Assignment[] }>();
 
   return (
-    <main className="px-4 py-6">
+    <div className="px-4 py-6">
       {/* 상단 통계 */}
       <div className="mb-6 space-y-4">
         <div className="flex items-center justify-between">
@@ -124,7 +124,7 @@ const HomePage = () => {
       <Suspense>
         <UsersGrid users={users} assignments={assignments} />
       </Suspense>
-    </main>
+    </div>
   );
 };
 

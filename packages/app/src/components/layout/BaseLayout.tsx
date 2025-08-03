@@ -9,7 +9,7 @@ export function BaseLayout({ children }: PropsWithChildren) {
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <AppSidebar />
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <header className="h-12 flex items-center border-b border-border bg-card px-4">
             <SidebarTrigger className="mr-4 text-white" />
             <h4 className="text-lg font-semibold ">{title}</h4>

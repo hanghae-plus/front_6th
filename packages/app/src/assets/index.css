@@ -76,3 +76,32 @@
     transform: translateY(0);
   }
 }
+
+.card-wrap {
+  transition: transform 0.15s;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.15s;
+    background-color: #FFF;
+    opacity: 0;
+    border-radius: var(--radius-lg);
+  }
+
+  .card {
+    transition: transform 0.15s;
+  }
+
+  &:hover {
+    .card {
+      transform: translateX(5px) translateY(-5px);
+    }
+
+    &::before {
+      opacity: 0.15;
+    }
+  }
+}
