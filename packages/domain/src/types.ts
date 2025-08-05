@@ -11,3 +11,14 @@ export interface GithubUser {
 export type AssignmentResponseType = typeof ASSIGNMENT_MOCK;
 
 export type AssignmentUsersTotalStatusResponseType = typeof ASSIGNMENT_USERS_TOTAL_STATUS_MOCK;
+
+export interface AssignmentResult {
+  passed: boolean;
+  theBest: boolean;
+  name: string;
+  feedback: string;
+  assignment: {
+    name: string;
+    url: string;
+  };
+}

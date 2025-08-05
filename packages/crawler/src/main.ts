@@ -4,7 +4,7 @@ import { GithubService } from './github/github.service';
 import * as fs from 'fs';
 import * as path from 'path';
 import { INestApplication } from '@nestjs/common';
-import { GithubPullRequest } from '@hanghae-plus/domain';
+import { AssignmentResult, GithubPullRequest } from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
 
 const organization = 'hanghae-plus';
@@ -75,23 +75,9 @@ const generateUserAssignmentInfos = async (app: App) => {
   const filename = path.join(dataDir, 'user-assignment-infos.json');
   const hanghaeService = app.get(HanghaeService);
 
-  const assignments = await hanghaeService.getAssignments();
+  const assignments = await hanghaeService.getAssignmentResults();
 
-  const results = await Promise.all(
-    assignments.map((assignment) =>
-      hanghaeService
-        .getAssignmentUsersTotalStatus(assignment.assignmentId)
-        .then((userTotalStatus) => {
-          return userTotalStatus.map((v) => ({
-            ...v,
-            assignmentId: assignment.assignmentId,
-            assignmentName: assignment.name,
-          }));
-        }),
-    ),
-  ).then((v) => v.flat());
-
-  fs.writeFileSync(filename, JSON.stringify(results, null, 2), 'utf-8');
+  fs.writeFileSync(filename, JSON.stringify(assignments, null, 2), 'utf-8');
 };
 
 const main = async () => {
