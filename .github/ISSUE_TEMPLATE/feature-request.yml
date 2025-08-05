@@ -1,0 +1,46 @@
+name: ✨ 기능 요청
+description: 새로운 기능이나 개선사항을 제안해주세요
+title: "[FEATURE] "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        새로운 기능 제안을 해주셔서 감사합니다! ✨
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 💡 기능 설명
+      description: 어떤 기능을 원하시나요?
+      placeholder: 전체 수강생의 과제 완료 현황을 보여주는 대시보드 페이지가 있으면 좋겠습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solving
+    attributes:
+      label: 🤔 해결하고자 하는 문제
+      description: 이 기능이 어떤 문제를 해결해줄까요?
+      placeholder: 현재는 각 수강생을 개별적으로 확인해야 해서 전체 현황 파악이 어렵습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 🛠️ 제안하는 해결방안
+      description: 구체적으로 어떤 기능이면 좋을까요?
+      placeholder: |
+        - 주차별 과제 완료율 차트
+        - 수강생별 진도 현황 표
+        - 필터링 기능
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 추가 정보
+      descriptio
