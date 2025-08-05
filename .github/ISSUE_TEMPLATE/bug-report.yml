@@ -1,0 +1,65 @@
+name: 🐛 버그 리포트
+description: 버그나 문제를 신고해주세요
+title: "[BUG] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그를 신고해주셔서 감사합니다! 🐛
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 버그 설명
+      description: 어떤 문제가 발생했나요?
+      placeholder: 수강생 상세 페이지에서 과제 목록이 로딩되지 않습니다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 재현 방법
+      description: 어떻게 하면 이 문제를 다시 볼 수 있나요?
+      placeholder: |
+        1. 메인 페이지 접속
+        2. 수강생 카드 클릭
+        3. 상세 페이지에서 과제 목록 확인
+      value: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ 예상 동작
+      description: 어떻게 동작해야 한다고 생각하시나요?
+      placeholder: 과제 목록이 정상적으로 표시되어야 합니다.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 🌐 브라우저
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Mobile (iOS Safari)
+        - Mobile (Android Chrome)
+        - 기타
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 📝 추가 정보
+      description: 스크린샷, 콘솔 에러, 기타 도움이 될 만한 정보
