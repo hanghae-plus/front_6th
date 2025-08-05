@@ -43,4 +43,4 @@ body:
     id: additional-context
     attributes:
       label: 📝 추가 정보
-      descriptio
+      description: 참고할 만한 사이트, 스크린샷, 기타 아이디어
