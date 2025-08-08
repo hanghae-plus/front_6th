@@ -10,6 +10,7 @@ const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { assignmentId = "" } = useParams<{ assignmentId: string }>();
   const userId = useUserIdByParam();
   const { data: assignment } = useAssignmentById(userId, assignmentId);
+
   const title = assignment ? (
     <>
       <Link to={`/@${assignment.user.login}/`}>{assignment.user.login} 님의 상세페이지</Link> ＞ {assignment.title}
@@ -84,6 +85,8 @@ export const AssignmentDetail = Object.assign(
             }}
           />
         </div>
+
+        {/* TODO: Feedback Design 추가 */}
       </div>
     );
   },
