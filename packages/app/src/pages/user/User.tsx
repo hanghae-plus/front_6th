@@ -31,7 +31,7 @@ const UserProfile = ({ id, image, link }: GithubUser) => {
   );
 };
 
-const AssignmentCard = ({ id, title, url, createdAt }: Assignment) => {
+const AssignmentCard = ({ id, title, url, createdAt, isBest }: Assignment) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer group bg-card border border-border">
       <Link to={`./assignment/${id}/`} className="block">
@@ -39,7 +39,7 @@ const AssignmentCard = ({ id, title, url, createdAt }: Assignment) => {
           <div className="flex flex-col space-y-3">
             {/* 과제 제목 */}
             <h3 className="text-lg font-semibold text-white group-hover:text-orange-300 transition-colors leading-tight">
-              {title}
+              {title} {isBest && <span className="text-orange-400">👍</span>}
             </h3>
 
             {/* 메타 정보 */}

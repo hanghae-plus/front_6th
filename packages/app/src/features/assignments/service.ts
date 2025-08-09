@@ -13,12 +13,24 @@ type AssignmentPath = (typeof assignments)[number]["path"];
 
 export const fetchAssignments = async (path: AssignmentPath): Promise<Assignment[]> => {
   const { default: data } = await import(`../../../../../docs/data/${path}/pulls.json`);
-  return data.map((item: GithubPullRequest) => ({
-    ...pick(item, ["id", "user", "title", "body"]),
-    url: item.html_url,
-    createdAt: new Date(item.created_at),
-    updatedAt: new Date(item.updated_at),
-  }));
+
+  const { default: userAssignmentInfos } = await import(`../../../../../docs/data/user-assignment-infos.json`);
+
+  return data.map((item: GithubPullRequest) => {
+    const userAssignmentInfo = userAssignmentInfos.filter((info) => info.assignment.url === item.html_url);
+
+    const feedback = userAssignmentInfo.map((info) => info.feedback).join("");
+    const isBest = userAssignmentInfo.some((info) => info.theBest);
+
+    return {
+      ...pick(item, ["id", "user", "title", "body"]),
+      url: item.html_url,
+      feedback,
+      isBest,
+      createdAt: new Date(item.created_at),
+      updatedAt: new Date(item.updated_at),
+    };
+  });
 };
 
 export const fetchAllAssignments = async () => {
