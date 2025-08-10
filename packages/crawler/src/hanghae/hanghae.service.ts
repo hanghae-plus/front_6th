@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import {
   AssignmentResponseType,
   AssignmentResult,
@@ -35,14 +34,12 @@ export class HanghaeService {
   }
 
   private sortResults(results: AssignmentResult[]): AssignmentResult[] {
-    /* eslint-disable @typescript-eslint/no-unsafe-return,@typescript-eslint/no-unsafe-call */
     return results.sort((a, b) => {
       if (a.assignment.name === b.assignment.name) {
         return a.name.localeCompare(b.name, 'ko');
       }
       return a.assignment.name.localeCompare(b.assignment.name, 'ko');
     });
-    /* eslint-enable @typescript-eslint/no-unsafe-return,@typescript-eslint/no-unsafe-call */
   }
 
   private adjustResult(results: AssignmentResult[]): AssignmentResult[] {
@@ -50,25 +47,25 @@ export class HanghaeService {
       // 김유현님 1주차 과제 URL 제출 링크 조정
       draft[8].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/22';
-      draft[63].assignment.url =
+      draft[62].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/22';
 
       // 신홍준님의 1주차 과제 URL 제출 링크 조정
       draft[17].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/77';
-      draft[72].assignment.url =
+      draft[71].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/77';
 
       // 정민기님 2주차 과제 URL 제출 링크 조정
-      draft[153].assignment.url =
+      draft[151].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-2/pull/13';
-      draft[208].assignment.url =
+      draft[205].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-2/pull/13';
 
       // 김지혜님 4주차 과제 URL 제출 링크 조정
-      draft[339].assignment.url =
+      draft[333].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter2-1/pull/22';
-      draft[394].assignment.url =
+      draft[387].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter2-1/pull/22';
     });
   }
@@ -81,7 +78,7 @@ export class HanghaeService {
           (userTotalStatus) =>
             userTotalStatus.map((v) => ({
               passed: v.result === 'PASS',
-              theBest: v.isBestPractice,
+              ...(v.isBestPractice && { theBest: true }),
               name: v.name,
               feedback: v.feedback,
               assignment: { name, url: v.answers[0].answer },

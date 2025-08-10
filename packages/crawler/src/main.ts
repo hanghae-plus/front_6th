@@ -4,8 +4,15 @@ import { GithubService } from './github/github.service';
 import * as fs from 'fs';
 import * as path from 'path';
 import { INestApplication } from '@nestjs/common';
-import { AssignmentResult, GithubPullRequest } from '@hanghae-plus/domain';
+import {
+  AssignmentDetail,
+  AssignmentResult,
+  CommonAssignment,
+  GithubPullRequest,
+  UserWIthCommonAssignments,
+} from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
+import { omit } from 'es-toolkit/compat';
 
 const organization = 'hanghae-plus';
 const repos = [
@@ -13,6 +20,7 @@ const repos = [
   'front_6th_chapter1-2',
   'front_6th_chapter1-3',
   'front_6th_chapter2-1',
+  'front_6th_chapter2-2',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {
@@ -80,11 +88,106 @@ const generateUserAssignmentInfos = async (app: App) => {
   fs.writeFileSync(filename, JSON.stringify(assignments, null, 2), 'utf-8');
 };
 
+const createUserWithCommonAssignments = (
+  pull: GithubPullRequest,
+  info: AssignmentResult,
+): UserWIthCommonAssignments => ({
+  name: info.name,
+  github: {
+    id: pull.user.login,
+    image: pull.user.avatar_url,
+    link: pull.user.html_url,
+  },
+  assignments: [],
+});
+
+const generateAppData = () => {
+  const assignmentInfos = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'user-assignment-infos.json'), 'utf-8'),
+  ) as AssignmentResult[];
+
+  const pulls = repos
+    .flatMap(
+      (repo) =>
+        JSON.parse(
+          fs.readFileSync(path.join(dataDir, `${repo}/pulls.json`), 'utf-8'),
+        ) as GithubPullRequest,
+    )
+    .reduce(
+      (acc, pull) => ({
+        ...acc,
+        [pull.html_url]: pull,
+      }),
+      {} as Record<string, GithubPullRequest>,
+    );
+
+  const assignmentDetails = Object.values(pulls).reduce(
+    (acc, pull) => ({
+      ...acc,
+      [pull.html_url]: {
+        id: pull.id,
+        user: pull.user.id,
+        title: pull.title,
+        body: pull.body,
+        createdAt: new Date(pull.created_at),
+        updatedAt: new Date(pull.updated_at),
+        url: pull.html_url,
+      },
+    }),
+    {} as Record<string, AssignmentDetail>,
+  );
+
+  const feedbacks = assignmentInfos.reduce(
+    (acc, { assignment, feedback }) => ({
+      ...acc,
+      ...(assignment.url && feedback && { [assignment.url]: feedback }),
+    }),
+    {} as Record<string, { name: string; feedback: string }>,
+  );
+
+  const userWithCommonAssignments = assignmentInfos.reduce(
+    (acc, info) => {
+      const pull = pulls[info.assignment.url];
+      if (!pull) {
+        return acc;
+      }
+      const value: UserWIthCommonAssignments =
+        acc[pull.user.login] ?? createUserWithCommonAssignments(pull, info);
+
+      value.assignments.push({
+        ...omit(info, ['name', 'feedback', 'assignment']),
+        url: info.assignment.url,
+      });
+
+      return {
+        ...acc,
+        [value.github.id]: value,
+      };
+    },
+    {} as Record<string, UserWIthCommonAssignments>,
+  );
+
+  fs.writeFileSync(
+    path.join(dataDir, 'app-data.json'),
+    JSON.stringify(
+      {
+        users: userWithCommonAssignments,
+        feedbacks,
+        assignmentDetails,
+      },
+      null,
+      2,
+    ),
+    'utf-8',
+  );
+};
+
 const main = async () => {
   const app = await createApp();
   await generatePulls(app);
   generateUsers(app);
   await generateUserAssignmentInfos(app);
+  generateAppData();
 };
 
 main();

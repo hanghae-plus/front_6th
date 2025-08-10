@@ -14,7 +14,7 @@ export type AssignmentUsersTotalStatusResponseType = typeof ASSIGNMENT_USERS_TOT
 
 export interface AssignmentResult {
   passed: boolean;
-  theBest: boolean;
+  theBest?: boolean;
   name: string;
   feedback: string;
   assignment: {
@@ -22,3 +22,19 @@ export interface AssignmentResult {
     url: string;
   };
 }
+
+export interface UserWIthCommonAssignments {
+  name: string;
+  github: GithubUser;
+  assignments: CommonAssignment[];
+}
+
+export interface CommonAssignment extends Pick<AssignmentResult, "passed" | "theBest"> {
+  url: string;
+}
+
+export type AssignmentDetail = Pick<GithubPullRequest, "id" | "user" | "title" | "body"> & {
+  createdAt: Date;
+  updatedAt: Date;
+  url: string;
+};
