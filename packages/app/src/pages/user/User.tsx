@@ -126,8 +126,6 @@ const UserProvider = ({ children }: PropsWithChildren) => {
   const userId = useUserIdByParam();
   const user = useUserWithAssignments(userId);
 
-  console.log(user);
-
   return (
     <PageProvider title={`${user.github.id} 님의 상세페이지`} data={user}>
       {children}

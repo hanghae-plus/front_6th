@@ -14,7 +14,7 @@ const getUrls = async () => {
     const pullIds = new Set(user.assignments.map((v) => appData.assignmentDetails[v.url].id));
     return {
       ...acc,
-      [userId]: pullIds,
+      [userId]: [...pullIds],
     };
   }, {});
 
