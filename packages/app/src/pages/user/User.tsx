@@ -1,13 +1,13 @@
-import type { GithubUser } from "@hanghae-plus/domain";
+import type { GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
 import { type PropsWithChildren, useMemo } from "react";
 import { Link } from "react-router";
-import { Calendar, Clock, Github } from "lucide-react";
-import { type Assignment, useAssignmentsByUser, useUser, useUserIdByParam } from "@/features";
+import { Calendar, Clock, Github, StarIcon } from "lucide-react";
+import { useUserIdByParam, useUserWithAssignments } from "@/features";
 import { Badge, Card } from "@/components";
 import { formatDate } from "@/lib";
-import { PageProvider, usePageData } from "@/providers";
+import { type Assignment, PageProvider, usePageData } from "@/providers";
 
-const UserProfile = ({ id, image, link }: GithubUser) => {
+const UserProfile = ({ id, name, image, link }: GithubUser & { name: string }) => {
   return (
     <div className="sticky top-6">
       <a href={link} target="_blank">
@@ -23,6 +23,7 @@ const UserProfile = ({ id, image, link }: GithubUser) => {
             {/* 사용자 정보 */}
             <div className="w-full">
               <h3 className="text-2xl font-bold text-white mb-2">{id}</h3>
+              <p>{name}</p>
             </div>
           </div>
         </Card>
@@ -31,7 +32,7 @@ const UserProfile = ({ id, image, link }: GithubUser) => {
   );
 };
 
-const AssignmentCard = ({ id, title, url, createdAt, isBest }: Assignment) => {
+const AssignmentCard = ({ id, title, url, createdAt, theBest }: Assignment) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer group bg-card border border-border">
       <Link to={`./assignment/${id}/`} className="block">
@@ -39,12 +40,18 @@ const AssignmentCard = ({ id, title, url, createdAt, isBest }: Assignment) => {
           <div className="flex flex-col space-y-3">
             {/* 과제 제목 */}
             <h3 className="text-lg font-semibold text-white group-hover:text-orange-300 transition-colors leading-tight">
-              {title} {isBest && <span className="text-orange-400">👍</span>}
+              {title}
             </h3>
 
             {/* 메타 정보 */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4 text-xs text-slate-500">
+                {theBest && (
+                  <Badge variant="secondary" className="text-xs bg-green-800">
+                    <StarIcon />
+                    베스트
+                  </Badge>
+                )}
                 <Link
                   to={url}
                   className="text-xs text-slate-400 flex items-center space-x-1 hover:underline underline-offset-4"
@@ -117,13 +124,12 @@ const UserStats = ({ assignmentCount }: { assignmentCount: number }) => {
 
 const UserProvider = ({ children }: PropsWithChildren) => {
   const userId = useUserIdByParam();
-  const assignments = useAssignmentsByUser(userId);
-  const user = useUser(userId);
+  const user = useUserWithAssignments(userId);
 
-  const contextValue = useMemo(() => ({ ...user, assignments: assignments.data ?? [] }), [user, assignments]);
+  console.log(user);
 
   return (
-    <PageProvider title={`${user.id} 님의 상세페이지`} data={contextValue}>
+    <PageProvider title={`${user.github.id} 님의 상세페이지`} data={user}>
       {children}
     </PageProvider>
   );
@@ -131,20 +137,24 @@ const UserProvider = ({ children }: PropsWithChildren) => {
 
 export const User = Object.assign(
   () => {
-    const { assignments, ...user } = usePageData<GithubUser & { assignments: Assignment[] }>();
+    const { assignments, ...user } = usePageData<
+      Omit<UserWIthCommonAssignments, "assignments"> & { assignments: Record<string, Assignment> }
+    >();
+
+    const assignmentList = Object.values(assignments);
 
     return (
       <div className="px-4 py-6">
         <div className="lg:flex lg:gap-8">
           {/* 왼쪽 프로필 영역 */}
           <div className="lg:w-[300px]">
-            <UserProfile {...user} />
+            <UserProfile {...user.github} name={user.name} />
           </div>
 
           {/* 오른쪽 과제 목록 영역 */}
           <div className="lg:flex-1">
-            <UserStats assignmentCount={assignments.length} />
-            <AssignmentsList items={assignments} />
+            <UserStats assignmentCount={assignmentList.length} />
+            <AssignmentsList items={assignmentList} />
           </div>
         </div>
       </div>

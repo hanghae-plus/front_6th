@@ -1,12 +1,12 @@
-import type { GithubUser } from "@hanghae-plus/domain";
+import type { GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
 import { BookOpen, Github, Users } from "lucide-react";
-import { type Assignment, useAllAssignments, useUsers } from "@/features";
+import { useUsers } from "@/features";
 import { Link } from "react-router";
 import { Badge, Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
 
-const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: number }) => {
+const UserCard = ({ id, name, link, image, assignments }: GithubUser & { assignments: number; name: string }) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
       <Link to={`/@${id}/`} className="block">
@@ -22,7 +22,7 @@ const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: 
 
             <div className="w-full">
               <h3 className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors break-words leading-tight">
-                {id}
+                {name}({id})
               </h3>
               <p>
                 <span className="text-xs text-slate-400">과제 제출: {assignments}개</span>
@@ -46,20 +46,11 @@ const UserCard = ({ id, link, image, assignments }: GithubUser & { assignments: 
   );
 };
 
-const UsersGrid = ({ users, assignments }: { users: GithubUser[]; assignments: Assignment[] }) => {
-  const usersWithAssignments = useMemo(
-    () =>
-      users.map((user) => {
-        const userAssignments = assignments.filter((assignment) => assignment.user.login === user.id);
-        return { ...user, assignments: userAssignments };
-      }),
-    [assignments, users],
-  );
-
+const UsersGrid = ({ items }: { items: UserWIthCommonAssignments[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-      {usersWithAssignments.map(({ assignments, ...user }) => (
-        <UserCard key={user.id} {...user} assignments={assignments.length} />
+      {items.map(({ assignments, ...user }) => (
+        <UserCard key={user.github.id} {...user.github} name={user.name} assignments={assignments.length} />
       ))}
     </div>
   );
@@ -67,9 +58,8 @@ const UsersGrid = ({ users, assignments }: { users: GithubUser[]; assignments: A
 
 const HomeProvider = ({ children }: PropsWithChildren) => {
   const users = useUsers();
-  const assignments = useAllAssignments();
 
-  const contextValue = useMemo(() => ({ users: users.items, assignments: assignments.data }), [users, assignments]);
+  const contextValue = useMemo(() => ({ users }), [users]);
 
   return (
     <PageProvider title="수강생 목록" data={contextValue}>
@@ -79,7 +69,8 @@ const HomeProvider = ({ children }: PropsWithChildren) => {
 };
 
 const HomePage = () => {
-  const { users, assignments } = usePageData<{ users: GithubUser[]; assignments: Assignment[] }>();
+  const { users } = usePageData<{ users: Record<string, UserWIthCommonAssignments> }>();
+  const items = Object.values(users);
 
   return (
     <div className="px-4 py-6">
@@ -88,7 +79,7 @@ const HomePage = () => {
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-white">수강생 명단</h2>
           <Badge variant="secondary" className="text-sm bg-slate-700">
-            총 {users.length}명
+            총 {items.length}명
           </Badge>
         </div>
 
@@ -100,7 +91,7 @@ const HomePage = () => {
                 <Users className="w-5 h-5 text-orange-400" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-white">{users.length}</div>
+                <div className="text-2xl font-bold text-white">{items.length}</div>
                 <div className="text-sm text-slate-400">총 수강생</div>
               </div>
             </div>
@@ -122,7 +113,7 @@ const HomePage = () => {
 
       {/* 수강생 그리드 */}
       <Suspense>
-        <UsersGrid users={users} assignments={assignments} />
+        <UsersGrid items={items} />
       </Suspense>
     </div>
   );

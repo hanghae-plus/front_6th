@@ -1,3 +1,3 @@
 export * from "./useAllAssignments";
-export * from "./useAssignmentsByUser";
+export * from "./useUserWithAssignments";
 export * from "./useAssignmentById";

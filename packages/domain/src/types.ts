@@ -33,8 +33,15 @@ export interface CommonAssignment extends Pick<AssignmentResult, "passed" | "the
   url: string;
 }
 
-export type AssignmentDetail = Pick<GithubPullRequest, "id" | "user" | "title" | "body"> & {
+export type AssignmentDetail = Pick<GithubPullRequest, "id" | "title" | "body"> & {
+  user: string;
+  url: string;
   createdAt: Date;
   updatedAt: Date;
-  url: string;
 };
+
+export interface AppData {
+  users: Record<string, UserWIthCommonAssignments>;
+  assignmentDetails: Record<string, AssignmentDetail>;
+  feedbacks: Record<string, string>;
+}

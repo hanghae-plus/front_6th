@@ -1,15 +1,18 @@
-import { createContext, type PropsWithChildren, useContext } from "react";
-import type { GithubUser } from "@hanghae-plus/domain";
-import type { Assignment } from "@/features";
+import { createContext, type PropsWithChildren, useContext, useMemo } from "react";
+import type { AppData, AssignmentDetail, CommonAssignment } from "@hanghae-plus/domain";
+import appData from "../../../../docs/data/app-data.json";
 
-export type UsersWithAssignments = Record<string, GithubUser & { assignments: Assignment[] }>;
-
-const AppDataContext = createContext<UsersWithAssignments>({});
-
-export function useAppDataContext() {
-  return useContext(AppDataContext);
+interface ContextValue {
+  data: AppData;
 }
 
-export function AppDataProvider({ children, data }: PropsWithChildren<{ data: UsersWithAssignments }>) {
-  return <AppDataContext value={data}>{children}</AppDataContext>;
+export type Assignment = AssignmentDetail & Omit<CommonAssignment, "id">;
+
+const AppDataContext = createContext<ContextValue>({ data: appData as AppData });
+
+export const useAppDataContext = () => useContext(AppDataContext);
+
+export function AppDataProvider({ children }: PropsWithChildren) {
+  const contextValue = useMemo(() => ({ data: appData as AppData }), []);
+  return <AppDataContext value={contextValue}>{children}</AppDataContext>;
 }

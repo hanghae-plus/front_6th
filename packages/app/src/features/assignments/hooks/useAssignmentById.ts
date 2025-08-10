@@ -1,15 +1,8 @@
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { fetchAssignmentsByUser } from "../service";
-import { useAppDataContext } from "@/providers";
+import { type Assignment } from "@/providers";
+import { useUserWithAssignments } from "@/features";
 
 export const useAssignmentById = (id: string, assignmentId: string) => {
-  const appData = useAppDataContext();
-  return useSuspenseQuery({
-    queryKey: ["assignment-detail", id],
-    queryFn: async () => {
-      const userWithAssignments = await fetchAssignmentsByUser(id);
-      return userWithAssignments.find((v) => v.id === Number(assignmentId));
-    },
-    initialData: appData[id]?.assignments?.find((v) => v.id === Number(assignmentId)),
-  });
+  const { assignments } = useUserWithAssignments(id);
+  const assignment: Assignment = assignments[assignmentId];
+  return assignment;
 };

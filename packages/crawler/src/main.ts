@@ -126,7 +126,7 @@ const generateAppData = () => {
       ...acc,
       [pull.html_url]: {
         id: pull.id,
-        user: pull.user.id,
+        user: pull.user.login,
         title: pull.title,
         body: pull.body,
         createdAt: new Date(pull.created_at),

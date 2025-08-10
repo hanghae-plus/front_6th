@@ -1,19 +1,20 @@
-import { PageProvider, usePageData } from "@/providers";
+import { type Assignment, PageProvider, usePageData } from "@/providers";
 import { type PropsWithChildren, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router";
-import { type Assignment, useAssignmentById, useUserIdByParam } from "@/features";
+import { useAssignmentById, useUserIdByParam } from "@/features";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { IconGithub } from "@/assets";
 import { Card } from "@/components";
+import { useFeedback } from "@/features/feedbacks";
 
 const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { assignmentId = "" } = useParams<{ assignmentId: string }>();
   const userId = useUserIdByParam();
-  const { data: assignment } = useAssignmentById(userId, assignmentId);
+  const assignment = useAssignmentById(userId, assignmentId);
 
   const title = assignment ? (
     <>
-      <Link to={`/@${assignment.user.login}/`}>{assignment.user.login} 님의 상세페이지</Link> ＞ {assignment.title}
+      <Link to={`/@${assignment.user}/`}>{assignment.user} 님의 상세페이지</Link> ＞ {assignment.title}
     </>
   ) : (
     "과제 상세페이지"
@@ -29,6 +30,7 @@ const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
 export const AssignmentDetail = Object.assign(
   () => {
     const data = usePageData<Assignment>();
+    const feedback = useFeedback(data.url);
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -60,10 +62,9 @@ export const AssignmentDetail = Object.assign(
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-2">
                     <h3 className="text-lg font-semibold text-white truncate">{data.title}</h3>
-                    <span className="px-2 py-1 text-xs bg-green-600 text-white rounded-full flex-shrink-0">Open</span>
                   </div>
                   <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <span>by {data.user.login}</span>
+                    <span>by {data.user}</span>
                     <span>{new Date(data.createdAt).toLocaleDateString("ko-KR")}</span>
                   </div>
                 </div>
@@ -75,6 +76,21 @@ export const AssignmentDetail = Object.assign(
         <div className="overflow-auto">
           <MarkdownPreview
             source={data.body}
+            className="p-6 max-w-full"
+            wrapperElement={{
+              "data-color-mode": "dark",
+            }}
+            style={{
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
+            }}
+          />
+        </div>
+
+        <div className="overflow-auto mt-9">
+          <h3 className="text-2xl mb-3">과제 피드백</h3>
+          <MarkdownPreview
+            source={feedback}
             className="p-6 max-w-full"
             wrapperElement={{
               "data-color-mode": "dark",

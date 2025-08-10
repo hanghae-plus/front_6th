@@ -4,12 +4,11 @@ import { BrowserRouter, Route, Routes, StaticRouter } from "react-router";
 import * as Pages from "@/pages";
 import { BASE_URL } from "@/constants";
 import { withBaseLayout } from "@/components";
-import { AppDataProvider, type UsersWithAssignments } from "@/providers";
+import { AppDataProvider } from "@/providers";
 
 interface Props {
   url?: string;
   ssr?: boolean;
-  initData?: UsersWithAssignments;
 }
 
 const Home = withBaseLayout(Pages.Home);
@@ -18,10 +17,10 @@ const Assignments = withBaseLayout(() => <div className="p-6">전체 과제 목�
 const NotFound = withBaseLayout(() => <div className="p-6">404 - 페이지를 찾을 수 없습니다</div>);
 const AssignmentDetail = withBaseLayout(Pages.AssignmentDetail);
 
-export const App = ({ url = "", ssr = false, initData = {} }: Props) => {
+export const App = ({ url = "", ssr = false }: Props) => {
   const Router = ssr ? StaticRouter : BrowserRouter;
   return (
-    <AppDataProvider data={initData}>
+    <AppDataProvider>
       <QueryClientProvider client={queryClient}>
         <Router location={url} basename={BASE_URL}>
           <Routes>
