@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-D1PDUPCa.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-1m8PjJmh.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@tomatopickles404/" data-discover="true">tomatopickles404<!-- --> 님의 상세페이지</a> ＞ <!-- -->[9팀 권지호]Chapter 2-2. 디자인패턴과 함수형프로그래밍 🦍</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter2-2/pull/10" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[9팀 권지호]Chapter 2-2. 디자인패턴과 함수형프로그래밍 🦍</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->tomatopickles404</span><span>2025. 8. 3.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제의-핵심취지"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제의-핵심취지"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제의 핵심취지</h2>
+<ul>
+<li>React의 hook 이해하기</li>
+<li>함수형 프로그래밍에 대한 이해</li>
+<li>액션과 순수함수의 분리</li>
+</ul>
+<h2 id="과제에서-꼭-알아가길-바라는-점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제에서-꼭-알아가길-바라는-점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제에서 꼭 알아가길 바라는 점</h2>
+<ul>
+<li>엔티티를 다루는 상태와 그렇지 않은 상태 - cart, isCartFull vs isShowPopup</li>
+<li>엔티티를 다루는 컴포넌트와 훅 - CartItemView, useCart(), useProduct()</li>
+<li>엔티티를 다루지 않는 컴포넌트와 훅 - Button, useRoute, useEvent 등</li>
+<li>엔티티를 다루는 함수와 그렇지 않은 함수 - calculateCartTotal(cart) vs capaitalize(str)</li>
+</ul>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<ul class="contains-task-list">
+<li>Component에서 비즈니스 로직을 분리하기</li>
+<li>비즈니스 로직에서 특정 엔티티만 다루는 계산을 분리하기</li>
+<li>뷰데이터와 엔티티데이터의 분리에 대한 이해</li>
+<li>entities -&gt; features -&gt; UI 계층에 대한 이해</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 함수는 분리되어 있나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 Component와 UI를 다루는 Component는 분리되어 있나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 데이터 흐름에 맞는 계층구조를 이루고 의존성이 맞게 작성이 되었나요?</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<ul class="contains-task-list">
+<li>재사용 가능한 Custom UI 컴포넌트를 만들어 보기</li>
+<li>재사용 가능한 Custom 라이브러리 Hook을 만들어 보기</li>
+<li>재사용 가능한 Custom 유틸 함수를 만들어 보기</li>
+<li>그래서 엔티티와는 어떤 다른 계층적 특징을 가지는지 이해하기</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> UI 컴포넌트 계층과 엔티티 컴포넌트의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 엔티티 Hook과 라이브러리 훅과의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 엔티티 순수함수와 유틸리티 함수의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</li>
+</ul>
+<h3 id="배포-주소"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포-주소"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포 주소</h3>
+<p><a href="https://tomatopickles404.github.io/front_6th_chapter2-2/index.advanced.html">https://tomatopickles404.github.io/front_6th_chapter2-2/index.advanced.html</a></p>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<p>이번 과제의 리팩토링은 지난주보다 볼륨이 크지 않아서 수월할 것이라고 생각했습니다.
+그리고 지난주차의 발제를 들으면서 제가 첫 방향을 잘 못 잡고 풀어 나갔다는 것을 깨닫게 되었습니다.
+이 연습을 하는 본질적인 이유는 <strong>&quot;요구사항을 어떻게 하면 유지보수하기 쉽게 생산할까&quot;</strong> 라고 생각하는데,
+저는 <strong>&quot;어떻게 하면 goal을 전략적으로 수행할까&quot;</strong> 에만 너무 포커싱을 둔 채로 과제에 임했다는 것을 회고했습니다.
+QnA에서 테오의 조언을 듣고 나는 어떤 포지션에서 이 과제를 대해야 할까를 생각 했을 때,
+AI를 잘 활용하는 방법을 공부하고 적용해보는 단계라기 보다는 직접 리팩토링 해보면서 소화 해보는 시간이 더 필요하다고 생각했습니다.
+그래서 이번 과제는 ai 디톡스로 진행했습니다.</p>
+<h4 id="1차-시도-컴포넌트-먼저-분리하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1차-시도-컴포넌트-먼저-분리하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1차 시도: 컴포넌트 먼저 분리하기</h4>
+<p>처음에는 가장 자신 있는 컴포넌트 분리부터 시작했습니다.
+그러나 props를 먼저 만들어버리는 구조가 되어버려 코드베이스 파악이 더 어려워졌습니다.
+그 기반에서 순수함수를 분리하려고 하니까 난이도가 더 체감되었습니다.</p>
+<h4 id="2차-시도-순수함수-먼저-분리하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2차-시도-순수함수-먼저-분리하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2차 시도: 순수함수 먼저 분리하기</h4>
+<p>App 컴포넌트에서 페이지와 한 두개 정도의 자식 컴포넌트를 분리한 정도 진행했을 때도 이미 props가 너무 많이 생성되었습니다.
+이 기반으로 순수함수 분리를 시도했으나, 함수를 분리할수록 리팩토링할 코드만 생성하고 있다는 느낌을 받았습니다.
+고민 끝에 만들었던 것들을 리셋하고 <strong>리드미 순서대로 진행</strong>하기로 결정했습니다.
+리드미를 다시 읽어보니 그 순서가 가장 점진적으로 개선하는 방법이라고 생각되었습니다.
+순수함수를 먼저 만들고 분리를 해놓아야 App컴포넌트에서 자유로워지는 코드들이 생기고, 코드가 분리가 된 상태에서 컴포넌트에 스페이싱을 두면 파악이 더 수월할거라고 예측했습니다.</p>
+<p>또한, 컴포넌트 분리보다 순수함수 분리하는 감각과 훅을 추상화 하는 것이 더 중요한 감각이라고 생각해 그 부분을 우선순위를 두는게 적절하다고 판단했습니다. 컴포넌트 추상화는 훅만 잘 분리되어 있다면 어렵지 않을 것이라고 생각했고, 그 정도는 AI에게 위임해도 괜찮은 작업이라고 생각했습니다.</p>
+<h4 id="커스텀-훅-만들기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#커스텀-훅-만들기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>커스텀 훅 만들기</h4>
+<p>예상대로 순수함수부터 분리한 뒤에는 상태와 관련된 로직들이 눈에 잘 보이기 시작했습니다.</p>
+<h4 id="엔티티별-훅-분리-전략"><a class="anchor" aria-hidden="true" tabindex="-1" href="#엔티티별-훅-분리-전략"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>엔티티별 훅 분리 전략</h4>
+<p>분리 우선순위 결정</p>
+<ol>
+<li><strong>useCart</strong>: 가장 복잡하고 다른 엔티티와 상호작용이 많음</li>
+<li><strong>useCoupon</strong>: 독립적이면서 상대적으로 단순함 (작은 단위부터)</li>
+<li><strong>useProduct</strong>: 상품 관리 로직</li>
+</ol>
+<h4 id="점진적-분리-과정"><a class="anchor" aria-hidden="true" tabindex="-1" href="#점진적-분리-과정"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>점진적 분리 과정</h4>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 1단계: useCoupon 분리 (가장 작은 단위)</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">useCoupon</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>coupons<span class="token punctuation">,</span> setCoupons<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useLocalStorage</span><span class="token punctuation">(</span><span class="token string">&#x27;coupons&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>selectedCoupon<span class="token punctuation">,</span> setSelectedCoupon<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token comment">// ... 쿠폰 관련 로직만</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 2단계: useCartItems 분리</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">useCartItems</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>cart<span class="token punctuation">,</span> setCart<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useLocalStorage</span><span class="token punctuation">(</span><span class="token string">&#x27;cart&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token comment">// ... 장바구니 아이템 관리만</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 3단계: useCart 합성 (Facade 패턴)</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">useCart</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> couponHook <span class="token operator">=</span> <span class="token function">useCoupon</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> cartItemsHook <span class="token operator">=</span> <span class="token function">useCartItems</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token comment">// ... 조합하여 제공</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 1단계: useCoupon 분리 (가장 작은 단위)
+const useCoupon = () =&gt; {
+  const [coupons, setCoupons] = useLocalStorage(&#x27;coupons&#x27;, []);
+  const [selectedCoupon, setSelectedCoupon] = useState(null);
+  // ... 쿠폰 관련 로직만
+};
+
+// 2단계: useCartItems 분리
+const useCartItems = () =&gt; {
+  const [cart, setCart] = useLocalStorage(&#x27;cart&#x27;, []);
+  // ... 장바구니 아이템 관리만
+};
+
+// 3단계: useCart 합성 (Facade 패턴)
+const useCart = () =&gt; {
+  const couponHook = useCoupon();
+  const cartItemsHook = useCartItems();
+  // ... 조합하여 제공
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="의존성-문제와-해결"><a class="anchor" aria-hidden="true" tabindex="-1" href="#의존성-문제와-해결"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>의존성 문제와 해결</h4>
+<p><strong>[문제 1]</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">//  잘못된 의존성</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useProduct</span><span class="token punctuation">(</span>addNotification<span class="token punctuation">,</span> cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">getRemainingStock</span> <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token operator">:</span> Product<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> product<span class="token punctuation">.</span>stock <span class="token operator">-</span> <span class="token punctuation">(</span>cart<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>item <span class="token operator">=&gt;</span> <span class="token operator">...</span><span class="token punctuation">)</span><span class="token operator">?.</span>quantity <span class="token operator">??</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="//  잘못된 의존성
+export function useProduct(addNotification, cart: CartItem[]) {
+  const getRemainingStock = (product: Product) =&gt; {
+    return product.stock - (cart.find(item =&gt; ...)?.quantity ?? 0);
+  };
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>useProduct의 훅 내부 함수중 cart 의존성이 존재했습니다.</li>
+</ul>
+<p><strong>[고민 과정]</strong></p>
+<ul>
+<li>useProduct가 cart에 의존하는 것이 옳은가?</li>
+<li>Product 도메인이 Cart 도메인을 알아야 하는가?</li>
+<li>의존성 방향이 잘못되었나?</li>
+</ul>
+<p><strong>해결책: 의존성 역전</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">//  의존성 제거</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useProduct</span><span class="token punctuation">(</span>addNotification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// Product CRUD만 담당</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// App.tsx에서 cart 주입</span>
+</span><span class="code-line"><span class="token keyword">const</span> getRemainingStock <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token operator">:</span> Product<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> product<span class="token punctuation">.</span>stock <span class="token operator">-</span> <span class="token punctuation">(</span>cart<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>item <span class="token operator">=&gt;</span> <span class="token operator">...</span><span class="token punctuation">)</span><span class="token operator">?.</span>quantity <span class="token operator">??</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="//  의존성 제거
+export function useProduct(addNotification) {
+  // Product CRUD만 담당
+}
+
+// App.tsx에서 cart 주입
+const getRemainingStock = (product: Product): number =&gt; {
+  return product.stock - (cart.find(item =&gt; ...)?.quantity ?? 0);
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>[문제 2]</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">//  관심사 혼재</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">validateUpdateQuantity</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> product<span class="token punctuation">,</span> newQuantity<span class="token punctuation">,</span> addNotification <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>newQuantity <span class="token operator">&gt;</span> product<span class="token punctuation">.</span>stock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">addNotification</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">재고는 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span>stock<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">개까지만 있습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token string">&#x27;error&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// UI 로직</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="//  관심사 혼재
+const validateUpdateQuantity = ({ product, newQuantity, addNotification }) =&gt; {
+  if (newQuantity &gt; product.stock) {
+    addNotification(`재고는 ${product.stock}개까지만 있습니다.`, &#x27;error&#x27;); // UI 로직
+    return false;
+  }
+  return true;
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>훅 내부에 UI 로직이 존재했습니다.</li>
+</ul>
+<p><strong>[고민 과정]</strong></p>
+<ul>
+<li>비즈니스 로직과 UI 로직이 함께 있는 것이 맞는가?</li>
+<li>훅에서 notification을 직접 호출하는 것이 적절한가?</li>
+<li>관심사 분리가 제대로 되었는가?</li>
+</ul>
+<p><strong>해결책: 관심사 분리</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 비즈니스 로직만 반환</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">validateUpdateQuantity</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> product<span class="token punctuation">,</span> newQuantity <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>newQuantity <span class="token operator">&gt;</span> product<span class="token punctuation">.</span>stock<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">재고는 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span>stock<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">개까지만 있습니다.</span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// App.tsx에서 UI 로직 처리</span>
+</span><span class="code-line"><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">validateUpdateQuantity</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>result<span class="token punctuation">.</span>isValid <span class="token operator">&amp;&amp;</span> result<span class="token punctuation">.</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">addNotification</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;error&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// 비즈니스 로직만 반환
+const validateUpdateQuantity = ({ product, newQuantity }) =&gt; {
+  if (newQuantity &gt; product.stock) {
+    return { isValid: false, message: `재고는 ${product.stock}개까지만 있습니다.` };
+  }
+  return { isValid: true };
+};
+
+// App.tsx에서 UI 로직 처리
+const result = validateUpdateQuantity(params);
+if (!result.isValid &amp;&amp; result.message) {
+  addNotification(result.message, &#x27;error&#x27;);
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="파생-상태-관리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#파생-상태-관리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>파생 상태 관리</h4>
+<p><strong>[문제 3]</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 파생 상태를 별도 상태로 관리</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">[</span>totalItemCount<span class="token punctuation">,</span> setTotalItemCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> count <span class="token operator">=</span> cart<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>sum<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> sum <span class="token operator">+</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">setTotalItemCount</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>cart<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 파생 상태를 별도 상태로 관리
+const [totalItemCount, setTotalItemCount] = useState(0);
+
+useEffect(() =&gt; {
+  const count = cart.reduce((sum, item) =&gt; sum + item.quantity, 0);
+  setTotalItemCount(count);
+}, [cart]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>기본 코드 베이스에서 불필요한 상태 관리를 하고 있었습니다.</li>
+</ul>
+<p><strong>[고민 과정]</strong></p>
+<ul>
+<li>cart에서 바로 계산할 수 있는 값을 왜 별도 상태로 관리하는가?</li>
+<li>useEffect를 통한 동기화가 정말 필요한가?</li>
+<li>성능과 메모리 낭비는 없는가?</li>
+</ul>
+<p><strong>해결책: 상수 값으로 변경</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">totalItemCount</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> cart<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>sum<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> sum <span class="token operator">+</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="const totalItemCount = () =&gt; {
+  return cart.reduce((sum, item) =&gt; sum + item.quantity, 0);
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<br/>
+<h2 id="최종-아키텍처basic"><a class="anchor" aria-hidden="true" tabindex="-1" href="#최종-아키텍처basic"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>최종 아키텍처(basic)</h2>
+<pre><code class="code-highlight"><span class="code-line">src/
+</span><span class="code-line">├── basic/
+</span><span class="code-line">│   ├── components/
+</span><span class="code-line">│   │   ├── common/
+</span><span class="code-line">│   │   ├── cart/
+</span><span class="code-line">│   │   ├── coupon/
+</span><span class="code-line">│   │   └── product/
+</span><span class="code-line">│   ├── hooks/
+</span><span class="code-line">│   │   ├── admin/
+</span><span class="code-line">│   │   ├── cart/
+</span><span class="code-line">│   │   ├── coupon/
+</span><span class="code-line">│   │   ├── notification/
+</span><span class="code-line">│   │   ├── product/
+</span><span class="code-line">│   │   └── search/
+</span><span class="code-line">│   ├── pages/
+</span><span class="code-line">│   └── utils/
+</span><span class="code-line">├── shared/
+</span><span class="code-line">│   ├── components/
+</span><span class="code-line">│   ├── hooks/
+</span><span class="code-line">│   └── utils/
+</span><span class="code-line">└── types.ts
+</span></code><div class="copied" data-code="src/
+├── basic/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── cart/
+│   │   ├── coupon/
+│   │   └── product/
+│   ├── hooks/
+│   │   ├── admin/
+│   │   ├── cart/
+│   │   ├── coupon/
+│   │   ├── notification/
+│   │   ├── product/
+│   │   └── search/
+│   ├── pages/
+│   └── utils/
+├── shared/
+│   ├── components/
+│   ├── hooks/
+│   └── utils/
+└── types.ts
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>규모가 크지 않아 역할 기반 레이어(components/hooks/pages/utils)를 유지하되, 그 안에서만 도메인(cart/coupon/product/notification)으로 나눴습니다. 즉, 과도한 구조 전환 없이 응집도만 높이는 방향을 택했습니다.</p>
+<p>이로써 얻은 이점은 다음과 같습니다.</p>
+<ul>
+<li>예측 가능한 경로와 낮은 진입 장벽(역할 기반 레이어 유지)</li>
+<li>변경 범위의 로컬화 및 응집도 상승(도메인 하위 폴더)</li>
+<li>공용 레이어(shared) 재사용 극대화로 중복 감소</li>
+<li>테스트 용이성(도메인 훅/유틸 단위)</li>
+<li>점진적 확장 경로 확보(규모 확장 시 도메인 루트로 승격 용이)</li>
+</ul>
+<br/>
+<h3 id="과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 하면서 내가 제일 신경 쓴 부분은 무엇인가요?</h3>
+<h4 id="1-단일책임과-응집도-고려"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-단일책임과-응집도-고려"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 단일책임과 응집도 고려</h4>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> productsAtom <span class="token operator">=</span> <span class="token generic-function"><span class="token function">atomWithStorage</span><span class="token generic class-name"><span class="token operator">&lt;</span>ProductWithUI<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token string">&#x27;products&#x27;</span><span class="token punctuation">,</span> initialProducts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useProduct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>products<span class="token punctuation">,</span> setProducts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useAtom</span><span class="token punctuation">(</span>productsAtom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> addProduct <span class="token operator">=</span> <span class="token punctuation">(</span>newProduct<span class="token operator">:</span> <span class="token maybe-class-name">Omit</span><span class="token operator">&lt;</span><span class="token maybe-class-name">ProductWithUI</span><span class="token punctuation">,</span> <span class="token string">&#x27;id&#x27;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> product<span class="token operator">:</span> <span class="token maybe-class-name">ProductWithUI</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token spread operator">...</span>newProduct<span class="token punctuation">,</span>
+</span><span class="code-line">      id<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">p</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>prev<span class="token punctuation">,</span> product<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">updateProduct</span> <span class="token operator">=</span> <span class="token punctuation">(</span>productId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> updates<span class="token operator">:</span> <span class="token maybe-class-name">Partial</span><span class="token operator">&lt;</span><span class="token maybe-class-name">ProductWithUI</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">      prev<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span>product<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> productId <span class="token operator">?</span> <span class="token punctuation">{</span> <span class="token spread operator">...</span>product<span class="token punctuation">,</span> <span class="token spread operator">...</span>updates <span class="token punctuation">}</span> <span class="token operator">:</span> product<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">deleteProduct</span> <span class="token operator">=</span> <span class="token punctuation">(</span>productId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> prev<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> p<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">!==</span> productId<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    products<span class="token punctuation">,</span>
+</span><span class="code-line">    addProduct<span class="token punctuation">,</span>
+</span><span class="code-line">    updateProduct<span class="token punctuation">,</span>
+</span><span class="code-line">    deleteProduct<span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="
+const productsAtom = atomWithStorage&lt;ProductWithUI[]&gt;(&#x27;products&#x27;, initialProducts);
+
+export function useProduct() {
+  const [products, setProducts] = useAtom(productsAtom);
+
+  const addProduct = (newProduct: Omit&lt;ProductWithUI, &#x27;id&#x27;&gt;) =&gt; {
+    const product: ProductWithUI = {
+      ...newProduct,
+      id: `p${Date.now()}`,
+    };
+    setProducts((prev) =&gt; [...prev, product]);
+  };
+
+  const updateProduct = (productId: string, updates: Partial&lt;ProductWithUI&gt;) =&gt; {
+    setProducts((prev) =&gt;
+      prev.map((product) =&gt; (product.id === productId ? { ...product, ...updates } : product))
+    );
+  };
+
+  const deleteProduct = (productId: string) =&gt; {
+    setProducts((prev) =&gt; prev.filter((p) =&gt; p.id !== productId));
+  };
+
+  return {
+    products,
+    addProduct,
+    updateProduct,
+    deleteProduct,
+  };
+}
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>[의도]</strong></p>
+<ul>
+<li>중앙 스토어를 두지 않고, 각 도메인 훅 모듈에서 Jotai atom을 선언해 “모듈 단위 싱글톤”으로 관리했습니다.</li>
+<li>훅은 그 상태와 관련 비즈니스 로직을 함께 캡슐화해 공개 인터페이스만 노출합니다.</li>
+</ul>
+<p><strong>[이점]</strong></p>
+<ul>
+<li>응집도·SRP: 상태와 로직이 같은 모듈에 있어 변경 이유가 명확합니다.</li>
+<li>예측가능성: 외부는 훅의 메서드만 사용하므로 사용면이 단순합니다.</li>
+<li>성능: 구독 범위가 도메인 단위로 좁아져 불필요한 리렌더가 줄어듭니다.</li>
+<li>테스트 용이: 모듈 스코프의 atom 초기화/리셋이 쉬워 단위 테스트가 간단합니다.</li>
+<li>확장성: 상위 훅에서 도메인 훅들을 합성해도 전역 결합 없이 확장 가능합니다.</li>
+<li>지속성 일관: atomWithStorage로 필요한 도메인만 선택적으로 영속화합니다.</li>
+</ul>
+<p><strong>[트레이드오프]</strong></p>
+<ul>
+<li>교차 도메인 의존은 훅의 공개 인터페이스로만 접근(직접 atom 접근 금지).</li>
+<li>원 사이클 방지(훅 간 순환 의존 금지), 공통 규칙은 shared 유틸/타입으로 승격.</li>
+<li>전역으로 반드시 공유해야 하는 크로스컷팅(예: auth, theme)은 별도 전역 훅로 관리.</li>
+</ul>
+<h4 id="2-훅-ui-의존-제거-리팩토링"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-훅-ui-의존-제거-리팩토링"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 훅 UI 의존 제거 리팩토링</h4>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> React<span class="token punctuation">.</span>FormEvent<span class="token punctuation">,</span> notify<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span>msg<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">handleCouponSubmit</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">resetCouponForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    notify<span class="token operator">?.</span><span class="token punctuation">(</span><span class="token string">&#x27;쿠폰이 등록되었습니다.&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 하드코딩 메시지</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const handleFormSubmit = (e: React.FormEvent, notify?: (msg: string) =&gt; void) =&gt; {
+  const result = handleCouponSubmit(e);
+  if (result.success) {
+    resetCouponForm();
+    notify?.(&#x27;쿠폰이 등록되었습니다.&#x27;); // 하드코딩 메시지
+  }
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>훅 내부에서 UI 문구를 하드코딩으로 주입하고 있었습니다.</li>
+</ul>
+<p><strong>[개선]</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> React<span class="token punctuation">.</span>FormEvent<span class="token punctuation">,</span> onSuccess<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">handleCouponSubmit</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">resetCouponForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    onSuccess<span class="token operator">?.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const handleFormSubmit = (e: React.FormEvent, onSuccess?: () =&gt; void) =&gt; {
+  const result = handleCouponSubmit(e);
+  if (result.success) {
+    resetCouponForm();
+    onSuccess?.();
+  }
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>성공 시점만 외부 콜백에 위임하여 문구를 외부에서 주입하도록 변경했습니다.</li>
+<li>여전히 함수에 여러 책임이 존재하는 구조였습니다.</li>
+</ul>
+<p><strong>[최종 구조]</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleFormSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span>FormEvent<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">handleCouponSubmit</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>success<span class="token punctuation">)</span> <span class="token function">resetCouponForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// Usage: 사용부에서 메시지/알림 처리</span>
+</span><span class="code-line">  onSubmit<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token operator">:</span> FormEvent<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">const</span> <span class="token punctuation">{</span> success <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">handleFormSubmit</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">            <span class="token function">addNotification</span><span class="token punctuation">(</span><span class="token string">&#x27;쿠폰이 생성되었습니다.&#x27;</span><span class="token punctuation">,</span> <span class="token string">&#x27;success&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="const handleFormSubmit = (e:FormEvent) =&gt; {
+  const result = handleCouponSubmit(e);
+  if (result.success) resetCouponForm();
+  return result;
+};
+
+// Usage: 사용부에서 메시지/알림 처리
+  onSubmit={(e: FormEvent) =&gt; {
+          const { success } = handleFormSubmit(e);
+          if (success) {
+            addNotification(&#x27;쿠폰이 생성되었습니다.&#x27;, &#x27;success&#x27;);
+          }
+        }}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>단일책임/SRP: 훅은 상태/검증/결과만, UI는 사용부에서 담당</li>
+<li>예측가능성: 훅 API가 결과 타입으로 수렴 → 호출부 분기 명확</li>
+<li>테스트 용이성: 알림/문구 없이 로직만 테스트 가능</li>
+<li>확장성: 동일 결과 타입을 다양한 UI(토스트/모달/로그)로 재사용</li>
+</ul>
+<h4 id="3-util-함수-활용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-util-함수-활용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. util 함수 활용</h4>
+<p><strong>format</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">formatMinError</span> <span class="token operator">=</span> <span class="token punctuation">(</span>fieldLabel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> min<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">  <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fieldLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">은 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>min<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">보다 커야 합니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">formatMaxError</span> <span class="token operator">=</span> <span class="token punctuation">(</span>fieldLabel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> max<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">  <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fieldLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">은 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>max<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">를 초과할 수 없습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">formatAdded</span> <span class="token operator">=</span> <span class="token punctuation">(</span>entityLabel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">  <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>entityLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">이 추가되었습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">formatCrudError</span> <span class="token operator">=</span> <span class="token punctuation">(</span>entityLabel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> actionLabel<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">  <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>entityLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>actionLabel<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 중 오류가 발생했습니다.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용 예 (검증)</span>
+</span><span class="code-line"><span class="token keyword">const</span> validateProductForm <span class="token operator">=</span> <span class="token punctuation">(</span>field<span class="token operator">:</span> <span class="token keyword">keyof</span> ProductForm<span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> ValidationResult <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>field <span class="token operator">===</span> <span class="token string">&#x27;price&#x27;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> value <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token function">formatMinError</span><span class="token punctuation">(</span><span class="token string">&#x27;가격&#x27;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> <span class="token operator">:</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>field <span class="token operator">===</span> <span class="token string">&#x27;stock&#x27;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token function">formatMinError</span><span class="token punctuation">(</span><span class="token string">&#x27;재고&#x27;</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&gt;</span> <span class="token number">9999</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> message<span class="token operator">:</span> <span class="token function">formatMaxError</span><span class="token punctuation">(</span><span class="token string">&#x27;재고&#x27;</span><span class="token punctuation">,</span> <span class="token number">9999</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span> isValid<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="export const formatMinError = (fieldLabel: string, min: number) =&gt;
+  `${fieldLabel}은 ${min}보다 커야 합니다.`;
+
+export const formatMaxError = (fieldLabel: string, max: number) =&gt;
+  `${fieldLabel}은 ${max}를 초과할 수 없습니다.`;
+
+export const formatAdded = (entityLabel: string) =&gt;
+  `${entityLabel}이 추가되었습니다.`;
+
+export const formatCrudError = (entityLabel: string, actionLabel: string) =&gt;
+  `${entityLabel} ${actionLabel} 중 오류가 발생했습니다.`;
+
+// 사용 예 (검증)
+const validateProductForm = (field: keyof ProductForm, value: number): ValidationResult =&gt; {
+  if (field === &#x27;price&#x27;) {
+    return value &lt; 0 ? { isValid: false, message: formatMinError(&#x27;가격&#x27;, 0) } : { isValid: true };
+  }
+  if (field === &#x27;stock&#x27;) {
+    if (value &lt; 0) return { isValid: false, message: formatMinError(&#x27;재고&#x27;, 0) };
+    if (value &gt; 9999) return { isValid: false, message: formatMaxError(&#x27;재고&#x27;, 9999) };
+    return { isValid: true };
+  }
+  return { isValid: true };
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>format 유틸을 만들어서 메세지 레이어를 맞추고자 했습니다.</li>
+<li>모든 메세지를 커버하기에는 시간이 부족해 중복이 많은 메세지부터 일부 적용했습니다.</li>
+</ul>
+<br/>
+<p><strong>commaizedNumber</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> commaizedNumber <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token builtin">number</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token builtin">number</span><span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> commaizedNumberWithUnit <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token builtin">number</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> unit<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token builtin">number</span><span class="token punctuation">.</span><span class="token function">toLocaleString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>unit<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>span className<span class="token operator">=</span><span class="token string">&quot;font-bold text-lg text-gray-900&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">{</span><span class="token function">commaizedNumberWithUnit</span><span class="token punctuation">(</span>totalAfterDiscount<span class="token punctuation">,</span> <span class="token string">&#x27;원&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>button<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">{</span><span class="token function">commaizedNumberWithUnit</span><span class="token punctuation">(</span>totalAfterDiscount<span class="token punctuation">,</span> <span class="token string">&#x27;원&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">}</span> 결제하기
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="export const commaizedNumber = (number: number): string =&gt; {
+  return number.toLocaleString();
+};
+
+export const commaizedNumberWithUnit = (number: number, unit: string): string =&gt; {
+  return `${number.toLocaleString()}${unit}`;
+};
+
+// 사용
+&lt;span className=&quot;font-bold text-lg text-gray-900&quot;&gt;
+  {commaizedNumberWithUnit(totalAfterDiscount, &#x27;원&#x27;)}
+&lt;/span&gt;
+&lt;button&gt;
+  {commaizedNumberWithUnit(totalAfterDiscount, &#x27;원&#x27;)} 결제하기
+&lt;/button&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>toLocaleString 직접 사용 대신 commaizedNumberWithUnit으로 일관성과 확장성(통화/단위) 확보</li>
+</ul>
+<br/>
+<h3 id="과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 다시 해보면 더 잘 할 수 있었겠다 아쉬운 점이 있다면 무엇인가요?</h3>
+<h4 id="1-계산-로직-단순화-하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-계산-로직-단순화-하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 계산 로직 단순화 하기</h4>
+<p>아직 많은 함수들이 분리만 되어있는 상태입니다.
+액션과 계산 함수에 대한 연습이 덜 되어 그 부분이 아쉽습니다.</p>
+<p><strong>[현재]</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">calculateCartTotal</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> selectedCoupon<span class="token operator">:</span> Coupon <span class="token operator">|</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">let</span> totalBeforeDiscount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">let</span> totalAfterDiscount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  cart<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> itemPrice <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">.</span>price <span class="token operator">*</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">;</span>
+</span><span class="code-line">    totalBeforeDiscount <span class="token operator">+=</span> itemPrice<span class="token punctuation">;</span>
+</span><span class="code-line">    totalAfterDiscount <span class="token operator">+=</span> <span class="token function">getProductDiscountedPrice</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>selectedCoupon<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>selectedCoupon<span class="token punctuation">.</span>discountType <span class="token operator">===</span> <span class="token string">&#x27;amount&#x27;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      totalAfterDiscount <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> totalAfterDiscount <span class="token operator">-</span> selectedCoupon<span class="token punctuation">.</span>discountValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      totalAfterDiscount <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>
+</span><span class="code-line">        totalAfterDiscount <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> selectedCoupon<span class="token punctuation">.</span>discountValue <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span>
+</span><span class="code-line">      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    totalBeforeDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>totalBeforeDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    totalAfterDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>totalAfterDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const calculateCartTotal = (cart: CartItem[], selectedCoupon: Coupon | null) =&gt; {
+  let totalBeforeDiscount = 0;
+  let totalAfterDiscount = 0;
+
+  cart.forEach((item) =&gt; {
+    const itemPrice = item.product.price * item.quantity;
+    totalBeforeDiscount += itemPrice;
+    totalAfterDiscount += getProductDiscountedPrice(item, cart);
+  });
+
+  if (selectedCoupon) {
+    if (selectedCoupon.discountType === &#x27;amount&#x27;) {
+      totalAfterDiscount = Math.max(0, totalAfterDiscount - selectedCoupon.discountValue);
+    } else {
+      totalAfterDiscount = Math.round(
+        totalAfterDiscount * (1 - selectedCoupon.discountValue / 100)
+      );
+    }
+  }
+
+  return {
+    totalBeforeDiscount: Math.round(totalBeforeDiscount),
+    totalAfterDiscount: Math.round(totalAfterDiscount),
+  };
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>변이 기반 계산: 누적 변수(totalBeforeDiscount, totalAfterDiscount)를 외부에서 변경</li>
+<li>책임 혼재: 합계 계산 + 쿠폰 적용 + 반올림을 한 함수에서 모두 처리</li>
+<li>조건 중첩: 쿠폰 분기(정액/정률) if-중첩으로 가독성 저하</li>
+</ul>
+<p><strong>[개선방향]</strong></p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">function</span> <span class="token function">calcCartTotals</span><span class="token punctuation">(</span>cart<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> cart<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> before<span class="token punctuation">,</span> after <span class="token punctuation">}</span><span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> base <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">.</span>price <span class="token operator">*</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> rate <span class="token operator">=</span> <span class="token function">getEffectiveDiscountRate</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> discounted <span class="token operator">=</span> <span class="token function">calcDiscountedItemTotal</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>product<span class="token punctuation">.</span>price<span class="token punctuation">,</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">,</span> rate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span> before<span class="token operator">:</span> before <span class="token operator">+</span> base<span class="token punctuation">,</span> after<span class="token operator">:</span> after <span class="token operator">+</span> discounted <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> before<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> after<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="function calcCartTotals(cart) {
+  return cart.reduce(({ before, after }, item) =&gt; {
+    const base = item.product.price * item.quantity;
+    const rate = getEffectiveDiscountRate(item, cart);
+    const discounted = calcDiscountedItemTotal(item.product.price, item.quantity, rate);
+    return { before: before + base, after: after + discounted };
+  }, { before: 0, after: 0 });
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>계산 순수화: reduce로 합계 산출(calcCartTotals), 변이 제거</li>
+<li>역할 분리
+<ul>
+<li>할인 규칙 → getEffectiveDiscountRate, calcDiscountedItemTotal</li>
+<li>쿠폰 적용 → applyCoupon(total, coupon) (전략 함수)</li>
+<li>반올림 → 최종 출력 레이어에서만 수행</li>
+</ul>
+</li>
+<li>가독성/유지보수성: 계산·정책·표현 레이어 분리로 변경 영향 최소화</li>
+</ul>
+<h4 id="2-컴포넌트-추상화-설계-조금-더-깊게-고민하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-컴포넌트-추상화-설계-조금-더-깊게-고민하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 컴포넌트 추상화, 설계 조금 더 깊게 고민하기</h4>
+<p>훅 추상화에 시간을 많이 보내서 컴포넌트 추상화는 AI에게 위임했습니다.
+이부분도 혼자 고민해보면서 리팩토링 해본다면 좋은 공부가 될 것 같습니다.
+다만 생산성은 AI에게 위임하는 것이 더 높은 것 같습니다.
+꽤 괜찮고 빠르게 만들어주는 것을 체감했습니다.</p>
+<br/>
+<h3 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문-편하게-남겨주세요-"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문-편하게-남겨주세요-"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문 편하게 남겨주세요 :)</h3>
+<ol>
+<li>모듈 단위 싱글톤 훅(Jotai) 설계에 대한 피드백</li>
+</ol>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> productsAtom <span class="token operator">=</span> <span class="token generic-function"><span class="token function">atomWithStorage</span><span class="token generic class-name"><span class="token operator">&lt;</span>ProductWithUI<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token string">&#x27;products&#x27;</span><span class="token punctuation">,</span> initialProducts<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useProduct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>products<span class="token punctuation">,</span> setProducts<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useAtom</span><span class="token punctuation">(</span>productsAtom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> addProduct <span class="token operator">=</span> <span class="token punctuation">(</span>newProduct<span class="token operator">:</span> <span class="token maybe-class-name">Omit</span><span class="token operator">&lt;</span><span class="token maybe-class-name">ProductWithUI</span><span class="token punctuation">,</span> <span class="token string">&#x27;id&#x27;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> product<span class="token operator">:</span> <span class="token maybe-class-name">ProductWithUI</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token spread operator">...</span>newProduct<span class="token punctuation">,</span>
+</span><span class="code-line">      id<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">p</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>prev<span class="token punctuation">,</span> product<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">updateProduct</span> <span class="token operator">=</span> <span class="token punctuation">(</span>productId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> updates<span class="token operator">:</span> <span class="token maybe-class-name">Partial</span><span class="token operator">&lt;</span><span class="token maybe-class-name">ProductWithUI</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">      prev<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>product<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span>product<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> productId <span class="token operator">?</span> <span class="token punctuation">{</span> <span class="token spread operator">...</span>product<span class="token punctuation">,</span> <span class="token spread operator">...</span>updates <span class="token punctuation">}</span> <span class="token operator">:</span> product<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">deleteProduct</span> <span class="token operator">=</span> <span class="token punctuation">(</span>productId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setProducts</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> prev<span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> p<span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">!==</span> productId<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    products<span class="token punctuation">,</span>
+</span><span class="code-line">    addProduct<span class="token punctuation">,</span>
+</span><span class="code-line">    updateProduct<span class="token punctuation">,</span>
+</span><span class="code-line">    deleteProduct<span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="
+const productsAtom = atomWithStorage&lt;ProductWithUI[]&gt;(&#x27;products&#x27;, initialProducts);
+
+export function useProduct() {
+  const [products, setProducts] = useAtom(productsAtom);
+
+  const addProduct = (newProduct: Omit&lt;ProductWithUI, &#x27;id&#x27;&gt;) =&gt; {
+    const product: ProductWithUI = {
+      ...newProduct,
+      id: `p${Date.now()}`,
+    };
+    setProducts((prev) =&gt; [...prev, product]);
+  };
+
+  const updateProduct = (productId: string, updates: Partial&lt;ProductWithUI&gt;) =&gt; {
+    setProducts((prev) =&gt;
+      prev.map((product) =&gt; (product.id === productId ? { ...product, ...updates } : product))
+    );
+  };
+
+  const deleteProduct = (productId: string) =&gt; {
+    setProducts((prev) =&gt; prev.filter((p) =&gt; p.id !== productId));
+  };
+
+  return {
+    products,
+    addProduct,
+    updateProduct,
+    deleteProduct,
+  };
+}
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>앞서 언급했던 이 모듈 단위 싱글톤 훅에 대해서 코멘트를 받아보고 싶습니다!
+저의 고려 방법이 적절했던 것인지, 다른 의견 주실 것이 있는지 궁금합니다.</p>
+<ol start="2">
+<li>
+<p>적절한 리팩토링의 타이밍
+코치님이 생각하시는 적절한 리팩토링 타이밍은 언제이신가요?
+회사일정과 같은 외부요소 고려를 제외하고 순수 코드 상에서 어떤 기준으로 판단하시는지 <strong>판단 기준</strong>이 궁금합니다!</p>
+</li>
+<li>
+<p>앞서 언급했던 저의 판단 과정이나 리팩토링 코드의 방향은 적절할까요?</p>
+</li>
+</ol></div></div><div class="overflow-auto mt-9"><h3 class="text-2xl mb-3">과제 피드백</h3><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"></div></div></div></main></div></div></div></div>
+</body>
+</html>

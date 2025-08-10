@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-D1PDUPCa.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-1m8PjJmh.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@jeongmingi123/" data-discover="true">jeongmingi123<!-- --> 님의 상세페이지</a> ＞ <!-- -->[2팀 정민기] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter2-2/pull/7" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[2팀 정민기] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->jeongmingi123</span><span>2025. 8. 2.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><p>배포 URL : <a href="https://jeongmingi123.github.io/front_6th_chapter2-2/">https://jeongmingi123.github.io/front_6th_chapter2-2/</a></p>
+<h2 id="과제의-핵심취지"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제의-핵심취지"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제의 핵심취지</h2>
+<ul>
+<li>React의 hook 이해하기</li>
+<li>함수형 프로그래밍에 대한 이해</li>
+<li>액션과 순수함수의 분리</li>
+</ul>
+<h2 id="과제에서-꼭-알아가길-바라는-점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제에서-꼭-알아가길-바라는-점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제에서 꼭 알아가길 바라는 점</h2>
+<ul>
+<li>엔티티를 다루는 상태와 그렇지 않은 상태 - cart, isCartFull vs isShowPopup</li>
+<li>엔티티를 다루는 컴포넌트와 훅 - CartItemView, useCart(), useProduct()</li>
+<li>엔티티를 다루지 않는 컴포넌트와 훅 - Button, useRoute, useEvent 등</li>
+<li>엔티티를 다루는 함수와 그렇지 않은 함수 - calculateCartTotal(cart) vs capaitalize(str)</li>
+</ul>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<ul class="contains-task-list">
+<li>
+<p>Component에서 비즈니스 로직을 분리하기</p>
+</li>
+<li>
+<p>비즈니스 로직에서 특정 엔티티만 다루는 계산을 분리하기</p>
+</li>
+<li>
+<p>뷰데이터와 엔티티데이터의 분리에 대한 이해</p>
+</li>
+<li>
+<p>entities -&gt; features -&gt; UI 계층에 대한 이해</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 함수는 분리되어 있나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 Component와 UI를 다루는 Component는 분리되어 있나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled=""/> 데이터 흐름에 맞는 계층구조를 이루고 의존성이 맞게 작성이 되었나요?</p>
+</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<ul class="contains-task-list">
+<li>
+<p>재사용 가능한 Custom UI 컴포넌트를 만들어 보기</p>
+</li>
+<li>
+<p>재사용 가능한 Custom 라이브러리 Hook을 만들어 보기</p>
+</li>
+<li>
+<p>재사용 가능한 Custom 유틸 함수를 만들어 보기</p>
+</li>
+<li>
+<p>그래서 엔티티와는 어떤 다른 계층적 특징을 가지는지 이해하기</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> UI 컴포넌트 계층과 엔티티 컴포넌트의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 엔티티 Hook과 라이브러리 훅과의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 엔티티 순수함수와 유틸리티 함수의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<!-- -->
+<h3 id="과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 하면서 내가 제일 신경 쓴 부분은 무엇인가요?</h3>
+<p>발제에 대한 내용에 대해 이해를 다 못하고 넘어가는 부분이 있어서 테오가 말씀주신 컴포넌트 7단계에 대해 정리했습니다.
+확실히 정리를 하고 나니 재사용관점에서 어떤식으로 만들어야할지 조금 감이 잡힌거같습니다.
+URL : <a href="https://github.com/jeongmingi123/front_6th_chapter2-2/issues/1">https://github.com/jeongmingi123/front_6th_chapter2-2/issues/1</a></p>
+<p>또한 유틸함수를 분리하면서 유틸함수를 분리하는게 맞았을까 라는 생각을 했습니다.</p>
+<h4 id="기존-코드"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기존-코드"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기존 코드</h4>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// cartService.ts</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateDiscountRate <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  discountedPrice<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  originalPrice<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>originalPrice <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discountedPrice <span class="token operator">/</span> originalPrice<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// cartService.ts
+export const calculateDiscountRate = (
+  discountedPrice: number,
+  originalPrice: number
+): number =&gt; {
+  if (originalPrice &lt;= 0) return 0;
+
+  return Math.round((1 - discountedPrice / originalPrice) * 100);
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="분리된-코드"><a class="anchor" aria-hidden="true" tabindex="-1" href="#분리된-코드"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>분리된 코드</h4>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// cartService.ts</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateDiscountRate <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  discountedPrice<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  originalPrice<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>originalPrice <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> discountRate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discountedPrice <span class="token operator">/</span> originalPrice<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>discountRate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// numberUtil.ts</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> roundNumber <span class="token operator">=</span> <span class="token punctuation">(</span>num<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// cartService.ts
+export const calculateDiscountRate = (
+  discountedPrice: number,
+  originalPrice: number
+): number =&gt; {
+  if (originalPrice &lt;= 0) return 0;
+
+  const discountRate = (1 - discountedPrice / originalPrice) * 100;
+  return roundNumber(discountRate);
+};
+
+// numberUtil.ts
+export const roundNumber = (num: number): number =&gt; {
+  return Math.round(num);
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>병준님이 조언해주신덕에 이해를 하게되었습니다. 내용 중 &#x27;Math.round를 roundNumber로 한번 더 감싼다는건 추상화된 데이터를 다시 추상화하는 것처럼 느껴진다고 말씀을 주셨고, 이렇게 되면 오히려 코드를 읽는 사람의 입장에서는 roundNumber가 어떤 역할을 하는 지 한 번 더 들여다보게 될 거 같다&#x27;라는 말씀을 해주셨고. 괜히 불필요하게 추상화를 한번 더 거치면 개발자 입장에선 한번 더 코드를 들여다보게되어 리소스가 발생한다는 부분을 이해했습니다. 병준님 정말 감사합니다.</p>
+<p>교훈 : 추상화를 항상 생각하며 코드를 짜자!!</p>
+<h3 id="과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 다시 해보면 더 잘 할 수 있었겠다 아쉬운 점이 있다면 무엇인가요?</h3>
+<p>위의 컴포넌트 7단계에 대한 개념을 학습하는 와중에, 준형님에게 fsd패턴에 대해 배웠습니다. 가장 요즘 리액트에서 핫한 패턴이라고 들었는데,
+이 부분에 대해 좀 더 알고 코드를 짰다면 좀 더 좋지 않았을까에 대한 생각이 듭니다.</p>
+<p>또한 테오가 추천해준 함수형 코딩을 읽어보면서 아직 다 읽어본건 아니고 초반부이지만 .. 용어에 대해 개념을 잘몰랐는데 정리할 수 있는 기회가 있어서 좋았습니다.</p>
+<h3 id="입력-출력-개념정리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#입력-출력-개념정리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>입력 출력 개념정리</h3>
+<h3 id="압묵적-입력"><a class="anchor" aria-hidden="true" tabindex="-1" href="#압묵적-입력"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>압묵적 입력</h3>
+<ul>
+<li>인자 외 다른입력</li>
+<li>공유변수</li>
+</ul>
+<h3 id="압묵적-출력"><a class="anchor" aria-hidden="true" tabindex="-1" href="#압묵적-출력"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>압묵적 출력</h3>
+<ul>
+<li>리턴 값 외 다른 출력</li>
+<li>공유변수</li>
+</ul>
+<h3 id="명시적-입력"><a class="anchor" aria-hidden="true" tabindex="-1" href="#명시적-입력"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>명시적 입력</h3>
+<ul>
+<li>함수 인자</li>
+</ul>
+<h3 id="명시적-출력"><a class="anchor" aria-hidden="true" tabindex="-1" href="#명시적-출력"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>명시적 출력</h3>
+<ul>
+<li>리턴 값</li>
+<li>압묵적 출력은 리턴값으로 명시적 출력으로 바꿀 수 있음</li>
+<li>함수안에서 전역배열을 바꾸기</li>
+</ul>
+<h2 id="액션--계산-정리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#액션--계산-정리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>액션 &amp; 계산 정리</h2>
+<h3 id="액션"><a class="anchor" aria-hidden="true" tabindex="-1" href="#액션"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>액션</h3>
+<ul>
+<li>함수안에 액션이 있다면 전체가 액션이 됨</li>
+<li>전역변수를 읽으면 액션이됨.</li>
+<li>압묵적 출력</li>
+</ul>
+<h3 id="계산"><a class="anchor" aria-hidden="true" tabindex="-1" href="#계산"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>계산</h3>
+<ul>
+<li>암묵적 입력이나 출력이 없어야함</li>
+<li>압묵적 입력 → 인자로 바꾸기</li>
+<li>압묵적 출력 → 리턴값으로 바꾸기</li>
+<li>인자에만 의존해 정보를 가져오는 동작은 계산</li>
+</ul>
+<h2 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문</h2>
+<p>안녕하세요. 제가 service 라는 폴더에 cartService라는 파일을 만들었는데, 밑의 코드를 어떤식으로 나눴어야할지에 대한 로직에 대한 고민이있습니다.
+(코드 URL : <a href="https://github.com/jeongmingi123/front_6th_chapter2-2/blob/main/src/advanced/service/cartService.ts">https://github.com/jeongmingi123/front_6th_chapter2-2/blob/main/src/advanced/service/cartService.ts</a>)</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> CartItem<span class="token punctuation">,</span> Coupon <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../../types&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> CartTotals<span class="token punctuation">,</span> DiscountInfo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../types&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token constant">BULK_PURCHASE_THRESHOLD</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token constant">BULK_PURCHASE_ADDITIONAL_DISCOUNT</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token constant">MAX_DISCOUNT_RATE</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../constants/cart&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> roundNumber <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;../utils/number&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 상품의 기본 할인율을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param discounts 상품의 할인 정보 배열
+</span></span><span class="code-line"><span class="token comment"> * @param quantity 구매 수량
+</span></span><span class="code-line"><span class="token comment"> * @returns 적용 가능한 최대 할인율
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> calculateBaseDiscount <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  discounts<span class="token operator">:</span> DiscountInfo<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  quantity<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>discounts <span class="token operator">||</span> discounts<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> discounts<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>maxDiscount<span class="token punctuation">,</span> discount<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> isEligible <span class="token operator">=</span> quantity <span class="token operator">&gt;=</span> discount<span class="token punctuation">.</span>quantity<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> hasHigherRate <span class="token operator">=</span> discount<span class="token punctuation">.</span>rate <span class="token operator">&gt;</span> maxDiscount<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> isEligible <span class="token operator">&amp;&amp;</span> hasHigherRate <span class="token operator">?</span> discount<span class="token punctuation">.</span>rate <span class="token operator">:</span> maxDiscount<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 대량 구매 할인을 적용합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param baseDiscount 기본 할인율
+</span></span><span class="code-line"><span class="token comment"> * @param cart 장바구니 아이템 배열
+</span></span><span class="code-line"><span class="token comment"> * @returns 대량 구매 할인이 적용된 최종 할인율
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> applyBulkPurchaseDiscount <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  baseDiscount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> hasBulkPurchase <span class="token operator">=</span> cart<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token punctuation">(</span>cartItem<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> cartItem<span class="token punctuation">.</span>quantity <span class="token operator">&gt;=</span> <span class="token constant">BULK_PURCHASE_THRESHOLD</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>hasBulkPurchase<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">min</span><span class="token punctuation">(</span>
+</span><span class="code-line">      baseDiscount <span class="token operator">+</span> <span class="token constant">BULK_PURCHASE_ADDITIONAL_DISCOUNT</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token constant">MAX_DISCOUNT_RATE</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> baseDiscount<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 쿠폰 할인을 적용합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param totalAfterDiscount 쿠폰 적용 전 총액
+</span></span><span class="code-line"><span class="token comment"> * @param selectedCoupon 선택된 쿠폰
+</span></span><span class="code-line"><span class="token comment"> * @returns 쿠폰 적용 후 총액
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> applyCouponDiscount <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  totalAfterDiscount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  selectedCoupon<span class="token operator">:</span> Coupon <span class="token operator">|</span> <span class="token keyword">null</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>selectedCoupon<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> totalAfterDiscount<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>selectedCoupon<span class="token punctuation">.</span>discountType <span class="token operator">===</span> <span class="token string">&quot;amount&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> totalAfterDiscount <span class="token operator">-</span> selectedCoupon<span class="token punctuation">.</span>discountValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>
+</span><span class="code-line">    totalAfterDiscount <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> selectedCoupon<span class="token punctuation">.</span>discountValue <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">)</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니 아이템의 총 할인율을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param item 장바구니 아이템
+</span></span><span class="code-line"><span class="token comment"> * @param cart 전체 장바구니
+</span></span><span class="code-line"><span class="token comment"> * @returns 적용 가능한 최대 할인율
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> getMaxApplicableDiscount <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  item<span class="token operator">:</span> CartItem<span class="token punctuation">,</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> discounts <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> quantity <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> baseDiscount <span class="token operator">=</span> <span class="token function">calculateBaseDiscount</span><span class="token punctuation">(</span>discounts<span class="token punctuation">,</span> quantity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">applyBulkPurchaseDiscount</span><span class="token punctuation">(</span>baseDiscount<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니 아이템의 총 가격을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param item 장바구니 아이템
+</span></span><span class="code-line"><span class="token comment"> * @param cart 전체 장바구니
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인이 적용된 아이템 총 가격
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateItemTotal <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  item<span class="token operator">:</span> CartItem<span class="token punctuation">,</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> price <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> quantity <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> discount <span class="token operator">=</span> <span class="token function">getMaxApplicableDiscount</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>price <span class="token operator">*</span> quantity <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니 아이템들의 기본 가격 정보를 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param cart 장바구니 아이템 배열
+</span></span><span class="code-line"><span class="token comment"> * @returns 기본 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">calculateBaseTotals</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> cart<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token punctuation">(</span>acc<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> itemPrice <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">.</span>price <span class="token operator">*</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">const</span> itemTotal <span class="token operator">=</span> <span class="token function">calculateItemTotal</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        totalBeforeDiscount<span class="token operator">:</span> acc<span class="token punctuation">.</span>totalBeforeDiscount <span class="token operator">+</span> itemPrice<span class="token punctuation">,</span>
+</span><span class="code-line">        totalAfterDiscount<span class="token operator">:</span> acc<span class="token punctuation">.</span>totalAfterDiscount <span class="token operator">+</span> itemTotal<span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">{</span> totalBeforeDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> totalAfterDiscount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 할인율을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param discountedPrice 할인된 가격
+</span></span><span class="code-line"><span class="token comment"> * @param originalPrice 원래 가격
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인율 (0-100 사이의 정수)
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateDiscountRate <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  discountedPrice<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  originalPrice<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>originalPrice <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> discountRate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discountedPrice <span class="token operator">/</span> originalPrice<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>discountRate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니의 총 가격을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param cart 장바구니 아이템 배열
+</span></span><span class="code-line"><span class="token comment"> * @param selectedCoupon 선택된 쿠폰
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인 전후 총 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateCartTotal <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  selectedCoupon<span class="token operator">:</span> Coupon <span class="token operator">|</span> <span class="token keyword">null</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> CartTotals <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// 빈 장바구니 처리</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cart<span class="token operator">?.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      totalBeforeDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+</span><span class="code-line">      totalAfterDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 기본 가격 계산</span>
+</span><span class="code-line">  <span class="token keyword">const</span> baseTotals <span class="token operator">=</span> <span class="token function">calculateBaseTotals</span><span class="token punctuation">(</span>cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 쿠폰 할인 적용</span>
+</span><span class="code-line">  <span class="token keyword">const</span> finalTotalAfterDiscount <span class="token operator">=</span> <span class="token function">applyCouponDiscount</span><span class="token punctuation">(</span>
+</span><span class="code-line">    baseTotals<span class="token punctuation">.</span>totalAfterDiscount<span class="token punctuation">,</span>
+</span><span class="code-line">    selectedCoupon
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 최종 결과 반환</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">createFinalTotals</span><span class="token punctuation">(</span>baseTotals<span class="token punctuation">,</span> finalTotalAfterDiscount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 최종 가격을 반올림하여 반환합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param totals 계산된 가격 정보
+</span></span><span class="code-line"><span class="token comment"> * @param finalTotalAfterDiscount 쿠폰 적용 후 최종 가격
+</span></span><span class="code-line"><span class="token comment"> * @returns 반올림된 최종 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> createFinalTotals <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  totals<span class="token operator">:</span> <span class="token punctuation">{</span> totalBeforeDiscount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span> totalAfterDiscount<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  finalTotalAfterDiscount<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> CartTotals <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    totalBeforeDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>totals<span class="token punctuation">.</span>totalBeforeDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    totalAfterDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>finalTotalAfterDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니 아이템의 총 가격을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param item 장바구니 아이템
+</span></span><span class="code-line"><span class="token comment"> * @param cart 전체 장바구니
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인이 적용된 아이템 총 가격
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateItemTotal <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  item<span class="token operator">:</span> CartItem<span class="token punctuation">,</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> price <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> quantity <span class="token punctuation">}</span> <span class="token operator">=</span> item<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> discount <span class="token operator">=</span> <span class="token function">getMaxApplicableDiscount</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>price <span class="token operator">*</span> quantity <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니 아이템들의 기본 가격 정보를 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param cart 장바구니 아이템 배열
+</span></span><span class="code-line"><span class="token comment"> * @returns 기본 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">calculateBaseTotals</span> <span class="token operator">=</span> <span class="token punctuation">(</span>cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> cart<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token punctuation">(</span>acc<span class="token punctuation">,</span> item<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> itemPrice <span class="token operator">=</span> item<span class="token punctuation">.</span>product<span class="token punctuation">.</span>price <span class="token operator">*</span> item<span class="token punctuation">.</span>quantity<span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">const</span> itemTotal <span class="token operator">=</span> <span class="token function">calculateItemTotal</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        totalBeforeDiscount<span class="token operator">:</span> acc<span class="token punctuation">.</span>totalBeforeDiscount <span class="token operator">+</span> itemPrice<span class="token punctuation">,</span>
+</span><span class="code-line">        totalAfterDiscount<span class="token operator">:</span> acc<span class="token punctuation">.</span>totalAfterDiscount <span class="token operator">+</span> itemTotal<span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">{</span> totalBeforeDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> totalAfterDiscount<span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 할인율을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param discountedPrice 할인된 가격
+</span></span><span class="code-line"><span class="token comment"> * @param originalPrice 원래 가격
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인율 (0-100 사이의 정수)
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateDiscountRate <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  discountedPrice<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span>
+</span><span class="code-line">  originalPrice<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>originalPrice <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> discountRate <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> discountedPrice <span class="token operator">/</span> originalPrice<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">roundNumber</span><span class="token punctuation">(</span>discountRate<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 장바구니의 총 가격을 계산합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param cart 장바구니 아이템 배열
+</span></span><span class="code-line"><span class="token comment"> * @param selectedCoupon 선택된 쿠폰
+</span></span><span class="code-line"><span class="token comment"> * @returns 할인 전후 총 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> calculateCartTotal <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartItem<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  selectedCoupon<span class="token operator">:</span> Coupon <span class="token operator">|</span> <span class="token keyword">null</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> CartTotals <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// 빈 장바구니 처리</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cart<span class="token operator">?.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      totalBeforeDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+</span><span class="code-line">      totalAfterDiscount<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 기본 가격 계산</span>
+</span><span class="code-line">  <span class="token keyword">const</span> baseTotals <span class="token operator">=</span> <span class="token function">calculateBaseTotals</span><span class="token punctuation">(</span>cart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 쿠폰 할인 적용</span>
+</span><span class="code-line">  <span class="token keyword">const</span> finalTotalAfterDiscount <span class="token operator">=</span> <span class="token function">applyCouponDiscount</span><span class="token punctuation">(</span>
+</span><span class="code-line">    baseTotals<span class="token punctuation">.</span>totalAfterDiscount<span class="token punctuation">,</span>
+</span><span class="code-line">    selectedCoupon
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// 최종 결과 반환</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token function">createFinalTotals</span><span class="token punctuation">(</span>baseTotals<span class="token punctuation">,</span> finalTotalAfterDiscount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">/**
+</span></span><span class="code-line"><span class="token comment"> * 최종 가격을 반올림하여 반환합니다.
+</span></span><span class="code-line"><span class="token comment"> * @param totals 계산된 가격 정보
+</span></span><span class="code-line"><span class="token comment"> * @param finalTotalAfterDiscount 쿠폰 적용 후 최종 가격
+</span></span><span class="code-line"><span class="token comment"> * @returns 반올림된 최종 가격 정보
+</span></span><span class="code-line"><span class="token comment"> */</span>
+</span><span class="code-line"><span class="token keyword">const</span> createFinalTotals <span class="token operator">=</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  totals<span class="token operator">:</span> <span class="token punctuation">{</span> totalBeforeDiscount<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span> totalAfterDiscount<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  finalTotalAfterDiscount<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> CartTotals <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    totalBeforeDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>totals<span class="token punctuation">.</span>totalBeforeDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    totalAfterDiscount<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>finalTotalAfterDiscount<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="import { CartItem, Coupon } from &quot;../../types&quot;;
+import { CartTotals, DiscountInfo } from &quot;../types&quot;;
+import {
+  BULK_PURCHASE_THRESHOLD,
+  BULK_PURCHASE_ADDITIONAL_DISCOUNT,
+  MAX_DISCOUNT_RATE,
+} from &quot;../constants/cart&quot;;
+import { roundNumber } from &quot;../utils/number&quot;;
+
+/**
+ * 상품의 기본 할인율을 계산합니다.
+ * @param discounts 상품의 할인 정보 배열
+ * @param quantity 구매 수량
+ * @returns 적용 가능한 최대 할인율
+ */
+const calculateBaseDiscount = (
+  discounts: DiscountInfo[],
+  quantity: number
+): number =&gt; {
+  if (!discounts || discounts.length === 0) {
+    return 0;
+  }
+
+  return discounts.reduce((maxDiscount, discount) =&gt; {
+    const isEligible = quantity &gt;= discount.quantity;
+    const hasHigherRate = discount.rate &gt; maxDiscount;
+
+    return isEligible &amp;&amp; hasHigherRate ? discount.rate : maxDiscount;
+  }, 0);
+};
+
+/**
+ * 대량 구매 할인을 적용합니다.
+ * @param baseDiscount 기본 할인율
+ * @param cart 장바구니 아이템 배열
+ * @returns 대량 구매 할인이 적용된 최종 할인율
+ */
+const applyBulkPurchaseDiscount = (
+  baseDiscount: number,
+  cart: CartItem[]
+): number =&gt; {
+  const hasBulkPurchase = cart.some(
+    (cartItem) =&gt; cartItem.quantity &gt;= BULK_PURCHASE_THRESHOLD
+  );
+
+  if (hasBulkPurchase) {
+    return Math.min(
+      baseDiscount + BULK_PURCHASE_ADDITIONAL_DISCOUNT,
+      MAX_DISCOUNT_RATE
+    );
+  }
+
+  return baseDiscount;
+};
+
+/**
+ * 쿠폰 할인을 적용합니다.
+ * @param totalAfterDiscount 쿠폰 적용 전 총액
+ * @param selectedCoupon 선택된 쿠폰
+ * @returns 쿠폰 적용 후 총액
+ */
+const applyCouponDiscount = (
+  totalAfterDiscount: number,
+  selectedCoupon: Coupon | null
+): number =&gt; {
+  if (!selectedCoupon) {
+    return totalAfterDiscount;
+  }
+
+  if (selectedCoupon.discountType === &quot;amount&quot;) {
+    return Math.max(0, totalAfterDiscount - selectedCoupon.discountValue);
+  }
+
+  return roundNumber(
+    totalAfterDiscount * (1 - selectedCoupon.discountValue / 100)
+  );
+};
+
+/**
+ * 장바구니 아이템의 총 할인율을 계산합니다.
+ * @param item 장바구니 아이템
+ * @param cart 전체 장바구니
+ * @returns 적용 가능한 최대 할인율
+ */
+export const getMaxApplicableDiscount = (
+  item: CartItem,
+  cart: CartItem[]
+): number =&gt; {
+  const { discounts } = item.product;
+  const { quantity } = item;
+
+  const baseDiscount = calculateBaseDiscount(discounts, quantity);
+  return applyBulkPurchaseDiscount(baseDiscount, cart);
+};
+
+/**
+ * 장바구니 아이템의 총 가격을 계산합니다.
+ * @param item 장바구니 아이템
+ * @param cart 전체 장바구니
+ * @returns 할인이 적용된 아이템 총 가격
+ */
+export const calculateItemTotal = (
+  item: CartItem,
+  cart: CartItem[]
+): number =&gt; {
+  const { price } = item.product;
+  const { quantity } = item;
+  const discount = getMaxApplicableDiscount(item, cart);
+
+  return roundNumber(price * quantity * (1 - discount));
+};
+
+/**
+ * 장바구니 아이템들의 기본 가격 정보를 계산합니다.
+ * @param cart 장바구니 아이템 배열
+ * @returns 기본 가격 정보
+ */
+const calculateBaseTotals = (cart: CartItem[]) =&gt; {
+  return cart.reduce(
+    (acc, item) =&gt; {
+      const itemPrice = item.product.price * item.quantity;
+      const itemTotal = calculateItemTotal(item, cart);
+
+      return {
+        totalBeforeDiscount: acc.totalBeforeDiscount + itemPrice,
+        totalAfterDiscount: acc.totalAfterDiscount + itemTotal,
+      };
+    },
+    { totalBeforeDiscount: 0, totalAfterDiscount: 0 }
+  );
+};
+
+/**
+ * 할인율을 계산합니다.
+ * @param discountedPrice 할인된 가격
+ * @param originalPrice 원래 가격
+ * @returns 할인율 (0-100 사이의 정수)
+ */
+export const calculateDiscountRate = (
+  discountedPrice: number,
+  originalPrice: number
+): number =&gt; {
+  if (originalPrice &lt;= 0) return 0;
+
+  const discountRate = (1 - discountedPrice / originalPrice) * 100;
+  return roundNumber(discountRate);
+};
+
+/**
+ * 장바구니의 총 가격을 계산합니다.
+ * @param cart 장바구니 아이템 배열
+ * @param selectedCoupon 선택된 쿠폰
+ * @returns 할인 전후 총 가격 정보
+ */
+export const calculateCartTotal = (
+  cart: CartItem[],
+  selectedCoupon: Coupon | null
+): CartTotals =&gt; {
+  // 빈 장바구니 처리
+  if (!cart?.length) {
+    return {
+      totalBeforeDiscount: 0,
+      totalAfterDiscount: 0,
+    };
+  }
+
+  // 기본 가격 계산
+  const baseTotals = calculateBaseTotals(cart);
+
+  // 쿠폰 할인 적용
+  const finalTotalAfterDiscount = applyCouponDiscount(
+    baseTotals.totalAfterDiscount,
+    selectedCoupon
+  );
+
+  // 최종 결과 반환
+  return createFinalTotals(baseTotals, finalTotalAfterDiscount);
+};
+
+/**
+ * 최종 가격을 반올림하여 반환합니다.
+ * @param totals 계산된 가격 정보
+ * @param finalTotalAfterDiscount 쿠폰 적용 후 최종 가격
+ * @returns 반올림된 최종 가격 정보
+ */
+const createFinalTotals = (
+  totals: { totalBeforeDiscount: number; totalAfterDiscount: number },
+  finalTotalAfterDiscount: number
+): CartTotals =&gt; {
+  return {
+    totalBeforeDiscount: Math.round(totals.totalBeforeDiscount),
+    totalAfterDiscount: Math.round(finalTotalAfterDiscount),
+  };
+};
+
+};
+
+/**
+ * 장바구니 아이템의 총 가격을 계산합니다.
+ * @param item 장바구니 아이템
+ * @param cart 전체 장바구니
+ * @returns 할인이 적용된 아이템 총 가격
+ */
+export const calculateItemTotal = (
+  item: CartItem,
+  cart: CartItem[]
+): number =&gt; {
+  const { price } = item.product;
+  const { quantity } = item;
+  const discount = getMaxApplicableDiscount(item, cart);
+
+  return roundNumber(price * quantity * (1 - discount));
+};
+
+/**
+ * 장바구니 아이템들의 기본 가격 정보를 계산합니다.
+ * @param cart 장바구니 아이템 배열
+ * @returns 기본 가격 정보
+ */
+const calculateBaseTotals = (cart: CartItem[]) =&gt; {
+  return cart.reduce(
+    (acc, item) =&gt; {
+      const itemPrice = item.product.price * item.quantity;
+      const itemTotal = calculateItemTotal(item, cart);
+
+      return {
+        totalBeforeDiscount: acc.totalBeforeDiscount + itemPrice,
+        totalAfterDiscount: acc.totalAfterDiscount + itemTotal,
+      };
+    },
+    { totalBeforeDiscount: 0, totalAfterDiscount: 0 }
+  );
+};
+
+/**
+ * 할인율을 계산합니다.
+ * @param discountedPrice 할인된 가격
+ * @param originalPrice 원래 가격
+ * @returns 할인율 (0-100 사이의 정수)
+ */
+export const calculateDiscountRate = (
+  discountedPrice: number,
+  originalPrice: number
+): number =&gt; {
+  if (originalPrice &lt;= 0) return 0;
+
+  const discountRate = (1 - discountedPrice / originalPrice) * 100;
+  return roundNumber(discountRate);
+};
+
+/**
+ * 장바구니의 총 가격을 계산합니다.
+ * @param cart 장바구니 아이템 배열
+ * @param selectedCoupon 선택된 쿠폰
+ * @returns 할인 전후 총 가격 정보
+ */
+export const calculateCartTotal = (
+  cart: CartItem[],
+  selectedCoupon: Coupon | null
+): CartTotals =&gt; {
+  // 빈 장바구니 처리
+  if (!cart?.length) {
+    return {
+      totalBeforeDiscount: 0,
+      totalAfterDiscount: 0,
+    };
+  }
+
+  // 기본 가격 계산
+  const baseTotals = calculateBaseTotals(cart);
+
+  // 쿠폰 할인 적용
+  const finalTotalAfterDiscount = applyCouponDiscount(
+    baseTotals.totalAfterDiscount,
+    selectedCoupon
+  );
+
+  // 최종 결과 반환
+  return createFinalTotals(baseTotals, finalTotalAfterDiscount);
+};
+
+/**
+ * 최종 가격을 반올림하여 반환합니다.
+ * @param totals 계산된 가격 정보
+ * @param finalTotalAfterDiscount 쿠폰 적용 후 최종 가격
+ * @returns 반올림된 최종 가격 정보
+ */
+const createFinalTotals = (
+  totals: { totalBeforeDiscount: number; totalAfterDiscount: number },
+  finalTotalAfterDiscount: number
+): CartTotals =&gt; {
+  return {
+    totalBeforeDiscount: Math.round(totals.totalBeforeDiscount),
+    totalAfterDiscount: Math.round(finalTotalAfterDiscount),
+  };
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>위의 코드 보시면.. 좀 코드가 안좋습니다 ㅜㅜ</p>
+<p>calculateBaseDiscount, applyBulkPurchaseDiscount, applyCouponDiscount,  getMaxApplicableDiscount, calculateItemTotal, calculateBaseTotals, calculateDiscountRate, .... 등 함수가 여러개 있습니다.</p>
+<p>service 라는 폴더의 파일들을 어떤기준으로 코드를 나누는지 궁금합니다.
+제가 아직 개발자가 아니라 그런가.. 사실 도메인 로직으로 나눈다는 개념이 좀 어렵습니다 ㅜ ㅜ</p>
+<p>저는 cartService 라는 파일에 한곳에 다 넣었지만, 코드를 만들면서 너무 많이 만들었나 생각이 들기도하고, 아니면 단일책임 원칙에 어긋나는거같은데..? 라는 생각이 들어 질문을 하게되었습니다.</p>
+<p>다시 생각해보니 couponService(쿠폰관련된 로직), adminService(어드민관련된 로직), productService(제품 관련된 로직), cartService(장바구니 관련된 로직), ... 이런식으로 나눠야하는게 맞을지 생각이 들기도하더라구요.. 아니면 다른방안으로 했어야 할까요.?</p></div></div><div class="overflow-auto mt-9"><h3 class="text-2xl mb-3">과제 피드백</h3><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><p>수고하셨습니다. 민기님!</p>
+<p>일단 너무 어렵게 생각하실 필요가 없습니다.
+도메인 로직으로 나눈다는 것은
+예를들어
+장바구니면 장바구니 관련 코드들을 모은다 정도로 이해하시면 될 것 같아요.
+지금 cartService는 사실 카트의 데이터를 계산해서 특별한 데이터로 전환하는 코드들이 모여있잖아요.
+그냥 일단 다른것은 고민하지마시고
+cartService 요건 단순히 계산의 입장에서 코드를 모아두었는데,
+요것을 훅을 이용해서 재구성해서 조금 더 편하게 사용하게 만들려면 어떻게 할까를 한 번 고민해봐주시면 좋을 것 같아요!
+이것은 카트라는 엔터티 혹은 도메인에 대한 훅이 될 수 있을 것 같아요.
+그렇게 쿠폰도 있을 수 있고, 프로덕트도 있을 수 있겠죠?
+카트도 카트에 대한 로직을 훅으로 묶었듯, 쿠폰이라면 쿠폰에 대한 정보를 얻거나 수정하려면 사용하는 훅으로  묶는것이죠..
+이것을 도메인(엔터티) 로직으로 나눈다혹은 분리한다 라는 것이에요 :)
+일단 한 번 고민을 해봐주시고, 나중에 솔루션 코드를 한땀한땀 뜯어보시면 좋을 것 같아요!</p></div></div></div></main></div></div></div></div>
+</body>
+</html>

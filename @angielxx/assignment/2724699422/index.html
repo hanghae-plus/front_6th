@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-D1PDUPCa.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-1m8PjJmh.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@angielxx/" data-discover="true">angielxx<!-- --> 님의 상세페이지</a> ＞ <!-- -->[1팀 이은지] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter2-2/pull/44" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[1팀 이은지] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->angielxx</span><span>2025. 8. 6.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="배포-링크"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포-링크"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포 링크</h2>
+<p><a href="https://angielxx.github.io/front_6th_chapter2-2/">https://angielxx.github.io/front_6th_chapter2-2/</a></p>
+<h2 id="과제의-핵심취지"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제의-핵심취지"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제의 핵심취지</h2>
+<ul>
+<li>React의 hook 이해하기</li>
+<li>함수형 프로그래밍에 대한 이해</li>
+<li>액션과 순수함수의 분리</li>
+</ul>
+<h2 id="과제에서-꼭-알아가길-바라는-점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제에서-꼭-알아가길-바라는-점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제에서 꼭 알아가길 바라는 점</h2>
+<ul>
+<li>엔티티를 다루는 상태와 그렇지 않은 상태 - cart, isCartFull vs isShowPopup</li>
+<li>엔티티를 다루는 컴포넌트와 훅 - CartItemView, useCart(), useProduct()</li>
+<li>엔티티를 다루지 않는 컴포넌트와 훅 - Button, useRoute, useEvent 등</li>
+<li>엔티티를 다루는 함수와 그렇지 않은 함수 - calculateCartTotal(cart) vs capaitalize(str)</li>
+</ul>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<ul class="contains-task-list">
+<li>
+<p>Component에서 비즈니스 로직을 분리하기</p>
+</li>
+<li>
+<p>비즈니스 로직에서 특정 엔티티만 다루는 계산을 분리하기</p>
+</li>
+<li>
+<p>뷰데이터와 엔티티데이터의 분리에 대한 이해</p>
+</li>
+<li>
+<p>entities -&gt; features -&gt; UI 계층에 대한 이해</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> Component에서 사용되는 Data가 아닌 로직들은 hook으로 옮겨졌나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 주어진 hook의 책임에 맞도록 코드가 분리가 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 계산함수는 순수함수로 작성이 되었나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 함수는 분리되어 있나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 특정 Entitiy만 다루는 Component와 UI를 다루는 Component는 분리되어 있나요?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 데이터 흐름에 맞는 계층구조를 이루고 의존성이 맞게 작성이 되었나요?</p>
+</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<ul class="contains-task-list">
+<li>
+<p>재사용 가능한 Custom UI 컴포넌트를 만들어 보기</p>
+</li>
+<li>
+<p>재사용 가능한 Custom 라이브러리 Hook을 만들어 보기</p>
+</li>
+<li>
+<p>재사용 가능한 Custom 유틸 함수를 만들어 보기</p>
+</li>
+<li>
+<p>그래서 엔티티와는 어떤 다른 계층적 특징을 가지는지 이해하기</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> UI 컴포넌트 계층과 엔티티 컴포넌트의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 엔티티 Hook과 라이브러리 훅과의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 엔티티 순수함수와 유틸리티 함수의 계층의 성격이 다르다는 것을 이해하고 적용했는가?</p>
+</li>
+</ul>
+<br/>
+<h1 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h1>
+<h3 id="-과제-시작-전-고민과-목표-설정"><a class="anchor" aria-hidden="true" tabindex="-1" href="#-과제-시작-전-고민과-목표-설정"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>💭 과제 시작 전 고민과 목표 설정</h3>
+<p>4주차 과제에서 AI를 적극적으로 활용하며 과제를 진행했고, AI가 척척 내 요구에 맞게 코드를 짜는 모습을 보면서 희열과 함께 뇌리 저편에서 불안함이 엄습했습니다. 이쯤되니 &#x27;본전&#x27; 생각이 뇌를 떠나지 않았어요!</p>
+<blockquote>
+<p>내가 지금 일주일에 10만원 넘는 비용을 지불하며 성장하려고 이 곳에 왔는데...정작 과제는 AI가 다하고 있네?</p>
+</blockquote>
+<blockquote>
+<p>챕터 1에서는 기술적인 이해에 대한 얻어가는 게 확실했는데 챕터 2에서는 무엇을 어떻게 얻어갈 수 있을까?</p>
+</blockquote>
+<blockquote>
+<p>앞으로 어떻게 과제 속에서 내 경험과 성장을 최대치로 이끌어낼 수 있을까?</p>
+</blockquote>
+<p>이러한 고민 속에서 5주차 과제를 시작하며 일단 우선적으로 근본적인 과제 목표를 정했습니다.</p>
+<ol>
+<li>테오가 과제를 통해 느껴보라고 한 것 최대한 느껴보기</li>
+<li>과제의 결론보다는 과정을 통해 배우기</li>
+<li>다른 항해러 코드, PR (최대한) 모두 읽어보기</li>
+</ol>
+<br/>
+<h3 id="1-테오가-과제를-통해-느껴보라고-한-것-최대한-느껴보기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-테오가-과제를-통해-느껴보라고-한-것-최대한-느껴보기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 테오가 과제를 통해 느껴보라고 한 것 최대한 느껴보기</h3>
+<blockquote>
+<p>단일 책임 원칙을 위반한 거대한 컴포넌트가 얼마나 안 좋은지</p>
+</blockquote>
+<p>1500줄에 달하는 메인 App.tsx를 리팩토링하면서 가장 불편했던 점은, &quot;어디에 무엇이 있는지 모르겠다&quot;는 점이었습니다. 컴포넌트가 추상화되어 있지 않으니 jsx 코드를 봤을 때 앱이 어떤 구성을 하고 있는지 파악이 안되고, 그래서 어디어 무엇이 있는지 알수가 없고, 결국 신규 기능 추가나 수정이 어려울 게 뻔하더라구요.</p>
+<p>또 불편했던 점은, 함수와 로직 등 서로 간의 의존도와 결합도가 높아서 분리하려고 해도 분리할 수 없는 상태였다는 점이었습니다. 처음에 단순히 함수부터 분리하고자 함수를 코드에서 잘라내었지만, 외부 상태를 참조하고 있기 때문에 바로 분리할수도 없는 상태였습니다. 하나를 고치면 다른 부분이 깨지는 현상이 계속 발생했습니다.</p>
+<blockquote>
+<p>엔티티를 다루는 것 vs 그렇지 않은 것의 구분</p>
+</blockquote>
+<p>리팩토링을 진행하면서 엔티티를 다루는 것과 그렇지 않은 것을 구분하는 건 어렵지 않았습니다. 과제의 엔티티가 상품, 장바구니, 쿠폰 등으로 명시적이었기 때문에 엔티티를 다루는지 아닌지 여부를 판단하는데 어렵지 않았습니다.</p>
+<p>엔티티를 구분하기 위해 &quot;실제 비즈니스에 존재하는지&quot;, &quot;DB에 저장될 정보인지&quot;(여기선 로컬스토리지) 를 생각해보았습니다.</p>
+<blockquote>
+<p>hooks, util, model의 구분</p>
+</blockquote>
+<p>테오가 느끼라고 한 것을 충분히 느끼기 위해 과제를 충실히 따라가고자 했고, 힌트로 주신 폴더를 읽어봤는데 hooks, util은 익숙한데 models 폴더가 익숙치 않아 어떤 역할을 하는 모듈의 집합인지 헷갈렸습니다.</p>
+<p>GPT를 통해 학습한 결과 세 폴더의 차이점을 이렇게 요약했습니다.</p>
+<ul>
+<li>hooks : React에 의존하는 상태 관리와 변경</li>
+<li>utils : 도메인과 무관한 범용 도구 함수</li>
+<li>models : 순수 비즈니스 로직</li>
+</ul>
+<p>공용 로직, 비즈니스 로직, 그리고 커스텀 훅 각각 명시적으로 분리하여 관리하고자 했습니다. 이렇게 세가지 계층으로 로직을 분리하고 나니 각 계층의 책임이 명확해지고 어플리케이션 어디에서도 필요한 로직을 재사용할 수 있게 됐습니다.</p>
+<br/>
+<h3 id="2-과제의-결론보다는-과정을-통해-배우기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-과제의-결론보다는-과정을-통해-배우기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 과제의 결론보다는 과정을 통해 배우기</h3>
+<p>4주동안 항해하면서 발견한 저의 고질적인 문제가 있습니다. 이력서, 블로그 등 저는 항상 &quot;결과&quot; 위주로 글을 쓴다는 것이었어요. 어렸을 때부터 변수가 많은 스토리 중심의 역사보다는 인풋-아웃풋이 명확한 수학, 과학을 선호했던 성향이 글쓰기에도 영향을 미친 것 같습니다. 하지만 개발자로서 소통과 공유가 중요한 시대에 이는 분명한 약점이라고 느꼈어요.</p>
+<p>4주동안 다른 분들의 회고글을 보면 그 과정이 생동감 있게 느껴지고 적절한 비유와 재치로 기술 이야기를 재밌게 풀어내는 분들이 많더라구요. 그런 분들이 참 부러웠고 어떻게 하면 나의 단점을 개선해볼 수 있을까 고민하게 되었습니다. 그래서 이번 과제에는 과정 중심의 글을 써보고자! PR을 작성하고 있는 지금도! 신경쓰며 PR을 작성하고 있고, 이어서 이번 주차 회고 글에서도 실천해볼 계획입니다!</p>
+<p>특히, 이번 과제를 진행하면서 각 단계별 작업 내용을 상세하게 문서로 기록하고자 했습니다. (docs/refactoring-process.md) AI가 정리해준 내용이라 미흡한 부분도 있지만, 해당 문서를 통해 각 단계의 작업을 복기할 수 있어서 추후 글을 작성할 때 큰 도움이 되겠더라구요.</p>
+<p>이 목표는 PR과 WIL에서 실현해볼 계획이기에 현재 진행 중이고, 목표 달성 여부는 6주차가 시작되고 나서 알 수 있겠네요. (지켜봐주십쇼)</p>
+<br/>
+<h3 id="3-다른-항해러-코드-pr-최대한-모두-읽어보기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-다른-항해러-코드-pr-최대한-모두-읽어보기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 다른 항해러 코드, PR (최대한) 모두 읽어보기</h3>
+<p>항해를 시작하게 된 큰 동기 중 하나가 다른 주니어 개발자들이 어떻게 하는지 보고 싶다였습니다. 회사에서도 코드 리뷰를 통해 다른 사람들의 코드를 읽어볼 때 인사이트를 많이 얻을 수 있는 것을 느끼고 있습니다. 이러한 목적을 지난 4주동안 잊고 내 과제하는데 급급해서 다른 사람들은 어떻게 하고 있는지 살펴보지 못한 게 참 아쉽습니다. 그래서 이번 주차에는 기필코 다른 분들의 코드를 최대한 모두 읽어보려고 합니다.</p>
+<p>이 목표도 과제 제출 후에 실천할 수 있는 내용이라 아직 진행 중이네요! 얼마나 많은 분들의 코드를 읽었는지..다음 주차에 불시에 검문해주셔도 좋습니다. ㅎ_ㅎ</p>
+<br/>
+<br/>
+<h2 id="과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-하면서-내가-제일-신경-쓴-부분은-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 하면서 내가 제일 신경 쓴 부분은 무엇인가요?</h2>
+<blockquote>
+<ol>
+<li>코드 바로 썰고 바로 볶을 수 있는 주방 만들기</li>
+<li>확장 가능한 공통 컴포넌트 개발</li>
+<li>개발효율성을 위한 NotificationBoundary 구현</li>
+</ol>
+</blockquote>
+<h3 id="1-코드-바로-썰고-바로-볶을-수-있는-주방-만들기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-코드-바로-썰고-바로-볶을-수-있는-주방-만들기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 코드 바로 썰고 바로 볶을 수 있는 주방 만들기</h3>
+<p>개발할 때 동선을 최소화할 수 있는 폴더 구조로 모듈을 관리하고자 했습니다. 처음 과제를 시작할 때는 아래와 같은 기본적인 폴더 구조로 프로젝트를 구성했습니다.</p>
+<p>AS-IS: 역할 기반 구조</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">src<span class="token operator">/</span>
+</span><span class="code-line">├── components<span class="token operator">/</span>   <span class="token comment">// 재사용 가능한 UI 컴포넌트들을 모아두는 폴더</span>
+</span><span class="code-line">├── constants<span class="token operator">/</span>    <span class="token comment">// 상수값이나 설정값을 관리하는 폴더 (예: calculation.ts 등)</span>
+</span><span class="code-line">├── pages<span class="token operator">/</span>        <span class="token comment">// 라우팅되는 각 페이지 컴포넌트를 담는 폴더</span>
+</span><span class="code-line">├── hooks<span class="token operator">/</span>        <span class="token comment">// 커스텀 React 훅을 정의하는 폴더</span>
+</span><span class="code-line">├── utils<span class="token operator">/</span>        <span class="token comment">// 유틸리티 함수들을 모아두는 폴더</span>
+</span><span class="code-line">├── types<span class="token operator">/</span>        <span class="token comment">// TypeScript 타입 정의를 위한 폴더</span>
+</span><span class="code-line">└── App<span class="token punctuation">.</span>tsx       <span class="token comment">// 애플리케이션의 루트 컴포넌트 파일</span>
+</span></code><div class="copied" data-code="src/
+├── components/   // 재사용 가능한 UI 컴포넌트들을 모아두는 폴더
+├── constants/    // 상수값이나 설정값을 관리하는 폴더 (예: calculation.ts 등)
+├── pages/        // 라우팅되는 각 페이지 컴포넌트를 담는 폴더
+├── hooks/        // 커스텀 React 훅을 정의하는 폴더
+├── utils/        // 유틸리티 함수들을 모아두는 폴더
+├── types/        // TypeScript 타입 정의를 위한 폴더
+└── App.tsx       // 애플리케이션의 루트 컴포넌트 파일
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이 구조는 관심사의 분리를 통해 유지보수성과 확장성을 높이고, 각 기능별로 코드를 체계적으로 관리할 수 있도록 도와줍니다.</p>
+<p>이 구조는 모듈 역할 기반으로 폴더가 분리되어 있기 때문에 관심사 분리가 명확하고 각 폴더의 역할이 직관적입니다. 하지만 기능 단위로 개발을 진행할 때 기능 단위로 모듈이 인접해있지 않기 때문에 여러 폴더를 오가며 작업해야하는 단점이 있었습니다.</p>
+<p>장바구니 기능을 수정하려면:</p>
+<ol>
+<li>components/ 폴더에서 CartItem.tsx 찾기</li>
+<li>hooks/ 폴더에서 useCart.ts 찾기</li>
+<li>utils/ 폴더에서 cart.util.ts 찾기</li>
+<li>constants/ 폴더에서 관련 상수 cart.ts 찾기</li>
+</ol>
+<p>마치 요리할 때 재료가 냉장고, 창고, 다락방에 흩어져있는 느낌이랄까...?!
+각 유틸, 상수 등을 네임스페이스로 관리하고자 하여 import문은 깔끔하고 가독성이 좋았지만 개발 편의성이나 확장성은 아쉬웠습니다.</p>
+<p>준일코치님과의 멘토링에서 이 폴더구조에 대한 피드백을 받고 일명 &#x27;개발 동선 최소화&#x27;를 위한 새로운 폴더 구조로 개선하고자 했습니다. 처음엔 FSD(Feature-Sliced Design)도 고려했는데, 러닝 커브가 있고 짧은 과제 기간에는 부담스러워서 익숙한 Feature-based 구조를 선택했습니다.</p>
+<p>TO-BE: Feature-based 구조</p>
+<p>도메인 단위로 폴더 재구성하여 서로 영향 범위가 같은 코드들끼리 인접하도록 해 &#x27;바로 야채를 썰고 볶을 수 있게&#x27; 개발 동선을 최적화하고자 했습니다.</p>
+<h4 id="최상위-구조"><a class="anchor" aria-hidden="true" tabindex="-1" href="#최상위-구조"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>최상위 구조</h4>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">src<span class="token operator">/</span>advanced<span class="token operator">/</span>
+</span><span class="code-line">├── pages<span class="token operator">/</span>           # <span class="token function">페이지</span> <span class="token punctuation">(</span>HomePage<span class="token punctuation">,</span> AdminPage<span class="token punctuation">)</span>
+</span><span class="code-line">├── features<span class="token operator">/</span>        # 도메인별 기능 모듈
+</span><span class="code-line">└── shared<span class="token operator">/</span>          # 공통 자원
+</span></code><div class="copied" data-code="src/advanced/
+├── pages/           # 페이지 (HomePage, AdminPage)
+├── features/        # 도메인별 기능 모듈
+└── shared/          # 공통 자원
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="주요-기능-도메인"><a class="anchor" aria-hidden="true" tabindex="-1" href="#주요-기능-도메인"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>주요 기능 도메인</h4>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">features<span class="token operator">/</span>
+</span><span class="code-line">├── admin<span class="token operator">/</span>          # 관리자 기능
+</span><span class="code-line">├── cart<span class="token operator">/</span>           # 장바구니
+</span><span class="code-line">├── coupon<span class="token operator">/</span>         # 쿠폰 시스템
+</span><span class="code-line">├── discount<span class="token operator">/</span>       # 할인 처리
+</span><span class="code-line">├── notification<span class="token operator">/</span>   # 알림
+</span><span class="code-line">├── product<span class="token operator">/</span>        # 상품 관리
+</span><span class="code-line">└── search<span class="token operator">/</span>         # 검색
+</span></code><div class="copied" data-code="features/
+├── admin/          # 관리자 기능
+├── cart/           # 장바구니
+├── coupon/         # 쿠폰 시스템
+├── discount/       # 할인 처리
+├── notification/   # 알림
+├── product/        # 상품 관리
+└── search/         # 검색
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="각-기능별-내부-구조"><a class="anchor" aria-hidden="true" tabindex="-1" href="#각-기능별-내부-구조"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>각 기능별 내부 구조</h4>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">feature<span class="token operator">/</span>
+</span><span class="code-line">├── atoms<span class="token operator">/</span>          # Jotai 상태 관리
+</span><span class="code-line">├── components<span class="token operator">/</span>     # <span class="token constant">UI</span> 컴포넌트
+</span><span class="code-line">├── hooks<span class="token operator">/</span>          # 커스텀 훅
+</span><span class="code-line">├── models<span class="token operator">/</span>         # 비즈니스 로직
+</span><span class="code-line">├── types<span class="token operator">/</span>          # 타입 정의
+</span><span class="code-line">├── constants<span class="token operator">/</span>      # 상수
+</span><span class="code-line">├── data<span class="token operator">/</span>           # 초기 데이터
+</span><span class="code-line">└── utils<span class="token operator">/</span>          # 유틸리티
+</span></code><div class="copied" data-code="feature/
+├── atoms/          # Jotai 상태 관리
+├── components/     # UI 컴포넌트
+├── hooks/          # 커스텀 훅
+├── models/         # 비즈니스 로직
+├── types/          # 타입 정의
+├── constants/      # 상수
+├── data/           # 초기 데이터
+└── utils/          # 유틸리티
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="공통-자원"><a class="anchor" aria-hidden="true" tabindex="-1" href="#공통-자원"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>공통 자원</h4>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">shared<span class="token operator">/</span>
+</span><span class="code-line">├── components<span class="token operator">/</span>     # 공통 <span class="token constant">UI</span> <span class="token punctuation">(</span>icons<span class="token punctuation">,</span> layout<span class="token punctuation">,</span> ui<span class="token punctuation">)</span>
+</span><span class="code-line">├── constants<span class="token operator">/</span>      # 공통 상수
+</span><span class="code-line">├── hooks<span class="token operator">/</span>          # 공통 훅
+</span><span class="code-line">├── utils<span class="token operator">/</span>          # 공통 유틸리티
+</span><span class="code-line">└── errors<span class="token operator">/</span>         # 에러 처리
+</span></code><div class="copied" data-code="shared/
+├── components/     # 공통 UI (icons, layout, ui)
+├── constants/      # 공통 상수
+├── hooks/          # 공통 훅
+├── utils/          # 공통 유틸리티
+└── errors/         # 에러 처리
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이렇게 폴더 구조를 변경하고 나니 어떤 기능을 수정할 때 이동하는 폴더와 파일 범위가 확실히 좁아졌다는 걸 느꼈습니다. 각 기능 별로 일관된 하위 폴더 구조를 유지하고 있으니 신규 도메인이나 기능이 생길 때 feature 단위로 폴더를 추가하면 돼서 개발편의성도 훨씬 좋아졌습니다.</p>
+<br/>
+<h3 id="2-확장-가능한-공통-컴포넌트-개발"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-확장-가능한-공통-컴포넌트-개발"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 확장 가능한 공통 컴포넌트 개발</h3>
+<h4 id="icon-컴포넌트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#icon-컴포넌트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Icon 컴포넌트</h4>
+<p>Icon 컴포넌트를 일관적인 인터페이스로 쉽게 새로운 아이콘을 추가하고 수정할 수 있도록 설계하고자 했습니다. &quot;가장 단순하면서도 효과적인 방법이 뭘까?&quot; 생각해보다가 모든 SVG 아이콘의 구조가 반복적이고 외부 svg 태그 또한 동일한 형태로 반복되고 있는 걸 발견했습니다.</p>
+<p>이를 통해 공통 인터페이스를 가지고 있는 감싸는 메인 Icon 컴포넌트를 만들고, 아이콘 종류마다 각기 다른 path를 가지도록 설계했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 개별 아이콘 정의</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">PlusIcon</span> <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span> IconProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>path <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">MinusIcon</span> <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span> IconProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>path <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">CartIcon</span> <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span> IconProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>path <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 아이콘 타입 정의</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token constant">ICONS</span><span class="token operator">:</span> Record<span class="token operator">&lt;</span>IconType<span class="token punctuation">,</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span>IconProps<span class="token operator">&gt;&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  cart<span class="token operator">:</span> CartIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  shop<span class="token operator">:</span> ShopIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  shopThin<span class="token operator">:</span> ShopThin<span class="token punctuation">,</span>
+</span><span class="code-line">  minus<span class="token operator">:</span> MinusIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  image<span class="token operator">:</span> ImageIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  close<span class="token operator">:</span> CloseIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  plus<span class="token operator">:</span> PlusIcon<span class="token punctuation">,</span>
+</span><span class="code-line">  trash<span class="token operator">:</span> TrashIcon<span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> Icon<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 메인 아이콘 컴포넌트</span>
+</span><span class="code-line"><span class="token keyword">const</span> Icon<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span>IconProps<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">  size <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">,</span>
+</span><span class="code-line">  color <span class="token operator">=</span> <span class="token string">&quot;text-gray-700&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">  className <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">  onClick<span class="token punctuation">,</span>
+</span><span class="code-line">  disabled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+</span><span class="code-line">  type <span class="token operator">=</span> <span class="token string">&quot;cart&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// ...중략</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> IconComponent <span class="token operator">=</span> <span class="token constant">ICONS</span><span class="token punctuation">[</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>svg
+</span><span class="code-line">      className<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>baseClasses<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>disabledClasses<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>interactiveClasses<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>color<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">      fill<span class="token operator">=</span><span class="token string">&quot;none&quot;</span>
+</span><span class="code-line">      stroke<span class="token operator">=</span><span class="token string">&quot;currentColor&quot;</span>
+</span><span class="code-line">      viewBox<span class="token operator">=</span><span class="token string">&quot;0 0 24 24&quot;</span>
+</span><span class="code-line">      onClick<span class="token operator">=</span><span class="token punctuation">{</span>handleClick<span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>IconComponent <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>svg<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>Icon type<span class="token operator">=</span><span class="token string">&quot;cart&quot;</span> size<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="// 개별 아이콘 정의
+const PlusIcon = (props: IconProps) =&gt; &lt;path /&gt;
+const MinusIcon = (props: IconProps) =&gt; &lt;path /&gt;
+const CartIcon = (props: IconProps) =&gt; &lt;path /&gt;
+
+// 아이콘 타입 정의
+const ICONS: Record&lt;IconType, React.FC&lt;IconProps&gt;&gt; = {
+  cart: CartIcon,
+  shop: ShopIcon,
+  shopThin: ShopThin,
+  minus: MinusIcon,
+  image: ImageIcon,
+  close: CloseIcon,
+  plus: PlusIcon,
+  trash: TrashIcon,
+} as const;
+
+export default Icon;
+
+// 메인 아이콘 컴포넌트
+const Icon: React.FC&lt;IconProps&gt; = ({
+  size = 6,
+  color = &quot;text-gray-700&quot;,
+  className = &quot;&quot;,
+  onClick,
+  disabled = false,
+  type = &quot;cart&quot;,
+}) =&gt; {
+  // ...중략
+
+  const IconComponent = ICONS[type];
+
+  return (
+    &lt;svg
+      className={`${baseClasses} ${disabledClasses} ${interactiveClasses} ${color}`}
+      fill=&quot;none&quot;
+      stroke=&quot;currentColor&quot;
+      viewBox=&quot;0 0 24 24&quot;
+      onClick={handleClick}
+    &gt;
+      &lt;IconComponent /&gt;
+    &lt;/svg&gt;
+  );
+};
+
+// 사용
+&lt;Icon type=&quot;cart&quot; size={5} /&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="tabs-adminsection"><a class="anchor" aria-hidden="true" tabindex="-1" href="#tabs-adminsection"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Tabs, AdminSection</h4>
+<p>합성 패턴을 기반으로 재사용성이 높은 컴포넌트를 구현하고자 했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// src/advanced/features/admin/components/AdminTabs.tsx</span>
+</span><span class="code-line"><span class="token comment">// 합성 패턴 기반 재사용 가능한 Tabs</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>Tabs defaultValue<span class="token operator">=</span><span class="token string">&quot;products&quot;</span> onValueChange<span class="token operator">=</span><span class="token punctuation">{</span>setActiveTab<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>Tabs<span class="token punctuation">.</span>List<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>Tabs<span class="token punctuation">.</span>Trigger value<span class="token operator">=</span><span class="token string">&quot;products&quot;</span><span class="token operator">&gt;</span>상품 관리<span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token punctuation">.</span>Trigger<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>Tabs<span class="token punctuation">.</span>Trigger value<span class="token operator">=</span><span class="token string">&quot;coupons&quot;</span><span class="token operator">&gt;</span>쿠폰 관리<span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token punctuation">.</span>Trigger<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token punctuation">.</span>List<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>Tabs<span class="token punctuation">.</span>Content value<span class="token operator">=</span><span class="token string">&quot;products&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>ProductAdmin <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token punctuation">.</span>Content<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>Tabs<span class="token punctuation">.</span>Content value<span class="token operator">=</span><span class="token string">&quot;coupons&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>CouponAdmin <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token punctuation">.</span>Content<span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>Tabs<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="// src/advanced/features/admin/components/AdminTabs.tsx
+// 합성 패턴 기반 재사용 가능한 Tabs
+&lt;Tabs defaultValue=&quot;products&quot; onValueChange={setActiveTab}&gt;
+  &lt;Tabs.List&gt;
+    &lt;Tabs.Trigger value=&quot;products&quot;&gt;상품 관리&lt;/Tabs.Trigger&gt;
+    &lt;Tabs.Trigger value=&quot;coupons&quot;&gt;쿠폰 관리&lt;/Tabs.Trigger&gt;
+  &lt;/Tabs.List&gt;
+  &lt;Tabs.Content value=&quot;products&quot;&gt;
+    &lt;ProductAdmin /&gt;
+  &lt;/Tabs.Content&gt;
+  &lt;Tabs.Content value=&quot;coupons&quot;&gt;
+    &lt;CouponAdmin /&gt;
+  &lt;/Tabs.Content&gt;
+&lt;/Tabs&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<br/>
+<h3 id="3-개발효율성을-위한-notificationboundary-구현"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-개발효율성을-위한-notificationboundary-구현"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 개발효율성을 위한 NotificationBoundary 구현</h3>
+<p>addNotification이 모든 도메인에 걸쳐 사용되어 거의 대부분의 컴포넌트가 props로 받아야 하는 상황이었습니다. 알림을 추가하는 것을 각 사용부에서 처리하는 것이 아니라 외부의 한 곳에서 모아 처리할 방법이 없을까 고민했습니다.</p>
+<p>알림을 발생시키는 곳에서는 에러 형태를 던지기만 하고 외부에서 그걸 캐치해서 처리할 수 없을까 고민하게 되었고, 그렇게 떠오른 패턴이 에러 바운더리 구조였습니다.</p>
+<h4 id="아키텍처"><a class="anchor" aria-hidden="true" tabindex="-1" href="#아키텍처"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><strong>아키텍처</strong></h4>
+<p><strong>NotificationBoundary 컴포넌트</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// src/basic/features/notification/components/NotificationBoundary.tsx</span>
+</span><span class="code-line"><span class="token comment">// 전역 에러 이벤트 리스너로 NotificationError를 캐치</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">NotificationBoundary</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token operator">:</span> PropsWithChildren<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>notifications<span class="token punctuation">,</span> setNotifications<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>Notification<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token function-variable function">handleUnhandledRejection</span> <span class="token operator">=</span> <span class="token punctuation">(</span>event<span class="token operator">:</span> PromiseRejectionEvent<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>reason <span class="token keyword">instanceof</span> <span class="token class-name">NotificationError</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">       <span class="token comment">// ...알림 추가 로직</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">throw</span> event<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token function-variable function">handleGlobalError</span> <span class="token operator">=</span> <span class="token punctuation">(</span>event<span class="token operator">:</span> ErrorEvent<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>error <span class="token keyword">instanceof</span> <span class="token class-name">NotificationError</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token comment">// ...알림 추가 로직</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">throw</span> event<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> handleGlobalError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;unhandledrejection&quot;</span><span class="token punctuation">,</span> handleUnhandledRejection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> handleGlobalError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span>
+</span><span class="code-line">        <span class="token string">&quot;unhandledrejection&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">        handleUnhandledRejection
+</span><span class="code-line">      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> removeNotification <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setNotifications</span><span class="token punctuation">(</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> prev<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> n<span class="token punctuation">.</span>id <span class="token operator">!==</span> id<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token comment">// 알림 렌더링</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;fixed top-20 right-4 z-50 space-y-2 max-w-sm&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token punctuation">{</span>notifications<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>notification<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">          <span class="token operator">&lt;</span>NotificationItem
+</span><span class="code-line">            key<span class="token operator">=</span><span class="token punctuation">{</span>notification<span class="token punctuation">.</span>id<span class="token punctuation">}</span>
+</span><span class="code-line">            notification<span class="token operator">=</span><span class="token punctuation">{</span>notification<span class="token punctuation">}</span>
+</span><span class="code-line">            removeNotification<span class="token operator">=</span><span class="token punctuation">{</span>removeNotification<span class="token punctuation">}</span>
+</span><span class="code-line">          <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// src/basic/features/notification/components/NotificationBoundary.tsx
+// 전역 에러 이벤트 리스너로 NotificationError를 캐치
+export function NotificationBoundary({ children }: PropsWithChildren) {
+  const [notifications, setNotifications] = useState&lt;Notification[]&gt;([]);
+
+  useEffect(() =&gt; {
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) =&gt; {
+      if (event.reason instanceof NotificationError) {
+        event.preventDefault();
+
+       // ...알림 추가 로직
+
+        return;
+      }
+
+      throw event;
+    };
+
+    const handleGlobalError = (event: ErrorEvent) =&gt; {
+      if (event.error instanceof NotificationError) {
+        event.preventDefault();
+
+        // ...알림 추가 로직
+
+        return;
+      }
+
+      throw event;
+    };
+
+    window.addEventListener(&quot;error&quot;, handleGlobalError);
+    window.addEventListener(&quot;unhandledrejection&quot;, handleUnhandledRejection);
+
+    return () =&gt; {
+      window.removeEventListener(&quot;error&quot;, handleGlobalError);
+      window.removeEventListener(
+        &quot;unhandledrejection&quot;,
+        handleUnhandledRejection
+      );
+    };
+  }, []);
+
+  const removeNotification = useCallback((id: string) =&gt; {
+    setNotifications((prev) =&gt; prev.filter((n) =&gt; n.id !== id));
+  }, []);
+
+  return (
+    &lt;div&gt;
+      // 알림 렌더링
+      &lt;div className=&quot;fixed top-20 right-4 z-50 space-y-2 max-w-sm&quot;&gt;
+        {notifications.map((notification) =&gt; (
+          &lt;NotificationItem
+            key={notification.id}
+            notification={notification}
+            removeNotification={removeNotification}
+          /&gt;
+        ))}
+      &lt;/div&gt;
+      {children}
+    &lt;/div&gt;
+  );
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>2. NotificationError 클래스</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 커스텀 에러 클래스로 알림 타입과 메시지를 포함</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotificationError</span> <span class="token keyword">extends</span> <span class="token class-name">Error</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">constructor</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token keyword">public</span> message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token keyword">public</span> type<span class="token operator">:</span> NotificationType
+</span><span class="code-line">  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">super</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;NotificationError&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// 커스텀 에러 클래스로 알림 타입과 메시지를 포함
+export class NotificationError extends Error {
+  constructor(
+    public message: string,
+    public type: NotificationType
+  ) {
+    super(message);
+    this.name = &quot;NotificationError&quot;;
+    this.type = type;
+  }
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>3. throwNotificationError 유틸리티</strong></p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// src/basic/features/notification/utils/notificationError.util.ts</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> throwNotificationError<span class="token operator">:</span> Record<span class="token operator">&lt;</span>
+</span><span class="code-line">  NotificationType<span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">never</span>
+</span><span class="code-line"><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token punctuation">[</span><span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">ERROR</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">never</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">ERROR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token punctuation">[</span><span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">SUCCESS</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">never</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">SUCCESS</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token punctuation">[</span><span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">WARNING</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">never</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token constant">NOTIFICATION</span><span class="token punctuation">.</span><span class="token constant">TYPES</span><span class="token punctuation">.</span><span class="token constant">WARNING</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// src/basic/features/notification/utils/notificationError.util.ts
+export const throwNotificationError: Record&lt;
+  NotificationType,
+  (message: string) =&gt; never
+&gt; = {
+  [NOTIFICATION.TYPES.ERROR]: (message: string): never =&gt; {
+    throw new NotificationError(message, NOTIFICATION.TYPES.ERROR);
+  },
+
+  [NOTIFICATION.TYPES.SUCCESS]: (message: string): never =&gt; {
+    throw new NotificationError(message, NOTIFICATION.TYPES.SUCCESS);
+  },
+
+  [NOTIFICATION.TYPES.WARNING]: (message: string): never =&gt; {
+    throw new NotificationError(message, NOTIFICATION.TYPES.WARNING);
+  },
+} as const;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>일반 에러와 알림 에러를 구분하여 모두 캐치하여 핸들링 할 수 있고, 알림 관련 로직을 모두 NotificationBoundary에서 처리할 수 있어 관심사가 명확히 분리됐습니다. 알림을 발생시키는 구조도 간편하고 새로운 알림 타입을 추가하기도 좋은 구조지만, 구현하는 과정에서 문제점을 발견했습니다.</p>
+<p>어쨌든 알림을 발생시키지만 에러 타입이기 때문에 알림 에러가 발생한 시점에 로직의 흐름이 중단된다는 것이었습니다. 이 문제 때문에 아무데서나 알림을 발생시켜선 안되고 알림을 발생시키전 필요한 로직은 모두 선행시킨 후 마지막에 알림을 발생시켜야 했습니다.</p>
+<br/>
+<h2 id="과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제를-다시-해보면-더-잘-할-수-있었겠다-아쉬운-점이-있다면-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제를 다시 해보면 더 잘 할 수 있었겠다 아쉬운 점이 있다면 무엇인가요?</h2>
+<h3 id="함수-리팩토링"><a class="anchor" aria-hidden="true" tabindex="-1" href="#함수-리팩토링"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>함수 리팩토링</h3>
+<p>아직 개별 함수 단위에서 깔끔하지 못한 코드들이 많은데 시간이 좀 더 있었다면 함수 단위로 리팩토링을 더 진행하고 싶습니다.</p>
+<h3 id="비동기-알림-시스템"><a class="anchor" aria-hidden="true" tabindex="-1" href="#비동기-알림-시스템"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>비동기 알림 시스템</h3>
+<p>앞서 언급했던 NotificationError 특성 상 로직을 중단하는 문제를 개선하고 싶습니다. 가능할지는 구현해봐야 알겠지만, Claude가 추천한 방식은 Promise로 감싸서 즉시 에러를 던지지 않게 하는 방법입니다.</p>
+<h4 id="동기적-에러에서-비동기-에러로-개선"><a class="anchor" aria-hidden="true" tabindex="-1" href="#동기적-에러에서-비동기-에러로-개선"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>동기적 에러에서 비동기 에러로 개선</h4>
+<p>Promise로 에러를 발생시켜 현재 실행 컨텍스트가 끝난 후 다음 이벤트 루프에서 처리하도록 유도하여 메인 로직이 중단되지 않습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 즉시 에러를 던지지 않고 Promise로 감싸서 처리</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> notifyAsync <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;SUCCESS&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">error</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;ERROR&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">warning</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;WARNING&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용 예시</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// 필요한 로직 실행</span>
+</span><span class="code-line">  <span class="token function">updateData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">saveToStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// 마지막에 알림 (로직 중단 없음)</span>
+</span><span class="code-line">  notifyAsync<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">&#x27;저장이 완료되었습니다!&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 즉시 에러를 던지지 않고 Promise로 감싸서 처리
+export const notifyAsync = {
+  success: (message: string) =&gt; {
+    Promise.reject(new NotificationError(message, &#x27;SUCCESS&#x27;));
+  },
+  error: (message: string) =&gt; {
+    Promise.reject(new NotificationError(message, &#x27;ERROR&#x27;));
+  },
+  warning: (message: string) =&gt; {
+    Promise.reject(new NotificationError(message, &#x27;WARNING&#x27;));
+  },
+};
+
+// 사용 예시
+const handleSubmit = () =&gt; {
+  // 필요한 로직 실행
+  updateData();
+  saveToStorage();
+  
+  // 마지막에 알림 (로직 중단 없음)
+  notifyAsync.success(&#x27;저장이 완료되었습니다!&#x27;);
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>AS-IS: 동기적 에러로 즉시 중단</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 현재 상황 (동기적 에러)</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> throwNotificationError <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  success<span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">never</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;SUCCESS&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 즉시 실행 중단</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용 시</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">updateData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 실행됨</span>
+</span><span class="code-line">  throwNotificationError<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">&#x27;완료!&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 여기서 즉시 중단</span>
+</span><span class="code-line">  <span class="token function">saveToStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 실행되지 않음!</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 현재 상황 (동기적 에러)
+export const throwNotificationError = {
+  success: (message: string): never =&gt; {
+    throw new NotificationError(message, &#x27;SUCCESS&#x27;); // 즉시 실행 중단
+  }
+};
+
+// 사용 시
+const handleSubmit = () =&gt; {
+  updateData();        // 실행됨
+  throwNotificationError.success(&#x27;완료!&#x27;); // 여기서 즉시 중단
+  saveToStorage();     // 실행되지 않음!
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>TO-BE: Promise만 호출하고 계속 진행</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// Promise.reject 방식</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> notifyAsync <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token punctuation">(</span>message<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">NotificationError</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">&#x27;SUCCESS&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token comment">// 함수는 여기서 정상 종료됨 (에러를 던지지 않음)</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 사용 시</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">updateData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 실행됨</span>
+</span><span class="code-line">  notifyAsync<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">&#x27;완료!&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Promise.reject만 호출하고 계속 진행</span>
+</span><span class="code-line">  <span class="token function">saveToStorage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 실행됨!</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// Promise.reject 방식
+export const notifyAsync = {
+  success: (message: string) =&gt; {
+    Promise.reject(new NotificationError(message, &#x27;SUCCESS&#x27;));
+    // 함수는 여기서 정상 종료됨 (에러를 던지지 않음)
+  }
+};
+
+// 사용 시
+const handleSubmit = () =&gt; {
+  updateData();        // 실행됨
+  notifyAsync.success(&#x27;완료!&#x27;); // Promise.reject만 호출하고 계속 진행
+  saveToStorage();     // 실행됨!
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="notificationboundary에서-promise-감지하는-법"><a class="anchor" aria-hidden="true" tabindex="-1" href="#notificationboundary에서-promise-감지하는-법"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>NotificationBoundary에서 Promise 감지하는 법</h4>
+<p>Promise.reject()를 호출하면 이 Promise가 catch되지 않으면 브라우저에서 &#x27;unhandledrejection&#x27; 이벤트 발생시킵니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">NotificationBoundary</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token operator">:</span> PropsWithChildren<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>notifications<span class="token punctuation">,</span> setNotifications<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>Notification<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token comment">// Promise.reject()로 생성된 rejected Promise를 감지</span>
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token function-variable function">handleUnhandledRejection</span> <span class="token operator">=</span> <span class="token punctuation">(</span>event<span class="token operator">:</span> PromiseRejectionEvent<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#x27;감지된 rejected Promise:&#x27;</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>reason<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>reason <span class="token keyword">instanceof</span> <span class="token class-name">NotificationError</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 브라우저 콘솔 에러 방지</span>
+</span><span class="code-line">        
+</span><span class="code-line">        <span class="token comment">// ...알림 추가 로직</span>
+</span><span class="code-line">        <span class="token keyword">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;unhandledrejection&quot;</span><span class="token punctuation">,</span> handleUnhandledRejection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;unhandledrejection&quot;</span><span class="token punctuation">,</span> handleUnhandledRejection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// ... 렌더링 로직</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="export function NotificationBoundary({ children }: PropsWithChildren) {
+  const [notifications, setNotifications] = useState&lt;Notification[]&gt;([]);
+
+  useEffect(() =&gt; {
+    // Promise.reject()로 생성된 rejected Promise를 감지
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) =&gt; {
+      console.log(&#x27;감지된 rejected Promise:&#x27;, event.reason);
+      
+      if (event.reason instanceof NotificationError) {
+        event.preventDefault(); // 브라우저 콘솔 에러 방지
+        
+        // ...알림 추가 로직
+        return;
+      }
+    };
+
+    window.addEventListener(&quot;unhandledrejection&quot;, handleUnhandledRejection);
+    
+    return () =&gt; {
+      window.removeEventListener(&quot;unhandledrejection&quot;, handleUnhandledRejection);
+    };
+  }, []);
+
+  // ... 렌더링 로직
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<br/>
+<h2 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문</h2>
+<h3 id="컴포넌트-분리-수준에-대한-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#컴포넌트-분리-수준에-대한-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>컴포넌트 분리 수준에 대한 피드백</h3>
+<p>제가 선택한 컴포넌트 분리 수준이 적절한지 궁금합니다. 더 세분화해야 하는 부분이나, 반대로 과도하게 분리한 부분이 있을까요?</p>
+<h3 id="icon-사용-불편함"><a class="anchor" aria-hidden="true" tabindex="-1" href="#icon-사용-불편함"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Icon 사용 불편함</h3>
+<p>아이콘 추가될 때마다 type과 객체에 추가해줘야 하는 것이 불편합니다. 더 효율적으로 아이콘 컴포넌틀를 관리할 수 있는 설계 구조가 없을지 추천해주세요!</p>
+<h3 id="notificationboundary-패턴의-실용성"><a class="anchor" aria-hidden="true" tabindex="-1" href="#notificationboundary-패턴의-실용성"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>NotificationBoundary 패턴의 실용성</h3>
+<p>제가 시도했던 에러 기반 알림 시스템이 실무에서도 시도해볼 만한 패턴인지, 혹은 다른 더 나은 전역 알림 처리 방법이 있는지 궁금합니다.</p></div></div><div class="overflow-auto mt-9"><h3 class="text-2xl mb-3">과제 피드백</h3><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><p>안녕하세요 은지님!
+5주차 과제 너무 잘 진행해주셨네요!!
+여태까지는 결과 위주의 글을 작성했다고 말씀해주셨는데,
+과정이 정말 디테일하게 담겨있어서 깜짝 놀랐답니다 ㅎㅎ
+기승전결이 다 녹아있다고 느껴졌어요.</p>
+<blockquote>
+<p>제가 선택한 컴포넌트 분리 수준이 적절한지 궁금합니다. 더 세분화해야 하는 부분이나, 반대로 과도하게 분리한 부분이 있을까요?</p>
+</blockquote>
+<p>무척 분리를 잘 해주셨어요 ㅎㅎ
+여기서에서 조금 더 나아가보자면, Primitive Component 를 추출하는 과정이 필요할 수도 있다고 생각해요. 다만 필수는 아닙니다!</p>
+<p>가령, Input, Button 처럼 제일 하위에서 쓰일 수 있는 컴포넌트랄까!?
+지금 icon이 이런 역할을 수행하고 있네요!</p>
+<blockquote>
+<p>아이콘 추가될 때마다 type과 객체에 추가해줘야 하는 것이 불편합니다. 더 효율적으로 아이콘 컴포넌틀를 관리할 수 있는 설계 구조가 없을지 추천해주세요!</p>
+</blockquote>
+<p><code>svgr</code> 이라는 키워드로 찾아보시면 좋답니다 ㅎㅎ
+가령, vite에서는 <a href="https://www.npmjs.com/package/vite-plugin-svgr">https://www.npmjs.com/package/vite-plugin-svgr</a> 을 사용해볼 수 있어요.
+svg 파일을 아예 컴포넌트로 관리할 수 있도록 해주는거죠.</p>
+<p>혹은 디자인 시스템들이 어떻게 구현되어있는지 참고해보면 좋답니다!</p>
+<p><a href="https://www.chakra-ui.com/docs/components/icon-button">https://www.chakra-ui.com/docs/components/icon-button</a>
+<a href="https://www.chakra-ui.com/docs/components/icon#custom-svg">https://www.chakra-ui.com/docs/components/icon#custom-svg</a></p>
+<blockquote>
+<p>제가 시도했던 에러 기반 알림 시스템이 실무에서도 시도해볼 만한 패턴인지, 혹은 다른 더 나은 전역 알림 처리 방법이 있는지 궁금합니다.</p>
+</blockquote>
+<p>굉장히 체계적으로 설계를 잘 해주셨어요!
+제가 이해한 부분은, throw를 통해 NotficiationBoundary 에 메세지를 쌓아가는 방식이라고 이해했어요.
+다만, 조금 아쉬운 부분은 success를 처리하는 부분도 throw로 처리하고 있다는점!?</p>
+<p>그래서 context를 조금 엮어서 사용해주면 어떨까 싶어요!
+throw를 통해 쌓아가기보단, 아예 context api를 통해 상위 계층으로 메세지를 보내서 알림을 쌓아가는 방식으로 해결할 수 있지 않을까 싶네요 ㅎㅎ</p>
+<p>결국 &quot;에러를 에러처럼 사용 하는 것&quot; 이 제일 중요하다고 생각해요!</p></div></div></div></main></div></div></div></div>
+</body>
+</html>
