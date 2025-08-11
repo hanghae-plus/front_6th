@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Calendar, Clock, Github, StarIcon } from "lucide-react";
 import { useUserIdByParam, useUserWithAssignments } from "@/features";
 import { Badge, Card } from "@/components";
-import { formatDate } from "@/lib";
+import { formatDate, calculateReadingTime } from "@/lib";
 import { type Assignment, PageProvider, usePageData } from "@/providers";
 
 const UserProfile = ({ id, name, image, link }: GithubUser & { name: string }) => {
@@ -32,7 +32,13 @@ const UserProfile = ({ id, name, image, link }: GithubUser & { name: string }) =
   );
 };
 
-const AssignmentCard = ({ id, title, url, createdAt, theBest }: Assignment) => {
+const AssignmentCard = ({ id, title, url, createdAt, theBest, body }: Assignment) => {
+  // PR 본문을 기반으로 읽기 시간 계산
+  const readingTime = useMemo(() => {
+    if (!body) return { text: "1분 읽기" };
+    return calculateReadingTime(body);
+  }, [body]);
+
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer group bg-card border border-border">
       <Link to={`./assignment/${id}/`} className="block">
@@ -67,7 +73,7 @@ const AssignmentCard = ({ id, title, url, createdAt, theBest }: Assignment) => {
                 </div>
                 <div className="flex items-center space-x-1">
                   <Clock className="w-3 h-3" />
-                  <span>5분 읽기</span>
+                  <span>{readingTime.text}</span>
                 </div>
               </div>
             </div>
