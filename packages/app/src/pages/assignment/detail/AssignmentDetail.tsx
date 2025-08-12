@@ -41,7 +41,7 @@ export const AssignmentDetail = Object.assign(
 
       const $script = document.createElement("script");
       $script.setAttribute("issue-term", "pathname");
-      $script.setAttribute("theme", "github-light");
+      $script.setAttribute("theme", "github-dark");
       $script.setAttribute("repo", `hanghae-plus/front_6th`);
       $script.type = "text/javascript";
       $script.async = true;
