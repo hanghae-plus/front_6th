@@ -1,33 +1,10 @@
 import type { CommonAssignment, GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
 import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
-import { useUsers } from "@/features";
+import { mergeAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
 import { Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
-
-const getPullRequests = (assignments: CommonAssignment[]) => {
-  const prSet = assignments.reduce(
-    (acc, current) => {
-      const prev = acc[current.url];
-      const assignment = !prev
-        ? current
-        : {
-            url: current.url,
-            passed: prev.passed && current.passed,
-            theBest: prev.theBest && current.theBest,
-          };
-
-      return {
-        ...acc,
-        [current.url]: assignment,
-      };
-    },
-    {} as Record<string, CommonAssignment>,
-  );
-
-  return Object.values(prSet);
-};
 
 const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: CommonAssignment[]; name: string }) => {
   return (
@@ -73,7 +50,7 @@ const UsersGrid = ({ items }: { items: UserWIthCommonAssignments[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {items.map(({ assignments, ...user }) => (
-        <UserCard key={user.github.id} {...user.github} name={user.name} assignments={getPullRequests(assignments)} />
+        <UserCard key={user.github.id} {...user.github} name={user.name} assignments={mergeAssignments(assignments)} />
       ))}
     </div>
   );
