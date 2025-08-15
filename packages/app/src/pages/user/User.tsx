@@ -98,30 +98,34 @@ const AssignmentsList = ({ items }: { items: Assignment[] }) => {
   );
 };
 
-const UserStats = ({ assignmentCount }: { assignmentCount: number }) => {
+const UserStats = ({ assignments }: { assignments: Assignment[] }) => {
+  const count = assignments.length;
+  const passedCount = assignments.filter((a) => a.passed).length;
+  const bestCount = assignments.filter((a) => a.theBest).length;
+
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-bold text-white">제출한 과제</h2>
         <Badge variant="secondary" className="text-sm bg-slate-700">
-          총 {assignmentCount}개
+          총 {assignments.length}개
         </Badge>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="p-4 bg-slate-800/50 border-slate-700">
-          <div className="text-2xl font-bold text-white">{assignmentCount}</div>
+          <div className="text-2xl font-bold text-white">{count}</div>
           <div className="text-sm text-slate-400">총 과제 수</div>
         </Card>
 
         <Card className="p-4 bg-slate-800/50 border-slate-700">
-          <div className="text-2xl font-bold text-green-400">{assignmentCount}</div>
-          <div className="text-sm text-slate-400">완료한 과제</div>
+          <div className="text-2xl font-bold text-green-400">{passedCount}</div>
+          <div className="text-sm text-slate-400">합격한 과제</div>
         </Card>
 
         <Card className="p-4 bg-slate-800/50 border-slate-700">
-          <div className="text-2xl font-bold text-orange-400">100%</div>
-          <div className="text-sm text-slate-400">완성도</div>
+          <div className="text-2xl font-bold text-yellow-500">{bestCount}</div>
+          <div className="text-sm text-slate-400">베스트 과제</div>
         </Card>
       </div>
     </div>
@@ -157,7 +161,7 @@ export const User = Object.assign(
 
           {/* 오른쪽 과제 목록 영역 */}
           <div className="lg:flex-1">
-            <UserStats assignmentCount={assignmentList.length} />
+            <UserStats assignments={assignmentList} />
             <AssignmentsList items={assignmentList} />
           </div>
         </div>
