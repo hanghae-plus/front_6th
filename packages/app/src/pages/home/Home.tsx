@@ -2,7 +2,7 @@ import type { CommonAssignment, GithubUser, UserWIthCommonAssignments } from "@h
 import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
 import { useUsers } from "@/features";
 import { Link } from "react-router";
-import { Badge, Card } from "@/components";
+import { Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
 
@@ -99,13 +99,6 @@ const HomePage = () => {
     <div className="px-4 py-6">
       {/* 상단 통계 */}
       <div className="mb-6 space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-white">수강생 명단</h2>
-          <Badge variant="secondary" className="text-sm bg-slate-700">
-            총 {items.length}명
-          </Badge>
-        </div>
-
         {/* 통계 카드 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card className="p-4 bg-slate-800/50 border-slate-700">
