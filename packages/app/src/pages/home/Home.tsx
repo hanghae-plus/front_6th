@@ -1,12 +1,35 @@
-import type { GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
-import { BookOpen, Github, Users } from "lucide-react";
+import type { CommonAssignment, GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
+import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
 import { useUsers } from "@/features";
 import { Link } from "react-router";
 import { Badge, Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
 
-const UserCard = ({ id, name, link, image, assignments }: GithubUser & { assignments: number; name: string }) => {
+const getPullRequests = (assignments: CommonAssignment[]) => {
+  const prSet = assignments.reduce(
+    (acc, current) => {
+      const prev = acc[current.url];
+      const assignment = !prev
+        ? current
+        : {
+            url: current.url,
+            passed: prev.passed && current.passed,
+            theBest: prev.theBest && current.theBest,
+          };
+
+      return {
+        ...acc,
+        [current.url]: assignment,
+      };
+    },
+    {} as Record<string, CommonAssignment>,
+  );
+
+  return Object.values(prSet);
+};
+
+const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: CommonAssignment[]; name: string }) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
       <Link to={`/@${id}/`} className="block">
@@ -24,21 +47,21 @@ const UserCard = ({ id, name, link, image, assignments }: GithubUser & { assignm
               <h3 className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors break-words leading-tight">
                 {name}({id})
               </h3>
-              <p>
-                <span className="text-xs text-slate-400">과제 제출: {assignments}개</span>
-              </p>
+              <div className="flex items-center justify-center space-x-2 text-xs text-slate-400 mt-2">
+                <div className="flex items-center space-x-1">
+                  <BookOpen className="w-3 h-3 text-blue-400" />
+                  <span>{assignments.length}</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <CheckCircle className="w-3 h-3 text-green-400" />
+                  <span>{assignments.filter((v) => v.passed).length}</span>
+                </div>
+                <div className="flex items-center space-x-1">
+                  <Star className="w-3 h-3 text-yellow-400" />
+                  <span>{assignments.filter((v) => v.theBest).length}</span>
+                </div>
+              </div>
             </div>
-
-            <Badge
-              variant="secondary"
-              className="text-xs bg-slate-700 hover:bg-slate-600 cursor-pointer transition-colors px-2 py-1"
-              onClick={(e: React.MouseEvent) => {
-                e.preventDefault();
-                window.open(link, "_blank");
-              }}
-            >
-              <Github className="w-4 h-4" />
-            </Badge>
           </div>
         </div>
       </Link>
@@ -50,7 +73,7 @@ const UsersGrid = ({ items }: { items: UserWIthCommonAssignments[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {items.map(({ assignments, ...user }) => (
-        <UserCard key={user.github.id} {...user.github} name={user.name} assignments={assignments.length} />
+        <UserCard key={user.github.id} {...user.github} name={user.name} assignments={getPullRequests(assignments)} />
       ))}
     </div>
   );
