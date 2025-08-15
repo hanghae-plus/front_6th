@@ -1,11 +1,11 @@
-import { type Assignment, PageProvider, usePageData } from "@/providers";
-import { type PropsWithChildren, useEffect, useRef } from "react";
+import { type PropsWithChildren } from "react";
 import { Link, useParams } from "react-router";
-import { useAssignmentById, useUserIdByParam } from "@/features";
+import { type Assignment, PageProvider, usePageData } from "@/providers";
+import { useAssignmentById, useFeedback, useUserIdByParam } from "@/features";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { IconGithub } from "@/assets";
 import { Card } from "@/components";
-import { useFeedback } from "@/features/feedbacks";
+import { AssignmentComment } from "./AssignmentComment";
 
 const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { assignmentId = "" } = useParams<{ assignmentId: string }>();
@@ -31,27 +31,9 @@ export const AssignmentDetail = Object.assign(
   () => {
     const data = usePageData<Assignment>();
     const feedback = useFeedback(data.url);
-    const ref = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-      const $el = ref.current;
-      if (!$el) {
-        return undefined;
-      }
-
-      const $script = document.createElement("script");
-      $script.setAttribute("issue-term", "pathname");
-      $script.setAttribute("theme", "github-dark");
-      $script.setAttribute("repo", `hanghae-plus/front_6th`);
-      $script.type = "text/javascript";
-      $script.async = true;
-      $script.crossOrigin = "anonymous";
-      $script.src = "https://utteranc.es/client.js";
-      $el.appendChild($script);
-    }, []);
 
     return (
-      <div ref={ref}>
+      <div>
         <div className="card-wrap">
           <Card className="mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg">
             <a href={data.url} target="_blank">
@@ -88,9 +70,8 @@ export const AssignmentDetail = Object.assign(
         </div>
 
         <div className="overflow-auto mt-9">
-          <h3 className="text-2xl mb-3">과제 피드백</h3>
           <MarkdownPreview
-            source={feedback}
+            source={`## 과제 피드백\n${feedback}`}
             className="p-6 max-w-full"
             wrapperElement={{
               "data-color-mode": "dark",
@@ -102,7 +83,7 @@ export const AssignmentDetail = Object.assign(
           />
         </div>
 
-        {/* TODO: Feedback Design 추가 */}
+        <AssignmentComment className="mt-9" />
       </div>
     );
   },
