@@ -1,1 +1,1 @@
-export * from "./mergeAssignments.ts";
+export * from "./mergeAssignments";
