@@ -7,7 +7,6 @@ import { INestApplication } from '@nestjs/common';
 import {
   AssignmentDetail,
   AssignmentResult,
-  CommonAssignment,
   GithubPullRequest,
   UserWIthCommonAssignments,
 } from '@hanghae-plus/domain';
@@ -21,6 +20,7 @@ const repos = [
   'front_6th_chapter1-3',
   'front_6th_chapter2-1',
   'front_6th_chapter2-2',
+  'front_6th_chapter2-3',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {

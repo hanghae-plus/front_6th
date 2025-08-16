@@ -47,31 +47,38 @@ export class HanghaeService {
       // 김유현님 1주차 과제 URL 제출 링크 조정
       draft[8].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/22';
-      draft[62].assignment.url =
+      draft[61].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/22';
 
       // 신홍준님의 1주차 과제 URL 제출 링크 조정
       draft[17].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/77';
-      draft[71].assignment.url =
+      draft[70].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-1/pull/77';
 
       // 정민기님 2주차 과제 URL 제출 링크 조정
-      draft[151].assignment.url =
+      draft[149].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-2/pull/13';
-      draft[205].assignment.url =
+      draft[202].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter1-2/pull/13';
 
       // 김지혜님 4주차 과제 URL 제출 링크 조정
-      draft[333].assignment.url =
+      draft[327].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter2-1/pull/22';
-      draft[387].assignment.url =
+      draft[380].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter2-1/pull/22';
+
+      // 장루빈님 5주차 과제 URL 제출 링크 조정
+      draft[462].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter2-2/pull/30';
+      draft[515].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter2-2/pull/30';
     });
   }
 
   public async getAssignmentResults(): Promise<AssignmentResult[]> {
     const assignments = await this.getAssignments();
+    console.log(assignments);
     const results: AssignmentResult[] = await Promise.all(
       assignments.map(({ assignmentId, name }) =>
         this.getAssignmentUsersTotalStatus(assignmentId).then(
