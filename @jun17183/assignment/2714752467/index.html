@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -967,6 +967,19 @@ export const ProductForm = ({
   );
 };
 "><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>수고했어요! 홍준</p>
+<p>&quot;놀랍게도 이번 과제를 하면서 느낀 점은,,, 재밌었습니다.
+&#x27;애니 봐야지~&#x27;, &#x27;게임 한 판 해야지~&#x27; 보다 &#x27;빨리 과제 해야지~&#x27; 라는 생각이 들었습니다.
+이유를 떠올려 보자면 이전 과제들과 달리 주체적으로 작업했고, 그에 따른 결과물도 스스로 만족스러웠기 때문이라고 생각합니다.&quot;</p>
+<p>출제자로써 너무나 만족스러운 내용이네요ㅎ 코드를 정리정돈하면서 이해도가 선명해져가는 기분은 뭔가 만들어가는 코딩에 비해 또 새로운 즐거움이죠. 그렇게 직접 해보면서 능동적인 도움을 구해가며 AI와 함께 코딩을 해보는 경험도 좋아보여요. 아주 아주 잘했습니다. 도움이 되었다니 기쁘네요!</p>
+<p>Q)
+아래와 같이 포맷 함수나 계산 함수를 utils 파일로 분리하긴 했는데 적절하다고 생각하진 않습니다. 당장 인자 값도 product와 같은 엔티티를 쓰고 있으며, utils로만 묶기엔 여러 역할의 함수가 있다고 생각합니다.</p>
+<p>다만 나눈다면 어떻게 나눠야 할까? 라는 생각이 듭니다. 각 도메인마다 util 파일이 존재해야 하는 건지, 그렇다면 그건 util 이라고 부르는 건 적절한지 모르겠습니다.</p>
+<p>=&gt; 과제의 의도는 도메인에 쓰이는 순수함수와 도메인과 무관한 유틸함수의 경계를 구분하기를 바랬습니다. 도메인을 중심으로 코드를 정리하면 자연스레 비즈니스 로직과 그렇지 않은 로직을 구분할 수 있거든요. 순수함수 vs 부수효과, 도메인 vs 비도메인은 다른 관점이니까요.</p>
+<p>=&gt; 모든 도메인에 모든 유틸이 있어야 할 필요는 없습니다. 그리고 같은 유틸스러운 코드라 하더라도 도메인이 엮이고 안 엮이고의 차이를 느껴보기를 바랬습니다. 굳이 나눈다면 도메인을 기준으로 나누는게 좋습니다. 도메인이 포함되지 않은 코드여야 라이브러리로써 다른 데서도 재사용이 가능하니까요.</p>
+<p>2
+Form 컴포넌트의 코드 수를 줄일 수 있는 방법이 있을까요? 아무래도 입력할 부분이 많고 그만큼 jsx 코드 길이도, 핸들러 수도 많아 Form 컴포넌트 만큼은 코드 라인 수가 길어지더라구요.</p>
+<p>=&gt; 그래서 react-hook-form과 같은 form 전용 훅을 사용하게 되죠. 홍준과 같은 고민을 이미 많은 사람들이 해봤을 거에요. 다양한 form을 다루는 hook 라이브러리들을 살펴보면서 이런식으로도 해볼 수 있구나 하는걸 느껴보면 좋겠어요.</p>
+<p>ps. 과제 채점 빼먹어서 미안해요!! ^^;</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -151,6 +151,16 @@ Jotai는 사용해 보니 규모가 큰 프로젝트에서는 한 곳에서 관�
 </li>
 </ul>
 <hr/></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>안녕하세요 태영, 수고했습니다! 이번 과제는 React의 Custom Hook 개념을 이해하고 함수형 프로그래밍의 순수함수 개념을 체득하면서 적절한 계층 분리를 경험하는 것이 목표였어요.</p>
+<p>&quot;순서가 중요하다!!!!&quot;라는 깨달음 좋습니다. 실제로 리팩토링에서 가장 많이 실수하는 부분이 바로 순서죠. icons를 먼저 분리하지 않고 진행했다가 svg 코드들을 다시 찾아 헤맨 경험 - 이런 시행착오가 진짜 학습이죠. 리팩토링을 할때에는 작은 것 부터 그냥 하면 100% 나아지는 게 확실한 소소한 것들을 하는게 중요합니다. 구조보다도 분리가 가능한 클린한 코드로 야금야금 만들어두는거죠. svg를 icon으로 만든다거나 좋지 않은 이름을 바꾼다거나 inline 핸들러를 옮긴다거나 코드의 순서를 정돈한다거나 주석을 다는 일처럼 말이죠.</p>
+<p>또 models &gt; hooks &gt; components의 단방향 데이터 흐름이라는 의미를 몸으로 느낌을 이해한듯 해서 좋네요. 데이터의 흐름을 이해하면 그 흐름은 그대로이면서 세부 계층이 더 쪼개어지는 거라 model의 타입 - 원본데이터 - 파생 데이터 등으로 쪼개어지고 hook도 그렇고 component도 세부적인 단계로 쪼개어질 수 있다는걸 느낄 수 있을거에요!</p>
+<p>Q) 실무에서 대규모 리팩토링을 진행할 때의 순서와 전략
+=&gt; 큰 방향과 목표에 대해서 공감대를 항상 갖추고 컨벤션을 갖추려하지만 이걸 작정하고 대대적으로 수정하거나 하지는 않아요. 규모가 클수록 기존의 동작이 문제없을거라는 재검증을 하는데 엄청난 에너지가 들기 떄문에 - 다시 다 확인해야하는 것인 만큼 - 그래도 평소에 조금씩 분리가능한 구조 즉 결합도를 낮춰두는 구조를 유지하는게 중요합니다.</p>
+<p>=&gt; 해보면 알겠지만 결합도가 충분히 낮은 좋은 구조를 가지고 있으면 그 뒤에 어떻게 재배치를 하거나 이전하는것이 어렵지 않을 뿐더라 문제가 생기는 경우도 굉장히 낮거든요. 그렇기 때문에 소소하게 조금씩 더러운 곳을 치워나가는 습관이 제일 중요합니다.</p>
+<p>=&gt; 그렇게 코드가 갖춰져 있다면 규모에 맞춰 응집도를 더 좋게 할 수 있는 적절한 구조들에서 대해서 열심히 고민하고 상의해보면서 실험등을 통해 합의를 하게 되겠죠. 테스트 코드도 작성하고 커버리지도 확인하면서 말이죠.</p>
+<p>Q) 팀원들과의 협업 방법</p>
+<p>=&gt; 리팩토링 전에 팀 전체가 목표와 방향성을 공유하는 게 핵심이에요. 우선 당연히 해야하는 것들에 대해서도 합의가 있으면 좋아요. svg는 IconOOO 형태로 옮겨둔다라거나 하면 안되는 안티코드들.</p>
+<p>그런데 폴더구조라건다 새로운 기술 스택의 도입등은 모두에게 영향을 미치는 만큼 충분한 합의가 필요합니다. 어떻게 구체적으로 할지를 정하는게 아니라 더 큰 합의. 왜 하려고 하는지 원하고자 하는게 무엇인지 결정은 어떻게 할 것인지 이런것들의 합의를 충분히 하면 고민이 생겼을때 그 합의했던 내용을 바탕으로 결정을 할 수 있답니다.</p>
+<p>수고하셨습니다. 6주차 과제도 화이팅입니다</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>

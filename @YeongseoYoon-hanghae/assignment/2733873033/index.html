@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@YeongseoYoon-hanghae/" data-discover="true">YeongseoYoon-hanghae<!-- --> 님의 상세페이지</a> ＞ <!-- -->[5팀 윤영서] Chapter 2-3. 관심사 🦍분리와 폴더구조</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter2-3/pull/20" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[5팀 윤영서] Chapter 2-3. 관심사 🦍분리와 폴더구조</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->YeongseoYoon-hanghae</span><span>2025. 8. 11.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><p>배포링크 : <a href="https://yeongseoyoon-hanghae.github.io/front_6th_chapter2-3">https://yeongseoyoon-hanghae.github.io/front_6th_chapter2-3</a></p>
+<h2 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h2>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<h4 id="목표--전역상태관리를-이용한-적절한-분리와-계층에-대한-이해를-통한-fsd-폴더-구조-적용하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#목표--전역상태관리를-이용한-적절한-분리와-계층에-대한-이해를-통한-fsd-폴더-구조-적용하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>목표 : 전역상태관리를 이용한 적절한 분리와 계층에 대한 이해를 통한 FSD 폴더 구조 적용하기</h4>
+<ul>
+<li>전역상태관리를 사용해서 상태를 분리하고 관리하는 방법에 대한 이해</li>
+<li>Context API, Jotai, Zustand 등 상태관리 라이브러리 사용하기</li>
+<li>FSD(Feature-Sliced Design)에 대한 이해</li>
+<li>FSD를 통한 관심사의 분리에 대한 이해</li>
+<li>단일책임과 역할이란 무엇인가?</li>
+<li>관심사를 하나만 가지고 있는가?</li>
+<li>어디에 무엇을 넣어야 하는가?</li>
+</ul>
+<h4 id="체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>체크포인트</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 전역상태관리를 사용해서 상태를 분리하고 관리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Props Drilling을 최소화했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> shared 공통 컴포넌트를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> shared 공통 로직을 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 type을 정의하고 model을 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 ui를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 api를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 사용자행동(이벤트 처리)를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 ui를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 api를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> widget을 중심으로 데이터를 재사용가능한 형태로 분리했나요?</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<h4 id="목표-서버상태관리-도구인-tanstackquery를-이용하여-비동기코드를-선언적인-함수형-프로그래밍으로-작성하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#목표-서버상태관리-도구인-tanstackquery를-이용하여-비동기코드를-선언적인-함수형-프로그래밍으로-작성하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>목표: 서버상태관리 도구인 TanstackQuery를 이용하여 비동기코드를 선언적인 함수형 프로그래밍으로 작성하기</h4>
+<ul>
+<li>TanstackQuery의 사용법에 대한 이해</li>
+<li>TanstackQuery를 이용한 비동기 코드 작성에 대한 이해</li>
+<li>비동기 코드를 선언적인 함수형 프로그래밍으로 작성하는 방법에 대한 이해</li>
+</ul>
+<h4 id="체크포인트-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#체크포인트-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>체크포인트</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 모든 API 호출이 TanStack Query의 useQuery와 useMutation으로 대체되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 쿼리 키가 적절히 설정되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> fetch와 useState가 아닌 선언적인 함수형 프로그래밍이 적절히 적용되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 캐싱과 리프레시 전략이 올바르게 구현되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 낙관적인 업데이트가 적용되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 에러 핸들링이 적절히 구현되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버 상태와 클라이언트 상태가 명확히 분리되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 코드가 간결하고 유지보수가 용이한 구조로 작성되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> TanStack Query의 Devtools가 정상적으로 작동하는가?</li>
+</ul>
+<h3 id="최종과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#최종과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>최종과제</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 폴더구조와 나의 멘탈모데일이 일치하나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 다른 사람이 봐도 이해하기 쉬운 구조인가요?</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<p>이번 과제도 쉽지 않았습니다...연속 3주차 쉽지 않았따고만 말하는거같은데... 셀프로 인생하드모드를 찍어보니까 진짜 쉽지 않네요...
+한 3일정도를 다른 곳에 에너지를 투자하다보니 과제에 투자할 시간이 없어지고 결국엔 또 밤을 새게 된...우하하
+그래도 다음주부터는 좀 더 시간이 날 것 같아서(아마?) 좀 더 과제에 투자할 시간이 있지 않을까 싶습니다.</p>
+<details>
+    <summary>이번 프로젝트의 전체 폴더구조</summary>
+<pre><code class="code-highlight"><span class="code-line">src/
+</span><span class="code-line">├── app/                          # 애플리케이션 레벨 설정
+</span><span class="code-line">│   ├── layouts/                  # 레이아웃 컴포넌트
+</span><span class="code-line">│   │   ├── Footer.tsx
+</span><span class="code-line">│   │   └── Header.tsx
+</span><span class="code-line">│   └── providers/                # 전역 프로바이더
+</span><span class="code-line">│       └── index.tsx
+</span><span class="code-line">├── assets/                       # 정적 자산
+</span><span class="code-line">│   └── react.svg
+</span><span class="code-line">├── entities/                     # 도메인 엔티티 (가장 하위 레이어)
+</span><span class="code-line">│   ├── comment/                  # 댓글 도메인
+</span><span class="code-line">│   │   ├── api/                  # API 관련
+</span><span class="code-line">│   │   │   ├── api.ts
+</span><span class="code-line">│   │   │   ├── index.ts
+</span><span class="code-line">│   │   │   ├── mutations.ts      # TanStack Query mutations
+</span><span class="code-line">│   │   │   └── queries.ts        # TanStack Query queries
+</span><span class="code-line">│   │   ├── model/                # 타입 정의
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   └── ui/                   # 순수 UI 컴포넌트
+</span><span class="code-line">│   │       ├── CommentItem.tsx
+</span><span class="code-line">│   │       ├── CommentList.tsx
+</span><span class="code-line">│   │       └── index.ts
+</span><span class="code-line">│   ├── post/                     # 게시물 도메인
+</span><span class="code-line">│   │   ├── api/
+</span><span class="code-line">│   │   │   ├── api.ts
+</span><span class="code-line">│   │   │   ├── index.ts
+</span><span class="code-line">│   │   │   ├── mutations.ts
+</span><span class="code-line">│   │   │   └── queries.ts
+</span><span class="code-line">│   │   ├── model/
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   └── ui/
+</span><span class="code-line">│   │       ├── PostItem.tsx
+</span><span class="code-line">│   │       ├── PostTagItem.tsx
+</span><span class="code-line">│   │       └── index.ts
+</span><span class="code-line">│   └── user/                     # 사용자 도메인
+</span><span class="code-line">│       ├── api/
+</span><span class="code-line">│       │   ├── api.ts
+</span><span class="code-line">│       │   ├── index.ts
+</span><span class="code-line">│       │   └── queries.ts
+</span><span class="code-line">│       ├── model/
+</span><span class="code-line">│       │   └── index.ts
+</span><span class="code-line">│       └── ui/
+</span><span class="code-line">│           ├── UserDetail.tsx
+</span><span class="code-line">│           └── index.ts
+</span><span class="code-line">├── features/                     # 사용자 기능 (비즈니스 로직)
+</span><span class="code-line">│   ├── comment/                  # 댓글 관련 기능
+</span><span class="code-line">│   │   ├── add-comment/          # 댓글 추가 기능
+</span><span class="code-line">│   │   │   ├── model/            # 비즈니스 로직
+</span><span class="code-line">│   │   │   │   ├── useAddComment.ts
+</span><span class="code-line">│   │   │   │   └── useAddCommentDialog.tsx
+</span><span class="code-line">│   │   │   ├── ui/               # 기능별 UI
+</span><span class="code-line">│   │   │   │   └── AddCommentDialog.tsx
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   ├── delete-comment/       # 댓글 삭제 기능
+</span><span class="code-line">│   │   │   ├── model/
+</span><span class="code-line">│   │   │   │   └── useDeleteComment.ts
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   ├── edit-comment/         # 댓글 수정 기능
+</span><span class="code-line">│   │   │   ├── model/
+</span><span class="code-line">│   │   │   │   ├── useEditComment.ts
+</span><span class="code-line">│   │   │   │   └── useEditCommentDialog.tsx
+</span><span class="code-line">│   │   │   ├── ui/
+</span><span class="code-line">│   │   │   │   └── EditCommentDialog.tsx
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   └── like-comment/         # 댓글 좋아요 기능
+</span><span class="code-line">│   │       ├── model/
+</span><span class="code-line">│   │       │   └── useLikeComment.ts
+</span><span class="code-line">│   │       └── index.ts
+</span><span class="code-line">│   ├── post/                     # 게시물 관련 기능
+</span><span class="code-line">│   │   ├── add-post/             # 게시물 추가
+</span><span class="code-line">│   │   │   ├── model/
+</span><span class="code-line">│   │   │   │   ├── useAddPost.ts
+</span><span class="code-line">│   │   │   │   └── useAddPostDialog.tsx
+</span><span class="code-line">│   │   │   ├── ui/
+</span><span class="code-line">│   │   │   │   └── AddPostDialog.tsx
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   ├── delete-post/          # 게시물 삭제
+</span><span class="code-line">│   │   │   ├── model/
+</span><span class="code-line">│   │   │   │   └── useDeletePost.ts
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   ├── edit-post/            # 게시물 수정
+</span><span class="code-line">│   │   │   ├── model/
+</span><span class="code-line">│   │   │   │   ├── useEditPost.ts
+</span><span class="code-line">│   │   │   │   └── useEditPostDialog.tsx
+</span><span class="code-line">│   │   │   ├── ui/
+</span><span class="code-line">│   │   │   │   └── EditPostDialog.tsx
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   └── view-posts/           # 게시물 조회
+</span><span class="code-line">│   │       ├── model/
+</span><span class="code-line">│   │       │   ├── usePostsBrowseParams.ts
+</span><span class="code-line">│   │       │   └── usePostsList.ts
+</span><span class="code-line">│   │       ├── ui/
+</span><span class="code-line">│   │       │   └── PostsFilterBar.tsx
+</span><span class="code-line">│   │       └── index.ts
+</span><span class="code-line">│   └── user/                     # 사용자 관련 기능
+</span><span class="code-line">│       └── view-profile/         # 프로필 조회
+</span><span class="code-line">│           ├── model/
+</span><span class="code-line">│           │   └── useUserProfileDialog.tsx
+</span><span class="code-line">│           ├── ui/
+</span><span class="code-line">│           │   └── UserProfileDialog.tsx
+</span><span class="code-line">│           └── index.ts
+</span><span class="code-line">├── mocks/                        # MSW 모킹
+</span><span class="code-line">│   ├── handlers.ts
+</span><span class="code-line">│   └── server.ts
+</span><span class="code-line">├── pages/                        # 페이지 레벨 (최상위)
+</span><span class="code-line">│   ├── __tests__/                # 테스트
+</span><span class="code-line">│   │   └── PostsManagerPage.test.tsx
+</span><span class="code-line">│   └── posts-manager/            # 게시물 관리 페이지
+</span><span class="code-line">│       ├── model/
+</span><span class="code-line">│       │   └── usePostsManagerStore.tsx  # Zustand store
+</span><span class="code-line">│       └── ui/
+</span><span class="code-line">│           └── PostsManagerPage.tsx
+</span><span class="code-line">├── shared/                       # 공통 유틸리티
+</span><span class="code-line">│   ├── config/                   # 설정
+</span><span class="code-line">│   │   └── query-client.ts       # TanStack Query 설정
+</span><span class="code-line">│   ├── lib/                      # 공통 로직
+</span><span class="code-line">│   │   ├── modal/
+</span><span class="code-line">│   │   ├── highlightText.tsx     # 검색어 하이라이트
+</span><span class="code-line">│   │   ├── httpClient.ts         # HTTP 클라이언트
+</span><span class="code-line">│   │   ├── index.ts
+</span><span class="code-line">│   │   ├── useOverlay.tsx        # 모달 관리
+</span><span class="code-line">│   │   └── useQueryParamsPagination.ts  # URL 상태 동기화
+</span><span class="code-line">│   ├── types/                    # 공통 타입
+</span><span class="code-line">│   │   ├── index.ts
+</span><span class="code-line">│   │   ├── pagination.ts
+</span><span class="code-line">│   │   └── sort.ts
+</span><span class="code-line">│   └── ui/                       # 공통 UI 컴포넌트
+</span><span class="code-line">│       ├── button/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── card/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── dialog/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── input/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── pagination/
+</span><span class="code-line">│       │   └── PaginationBar.tsx
+</span><span class="code-line">│       ├── post-actions/
+</span><span class="code-line">│       ├── select/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── table/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       ├── textarea/
+</span><span class="code-line">│       │   └── index.tsx
+</span><span class="code-line">│       └── index.ts
+</span><span class="code-line">├── widgets/                      # 재사용 가능한 위젯
+</span><span class="code-line">│   ├── post-detail/              # 게시물 상세 위젯
+</span><span class="code-line">│   │   ├── model/
+</span><span class="code-line">│   │   │   └── usePostDetailDialog.tsx
+</span><span class="code-line">│   │   ├── ui/
+</span><span class="code-line">│   │   │   └── PostDetailDialog.tsx
+</span><span class="code-line">│   │   └── index.ts
+</span><span class="code-line">│   ├── posts-pagination/         # 페이지네이션 위젯
+</span><span class="code-line">│   │   ├── ui/
+</span><span class="code-line">│   │   │   ├── PostsPagination.tsx
+</span><span class="code-line">│   │   │   └── index.ts
+</span><span class="code-line">│   │   └── index.ts
+</span><span class="code-line">│   └── posts-table/              # 게시물 테이블 위젯
+</span><span class="code-line">│       └── ui/
+</span><span class="code-line">│           ├── PostsTable.tsx
+</span><span class="code-line">│           └── index.ts
+</span><span class="code-line">├── App.tsx                       # 루트 컴포넌트
+</span><span class="code-line">├── index.css
+</span><span class="code-line">├── main.tsx                      # 진입점
+</span><span class="code-line">├── setupTests.ts
+</span><span class="code-line">└── vite-env.d.ts
+</span></code><div class="copied" data-code="src/
+├── app/                          # 애플리케이션 레벨 설정
+│   ├── layouts/                  # 레이아웃 컴포넌트
+│   │   ├── Footer.tsx
+│   │   └── Header.tsx
+│   └── providers/                # 전역 프로바이더
+│       └── index.tsx
+├── assets/                       # 정적 자산
+│   └── react.svg
+├── entities/                     # 도메인 엔티티 (가장 하위 레이어)
+│   ├── comment/                  # 댓글 도메인
+│   │   ├── api/                  # API 관련
+│   │   │   ├── api.ts
+│   │   │   ├── index.ts
+│   │   │   ├── mutations.ts      # TanStack Query mutations
+│   │   │   └── queries.ts        # TanStack Query queries
+│   │   ├── model/                # 타입 정의
+│   │   │   └── index.ts
+│   │   └── ui/                   # 순수 UI 컴포넌트
+│   │       ├── CommentItem.tsx
+│   │       ├── CommentList.tsx
+│   │       └── index.ts
+│   ├── post/                     # 게시물 도메인
+│   │   ├── api/
+│   │   │   ├── api.ts
+│   │   │   ├── index.ts
+│   │   │   ├── mutations.ts
+│   │   │   └── queries.ts
+│   │   ├── model/
+│   │   │   └── index.ts
+│   │   └── ui/
+│   │       ├── PostItem.tsx
+│   │       ├── PostTagItem.tsx
+│   │       └── index.ts
+│   └── user/                     # 사용자 도메인
+│       ├── api/
+│       │   ├── api.ts
+│       │   ├── index.ts
+│       │   └── queries.ts
+│       ├── model/
+│       │   └── index.ts
+│       └── ui/
+│           ├── UserDetail.tsx
+│           └── index.ts
+├── features/                     # 사용자 기능 (비즈니스 로직)
+│   ├── comment/                  # 댓글 관련 기능
+│   │   ├── add-comment/          # 댓글 추가 기능
+│   │   │   ├── model/            # 비즈니스 로직
+│   │   │   │   ├── useAddComment.ts
+│   │   │   │   └── useAddCommentDialog.tsx
+│   │   │   ├── ui/               # 기능별 UI
+│   │   │   │   └── AddCommentDialog.tsx
+│   │   │   └── index.ts
+│   │   ├── delete-comment/       # 댓글 삭제 기능
+│   │   │   ├── model/
+│   │   │   │   └── useDeleteComment.ts
+│   │   │   └── index.ts
+│   │   ├── edit-comment/         # 댓글 수정 기능
+│   │   │   ├── model/
+│   │   │   │   ├── useEditComment.ts
+│   │   │   │   └── useEditCommentDialog.tsx
+│   │   │   ├── ui/
+│   │   │   │   └── EditCommentDialog.tsx
+│   │   │   └── index.ts
+│   │   └── like-comment/         # 댓글 좋아요 기능
+│   │       ├── model/
+│   │       │   └── useLikeComment.ts
+│   │       └── index.ts
+│   ├── post/                     # 게시물 관련 기능
+│   │   ├── add-post/             # 게시물 추가
+│   │   │   ├── model/
+│   │   │   │   ├── useAddPost.ts
+│   │   │   │   └── useAddPostDialog.tsx
+│   │   │   ├── ui/
+│   │   │   │   └── AddPostDialog.tsx
+│   │   │   └── index.ts
+│   │   ├── delete-post/          # 게시물 삭제
+│   │   │   ├── model/
+│   │   │   │   └── useDeletePost.ts
+│   │   │   └── index.ts
+│   │   ├── edit-post/            # 게시물 수정
+│   │   │   ├── model/
+│   │   │   │   ├── useEditPost.ts
+│   │   │   │   └── useEditPostDialog.tsx
+│   │   │   ├── ui/
+│   │   │   │   └── EditPostDialog.tsx
+│   │   │   └── index.ts
+│   │   └── view-posts/           # 게시물 조회
+│   │       ├── model/
+│   │       │   ├── usePostsBrowseParams.ts
+│   │       │   └── usePostsList.ts
+│   │       ├── ui/
+│   │       │   └── PostsFilterBar.tsx
+│   │       └── index.ts
+│   └── user/                     # 사용자 관련 기능
+│       └── view-profile/         # 프로필 조회
+│           ├── model/
+│           │   └── useUserProfileDialog.tsx
+│           ├── ui/
+│           │   └── UserProfileDialog.tsx
+│           └── index.ts
+├── mocks/                        # MSW 모킹
+│   ├── handlers.ts
+│   └── server.ts
+├── pages/                        # 페이지 레벨 (최상위)
+│   ├── __tests__/                # 테스트
+│   │   └── PostsManagerPage.test.tsx
+│   └── posts-manager/            # 게시물 관리 페이지
+│       ├── model/
+│       │   └── usePostsManagerStore.tsx  # Zustand store
+│       └── ui/
+│           └── PostsManagerPage.tsx
+├── shared/                       # 공통 유틸리티
+│   ├── config/                   # 설정
+│   │   └── query-client.ts       # TanStack Query 설정
+│   ├── lib/                      # 공통 로직
+│   │   ├── modal/
+│   │   ├── highlightText.tsx     # 검색어 하이라이트
+│   │   ├── httpClient.ts         # HTTP 클라이언트
+│   │   ├── index.ts
+│   │   ├── useOverlay.tsx        # 모달 관리
+│   │   └── useQueryParamsPagination.ts  # URL 상태 동기화
+│   ├── types/                    # 공통 타입
+│   │   ├── index.ts
+│   │   ├── pagination.ts
+│   │   └── sort.ts
+│   └── ui/                       # 공통 UI 컴포넌트
+│       ├── button/
+│       │   └── index.tsx
+│       ├── card/
+│       │   └── index.tsx
+│       ├── dialog/
+│       │   └── index.tsx
+│       ├── input/
+│       │   └── index.tsx
+│       ├── pagination/
+│       │   └── PaginationBar.tsx
+│       ├── post-actions/
+│       ├── select/
+│       │   └── index.tsx
+│       ├── table/
+│       │   └── index.tsx
+│       ├── textarea/
+│       │   └── index.tsx
+│       └── index.ts
+├── widgets/                      # 재사용 가능한 위젯
+│   ├── post-detail/              # 게시물 상세 위젯
+│   │   ├── model/
+│   │   │   └── usePostDetailDialog.tsx
+│   │   ├── ui/
+│   │   │   └── PostDetailDialog.tsx
+│   │   └── index.ts
+│   ├── posts-pagination/         # 페이지네이션 위젯
+│   │   ├── ui/
+│   │   │   ├── PostsPagination.tsx
+│   │   │   └── index.ts
+│   │   └── index.ts
+│   └── posts-table/              # 게시물 테이블 위젯
+│       └── ui/
+│           ├── PostsTable.tsx
+│           └── index.ts
+├── App.tsx                       # 루트 컴포넌트
+├── index.css
+├── main.tsx                      # 진입점
+├── setupTests.ts
+└── vite-env.d.ts
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+</details>
+<h3 id="이번-과제를-통해-이전에-비해-새롭게-알게-된-점이-있다면-적어주세요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#이번-과제를-통해-이전에-비해-새롭게-알게-된-점이-있다면-적어주세요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>이번 과제를 통해 이전에 비해 새롭게 알게 된 점이 있다면 적어주세요.</h3>
+<p>fsd에 대해서 모호했던 개념들을 잡을 수 있었던것 같습니다.</p>
+<h3 id="본인이-과제를-하면서-가장-애쓰려고-노력했던-부분은-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#본인이-과제를-하면서-가장-애쓰려고-노력했던-부분은-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>본인이 과제를 하면서 가장 애쓰려고 노력했던 부분은 무엇인가요?</h3>
+<p>어떻게하면 FSD의 단방향 의존성을 지킬 수 있을까에 대해서 많이 고민했던 것 같습니다. 그리고 코드의 응집도를 신경쓰려고 노력했습니다.</p>
+<p>FSD 계층별로 단방향 흐름을 가져가기 위해서 entities는 순수한 데이터, 내부적으로 액션이 없는 Ui, 그리고 API 계층으로만 구성하고, features는 사용자 행동과 비즈니스 로직만 담당하도록 했습니다. entities/comment/ui/CommentItem.tsx는 외부 의존성 없이 props만으로 동작하는 순수한 UI 컴포넌트로 만들었고, features/comment/add-comment/useAddComment.ts에서는 entities의 mutation을 사용하여 위에서 아래로만 의존하도록 구성했습니다. 이렇게 해서 entities는 외부 의존이 전혀 없고, features는 entities에만 의존하고, widgets는 features와 entities에 의존하고, pages는 모든 계층에 의존하는 단방향 의존성을 구현할 수 있었습니다.</p>
+<p>TanStack Query를 활용한 낙관적 업데이트 구현에도 신경을 썼습니다. 지금 현재는 dummy데이터를 사용하고 있어 get요청인 경우에는 문제가 없으나, 댓글 추가 혹은 게시글 추가를 통해 새로운 글, 댓글이 추가되는 경우 계속해서 똑같은 Id값이 응답값으로 반환되어 react의 렌더링 구분값인 key값이 중복되는 경우가 존재하게 되었습니다. 따라서 post, put, delete시에는 key값으로 둘만한 id값이 필요했는데요. comment 추가 시에는 먼저 queryClient.cancelQueries로 race condition을 방지하고 이전 데이터를 백업한 후, 음수로 된 임시 ID를 생성해서 즉시 UI에 반영했습니다. 만약 API 호출이 실패하면 이전 데이터로 자동 롤백되고 성공하면 임시 데이터를 실제 서버 데이터로 교체하는 방식으로 구현했습니다. 또한 낙관적 업데이트 시 생성되는 임시 데이터에는 음수 ID와 isTemporary: true 플래그를 부여해서 실제 서버 데이터와 구분했습니다. 그래서 임시 상태의 아이템에 대해서는 실제 API 호출을 하지 않고 Promise.resolve()를 반환하도록 하여 게시글 삭제, 수정등과 같은 작업시에 404 에러가 발생하지 않도록 구분이 가능하게 되었습니다.
+또한 게시글의 경우에는 임시로 등록되는 Id값이 음수값이 되어 나타나 사용자 입장에서는 불편할 것 같아 id자리에 id를 보이는 게 아니라 NEW라는 뱃지를 띄우도록 구현하였습니다.</p>
+<p><a href="https://github.com/user-attachments/assets/48e490de-6b86-41e8-84c3-ff83e12499eb">https://github.com/user-attachments/assets/48e490de-6b86-41e8-84c3-ff83e12499eb</a></p>
+<p><a href="https://github.com/user-attachments/assets/6afa0c74-2754-4954-9464-cb257b5d327f">https://github.com/user-attachments/assets/6afa0c74-2754-4954-9464-cb257b5d327f</a></p>
+<p>또한 쿼리 옵션을 통해서 도메인별로 쿼리키 및 쿼리함수에 대한 응집도를 생각했습니다. postQueries.listQuery, postQueries.searchQuery, postQueries.listByTagQuery처럼 각 쿼리가 자체 옵션을 포함하도록 해서 응집도를 높였습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> queryOptions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@tanstack/react-query&quot;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> postApi<span class="token punctuation">,</span> FetchPostsBySearchParams<span class="token punctuation">,</span> FetchPostsByTagParams<span class="token punctuation">,</span> FetchPostsParams <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./api&quot;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> postQueries <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function-variable function">all</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string">&quot;post&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">list</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;list&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">listQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> FetchPostsParams<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">    <span class="token function">queryOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      queryKey<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> params<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token function-variable function">queryFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> postApi<span class="token punctuation">.</span><span class="token function">getPosts</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function-variable function">listByTag</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;byTag&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">listByTagQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> FetchPostsByTagParams<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">    <span class="token function">queryOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      queryKey<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">listByTag</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> params<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token function-variable function">queryFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> postApi<span class="token punctuation">.</span><span class="token function">getPostsByTag</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">      enabled<span class="token operator">:</span> <span class="token operator">!</span><span class="token operator">!</span>params<span class="token punctuation">.</span>tag<span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function-variable function">search</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;search&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">searchQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span>params<span class="token operator">:</span> FetchPostsBySearchParams<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">    <span class="token function">queryOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      queryKey<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> params<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token function-variable function">queryFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> postApi<span class="token punctuation">.</span><span class="token function">searchPosts</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">      enabled<span class="token operator">:</span> <span class="token operator">!</span><span class="token operator">!</span>params<span class="token punctuation">.</span>search<span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function-variable function">detail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;detail&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">detailQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">    <span class="token function">queryOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      queryKey<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">detail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token function-variable function">queryFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> postApi<span class="token punctuation">.</span><span class="token function">getPosts</span><span class="token punctuation">(</span><span class="token punctuation">{</span> limit<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> skip<span class="token operator">:</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">      enabled<span class="token operator">:</span> <span class="token operator">!</span><span class="token operator">!</span>id<span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function-variable function">tag</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;tag&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token keyword">const</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">tagQuery</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">    <span class="token function">queryOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      queryKey<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>postQueries<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;tag&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">      queryFn<span class="token operator">:</span> postApi<span class="token punctuation">.</span>getTags<span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="import { queryOptions } from &quot;@tanstack/react-query&quot;
+
+import { postApi, FetchPostsBySearchParams, FetchPostsByTagParams, FetchPostsParams } from &quot;./api&quot;
+
+export const postQueries = {
+  all: () =&gt; [&quot;post&quot;] as const,
+  list: () =&gt; [...postQueries.all(), &quot;list&quot;] as const,
+  listQuery: (params: FetchPostsParams) =&gt;
+    queryOptions({
+      queryKey: [...postQueries.list(), params],
+      queryFn: () =&gt; postApi.getPosts(params),
+    }),
+
+  listByTag: () =&gt; [...postQueries.list(), &quot;byTag&quot;] as const,
+  listByTagQuery: (params: FetchPostsByTagParams) =&gt;
+    queryOptions({
+      queryKey: [...postQueries.listByTag(), params],
+      queryFn: () =&gt; postApi.getPostsByTag(params),
+      enabled: !!params.tag,
+    }),
+
+  search: () =&gt; [...postQueries.list(), &quot;search&quot;] as const,
+  searchQuery: (params: FetchPostsBySearchParams) =&gt;
+    queryOptions({
+      queryKey: [...postQueries.search(), params],
+      queryFn: () =&gt; postApi.searchPosts(params),
+      enabled: !!params.search,
+    }),
+
+  detail: () =&gt; [...postQueries.all(), &quot;detail&quot;] as const,
+  detailQuery: (id: string) =&gt;
+    queryOptions({
+      queryKey: [...postQueries.detail(), id],
+      queryFn: () =&gt; postApi.getPosts({ limit: 1, skip: parseInt(id) - 1 }),
+      enabled: !!id,
+    }),
+
+  tag: () =&gt; [...postQueries.all(), &quot;tag&quot;] as const,
+  tagQuery: () =&gt;
+    queryOptions({
+      queryKey: [...postQueries.all(), &quot;tag&quot;],
+      queryFn: postApi.getTags,
+    }),
+}
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>기존 코드에 sortBy가 없음으로 되어있는 경우에 검색 또는 필터링이 되지 않는 버그가 있어 공식문서를 참고하여 필터링 되지 않는 버그를 수정했습니다.</p>
+<p>그리고, shared 레이어에서는 횡단 관심사를 체계적으로 분리했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">import</span> axios<span class="token punctuation">,</span> <span class="token punctuation">{</span> AxiosInstance<span class="token punctuation">,</span> AxiosRequestConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;axios&quot;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token constant">API_BASE_URL</span> <span class="token operator">=</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">DEV</span> <span class="token operator">?</span> <span class="token string">&quot;/api&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;https://dummyjson.com&quot;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">class</span> <span class="token class-name">HttpClient</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">private</span> client<span class="token operator">:</span> AxiosInstance
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>client <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      baseURL<span class="token operator">:</span> <span class="token constant">API_BASE_URL</span><span class="token punctuation">,</span>
+</span><span class="code-line">      timeout<span class="token operator">:</span> <span class="token number">10000</span><span class="token punctuation">,</span>
+</span><span class="code-line">      headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token string-property property">&quot;Content-Type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">async</span> <span class="token generic-function"><span class="token function">get</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> config<span class="token operator">?</span><span class="token operator">:</span> AxiosRequestConfig<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>client<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">get</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">async</span> <span class="token generic-function"><span class="token function">post</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>client<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">post</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">async</span> <span class="token generic-function"><span class="token function">put</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>client<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">put</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">async</span> <span class="token generic-function"><span class="token function">patch</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>client<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">patch</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">async</span> <span class="token keyword">delete</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>client<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">delete</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> httpClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HttpClient</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  get<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> config<span class="token operator">?</span><span class="token operator">:</span> AxiosRequestConfig<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> httpClient<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">get</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> config<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  post<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> httpClient<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">post</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  put<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> httpClient<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">put</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  patch<span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">unknown</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> httpClient<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">patch</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token keyword">delete</span><span class="token operator">:</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> httpClient<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">delete</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="import axios, { AxiosInstance, AxiosRequestConfig } from &quot;axios&quot;
+
+const API_BASE_URL = import.meta.env.DEV ? &quot;/api&quot; : &quot;https://dummyjson.com&quot;
+
+class HttpClient {
+  private client: AxiosInstance
+
+  constructor() {
+    this.client = axios.create({
+      baseURL: API_BASE_URL,
+      timeout: 10000,
+      headers: {
+        &quot;Content-Type&quot;: &quot;application/json&quot;,
+      },
+    })
+  }
+
+  async get&lt;T&gt;(url: string, config?: AxiosRequestConfig): Promise&lt;T&gt; {
+    const response = await this.client.get&lt;T&gt;(url, config)
+    return response.data
+  }
+
+  async post&lt;T&gt;(url: string, data?: unknown): Promise&lt;T&gt; {
+    const response = await this.client.post&lt;T&gt;(url, data)
+    return response.data
+  }
+
+  async put&lt;T&gt;(url: string, data?: unknown): Promise&lt;T&gt; {
+    const response = await this.client.put&lt;T&gt;(url, data)
+    return response.data
+  }
+
+  async patch&lt;T&gt;(url: string, data?: unknown): Promise&lt;T&gt; {
+    const response = await this.client.patch&lt;T&gt;(url, data)
+    return response.data
+  }
+
+  async delete&lt;T&gt;(url: string): Promise&lt;T&gt; {
+    const response = await this.client.delete&lt;T&gt;(url)
+    return response.data
+  }
+}
+
+const httpClient = new HttpClient()
+
+export const http = {
+  get: &lt;T&gt;(url: string, config?: AxiosRequestConfig) =&gt; httpClient.get&lt;T&gt;(url, config),
+  post: &lt;T&gt;(url: string, data?: unknown) =&gt; httpClient.post&lt;T&gt;(url, data),
+  put: &lt;T&gt;(url: string, data?: unknown) =&gt; httpClient.put&lt;T&gt;(url, data),
+  patch: &lt;T&gt;(url: string, data?: unknown) =&gt; httpClient.patch&lt;T&gt;(url, data),
+  delete: &lt;T&gt;(url: string) =&gt; httpClient.delete&lt;T&gt;(url),
+}
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>위 코드처럼 HttpClient를 구현하여 사용하는 쪽에서는 HTTP 응답 구조를 신경쓰지 않고 비즈니스 데이터만 다룰 수 있도록 구현했습니다. useOverlay를 통해서는 모달이나 다이얼로그를 선언적으로 관리할 수 있게 구현했습니다. 기존의 명령적인 방식이었다면 useState로 isOpen 상태를 관리하고, 사용자 입력을 또 다른 상태로 관리해야 했겠지만, useOverlay는 Promise를 반환해서 모달의 결과값을 직접 받을 수 있게 만들었습니다.</p>
+<p>리팩토링 작업을 시작하기 전에 최소한의 ui에 대한 유지를 보장하기 위한 <a href="https://github.com/hanghae-plus/front_6th_chapter2-3/pull/20/commits/da94be22648791c00a72c67728ff6ce57493b048">테스트를 작성</a>했습니다.</p>
+<p>또한 zustand를 도입하면서 스코프를 좁혀주기 위해서 React Context와 결합하는 패턴을 사용했습니다. 이 패턴은 <a href="https://tkdodo.eu/blog/zustand-and-react-context">tkdodo의 글</a>에도 언급되어있는데요. 전역 zustand store를 사용하면 애플리케이션 전체에서 하나의 상태를 공유하게 되는데, 이는 같은 컴포넌트를 여러 번 인스턴스화할 때 상태가 서로 간섭하는 문제가 발생합니다. 예를 들어 PostDetail 컴포넌트를 여러 개 렌더링하면 각각이 독립적인 댓글 상태를 가져야 하는데, 전역 store를 사용하면 모든 인스턴스가 같은 댓글 상태를 공유하게 되어 의도하지 않은 부작용이 발생하게 됩니다.</p>
+<p>이를 해결하기 위해 Context Provider 내부에서 zustand store를 생성하고, 해당 Provider의 스코프 내에서만 그 store를 사용할 수 있도록 제한하는 방식을 채택했습니다. 이렇게 하면 각 Provider가 독립적인 store 인스턴스를 갖게 되어, 같은 컴포넌트라도 서로 다른 Context Provider 안에 있다면 완전히 분리된 상태를 유지할 수 있습니다. 제가 생각했을때 이부분에 있어서 의존성 주입 관점에서의 이점을 가져갈 수 있다고 생각하는데, 컴포넌트가 &quot;나는 이런 종류의 store가 필요하다&quot;고 Context를 통해 명시적으로 선언하게 되어 암묵적으로 전역 store에 의존하는 것보다 훨씬 명확한 의존성 관계를 형성한다고 생각하고 해당 방향으로 진행했습니다.</p>
+<h3 id="아직은-막연하다거나-더-고민이-필요한-부분을-적어주세요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#아직은-막연하다거나-더-고민이-필요한-부분을-적어주세요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>아직은 막연하다거나 더 고민이 필요한 부분을 적어주세요.</h3>
+<p><a id="features-concern"></a></p>
+<h4 id="features를-어디까지-분리해야할까에-대한-고민"><a class="anchor" aria-hidden="true" tabindex="-1" href="#features를-어디까지-분리해야할까에-대한-고민"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>features를 어디까지 분리해야할까에 대한 고민</h4>
+<p>features를 좀 더 잘라야했을까? 라는 고민이 드는 부분이 있는 것 같습니다. 지금은 파일이 너무 잘게 쪼개지고 응집도가 너무 떨어지는 것이 아닌가 하는 생각에 ui를 적당히 잘랐는데요, 단순히 훅뿐만아니라 만약 add-post라면... add post를 하는 button까지 잘라 ui로 배치했어야했을지에 대한 의문이 듭니다.
+제가 생각했을때 ui를 너무 잘게 쪼개게되면 단순히 컴포넌트의 &#x27;분리&#x27;에만 초점이 두어지는 것 같고 이렇게되면 아무리 결합도가 낮아지는 구조라고해도 같은 버튼에 onClick시 기능만 달라짐에도 다른 기능의 button의 의미가 될 것 같아 더이상 나누지는 않았습니다. 예를 들어 <addpostbutton>, <editpostbutton>, <deletepostbutton> 이렇게 나누면 각각이 독립적인 컴포넌트가 되지만, 결국 버튼의 본질적인 역할은 동일하고 단지 클릭 시 실행되는 로직만 다른 건데 이걸 굳이 세 개의 다른 컴포넌트로 만들 필요가 있을까 하는 의문이 들었던 것 같습니다.</deletepostbutton></editpostbutton></addpostbutton></p>
+<p><a id="global-state-concern"></a></p>
+<h4 id="전역상태-관련-고민"><a class="anchor" aria-hidden="true" tabindex="-1" href="#전역상태-관련-고민"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>전역상태 관련 고민</h4>
+<p>그리고 전역상태에 대해서는 계속해서 의문이 드는 것 같습니다. 지금 현재로서 FSD구조를 가져가고 있으므로 단방향으로 의존성을 가져가게되는데, 단순히 props 드릴링을 해결하기 위해서 전역상태 관리 라이브러리를 사용하면 하위 레이어에서도 상위 레이어의 액션을 호출하거나 상태를 변경할 수 있게 되어서 의존성 방향이 역전될 수 있지 않나 하는 우려가 있다고 생각했습니다.</p>
+<p>예를 들어 제 코드를 기준으로 했을때 props 드릴링을 해결하기 위해 entities 레이어에 있는 CommentItem 컴포넌트에서 zustand store를 호출했다고 생각해보겠습니다. props 드릴링을 피하기 위해서 만들었으니 zustand store에서는 값 뿐만 아니라 액션도 존재할 것이라고 생각하고, 단순히 props를 주입하여 사용할때는 문제가 되지 않았으나 store를 호출하여 CommentItem을 사용하게 되는 경우에는 다음과 같이 entities 레이어가 widgets 또는 features 레이어의 store에 직접 의존하게 되는 상황이 발생합니다. 이렇게 되면 FSD의 핵심 원칙인 &quot;상위→하위로만 의존&quot;이라는 규칙이 깨지게 된다고 생각합니다. entities는 가장 하위 레이어로서 어떤 상위 레이어에도 의존하지 않아야 하는데, store를 통해 features나 widgets 레이어에 직접 의존하게 될 것이라 생각했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// widgets/post-detail/ui/PostDetailDialog.tsx</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> CommentList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@entities/comment/ui&quot;</span>           
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> useAddComment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@features/comment/add-comment&quot;</span> 
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEditComment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@features/comment/edit-comment&quot;</span> 
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// entities/comment/ui/CommentList.tsx</span>
+</span><span class="code-line"><span class="token comment">// 외부 의존성 없음, 순수 props ✅</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">//  entities/comment/ui/CommentItem.tsx  </span>
+</span><span class="code-line"><span class="token keyword">interface</span> <span class="token class-name">CommentItemProps</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  comment<span class="token operator">:</span> CommentType
+</span><span class="code-line">  searchQuery<span class="token operator">:</span> <span class="token builtin">string</span>
+</span><span class="code-line">  <span class="token function-variable function">onEdit</span><span class="token operator">:</span> <span class="token punctuation">(</span>comment<span class="token operator">:</span> CommentType<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>    <span class="token comment">// props로만 받음 ✅</span>
+</span><span class="code-line">  <span class="token function-variable function">onDelete</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+</span><span class="code-line">  <span class="token function-variable function">onLike</span><span class="token operator">:</span> <span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// widgets/post-detail/ui/PostDetailDialog.tsx
+import { CommentList } from &quot;@entities/comment/ui&quot;           
+import { useAddComment } from &quot;@features/comment/add-comment&quot; 
+import { useEditComment } from &quot;@features/comment/edit-comment&quot; 
+
+// entities/comment/ui/CommentList.tsx
+// 외부 의존성 없음, 순수 props ✅
+
+//  entities/comment/ui/CommentItem.tsx  
+interface CommentItemProps {
+  comment: CommentType
+  searchQuery: string
+  onEdit: (comment: CommentType) =&gt; void    // props로만 받음 ✅
+  onDelete: (id: number) =&gt; void
+  onLike: (id: number) =&gt; void
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>제 원래 코드는 위와 같았는데요.</p>
+<p>만약 처음부터 zustand를 고려하여 설계를 했더라면 문제가 없는 설계로 방향을 잡을 수 있었을 것 같습니다만, 지금과 같은 설계에서는 zustand를 이후에 도입하게되면서 이전까지는 문제가 없었음에도 불구하고 zustand를 도입함으로써 구조를 변경해야하는 상황이 된다고 느껴졌습니다.</p>
+<p>zustand를 도입하기 전까지도 props 드릴링 외에는 문제가 존재하지 않았었기도 하고, 만약 정말 필요하다면 서버 상태는 TanStack Query로, 클라이언트 상태는 Context + useState로 충분히 관리 가능한 것 같은데, 어떤 경우에 Zustand나 Jotai 같은 라이브러리를 도입해야 하는지 아직 명확한 기준이 서지 않은 것 같습니다.
+특히 현재 코드베이스에서는</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 이부분에서 단방향 의존성이 깨진다고 느껴짐</span>
+</span><span class="code-line"><span class="token comment">// entities/comment/ui/CommentItem.tsx</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> useCommentStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@widgets/post-detail/model/commentStore&quot;</span> 
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">CommentItem</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> comment <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token comment">// entities가 widgets에 의존</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> deleteComment<span class="token punctuation">,</span> editComment <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useCommentStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// 이부분에서 단방향 의존성이 깨진다고 느껴짐
+// entities/comment/ui/CommentItem.tsx
+import { useCommentStore } from &quot;@widgets/post-detail/model/commentStore&quot; 
+
+const CommentItem = ({ comment }) =&gt; {
+  // entities가 widgets에 의존
+  const { deleteComment, editComment } = useCommentStore()
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>각 레이어가 명확한 역할을 가지고 있고, 의존성 방향도 올바르다고 생각했습니다. props drilling이 2단계 정도 발생하지만, 이는 아키텍처 건전성을 해치는 것보다는 훨씬 나은 트레이드오프라고 생각하는데, 코치님께서는 어떻게 생각하시는지 궁금합니다.</p>
+<p>일단 과제에서 props드릴링 방지를 위하여 전역상태 라이브러리를 사용하라고 되어있어 props 드릴링이 일어나고있는 댓글 부분에 대해 적용했고, 단방향 흐름을 위해 CommentList를 features로 끌어올렸지만, 전역 상태관리 라이브러리 없이 서버 상태를 통해서도 충분히 가능할 것 같다는 생각이 자꾸 듭니다.</p>
+<p>위 두가지에 대해서는 하위 질문에도 동일하게 적어두겠습니다.</p>
+<h3 id="이번에-배운-내용-중을-통해-앞으로-개발에-어떻게-적용해보고-싶은지-적어주세요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#이번에-배운-내용-중을-통해-앞으로-개발에-어떻게-적용해보고-싶은지-적어주세요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>이번에 배운 내용 중을 통해 앞으로 개발에 어떻게 적용해보고 싶은지 적어주세요.</h3>
+<p>솔직하게는 저희 회사에서 fsd를 직접적으로 적용하려고하면 쉽지 않을까 하는 생각이 드는데요, 지금 저희 회사같은 경우에는 shared-features-pages의 삼단구조를 차용하고 있어 만약 fsd 구조를 가져가면 좀 더 상세한 분리가 필요하고 이에 대한 리소스가 많이 들어가게 될 것 같다는 생각이 듭니다.
+그러나 각각의 엔티티에 대해서 어떻게 하면 독립적인 엔티티를 가져갈지에 대한 충분한 고민이 되었다고 생각하고, 추후에 기업과제를 할때 좀 더 체계적으로 폴더구조를 가져갈 수 있지 않을까 기대됩니다.</p>
+<h2 id="챕터-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#챕터-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>챕터 셀프회고</h2>
+<blockquote>
+<p>클린코드와 아키테쳑 챕터 함께 하느라 고생 많으셨습니다!
+지난 3주간의 여정을 돌이켜 볼 수 있도록 준비해보았습니다.
+아래에 적힌 질문들은 추억(?)을 회상할 수 있도록 도와주려고 만든 질문이며, 꼭 질문에 대한 대답이 아니어도 좋으니 내가 느꼈던 인사이트들을 자유롭게 적어주세요.</p>
+</blockquote>
+<h3 id="클린코드-읽기-좋고-유지보수하기-좋은-코드-만들기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#클린코드-읽기-좋고-유지보수하기-좋은-코드-만들기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>클린코드: 읽기 좋고 유지보수하기 좋은 코드 만들기</h3>
+<ul>
+<li>더티코드를 접했을 때 어떤 기분이었나요? ^^; 클린코드의 중요성, 읽기 좋은 코드란 무엇인지, 유지보수하기 쉬운 코드란 무엇인지에 대한 생각을 공유해주세요
+더티코드를 봤을 때 가장 힘들었던 건 단순히 &quot;지저분하다&quot;가 아니라 &quot;이 코드의 의도를 파악하는 데 드는 인지적 부하&quot;였다고 생각합니다. 예를 들어</li>
+</ul>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line">  <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> cartItems<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">var</span> curItem<span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> prodList<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword control-flow">if</span><span class="token punctuation">(</span>prodList<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">id</span> <span class="token operator">===</span> cartItems<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          curItem<span class="token operator">=</span>prodList<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">          <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token keyword">var</span> q<span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span>cartItems<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">&#x27;span&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">textContent</span><span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">&#x27;x &#x27;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">var</span> itemTot<span class="token operator">=</span>curItem<span class="token punctuation">.</span><span class="token property-access">val</span> <span class="token operator">*</span> q<span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">var</span> disc<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">      itemCnt <span class="token operator">+=</span> q<span class="token punctuation">;</span>
+</span><span class="code-line">      subTot <span class="token operator">+=</span> itemTot<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token comment">//중략</span>
+</span><span class="code-line">      totalAmt <span class="token operator">+=</span> itemTot <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> disc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="  for (var i=0; i &lt; cartItems.length; i++) {
+    (function () {
+      var curItem;
+      for (var j=0; j &lt; prodList.length; j++) {
+        if(prodList[j].id === cartItems[i].id) {
+          curItem=prodList[j];
+          break;
+        }
+      }
+      var q=parseInt(cartItems[i].querySelector(&#x27;span&#x27;).textContent.split(&#x27;x &#x27;)[1]);
+      var itemTot=curItem.val * q;
+      var disc=0;
+      itemCnt += q;
+      subTot += itemTot;
+//중략
+      totalAmt += itemTot * (1 - disc);
+    })();
+  }
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>과제 2-1에 있던 이 코드를 처음 봤을 때 이해가 쉽지 않았던 이유는 머릭속에서 동시에 여러 층의 추상화를 파싱해야 했기 때문이 아닌가 생각합니다. 첫 번째 for문의 목적, IIFE, DOM 조작, 할인 계산 등등 머리는 하나인데 지저분한 변수명까지 이 모든걸 한번에 인지하려고 하다보니 머릿속에서 오버플로우가 일어나는 느낌이었습니다.
+더티 코드를 클린 코드로 전환하면서 읽기 좋은 코드란 &quot;인지적 복잡도를 최소화하는 코드&quot;라는 걸 깨달았던것 같습니다. 각각 함수가 명확한 역할을하고, 인풋과 아웃풋이 정확해서 부수효과가 일어나지 않는 계산과, 부수효과는 있지만 예측이 가능한 액션으로 분리가 될때 좀 더 읽기가 쉬운 코드가 되었다고 생각합니다. 일전에 2-1과제를 마치고나서 선언적 프로그래밍이 무엇인지에 대한 대화를 나누었던 적이 있는데요.</p>
+<blockquote>
+<p>제가 생각하는 선언적 프로그래밍에 대해서 작성해보자면... 보통 선언적 프로그래밍을 설명할 때 &quot;What vs How&quot;라는 예시를 많이 사용하는 것 같아요. 이게 프로그래밍론적으로 정말 유명한 구분법이긴 한데, 저한테는 이 설명이 좀 어려웠어요. What과 How의 기준이 사실 상당히 불분명하다고 생각했거든요. 처음엔 저도 &#x27;선언적인 코드라는건 내부를 들여다볼 필요없이 사람이 함수의 의미만 보더라도 이해할 수 있게 작성한 코드인가?&#x27; 하고 생각하다가, &#x27;아니 어차피 고장나면 다 내부를 뜯어다 봐야하잖아?&#x27; 하고 생각했거든요.(더 인지부조화가 온..) 게다가 코드라는 건 어떻게 보면 하나의 연속적인 스펙트럼 같은데, 이걸 딱 둘로 나누어 떨어뜨릴 수 있을까 하는 의문이 들었습니다. 물론 두 분의 앞선 대화에서 어느 정도 정리가 되긴 했지만요 ㅎㅎ
+제가 생각하는 선언적 프로그래밍은 인간과 컴퓨터 사이의 간극을 줄여주는 철학이라고 생각해요. 이렇게 말하면 좀 거창하게 들릴 수도 있을 것 같은데요... 예를 들어 사람은 기본적으로 절차적인 것보다는 결과 지향적으로 생각하잖아요. &#x27;A를 넣으면 B가 나온다&#x27;를 기대하고 코드를 작성하고요. 반면에 컴퓨터는 과정 지향적이라고 생각합니다. &#x27;A를 넣으면 먼저 C가 처리하고, 그 다음에 D가 계산되고, 메모리에서 뭔가를 읽어오고... 어쩌고저쩌고 해서 결국엔 B가 됩니다&#x27;라는 식으로 모든 걸 단계별로 처리하잖아요.
+그래서 선언적 프로그래밍이 주는 가장 큰 가치는 이 인식론적 차이를 줄여주는 거라고 생각해요. 우리가 머릿속으로 생각하는 방식과 실제로 코드를 작성하는 방식 사이의 거리를 좁혀주는 것이 아닐까요? 예를 들어 &quot;로그인한 사용자에게는 대시보드를 보여주고, 그렇지 않으면 로그인 폼을 보여줘&quot;라고 생각했을 때, 이걸 그대로 user ? <dashboard> : <loginform>로 표현할 수 있는 것처럼요.
+물론 컴퓨터는 뒤에서 여전히 조건문을 평가하고, 컴포넌트를 렌더링하고, DOM을 업데이트하는 복잡한 과정을 거치지만, 개발자는 그런 세부사항에 신경 쓰지 않고 자신의 의도를 직접적으로 표현할 수 있다고 생각합니다. 약간 역 컴파일 같은 느낌이라고 생각했어요 ㅋㅋㅋ
+암튼 글이 작성하다 보니까 장황해졌는데, 결국적으로는 선언적 프로그래밍은 인간이 좀 더 본질적인 문제 해결에 집중할 수 있게 해주는 철학이라고 생각합니다... 구현의 세부사항에 시간을 쏟는 대신, 정말 중요한 비즈니스 로직이나 사용자 경험에 더 많은 에너지를 투자할 수 있게 해주는 것 같아요..!</loginform></dashboard></p>
+</blockquote>
+<p>이런 선언적 프로그래밍에 대한 관점에서 보면, 읽기 좋은 코드란 결국 &quot;인간의 사고 과정과 가장 가까운 형태로 의도를 표현한 코드&quot;라고 정의할 수 있을 것 같습니다. 우리가 머릿속으로 &quot;이런 조건이면 이렇게 하고, 저런 상황이면 저렇게 해야지&quot;라고 생각하는 자연스러운 흐름을 코드에서도 그대로 따라갈 수 있으면 그게 읽기 쉬운 코드가 되는 것이라고 생각합니다.</p>
+<p>유지보수하기 쉬운 코드는 &quot;변화에 대한 예측 가능성을 제공하는 코드&quot;라고 생각했습니다. 새로운 요구사항이 들어왔을 때 &quot;이 부분을 수정하면 되겠구나&quot;라고 직관적으로 파악할 수 있고, 수정시의 영향범위를 예상할 수 있는 코드가 그렇지 않을까 생각했습니다.</p>
+<p>말이 길어졌는데 결국에 클린코드의 궁극적인 목표는 &quot;개발자의 인지적 에너지를 본질적인 문제 해결에 집중할 수 있게 해주는 것&quot;이라고 생각합니다. 이전에는 클린 코드가 어떤 것인지에 대해서 정의하기가 어려웠는데, 다른 분들과 토의하고 의견을 개진해보면서 좀 더 클린코드에 대해서 정의할 수 있었던 것 같아 의미있는 시간이었습니다.</p>
+<h3 id="결합도-낮추기-디자인-패턴-순수함수-컴포넌트-분리-전역상태-관리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#결합도-낮추기-디자인-패턴-순수함수-컴포넌트-분리-전역상태-관리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>결합도 낮추기: 디자인 패턴, 순수함수, 컴포넌트 분리, 전역상태 관리</h3>
+<ul>
+<li>거대한 단일 컴포넌트를 봤을때의 느낌! 처음엔 막막했던 상태관리, 디자인 패턴이라는 말이 어렵게만 느껴졌던 시절, 순수함수로 분리하면서 &quot;아하!&quot;했던 순간, 컴포넌트가 독립적이 되어가는 과정에서의 깨달음을 들려주세요</li>
+</ul>
+<p>처음에 천줄이 넘는 App.tsx를 봤을때 &#x27;아 또 이걸 어떻게 하지ㅋㅋㅋ...&#x27;하는 생각만 들었습니다. useEffect를 통해서 서버상태를 동기화함에 있어서도 서버 로직이 어디있는지를 파악하는 것 자체가 굉장히 에너지가 들었고, 각각 함수의 역할이 너무 모호해서 하나를 수정하려면 다른 여러 부분도 함께 확인해야 하는 상황이었습니다.</p>
+<p>단계별로 코드를 분리해나가면서 중요하게 생각한건 &quot;관심사의 분리&quot;였다고 생각합니다. 예를 들어 기존에는 handleSubmit 함수 안에서 폼 검증, 데이터 변환, API 호출, 에러 처리, UI 업데이트가 모두 뒤섞여 있었는데, 이걸 각각의 순수함수로 분리하니까 역할이 분명해지고 이해하기 쉬운 코드가 되었던 것 같습니다.</p>
+<p>특히 2-2 과제를 할때 관심사의 분리를 고려하기 위해 FSD구조를 사용했었는데, 계산함수에서 도메인 로직을 빼고 순수한 비즈니스 룰들을 entities 레이어 혹은 shared로 옮기니까 코드의 의도가 훨씬 명확해졌다고 생각합니다. 예를 들어 장바구니 총액 계산에서 할인율 적용이나 세금 계산 같은 비즈니스 로직들을 calculateItemTotal, applyDiscount, calculateTax 같은 순수함수로 분리하고, UI 레이어에서는 단순히 이 함수들을 조합해서 사용하기만 하는 구조를 가져갈 수 있었습니다. 이렇게 하니까 만약 추가적인 요구사항이 들어온다고 생각했을때 해당 도메인 함수만 수정하면 되고 고려해야할 영향 범위가 줄어든다는 느낌을 받았습니다. 이전에 <a href="https://www.youtube.com/watch?v=zncmO90s0sk&amp;t=1625s">준일님께서 레고블록에 비유한 Deview영상</a>을 추천해주신적이 있는데 그것과 흐름을 비슷하게 가져갈 수 있었던 것 같습니다. 특히 이렇게 분리된 함수들은 사이드 이펙트가 없어서 좀 더 예측이 가능하다고 생각했습니다.</p>
+<p>또 이전에 준일님께서 주신 피드백에서 onSuccess, onError와 같이 콜백을 전달하는 Observer 패턴을 통해 좀 더 선언적으로 코드를 작성할 수 있을 것 같다! 라고 말씀주셔서 2-2에서는 신경써서 해당 부분을 적용해보았었는데요. &quot;성공했을 때는 이렇게 해줘, 실패했을 때는 저렇게 해줘&quot;라고 선언을 하는 방식에서 의도가 훨씬 명확해졌던것 같습니다. 이벤트가 발생하면 알려달라는 식으로 관심사를 위임하고, 상위에서는 각각의 관심사를 가진 함수들을 콜백을 통해서 넘겨주어 조합을 해서 사용하면 되었던 것 같습니다.</p>
+<p>전역상태 관리같은 경우에 대해서는 사실 저희 회사에서는 전역상태 관리 라이브러리라고하면 클라이언트 상태 관리 라이브러리는 따로 사용하지 않고, 서버상태 관리 라이브러리를 사용하고 있는데요. 이부분에 대해서는 사실 아직도 약간의 의문이 있는것 같습니다. 과연 props 드릴링이 나쁜걸까요? 탄스택쿼리를 통해 서버상태 관리 라이브러리를 사용하고 있음에도 불구하고 전역상태관리 라이브러리가 무조건적으로 필요한 것일까요? 사실 과제를 하면서도, context+useState를 통해서 혹은 서버상태관리 라이브러리를 통해 충분히 관리가 가능한 지점이라고 생각이 되어서.... 아직은 이부분에 대한 답아 명확하게 내려진 것 같진 않습니다.</p>
+<h3 id="응집도-높이기-서버상태관리-폴더-구조"><a class="anchor" aria-hidden="true" tabindex="-1" href="#응집도-높이기-서버상태관리-폴더-구조"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>응집도 높이기: 서버상태관리, 폴더 구조</h3>
+<ul>
+<li>&quot;이 코드는 대체 어디에 둬야 하지?&quot;라고 고민했던 시간, FSD를 적용해보면서의 느낌, 나만의 구조를 만들어가는 과정, TanStack Query로 서버 상태를 분리하면서 느낀 해방감(?)등을 공유해주세요</li>
+</ul>
+<p>이번에 FSD를 진행하면서 정말 많은 질문을 받았었는데, 보통적으로 어떻게 features를 나눠야하냐, widgets은 어떻게 나눠야하냐 이런 질문들이었던 것 같습니다. 그리고 저에게 질문을 주신 분들에게 드렸던 답변은 항상 동일했습니다. &#x27;FSD는 사실 폴더구조를 팀에서 유리하게 가져가기 위한 철학일뿐이지 무조건적으로 지켜야할 룰이 아니고, 자기가 생각하는 FSD와 그에대한 컨벤션이 있다면 자유롭게 해도 된다. 다만 FSD에서는 의존성을 계층화시켜두고 단방향으로 의존하게 하는 특성이 있으니 그 부분에 대해서만 지키면 될 것 같다.&#x27; 물론 아직도 이부분에 대해서 저도 명확하게 생각하진 못하고 있고, 매번 &quot;이게 정답인가?&quot; 싶은 순간들이 있지만...FSD가 모두 정답은 아니고 제가 편리하게 계층화 해서 사용하고 명확한 기준이 있다면 그게 정답이지 않을까 생각하면서 과제에 임했던 것 같습니다.</p>
+<p>FSD를 분리하는 부분에 있어서 고민이 있었다면 이번 과제를 구현하면서는 얼마나 작은 단위로 features를 나눠야 할지에 대한 고민이 있었던 것 같습니다. 예를 들어 게시물 관련 기능에서 add-post라는 기능이있다면 지금 코드와 같이 단순히 훅으로만 묶어둘지 혹은 AddPostButton과 같이 분리할지에 대한 부분이었습니다. 결국 제가 내린 결론은 UI의 분리를 &quot;재사용성&quot;과 &quot;비즈니스 로직의 복잡도&quot;를 기준으로 판단하자 였습니다.</p>
+<p>만약 AddPostButton이 여러 페이지에서 동일한 모습과 동작으로 재사용된다면 features/post/add-post/ui에 두는 게 맞다고 생각했고, 반대로 각 페이지마다 다른 스타일이나 추가적인 로직이 필요하다면 해당 페이지나 widgets에서 useAddPost 훅만 가져다 쓰는 방식이 더 유연하다고 판단했습니다. 그래서 보통적으로 AddPostButton은 단순히 컴포넌트의 &#x27;분리&#x27;에만 초점이 두어지는 것 같고, 오히려 너무 많은 파일을 왔다갔다 하면서 확인해야할것 같아서 이부분은 features나 entity에 퉁쳐진 형태로 그대로 두었습니다...ㅎㅎ...</p>
+<p>물론 제가 FSD에 대해서 질문 주시는 분들에 대해서 정답은 없다라고 말씀드리긴 했지만 저도 이걸 어떻게 둬야할지에 대해서 고민되는 부분이 많았았던 것 같습니다. 사실 이번 과제의 경우에는 Post라는 엔티티에 user객체가 넘어오는것이 아니라 userId만 넘어오는 상태라 분리가 편했지만 만약에 userId가 아니라 user객체로 넘어오게 된다면... 엔티티 분리를 하기 좀 더 어려워졌을거라는 생각이 들었습니다.</p>
+<p>또한 TanStack Query를 각각의 entity에 배치하고 쿼리키와 쿼리펑션을 가깝게 두는 QueryKey Factory형태로 설계하면서 좀 더 응집도 높은 코드를 작성할 수 있었다고 생각했습니다. 외부에서 사용할때는 내부적으로 어떤 쿼리키를 가졌는지 어떤 동작을 해야하는지에 대해서 생각하지 않아도 되도록 캡슐화했던 게 만족스러웠던 것 같습니다.</p>
+<p>과제를 하면서 FSD는 결국 &#x27;코드를 찾는 시간을 줄이고, 변경의 영향 범위를 예측 가능하게 만드는&#x27; 도구라는 생각이 들었습니다. 완벽한 분류보다는 코드의 위치나 예상 범위를 직관적으로 예상할 수 있는 일관성이 더 중요하다는 생각이 들었습니다. (아마 그게 철학일 것 같고요)</p>
+<h2 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문</h2>
+<ol>
+<li>
+<p><a href="#features-concern">앞서 언급한 features 분리에 대한 고민</a>과 연결되니 위쪽 질문 봐주시면 감사하겠습니다..!</p>
+</li>
+<li>
+<p><a href="#global-state-concern">앞서 언급한 전역상태 관련 고민</a>과 연결되니 위쪽 질문 봐주시면 감사하겠습니다..!</p>
+</li>
+</ol></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>이번주 과제도 훌륭합니다.
+FSD규칙을 명확하게 지켰고, 명확한 규칙을 가지고 잘 나눴습니다.
+모범사례로 볼 수 있을것 같아요.</p>
+<blockquote>
+<p>features를 어디까지 분리해야할까에 대한 고민</p>
+</blockquote>
+<p>말씀해주신 부분이 적절한 분석인 것 같아요. 버튼까지 나눌 필요가 있나 싶긴해요. 단순히 &#x27;분리&#x27; 관점에서 해당 부분을 고민하고 나눈다면, 재사용성에 대한 판단이 흐려지고 일단 나누고 보는 관점이다보니 응집도도 낮아지구요. 지금과 동일한 규칙대로 운영하면 될 것 같아요.</p>
+<blockquote>
+<p>전역상태 관련 고민</p>
+</blockquote>
+<p>저도 구체적이게 작성한 설명을 보니까 어떤 고민을 하게 되었는지 명확하게 이해가 되었는데요. 일단 필요하지 않으면 굳이 사용할 필요는 당연히 없습니다. 결국 서버 상태를 제외하고 전역 라이브러리를 사용한다는 것은 드릴링을 방지하는것도 있지만, 복잡한 상태 동기화 등에서도 고려할 수 있는 부분이지만 설명을 들어보면 사용하지 않아도 된다고 저는 생각해요.</p>
+<p>지금의 구조가 comment에 대한 UI가 모든 곳에서 재사용 될 수 있는 관점이라면 entity에 위치하는게 적합할 수는 있지만, 지금같으면 아예 page에 컴포넌트 자체를 끌어올려야 할 수도 있겠네요.</p>
+<p>제 개인적으로는 이렇게 생각하는데, 이 의도에 대해서는 발제자님께 명확하게 질문해보는게 가장 명쾌한 것 같습니다.</p>
+<p>다음주도 화이팅입니다.</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

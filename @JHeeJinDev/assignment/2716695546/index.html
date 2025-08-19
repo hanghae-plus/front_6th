@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -336,6 +336,25 @@ export const AdminProductSection = () =&gt; {
 </li>
 </ol>
 <h2 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문</h2></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>안녕하세요 희진! 수고했습니다. 이번 과제는 React 코드의 구조적 분리와 함수형 프로그래밍 원칙을 이해하고 적용해보는 것이 핵심이었습니다. 특히 엔티티를 다루는 코드와 UI를 다루는 코드의 분리, 순수함수의 활용 등 현대적인 프론트엔드 개발의 중요한 패턴들을 경험했기를 바래요 :)</p>
+<p>회고를 보니 디자인 패턴을 의도적으로 적용하려는 노력이 인상적입니다. 특히 Props Drilling을 경험하고 이를 개선하기 위해 컨테이너-프레젠터 패턴과 Jotai를 활용한 상태 관리 구조를 구현하신 과정이 정말 좋은 학습 경험이었을 것 같아요. 옵저버 패턴과 파사드 패턴을 자연스럽게 적용하신 부분도 훌륭합니다.</p>
+<p>코드를 살펴보니 상태와 로직을 커스텀 훅으로 캡슐화하여 컴포넌트를 깔끔하게 유지하신 부분이 돋보입니다. 특히 useAdminProducts, useCart 같은 훅을 통해 비즈니스 로직을 분리하고, 컴포넌트는 UI 렌더링에만 집중하도록 한 점은 매우 좋은 접근법입니다.</p>
+<p>순수함수의 의존성 주입에 대한 고민도 흥미롭네요. calculateItemTotal 함수에 getMaxDiscount를 인자로 주입하여 순수성을 확보하려고 했던 시도가 인상적이었습니다. 사실 순수함수 + 순수함수 = 순수함수이기에 내부적으로 순수함수를 사용한다고 해도 의존성에 대한 문제는 발생하지 않아요. 다만 지금처럼 외부의존을 밖으로 빼내기도 용이하고 실제로 다른 전략을 써야한다면 OCP방식으로 필요한 부분만 빼내기도 용이한 방식이 되겠죠. 해당 과제의 경우 getMaxApplicableDiscount(item)만 되어 있는 경우에는 문제가 되는 코드였지만 이미 getMaxApplicableDiscount(item, cart) 형태로 순수하게 만들어두게 되면서 암묵적 문제는 해결이 된 상태랍니다. getMaxDiscount의 경우 전략적으로 선택을 해야하는 상황이 아니라면 내부에 두면 되고 필요할때 빼내어도 좋아요! 함수형 프로그래밍의 장점과 확장에 대한 체험을 제대로 했다고 생각이 드네요. 잘했씁니다.</p>
+<p>1 이번 과제에서 컨테이너-프레젠터, 파사드, 옵저버 패턴을 의도적으로 적용해보았습니다. 제가 이해하고 적용한 방식이 실제 의도와 잘 맞는지, 개선할 점은 없는지 궁금합니다!
+=&gt; 잘했습니다. 디자인 패턴은 어떻게 하거나 적용하는게 아니라 말 그대로 패턴인거죠. 내가 일반적으로 더 좋은 코드의 형태로 구조를 바꾸게 되는 여러가지 패턴들이 있는게 하고보니 우리가 하고 있던 패턴들이었던거죠. 그런 측면에서 컨테이너-프레젠터, 파사드, 옵저버 패턴을 특정 구현 방법이 아닌 패턴이라는 측면에서 아주 잘 활용했다고 생각합니다.</p>
+<p>2 함수에서 의존 함수를 인자로 주입하는 방식이 한편으로는 오히려 복잡도를 높이는 건 아닌지 우려되기도 하는데요. 순수성을 확보하는 데 효과적인 패턴인지 궁금합니다!
+=&gt; 위에서 설명한대로 순수함수 + 순수함수 = 순수함수이기 때문에 인자로 주입하지 않아도 됩니다. 인자로 주입을 한다는건 외부에서 전략을 바꿀 수 있도록 위임하는 것이죠. 마치 Array.map Array.filter와 같은 식으로요.</p>
+<p>=&gt; 필요한 경우에는 어렵지 않게 외부의존을 담을 수 있다는게 장점이고 필요없다면 그냥 사용해도 무방합니다. 무조건적인 적용이 아니라 점진적확장의 형태로 처음에는 가장 단순한 형태로 시작해서 필요할때 필요한 만큼 복잡하게 만든다라는 식으로 적용하면 됩니다.</p>
+<p>아니면 이렇게도 할수 있습니다. 외부에서도 받을 수 있게 만들면서 기본 값은 적용하는 방식이죠. 이렇게 하면 순수함과 외부의존성 전략패턴과 간결함 모두 얻을 수 있습니다.</p>
+<p>export const calculateItemTotal = (
+item: CartItem,
+cart: CartItem[],
+getMaxDiscount = defaultGetMaxDiscount // 기본 구현 제공
+): number =&gt; {
+const discount = getMaxDiscount(item, cart);
+return Math.round(item.product.price * item.quantity * (1 - discount));
+};</p>
+<p>그렇다고 이 방법이 만능이니 다 이렇게 해야되냐? 하면 필요없다면 이 역시도 오버엔지니어링이죠. 필요할때 필요한만큼!</p>
+<p>아주 아주 잘했습니다. 6주차 과제에서 지금의 고민들을 많이 적용해보길 바래요!!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>

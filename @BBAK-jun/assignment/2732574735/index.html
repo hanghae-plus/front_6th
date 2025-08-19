@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@BBAK-jun/" data-discover="true">BBAK-jun<!-- --> 님의 상세페이지</a> ＞ <!-- -->[3팀 박준형] Chapter 2-3. 관심사 🦍분리와 폴더구조</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter2-3/pull/8" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[3팀 박준형] Chapter 2-3. 관심사 🦍분리와 폴더구조</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->BBAK-jun</span><span>2025. 8. 9.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h2>
+<h3 id="배포링크"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포링크"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><a href="https://bbak-jun.github.io/front_6th_chapter2-3/">배포링크</a></h3>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<h4 id="목표--전역상태관리를-이용한-적절한-분리와-계층에-대한-이해를-통한-fsd-폴더-구조-적용하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#목표--전역상태관리를-이용한-적절한-분리와-계층에-대한-이해를-통한-fsd-폴더-구조-적용하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>목표 : 전역상태관리를 이용한 적절한 분리와 계층에 대한 이해를 통한 FSD 폴더 구조 적용하기</h4>
+<ul>
+<li>전역상태관리를 사용해서 상태를 분리하고 관리하는 방법에 대한 이해</li>
+<li>Context API, Jotai, Zustand 등 상태관리 라이브러리 사용하기</li>
+<li>FSD(Feature-Sliced Design)에 대한 이해</li>
+<li>FSD를 통한 관심사의 분리에 대한 이해</li>
+<li>단일책임과 역할이란 무엇인가?</li>
+<li>관심사를 하나만 가지고 있는가?</li>
+<li>어디에 무엇을 넣어야 하는가?</li>
+</ul>
+<h4 id="체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>체크포인트</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 전역상태관리를 사용해서 상태를 분리하고 관리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Props Drilling을 최소화했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> shared 공통 컴포넌트를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> shared 공통 로직을 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 type을 정의하고 model을 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 ui를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> entities를 중심으로 api를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 사용자행동(이벤트 처리)를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 ui를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> feature를 중심으로 api를 분리했나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> widget을 중심으로 데이터를 재사용가능한 형태로 분리했나요?</li>
+</ul>
+<h3 id="심화과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제</h3>
+<h4 id="목표-서버상태관리-도구인-tanstackquery를-이용하여-비동기코드를-선언적인-함수형-프로그래밍으로-작성하기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#목표-서버상태관리-도구인-tanstackquery를-이용하여-비동기코드를-선언적인-함수형-프로그래밍으로-작성하기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>목표: 서버상태관리 도구인 TanstackQuery를 이용하여 비동기코드를 선언적인 함수형 프로그래밍으로 작성하기</h4>
+<ul>
+<li>TanstackQuery의 사용법에 대한 이해</li>
+<li>TanstackQuery를 이용한 비동기 코드 작성에 대한 이해</li>
+<li>비동기 코드를 선언적인 함수형 프로그래밍으로 작성하는 방법에 대한 이해</li>
+</ul>
+<h4 id="체크포인트-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#체크포인트-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>체크포인트</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 모든 API 호출이 TanStack Query의 useQuery와 useMutation으로 대체되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 쿼리 키가 적절히 설정되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> fetch와 useState가 아닌 선언적인 함수형 프로그래밍이 적절히 적용되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 캐싱과 리프레시 전략이 올바르게 구현되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 낙관적인 업데이트가 적용되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 에러 핸들링이 적절히 구현되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버 상태와 클라이언트 상태가 명확히 분리되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 코드가 간결하고 유지보수가 용이한 구조로 작성되었는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> TanStack Query의 Devtools가 정상적으로 작동하는가?</li>
+</ul>
+<h3 id="최종과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#최종과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>최종과제</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 폴더구조와 나의 멘탈모델이 일치하나요?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 다른 사람이 봐도 이해하기 쉬운 구조인가요?</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<h3 id="쿼리키옵션"><a class="anchor" aria-hidden="true" tabindex="-1" href="#쿼리키옵션"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>쿼리키옵션</h3>
+<p><a href="https://github.com/lukemorales/query-key-factory">쿼리키팩토리 라이브러리</a>를 매번 사용하다가 불편함을 느꼇던것은 setQueryData / getQueryData에 쿼리키 전달할떄 타입추론이 잘 되지않는 문제가 되지않는 문제가 발생했었습니다. 그런데 queryOptions를 사용하니 너무나 깔끔하게 타입추론이 잘되어서 놀라웠습니다. 실제로 저희 회사팀원분중에 다른팀의 코드(윤영서님)를 보고 이거 좋은데요라고 까지 해주셨었는데, 이번과제에서 한번써보고 3일전에 신규피처에는 쿼리키팩토리를 사용하지않고, 사용해봤는데 너무 좋았습니다. 실제로 신규피처에서 낙관적업데이트를 사용해야해서 더욱더 만족스러웠습니다.</p>
+<h3 id="내가-새롭게-체감한-점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#내가-새롭게-체감한-점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>내가 새롭게 체감한 점</h3>
+<p>처음에는 <code>views / entities / shared</code>만으로 시작했습니다. 화면에서만 쓰는 값은 <code>views</code>, 서버에서 온 데이터와 그 규칙은 <code>entities</code>, 어느 레이어에서나 쓸 수 있는 도메인 무관 도구는 <code>shared</code>에 두었습니다. 이 기준을 지키며 리팩터링하다 보니, 사용자 행동 단위인 <code>features</code>와 화면의 독립 구역인 <code>widgets</code>가 자연스럽게 필요해졌고, 그때서야 추가했습니다. 덕분에 &quot;데이터는 어디에, 행동은 어디에, 섹션은 어디에&quot;라는 자리가 분명해졌다고 그렇게 생각합니다.</p>
+<ul>
+<li>shared: 전역 도구(HTTP, QueryClient, 공용 UI/훅)</li>
+</ul>
+<pre><code class="language-195:211:src/shared/lib/http-client.ts code-highlight"><span class="code-line">// 기본 HTTP 클라이언트 인스턴스 생성
+</span><span class="code-line">export const httpClient = new HttpClient({
+</span><span class="code-line">  timeout: 10000,
+</span><span class="code-line">  headers: {
+</span><span class="code-line">    &quot;Content-Type&quot;: &quot;application/json&quot;,
+</span><span class="code-line">  },
+</span><span class="code-line">})
+</span><span class="code-line">
+</span><span class="code-line">// 편의 함수들
+</span><span class="code-line">export const api = {
+</span><span class="code-line">  get: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.get&lt;T&gt;(url, options),
+</span><span class="code-line">  post: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.post&lt;T&gt;(url, data, options),
+</span><span class="code-line">  put: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.put&lt;T&gt;(url, data, options),
+</span><span class="code-line">  patch: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt;
+</span><span class="code-line">    httpClient.patch&lt;T&gt;(url, data, options),
+</span><span class="code-line">  delete: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.delete&lt;T&gt;(url, options),
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="// 기본 HTTP 클라이언트 인스턴스 생성
+export const httpClient = new HttpClient({
+  timeout: 10000,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+  },
+})
+
+// 편의 함수들
+export const api = {
+  get: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.get&lt;T&gt;(url, options),
+  post: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.post&lt;T&gt;(url, data, options),
+  put: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.put&lt;T&gt;(url, data, options),
+  patch: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt;
+    httpClient.patch&lt;T&gt;(url, data, options),
+  delete: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.delete&lt;T&gt;(url, options),
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>entities: 도메인 근처의 서버 상태, API 요청/응답 모양, 검증</li>
+</ul>
+<pre><code class="language-19:27:src/entities/posts/api/post.api.ts code-highlight"><span class="code-line">export const getPosts = async (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt; {
+</span><span class="code-line">  const parsedRequestParams = getPostsRequestParamsSchema.parse(requestParams)
+</span><span class="code-line">
+</span><span class="code-line">  const response = await httpClient.get&lt;z.infer&lt;typeof getPostsResponseSchema&gt;&gt;(&quot;/api/posts&quot;, {
+</span><span class="code-line">    params: parsedRequestParams,
+</span><span class="code-line">  })
+</span><span class="code-line">
+</span><span class="code-line">  return getPostsResponseSchema.parse(response.data)
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="export const getPosts = async (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt; {
+  const parsedRequestParams = getPostsRequestParamsSchema.parse(requestParams)
+
+  const response = await httpClient.get&lt;z.infer&lt;typeof getPostsResponseSchema&gt;&gt;(&quot;/api/posts&quot;, {
+    params: parsedRequestParams,
+  })
+
+  return getPostsResponseSchema.parse(response.data)
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>features: 사용자 행동 하나(추가/수정/삭제)와 폼·검증·성공/실패 흐름</li>
+</ul>
+<pre><code class="language-12:17:src/features/add-post/ui/open.tsx code-highlight"><span class="code-line">export const openAddPostDialog = (options: Options) =&gt; {
+</span><span class="code-line">  overlay.open(({ isOpen, close }) =&gt; (
+</span><span class="code-line">    &lt;Dialog open={isOpen} onOpenChange={() =&gt; isOpen &amp;&amp; close()}&gt;
+</span><span class="code-line">      &lt;AddPostDialog onSubmit={options.onSubmit} close={close} /&gt;
+</span><span class="code-line">    &lt;/Dialog&gt;
+</span><span class="code-line">  ))
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="export const openAddPostDialog = (options: Options) =&gt; {
+  overlay.open(({ isOpen, close }) =&gt; (
+    &lt;Dialog open={isOpen} onOpenChange={() =&gt; isOpen &amp;&amp; close()}&gt;
+      &lt;AddPostDialog onSubmit={options.onSubmit} close={close} /&gt;
+    &lt;/Dialog&gt;
+  ))
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>widgets: 화면의 독립 구역(목록/상세 등) 조합</li>
+</ul>
+<pre><code class="language-26:34:src/widgets/post-list-table/ui/post-list-table.tsx code-highlight"><span class="code-line">const postsQuery = useQuery({
+</span><span class="code-line">  ...postEntityQueries.getPosts({ ...queryParams }),
+</span><span class="code-line">})
+</span><span class="code-line">
+</span><span class="code-line">const usersQuery = useQuery({
+</span><span class="code-line">  ...userEntityQueries.getUsers({ limit: 0, select: &quot;username,image&quot; }),
+</span><span class="code-line">  enabled: postsQuery.isFetched,
+</span><span class="code-line">  select: (response) =&gt; ({
+</span><span class="code-line">    data: response.users,
+</span><span class="code-line">    pagination: { limit: response?.limit ?? 0, skip: response?.skip ?? 0, total: response?.total ?? 0 },
+</span><span class="code-line">  }),
+</span><span class="code-line">})
+</span></code><div class="copied" data-code="const postsQuery = useQuery({
+  ...postEntityQueries.getPosts({ ...queryParams }),
+})
+
+const usersQuery = useQuery({
+  ...userEntityQueries.getUsers({ limit: 0, select: &quot;username,image&quot; }),
+  enabled: postsQuery.isFetched,
+  select: (response) =&gt; ({
+    data: response.users,
+    pagination: { limit: response?.limit ?? 0, skip: response?.skip ?? 0, total: response?.total ?? 0 },
+  }),
+})
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>views: 페이지 조립자. 언제 어떤 다이얼로그를 열고, 어떤 행동을 부를지 결정</li>
+</ul>
+<pre><code class="language-18:31:src/views/post-management-page/view.tsx code-highlight"><span class="code-line">const { addPost, updatePost } = usePostMutations({ queryParams })
+</span><span class="code-line">const { deleteComment, likeComment } = useCommentMutations({
+</span><span class="code-line">  postId: selectedPostId as number,
+</span><span class="code-line">})
+</span><span class="code-line">
+</span><span class="code-line">const handleOpenPostDetailDialog = (post: Post) =&gt; {
+</span><span class="code-line">  setSelectedPostId(post.id)
+</span><span class="code-line">  openPostDetailDialog({
+</span><span class="code-line">    post: post,
+</span><span class="code-line">    searchQuery: queryParams.searchQuery,
+</span><span class="code-line">    onDeleteComment: (commentId) =&gt; deleteComment.mutate({ id: commentId }),
+</span><span class="code-line">    onLikeComment: (commentId, likes) =&gt; likeComment.mutate({ id: commentId, likes }),
+</span><span class="code-line">    onCloseCallback: () =&gt; setSelectedPostId(null),
+</span><span class="code-line">  })
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="const { addPost, updatePost } = usePostMutations({ queryParams })
+const { deleteComment, likeComment } = useCommentMutations({
+  postId: selectedPostId as number,
+})
+
+const handleOpenPostDetailDialog = (post: Post) =&gt; {
+  setSelectedPostId(post.id)
+  openPostDetailDialog({
+    post: post,
+    searchQuery: queryParams.searchQuery,
+    onDeleteComment: (commentId) =&gt; deleteComment.mutate({ id: commentId }),
+    onLikeComment: (commentId, likes) =&gt; likeComment.mutate({ id: commentId, likes }),
+    onCloseCallback: () =&gt; setSelectedPostId(null),
+  })
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="역할-단위-폴더구조와-fsd의-차이-왜-fsd는-화면-만들기-편할까"><a class="anchor" aria-hidden="true" tabindex="-1" href="#역할-단위-폴더구조와-fsd의-차이-왜-fsd는-화면-만들기-편할까"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>역할 단위 폴더구조와 FSD의 차이, 왜 FSD는 화면 만들기 편할까?</h3>
+<p>역할 단위 구조(components, hooks, services처럼 기술별로 나누는 방식)는 상자 정리는 깔끔하지만, 화면은 여러 도메인(게시글, 사용자, 댓글)을 한 번에 엮는 일이 많습니다. 그러다 보면 컴포넌트가 데이터와 규칙을 여기저기서 직접 가져와 가공하게 되고, &quot;누가 어떤 책임을 져야 하는지&quot;가 흐려지는 경험을 자주 했습니다. FSD는 데이터 소유와 검증을 도메인 가까이에 고정하고(entities), 사용자 행동은 features로, 여러 도메인을 엮는 화면 구역은 widgets로, 페이지 조립은 views로, 기술 공용은 shared로 두어 위에서 아래로만 의존하도록 유도하니, 화면 작업 흐름과 잘 맞는다고 그렇게 생각합니다.</p>
+<p>도메인 근처에서 서버 IO를 검증하고 키를 표준화하고, 상위 레이어는 이 계약을 신뢰해 가져다 씁니다.</p>
+<pre><code class="language-7:16:src/entities/posts/api/post.query.ts code-highlight"><span class="code-line">export const postEntityQueries = {
+</span><span class="code-line">  all: [&quot;post&quot;] as const,
+</span><span class="code-line">
+</span><span class="code-line">  getPostsKey: (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt;
+</span><span class="code-line">    [...postEntityQueries.all, &quot;getPosts&quot;, requestParams] as const,
+</span><span class="code-line">  getPosts: (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt;
+</span><span class="code-line">    queryOptions({
+</span><span class="code-line">      queryKey: postEntityQueries.getPostsKey(requestParams),
+</span><span class="code-line">      queryFn: () =&gt; getPosts(requestParams),
+</span><span class="code-line">    }),
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="export const postEntityQueries = {
+  all: [&quot;post&quot;] as const,
+
+  getPostsKey: (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt;
+    [...postEntityQueries.all, &quot;getPosts&quot;, requestParams] as const,
+  getPosts: (requestParams: z.infer&lt;typeof getPostsRequestParamsSchema&gt;) =&gt;
+    queryOptions({
+      queryKey: postEntityQueries.getPostsKey(requestParams),
+      queryFn: () =&gt; getPosts(requestParams),
+    }),
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>여러 도메인을 엮는 구역은 widgets에서 &quot;조합&quot;으로만 처리하고, 데이터 소유나 키 정의는 관여하지 않도록 했습니다.</p>
+<pre><code class="language-26:37:src/widgets/post-list-table/ui/post-list-table.tsx code-highlight"><span class="code-line">const postsQuery = useQuery({
+</span><span class="code-line">  ...postEntityQueries.getPosts({ ...queryParams }),
+</span><span class="code-line">})
+</span><span class="code-line">
+</span><span class="code-line">const usersQuery = useQuery({
+</span><span class="code-line">  ...userEntityQueries.getUsers({ limit: 0, select: &quot;username,image&quot; }),
+</span><span class="code-line">  enabled: postsQuery.isFetched,
+</span><span class="code-line">  select: (response) =&gt; ({
+</span><span class="code-line">    data: response.users,
+</span><span class="code-line">    pagination: { limit: response?.limit ?? 0, skip: response?.skip ?? 0, total: response?.total ?? 0 },
+</span><span class="code-line">  }),
+</span><span class="code-line">})
+</span></code><div class="copied" data-code="const postsQuery = useQuery({
+  ...postEntityQueries.getPosts({ ...queryParams }),
+})
+
+const usersQuery = useQuery({
+  ...userEntityQueries.getUsers({ limit: 0, select: &quot;username,image&quot; }),
+  enabled: postsQuery.isFetched,
+  select: (response) =&gt; ({
+    data: response.users,
+    pagination: { limit: response?.limit ?? 0, skip: response?.skip ?? 0, total: response?.total ?? 0 },
+  }),
+})
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>페이지는 views에서 오케스트레이션만 담당해, 어떤 구역을 배치하고 언제 어떤 행동을 부를지만 연결합니다.</p>
+<pre><code class="language-18:31:src/views/post-management-page/view.tsx code-highlight"><span class="code-line">const { addPost, updatePost } = usePostMutations({ queryParams })
+</span><span class="code-line">const { deleteComment, likeComment } = useCommentMutations({
+</span><span class="code-line">  postId: selectedPostId as number,
+</span><span class="code-line">})
+</span></code><div class="copied" data-code="const { addPost, updatePost } = usePostMutations({ queryParams })
+const { deleteComment, likeComment } = useCommentMutations({
+  postId: selectedPostId as number,
+})
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>공용 기술은 shared에 모아두어, 바꿔 끼워도 도메인 경계가 흔들리지 않게 했습니다.</p>
+<pre><code class="language-195:205:src/shared/lib/http-client.ts code-highlight"><span class="code-line">export const httpClient = new HttpClient({
+</span><span class="code-line">  timeout: 10000,
+</span><span class="code-line">  headers: {
+</span><span class="code-line">    &quot;Content-Type&quot;: &quot;application/json&quot;,
+</span><span class="code-line">  },
+</span><span class="code-line">})
+</span><span class="code-line">
+</span><span class="code-line">export const api = {
+</span><span class="code-line">  get: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.get&lt;T&gt;(url, options),
+</span><span class="code-line">  post: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.post&lt;T&gt;(url, data, options),
+</span><span class="code-line">}
+</span></code><div class="copied" data-code="export const httpClient = new HttpClient({
+  timeout: 10000,
+  headers: {
+    &quot;Content-Type&quot;: &quot;application/json&quot;,
+  },
+})
+
+export const api = {
+  get: &lt;T = unknown&gt;(url: string, options?: RequestOptions) =&gt; httpClient.get&lt;T&gt;(url, options),
+  post: &lt;T = unknown&gt;(url: string, data?: unknown, options?: RequestOptions) =&gt; httpClient.post&lt;T&gt;(url, data, options),
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>또한, 성공 이후 캐시 반영 같은 &quot;데이터의 사후 처리&quot;를 도메인 가까이에 두면 책임이 흐트러지지 않는다고 느꼈습니다.</p>
+<pre><code class="language-16:27:src/entities/posts/hooks/use-post-mutations.ts code-highlight"><span class="code-line">const addPost = useMutation({
+</span><span class="code-line">  mutationFn: addPostAction,
+</span><span class="code-line">  onError: (error) =&gt; {
+</span><span class="code-line">    console.error(&quot;게시물 추가 오류:&quot;, error)
+</span><span class="code-line">  },
+</span><span class="code-line">  onSuccess: (addPostResponse) =&gt; {
+</span><span class="code-line">    if (queryParams) {
+</span><span class="code-line">      queryClient.setQueryData(
+</span><span class="code-line">        postEntityQueries.getPosts({ ...queryParams }).queryKey,
+</span><span class="code-line">        (prevPostResponse) =&gt; optimisticAddPost(prevPostResponse, addPostResponse),
+</span><span class="code-line">      )
+</span><span class="code-line">    }
+</span><span class="code-line">  },
+</span><span class="code-line">})
+</span></code><div class="copied" data-code="const addPost = useMutation({
+  mutationFn: addPostAction,
+  onError: (error) =&gt; {
+    console.error(&quot;게시물 추가 오류:&quot;, error)
+  },
+  onSuccess: (addPostResponse) =&gt; {
+    if (queryParams) {
+      queryClient.setQueryData(
+        postEntityQueries.getPosts({ ...queryParams }).queryKey,
+        (prevPostResponse) =&gt; optimisticAddPost(prevPostResponse, addPostResponse),
+      )
+    }
+  },
+})
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="아토믹-디자인과-fsd의-차이-경계가-흐려지는-지점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#아토믹-디자인과-fsd의-차이-경계가-흐려지는-지점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>아토믹 디자인과 FSD의 차이, 경계가 흐려지는 지점</h3>
+<p>아토믹 디자인은 UI를 잘 그리는 데에는 큰 도움이 됩니다. 다만 실제 화면에서는 데이터와 서버 상태가 얽히는 순간이 많고, 그때 molecules/organisms가 상태와 규칙까지 떠안게 되면 UI 층이 무거워진다고 느꼈습니다. FSD는 UI 프리미티브를 <code>shared/ui</code>에서 &quot;그리기&quot;에만 집중시키고, 데이터와 규칙은 <code>entities</code>, 행동은 <code>features</code>, 섹션 조합은 <code>widgets</code>로 흘려보내 경계를 좀 더 선명하게 지키는 데 도움이 된다고 그렇게 생각합니다.</p>
+<p>실제 상세 다이얼로그에서도, widgets는 여러 도메인을 엮고 행동을 연결하지만, 서버 상태의 키/검증은 전부 entities가 책임집니다.</p>
+<pre><code class="language-21:28:src/widgets/post-detail-dialog/post-detail-dialog.tsx code-highlight"><span class="code-line">export const PostDetailDialog = ({ post, onDeleteComment, onLikeComment, searchQuery }: Props) =&gt; {
+</span><span class="code-line">  const { data: comments } = useQuery({
+</span><span class="code-line">    ...commentEntityQueries.getCommentsByPostId(post.id),
+</span><span class="code-line">    select: (response) =&gt; response.comments,
+</span><span class="code-line">  })
+</span><span class="code-line">
+</span><span class="code-line">  const { addComment, updateComment } = useCommentMutations({ postId: post.id })
+</span></code><div class="copied" data-code="export const PostDetailDialog = ({ post, onDeleteComment, onLikeComment, searchQuery }: Props) =&gt; {
+  const { data: comments } = useQuery({
+    ...commentEntityQueries.getCommentsByPostId(post.id),
+    select: (response) =&gt; response.comments,
+  })
+
+  const { addComment, updateComment } = useCommentMutations({ postId: post.id })
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="ddd-관점에서의-선택-무겁게-들고-가지-않고-실용적으로-쓰자"><a class="anchor" aria-hidden="true" tabindex="-1" href="#ddd-관점에서의-선택-무겁게-들고-가지-않고-실용적으로-쓰자"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>DDD 관점에서의 선택: 무겁게 들고 가지 않고, 실용적으로 쓰자</h3>
+<p>프론트엔드에서 바운디드 컨텍스트를 너무 엄격히 나누면, 화면을 만들 때마다 경계를 넘나드는 비용이 커진다고 느꼈습니다. 그래서 DDD의 큰 철학(소유, 경계, 계약)은 존중하되, 구현은 FSD의 레이어에 담아 가볍게 쓰기로 했습니다. 바운디드 컨텍스트는 결과적으로 &quot;화면을 구성하는 엔티티 묶음&quot;으로 보고, <code>entities</code>에서 스키마/쿼리 키/서버 상태 소유를 맡기되, 서로는 느슨하게만 연결하는 쪽을 택했습니다. 컨텍스트 간의 만남은 주로 <code>widgets</code>나 <code>views</code>에서 조합으로 일어나도록 했습니다.</p>
+<ul>
+<li>위젯에서 여러 컨텍스트를 얕게 매칭하는 예시입니다.</li>
+</ul>
+<pre><code class="language-39:42:src/widgets/post-list-table/ui/post-list-table.tsx code-highlight"><span class="code-line">const postWithAuthors = postsQuery.data?.posts.map((post) =&gt; ({
+</span><span class="code-line">  ...post,
+</span><span class="code-line">  author: usersQuery.data?.data.find((user) =&gt; user.id === post.userId),
+</span><span class="code-line">}))
+</span></code><div class="copied" data-code="const postWithAuthors = postsQuery.data?.posts.map((post) =&gt; ({
+  ...post,
+  author: usersQuery.data?.data.find((user) =&gt; user.id === post.userId),
+}))
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>각 컨텍스트는 자신의 키/요청을 스스로 정의하고, 다른 곳은 이 계약만 신뢰합니다.</li>
+</ul>
+<pre><code class="language-7:15:src/entities/users/api/user.query.ts code-highlight"><span class="code-line">export const userEntityQueries = {
+</span><span class="code-line">  all: [&quot;users&quot;] as const,
+</span><span class="code-line">  getUsersKey: (requestParams: z.infer&lt;typeof getUsersRequestParamsSchema&gt;) =&gt;
+</span><span class="code-line">    [...userEntityQueries.all, &quot;getUsers&quot;, requestParams] as const,
+</span><span class="code-line">  getUsers: (requestParams: z.infer&lt;typeof getUsersRequestParamsSchema&gt;) =&gt;
+</span><span class="code-line">    queryOptions({
+</span><span class="code-line">      queryKey: userEntityQueries.getUsersKey(requestParams),
+</span><span class="code-line">      queryFn: () =&gt; getUsers(requestParams),
+</span><span class="code-line">    }),
+</span></code><div class="copied" data-code="export const userEntityQueries = {
+  all: [&quot;users&quot;] as const,
+  getUsersKey: (requestParams: z.infer&lt;typeof getUsersRequestParamsSchema&gt;) =&gt;
+    [...userEntityQueries.all, &quot;getUsers&quot;, requestParams] as const,
+  getUsers: (requestParams: z.infer&lt;typeof getUsersRequestParamsSchema&gt;) =&gt;
+    queryOptions({
+      queryKey: userEntityQueries.getUsersKey(requestParams),
+      queryFn: () =&gt; getUsers(requestParams),
+    }),
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이런 방식이면 DDD의 핵심(소유와 경계)은 지키면서, 화면 조립은 FSD의 상위 레이어에서 유연하게 할 수 있어 실용적이라고 그렇게 생각합니다. &quot;엔티티 같은 레이어 간 참조&quot;도 타입/키/셀렉터 수준에서 얕게 이뤄지면 괜찮다고 그렇게 생각합니다.</p>
+<h3 id="내가-가장-애쓴-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#내가-가장-애쓴-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>내가 가장 애쓴 부분</h3>
+<p>행동(<code>features</code>)과 구역(<code>widgets</code>), 도메인(<code>entities</code>)의 경계를 지키는 데 집중했습니다. 위에서 크게 만들기보다 아래에서 필요한 것만 차곡차곡 쌓았고, 두세 군데 이상에서 실제로 쓰인 뒤에야 공통화해 성급한 추상화를 피했습니다.</p>
+<pre><code class="language-16:27:src/entities/posts/hooks/use-post-mutations.ts code-highlight"><span class="code-line">const addPost = useMutation({
+</span><span class="code-line">  mutationFn: addPostAction,
+</span><span class="code-line">  onError: (error) =&gt; {
+</span><span class="code-line">    console.error(&quot;게시물 추가 오류:&quot;, error)
+</span><span class="code-line">  },
+</span><span class="code-line">  onSuccess: (addPostResponse) =&gt; {
+</span><span class="code-line">    if (queryParams) {
+</span><span class="code-line">      queryClient.setQueryData(
+</span><span class="code-line">        postEntityQueries.getPosts({ ...queryParams }).queryKey,
+</span><span class="code-line">        (prevPostResponse) =&gt; optimisticAddPost(prevPostResponse, addPostResponse),
+</span><span class="code-line">      )
+</span><span class="code-line">    }
+</span><span class="code-line">  },
+</span><span class="code-line">})
+</span></code><div class="copied" data-code="const addPost = useMutation({
+  mutationFn: addPostAction,
+  onError: (error) =&gt; {
+    console.error(&quot;게시물 추가 오류:&quot;, error)
+  },
+  onSuccess: (addPostResponse) =&gt; {
+    if (queryParams) {
+      queryClient.setQueryData(
+        postEntityQueries.getPosts({ ...queryParams }).queryKey,
+        (prevPostResponse) =&gt; optimisticAddPost(prevPostResponse, addPostResponse),
+      )
+    }
+  },
+})
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="fsd를-넘어선-자신만의-폴더-구조에-대한-고민"><a class="anchor" aria-hidden="true" tabindex="-1" href="#fsd를-넘어선-자신만의-폴더-구조에-대한-고민"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>FSD를 넘어선 자신만의 폴더 구조에 대한 고민</h3>
+<p>FSD를 적용하면서 여러 아키텍처 패러다임을 비교해본 결과, 현재 구조가 이미 colocation과 layering의 균형을 잘 맞춘 형태라는 결론에 도달했습니다.</p>
+<h4 id="colocation의-가치를-깨닫다"><a class="anchor" aria-hidden="true" tabindex="-1" href="#colocation의-가치를-깨닫다"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Colocation의 가치를 깨닫다</h4>
+<p>여러 구조를 경험해보니 **관련된 것끼리 가까이 두기(colocation)**가 가장 중요하다고 느꼈습니다. 과거 역할별 폴더 구조에서는 하나의 기능을 위해 여러 폴더를 오가며 파일을 찾아야 했지만, 현재는 도메인별로 필요한 모든 것이 한 곳에 모여 있어 훨씬 효율적입니다.</p>
+<pre><code class="code-highlight"><span class="code-line">entities/posts/
+</span><span class="code-line">├── api/          # API 요청/응답
+</span><span class="code-line">├── hooks/        # 상태 관리 훅
+</span><span class="code-line">├── model/        # 타입 정의
+</span><span class="code-line">└── index.ts      # 공개 인터페이스
+</span></code><div class="copied" data-code="entities/posts/
+├── api/          # API 요청/응답
+├── hooks/        # 상태 관리 훅
+├── model/        # 타입 정의
+└── index.ts      # 공개 인터페이스
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="layering의-명확함"><a class="anchor" aria-hidden="true" tabindex="-1" href="#layering의-명확함"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Layering의 명확함</h4>
+<p>FSD의 레이어 구조(<code>shared → entities → features → widgets → views</code>)가 의존성 방향을 명확히 해줍니다. 이는 단순히 폴더 구조를 넘어서 <strong>사고의 체계</strong>를 제공합니다. 새로운 기능을 추가할 때도 &quot;어느 레이어의 책임인가?&quot;를 먼저 생각하게 되어 더 나은 설계로 이어집니다.</p>
+<h4 id="다른-패턴들을-고려해본-결과"><a class="anchor" aria-hidden="true" tabindex="-1" href="#다른-패턴들을-고려해본-결과"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>다른 패턴들을 고려해본 결과</h4>
+<p><strong>도메인별 Feature 구조 (Vertical Slice Architecture)</strong></p>
+<pre><code class="code-highlight"><span class="code-line">features/
+</span><span class="code-line">├── post-management/
+</span><span class="code-line">│   ├── components/
+</span><span class="code-line">│   ├── hooks/
+</span><span class="code-line">│   ├── services/
+</span><span class="code-line">│   └── types/
+</span><span class="code-line">└── user-management/
+</span><span class="code-line">    ├── components/
+</span><span class="code-line">    ├── hooks/
+</span><span class="code-line">    ├── services/
+</span><span class="code-line">    └── types/
+</span></code><div class="copied" data-code="features/
+├── post-management/
+│   ├── components/
+│   ├── hooks/
+│   ├── services/
+│   └── types/
+└── user-management/
+    ├── components/
+    ├── hooks/
+    ├── services/
+    └── types/
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이 구조도 고려했지만, 도메인 간 데이터 공유가 필요한 순간(게시글 목록에서 작성자 정보 표시 등)에 경계가 애매해진다는 단점이 있었습니다.</p>
+<p><strong>기능별 Monorepo 스타일</strong></p>
+<pre><code class="code-highlight"><span class="code-line">packages/
+</span><span class="code-line">├── post-domain/
+</span><span class="code-line">├── user-domain/
+</span><span class="code-line">├── shared-ui/
+</span><span class="code-line">└── shared-utils/
+</span></code><div class="copied" data-code="packages/
+├── post-domain/
+├── user-domain/
+├── shared-ui/
+└── shared-utils/
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>너무 과하다고 판단했습니다. 중소 규모 프로젝트에서는 복잡성 대비 이득이 적었습니다.</p>
+<h4 id="현재-구조가-최선인-이유"><a class="anchor" aria-hidden="true" tabindex="-1" href="#현재-구조가-최선인-이유"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>현재 구조가 최선인 이유</h4>
+<ol>
+<li><strong>점진적 복잡성 관리</strong>: 작은 것부터 시작해서 필요에 따라 레이어를 추가할 수 있음</li>
+<li><strong>명확한 책임 분리</strong>: 각 레이어가 명확한 역할을 가지고 있어 새 팀원도 쉽게 이해</li>
+<li><strong>실용적 유연성</strong>: 너무 엄격하지 않아서 실제 개발 시 적용하기 용이</li>
+<li><strong>도메인과 기술의 균형</strong>: 도메인 로직은 entities에, 기술적 관심사는 shared에 적절히 분리</li>
+</ol>
+<h4 id="더-나아가-진정한-격리를-위한-고민"><a class="anchor" aria-hidden="true" tabindex="-1" href="#더-나아가-진정한-격리를-위한-고민"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>더 나아가: 진정한 격리를 위한 고민</h4>
+<p>FSD의 핵심 가치 중 하나는 <strong>레이어 간 격리</strong>입니다. 하지만 자바스크립트 모듈 시스템만으로는 이런 격리를 강제하기 어렵다는 한계가 있습니다. 개발자가 실수로 <code>views</code>에서 직접 <code>entities</code>를 건너뛰고 <code>shared</code>를 import하는 것을 막을 방법이 없죠.</p>
+<p><strong>패키지 기반 격리 아이디어</strong></p>
+<pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token comment">// package.json (workspace root)</span>
+</span><span class="code-line"><span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token property">&quot;workspaces&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token string">&quot;packages/shared&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token string">&quot;packages/entities&quot;</span><span class="token punctuation">,</span> 
+</span><span class="code-line">    <span class="token string">&quot;packages/features&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token string">&quot;packages/widgets&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token string">&quot;packages/views&quot;</span>
+</span><span class="code-line">  <span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// package.json (workspace root)
+{
+  &quot;workspaces&quot;: [
+    &quot;packages/shared&quot;,
+    &quot;packages/entities&quot;, 
+    &quot;packages/features&quot;,
+    &quot;packages/widgets&quot;,
+    &quot;packages/views&quot;
+  ]
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-json"><code class="language-json code-highlight"><span class="code-line"><span class="token comment">// packages/features/package.json</span>
+</span><span class="code-line"><span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token property">&quot;@myapp/shared&quot;</span><span class="token operator">:</span> <span class="token string">&quot;workspace:*&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token property">&quot;@myapp/entities&quot;</span><span class="token operator">:</span> <span class="token string">&quot;workspace:*&quot;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token comment">// widgets나 views는 의존성에 없음 -&gt; 물리적으로 import 불가</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// packages/features/package.json
+{
+  &quot;dependencies&quot;: {
+    &quot;@myapp/shared&quot;: &quot;workspace:*&quot;,
+    &quot;@myapp/entities&quot;: &quot;workspace:*&quot;
+  }
+  // widgets나 views는 의존성에 없음 -&gt; 물리적으로 import 불가
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이렇게 하면:</p>
+<ul>
+<li><strong>컴파일 타임에 의존성 위반을 잡을 수 있음</strong></li>
+<li><strong>각 레이어가 독립적인 빌드/테스트 단위가 됨</strong></li>
+<li><strong>진정한 의미의 경계 강제</strong></li>
+</ul>
+<p>하지만 과할 수 있다고 생각하는 이유는:</p>
+<ol>
+<li><strong>개발 복잡성 증가</strong>: 간단한 변경에도 여러 패키지를 넘나들어야 함</li>
+<li><strong>빌드 시간 증가</strong>: 각 패키지별 빌드 과정이 필요</li>
+<li><strong>타입 공유 복잡성</strong>: 패키지 간 타입 전파가 까다로워짐</li>
+</ol>
+<p><strong>현실적 절충안</strong>
+현재로서는 FSD의 <strong>멘탈 모델</strong>을 잘 지키는 것이 더 실용적이라고 판단했습니다. 하지만 프로젝트가 더 커지고 팀이 늘어난다면, 중요한 경계(특히 <code>entities</code> 레이어)는 실제 패키지로 분리하는 것도 고려해볼 만합니다.</p>
+<pre><code class="code-highlight"><span class="code-line">// 미래의 가능한 구조
+</span><span class="code-line">packages/
+</span><span class="code-line">├── shared/           # 완전 독립 패키지
+</span><span class="code-line">├── post-domain/      # entities 레벨을 패키지로
+</span><span class="code-line">├── user-domain/      # entities 레벨을 패키지로  
+</span><span class="code-line">└── app/              # features, widgets, views
+</span><span class="code-line">    ├── features/
+</span><span class="code-line">    ├── widgets/
+</span><span class="code-line">    └── views/
+</span></code><div class="copied" data-code="// 미래의 가능한 구조
+packages/
+├── shared/           # 완전 독립 패키지
+├── post-domain/      # entities 레벨을 패키지로
+├── user-domain/      # entities 레벨을 패키지로  
+└── app/              # features, widgets, views
+    ├── features/
+    ├── widgets/
+    └── views/
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="결론-새로운-구조보다-현재-구조의-심화"><a class="anchor" aria-hidden="true" tabindex="-1" href="#결론-새로운-구조보다-현재-구조의-심화"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>결론: 새로운 구조보다 현재 구조의 심화</h4>
+<p>새로운 폴더 구조를 만드는 것보다, 현재 FSD 구조에서 <strong>colocation과 layering 원칙을 더 깊이 적용</strong>하는 것이 더 가치 있다고 결론지었습니다.</p>
+<p>예를 들어:</p>
+<ul>
+<li><code>entities</code> 내에서 도메인별 colocation 강화</li>
+<li>각 레이어 내에서 일관된 파일 명명 규칙 정착</li>
+<li>레이어 간 의존성 규칙을 더 엄격히 준수</li>
+<li>(선택적으로) 핵심 도메인을 패키지로 분리해 물리적 격리 확보</li>
+</ul>
+<p>이것이야말로 **&quot;조금 더 현대적이면서도 기능 중심&quot;**인 접근법이라고 생각합니다.</p>
+<h3 id="아직-더-고민이-필요한-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#아직-더-고민이-필요한-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>아직 더 고민이 필요한 부분</h3>
+<p>수정/추가 후 어떤 캐시를 언제 무효화할지, 이 책임을 <code>entities</code>에서 표준화할지 <code>features</code>에서 상황별로 결정할지는 더 고민중 입니다.</p>
+<h3 id="리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용이나-궁금한-것에-대한-질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용이나 궁금한 것에 대한 질문</h3>
+<ol>
+<li>캐시 무효화 책임: 엔티티 표준(쿼리 키 기반)으로 강제할까요, 아니면 피처가 상황별로 결정하도록 둘까요? 팀 합의가 가능한 단일 기준이 있나요?</li>
+<li>낙관적 업데이트/롤백: 실패 시 UI와 캐시를 어떻게 되돌릴까요? 동일 리소스에 대한 동시 업데이트 충돌은 어떤 규칙으로 중재하나요?</li>
+<li>도메인 모델 변환: 서버 DTO 변화에 대비해 변환 레이어를 <code>entities/model</code>에 고정할까요? 언제 공유 타입으로 승격하고 언제 도메인에 남길지 기준이 있나요?</li>
+</ol></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>준형님 이번 주 과제도 잘하셨네요.
+뭔가 AI의 향이 느껴지는 회고 부분 부분도 있었는데 내용 전반적으로 잘 작성해주신 것 같아요 ㅎㅎ 작성해주신대로 모두 느끼고 이해하고 적용하셨다면 더할나위 없는 한주였을것 같네요.
+(개인적으로는 views로 보다는 pages로 그대로 작성하는게 더 의미상으로 맞아 보이네요 ㅎㅎ 각각 )
+탠스택 쿼리를 현재는 entity에 속해있는 경우가 있는데, 이 부분도 해석하는 사람마다 다르겠지만 단순히 해당 엔티티에 대한 페칭이 아닌 여러 액션을 담고 있는 부분이 있어 각 피처에서 다뤄야 한다는 얘기가 많이 있긴해요! 지금의 구조가 단순히 데이터를 조회하는 맥락이라면 엔티티의 위치도 좋지만 상태에 대한게 함께 전달이 되니 이렇게 되면 왔다갔다 하니까 규칙을 아예 만들어버리는 경우도 있구요 ㅎㅎ
+전반적으로 타입에 대한 것도 zod를 활용해서 별도로 많이 작성해주셨고 필요로 하는 여러 기능들도 부가적으로 잘 작성해주셨네요.</p>
+<blockquote>
+<p>캐시 무효화 책임: 엔티티 표준(쿼리 키 기반)으로 강제할까요, 아니면 피처가 상황별로 결정하도록 둘까요? 팀 합의가 가능한 단일 기준이 있나요?</p>
+</blockquote>
+<p>요런것들 때문에 엔티티에 쿼리가 들어가게 되면 여러 액션이 섞이게 되어 적절하지 않을 수 있다였는데요. 조회에 대한것만 entity에 있다면 표준적이게 쿼리키로 무효화를 하고 아니면 피처에서 별도로 처리하는 형태로 구현하는게 좋을 것 같아요. 아니면 키만 엔티티에 두고 feature에 애초에 쿼리를 두고 각각 사용에 맞춰 쓰는거죠.</p>
+<blockquote>
+<p>낙관적 업데이트/롤백: 실패 시 UI와 캐시를 어떻게 되돌릴까요? 동일 리소스에 대한 동시 업데이트 충돌은 어떤 규칙으로 중재하나요?</p>
+</blockquote>
+<p>요거도 위 질문과 이어지지 않을까 싶네요! l</p>
+<blockquote>
+<p>도메인 모델 변환: 서버 DTO 변화에 대비해 변환 레이어를 entities/model에 고정할까요? 언제 공유 타입으로 승격하고 언제 도메인에 남길지 기준이 있나요?</p>
+</blockquote>
+<p>이 질문도 약간은 이어지는 것 같은데요.
+모델에 위치시킨다는건 결국 그 모델에 대한 조회가 발생된다는 거에 해당이 될텐데, 실제로 조회를 했을 때 해당 정보만 내려오는게 아니라면 (또는 그것만 깔끔하게 발라내서 사용하는 딱떨어지는 형태가 아니라면) 모델에 두는게 적절하지 않을수도 있을것 같아요. 정보의 특성에 맞게 위치하게 두는게 좋지 않을까 싶습니다. 페이지에 가까우면 페이지에 두는것처럼요.
+아니면 쿼리의 select같은 것들을 활용해서 어댑터 처럼 사용하는 방식도 있을 것 같구요.
+공유 타입 승격에 대해 고민하게 되는것도 결국 자연스럽게 동일하게 사용되는 위치, 정보에 가깝게 두면 되지 않을까 싶습니다.</p>
+<p>고생하셨고 다음주 테스트도 기대되네요. 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

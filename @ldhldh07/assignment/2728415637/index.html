@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -528,6 +528,12 @@ props drilling이 있을 경우</p>
 <p>코드 내부에 검색창의 로직이 컴포넌트에 있는 안티패턴
 이런 주석이 달려있어서 단순히 인라인에 있는 것을 분리했습니다.</p>
 <p>해당 안티패턴에 대해 정확히 이해한 느낌이 아니여서 관련해서 리뷰받아봤으면 합니다.</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>두현~ 수고했습니다! 이번 과제는 React의 hook과 함수형 프로그래밍을 깊이 이해하고, 액션과 순수함수를 분리하면서 엔티티와 UI를 체계적으로 구분하는 것이 목표였습니다. 작성한 회고를 보니 진짜 본인의 성찰과 인사이트를 많이 느낀것 같아서 뿌듯하네요</p>
+<p>&quot;&#x27;프론트엔드 개발에서 지나치게 함수형 코딩에 과몰입하는 것은 부작용이 있다&#x27;라는 경계를 가지고 있었습니다.&quot; 맞아요. 실제로 그렇죠. 그렇지만 무엇이 부작용을 가져오는지 무엇을 이점이 가져오는지는 겪어봐야만 알 수 있는 법이죠. 이번 과제만으로는 다 이해하기는 어렵겠지만 많은 시행착오등을 겪어보기를 바래요.</p>
+<p>props drilling에 대한 고민도 흥미롭게 읽었습니다. &quot;프롤 드릴링 지지협회의 일원&quot; 이라니 훌륭합니다! 삭제의 복잡성과 테스트 가능성이라는 실무적 관점에서 대해서 새로운 시야가 생겼다는 점이 인상깊네요. 프롤 드릴링 지지협회의 일원으로써 좋은 props drilli만 많이 남겨주길 바래요!</p>
+<p>핸들러 함수 전략에서 비즈니스 로직은 Hook으로, UI 핸들러는 컴포넌트에 두는 방식으로 구분한 것도 좋은 선택이었습니다. UI 이벤트 처리는 확실히 UI 컴포넌트의 책임이죠. 도메인 컴포넌트의 책임은 사용자의 액션에서도 도메인 로직을 처리하기 위한 데이터를 뽑아다가 전달하는 역할인만큼 지금의 접근법은 상당히 균형잡혀 보여요.</p>
+<p>질문하신 검색창 로직의 안티패턴에 대해 답변드리자면, AI에게 시키다 보니 그런 주석을 만들어 주었고 제가 삭제를 하지 못했었는데 유틸로 분리할 수 있는 훅 (debounce)와 검색의 기능이 한데 묶여 인라인으로 들어가있는 정도의 안티패턴이었어요. 우리는 이제 각자의 자리와 책임을 아니까 같이 있으면 안되는 책임과 자리를 가진 패턴이라서 안티패턴이라 명명했습니다.</p>
+<p>Decorator 패턴에 관심을 가지신 것도 좋습니다. 이 패턴은 기존 객체를 수정하지 않고 새로운 기능을 추가할 때 유용한데, React의 HOC나 커스텀 훅 조합에서도 비슷한 개념을 활용할 수 있어요. 앞으로 더 큰 규모의 프로젝트에서 이런 패턴들을 적용해보면서 실무적 감각을 키워나가시길 바랍니다.</p>
+<p>수고하셨습니다. 다음 주차도 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>

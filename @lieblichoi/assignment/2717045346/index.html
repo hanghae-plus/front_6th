@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -360,6 +360,27 @@ const handleQuantityChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt
 "><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
 <p>이런 간단한 변환 로직까지 부모로 올려야 하나 싶어서 그냥 뒀는데,, 엄밀히 말하면 엔티티 컴포넌트와 UI 컴포넌트 분리 원칙에 어긋나는 거라 생각하지만 굳이,, 이기도 하다고 생각합니다. 이럴 때는 적당한 타협을 해도 괜찮다 생각하는데 어떨까요?</p>
 <p>그리고 현재 <code>atoms → hooks → components</code> 흐름에서 의존성 방향이 올바른지, 더 개선할 부분이 있는지도 피드백 받고 싶습니다.</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>좋아요! 잘했습니다 재환! 비즈니스 로직 분리에서 계산이 가능한 상태는 순수함수로 분리해낸다는 전략 좋았습니다. 파생가능한 결과는 상태로 두는게 아니라 계산으로 만들어 두면 좋죠.</p>
+<p>jotai를 통해서 useToast를 만들었군요. 좋습니다. 아무리 props를 통해서 순수하게 만든다고 해도 toast하나 쓰겠다고 props를 계속 가지고 가는건 괴로운 법이죠. 뭐든 극단적이고 한 가지 방법만 고수하는건 좋지 않죠. 순수하게만 만드려고 하면 이런 문제가 생깁니다.</p>
+<p>이벤트 핸들러의 경우의 인사이트가 좋네요. 코드의 중복을 제거하면서 재사용이 가능한 코드를 만들고 싶었을 거에요. 그렇지만 재사용이 목적이라면 정말 재사용을 할 수 있어야 해요.</p>
+<pre><code class="code-highlight"><span class="code-line">// ProductForm.tsx
+</span><span class="code-line">const handleTextChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+</span><span class="code-line">  const { name, value } = e.target;
+</span><span class="code-line">  setProductForm(prev =&gt; ({ ...prev, [name]: value }));
+</span><span class="code-line">};
+</span></code><div class="copied" data-code="// ProductForm.tsx
+const handleTextChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+  const { name, value } = e.target;
+  setProductForm(prev =&gt; ({ ...prev, [name]: value }));
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>위 코드에서 보면 이름은 handleTextChange인데 사용은 setProductForm이죠. 이렇게 DOM과 유틸과 도메인이 섞여있으면 재사용도 안되고 추상화도 애매한 코드가 됩니다.  setProductForm도 외부에서 받도록 하면 좋겠죠? ex) handleTextChange(&quot;name&quot;, setProductForm) 그런데 숫자도 필요하고 검증이 필요하네요? 그러면 ex) handleChange(&quot;name&quot;, setProductForm, (e) =&gt; Number(e.value), (value) =&gt; value &gt; 1000) 이런식으로도 만들 수 있지만 이건 좋은 방법이 아니게 되죠.</p>
+<p>사실 이러한 시도들은 예전에도 많이 있었어요. 결국 알게된 해법은 validate는 도메인에서 handleChange는 form에서 할 수 있도록 해서 선언적으로 만드는 방식이 낫다라는거에요. react-hook-form과 zod가 가장 대표적이니 한번 살펴보시면 좋겠네요.</p>
+<p>Q) useCart 같은 <strong>엔티티 Hook</strong>과 useLocalStorage 같은 <strong>라이브러리 Hook</strong>을 분리했는데, useCart가 지금 꽤 많은 일을 하고 있습니다. 이게 엔티티를 다루는 Hook의 적절한 책임 범위일지 아니면 더 세분화해야 할지 의문입니다.</p>
+<p>=&gt; 선택하기 나름입니다. 물론 가급적 가벼우면 좋겠죠. 대부분 화면에서 그려지는 파생데이터 - 포맷터, 조건, 필터 등 - 컴포넌트의 책임이 되는 편을 선호합니다. 왜냐하면 해당 컴포넌트가 없다면 쓰이지 않을 로직이니까요. 그런데 cartTotal이 다른 파생데이터의 원본 데이터이고 무거운 계산이라면 미리 만들어두면 좋습니다. 그렇다면 훅에 포함이 되는 편이 좋죠. 또는 cartTotal은 순수하나 타 의존도가 높고 인자가 복잡해서 import를 꼬게 만든다면 의도적으로 hook안으로 넣어서 간결하게 만들어 줄 수 있습니다.</p>
+<p>=&gt; 사실 다 같은 맥락의 문제들입니다. 순수하면 결합도도 낮고 테스트하기에도 좋고 독립적이죠. 함수건 컴포넌트건 모듈이건 다 그렇습니다. 그렇지만 모든 걸 그렇게만 만들수도 없고 비효율적인 부분은 부분이 존재합니다. 대신 이걸 상태로 묶어버리면 관리가 필요해집니다. 상태란 값이 변하니까요. 그 선택이 더 나은 근거를 생각해보시기 바랍니다.</p>
+<p>Q) CartItemCard 같은 경우 완전한 Presenter는 아니고 약간의 로직을 가지고 있습니다. 하지만 굳이,, 이기도 하다고 생각합니다. 이럴 때는 적당한 타협을 해도 괜찮다 생각하는데 어떨까요?</p>
+<p>=&gt; 전역상태관리 체계안에서의 컴포넌트의 책임은 프레젠터만 있지는 않아요. 버튼이 자신의 UI적 책임이 있듯 CartItemCard의 경우 Cart의 동작의 책임도 부여해주면 됩니다. 전역상태관리를 통해서 이제 모든 로직을 컨테이너로 몰지 않아도 되지 가장 가까운 곳에서 그 기능을 해주면 되는거에요. 그래서 컴포넌트에서 로직을 가지는건 이상하지 않아요.</p>
+<p>=&gt; 컴포넌트에서 이벤트 핸들러의 책임이란 이벤트와 UI를 통해 얻을 수 있는 정보 (즉 event.value와 같은)나 해당 상황에서의 도메인과 관련없는 UI정보 처리들 (토스트) 등은 컴포넌트의 책임이랍니다. 이러한 정보를 도메인 훅으로 전달해서 도메인 훅은 UI와 상관없이 처리할 수 있도록 하게 해주는 것이죠.</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>

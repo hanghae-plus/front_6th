@@ -6,7 +6,7 @@
   <title>항해플러스 프론트엔드 6기 기술블로그</title>
   <link rel="icon" href="/front_6th/favicon.ico"/>
   
-  <script type="module" crossorigin src="/front_6th/assets/index-C86_9DIC.js"></script>
+  <script type="module" crossorigin src="/front_6th/assets/index-Drf7uASk.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-Dvjhel9t.css">
 </head>
 <body>
@@ -100,6 +100,10 @@
 <li>Jotai atom 구조가 현재는 파일 하나(atoms.ts)에 몰려 있습니다. 도메인별 atom 모듈화하는 것이 좋을까요?</li>
 <li>할인 계산 로직을 cartModel 레이어까지 더 분리한다면 테스트 용이성이 높아질지 궁금합니다.</li>
 </ul></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
-<p>undefined</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<p>수고했어요 정우, 잘했습니다!</p>
+<p>Q) atoms등이 한 곳에 모여있는 것들과 아닌 것들에는 장단점이 있습니다. atom이 한 곳에 모여있으면 전체적으로 어떤 데이터들이 사용되는지를 코드에서 한눈에 파악할 수 있습니다. 만약 atom읙 개수가 많지않고 전체적인 코드에서 큰 비중이 없다면 한 곳에 모아두는 것도 좋은 선택입니다.</p>
+<p>지금의 경우에는 도메인을 전연상태관리로 나눈것이기에 각 atom들이 서로 연관성이 있게 쓰이지 않습니다. 생각해보면 atom이 쓰이는 곳은 useAtom이 유일한데 그 곳이 useCart useProduct에서만 사용되고 있으니 그 쓰임이 가장 가까운데 두는데 좋다는 원칙에 따라 자연스럽게 도메인 별로 모듈화 되는 방향으로 놓이게 됩니다.</p>
+<p>Q) 할인 계산 로직을 cartModel 레이어까지 더 분리한다면 테스트 용이성이 높아질지 궁금합니다.</p>
+<p>=&gt; 네 순수함수로 분리를 하는 만큼 확실하게 얻을 수 있는 이득입니다. 대신 잘게 쪼갤수록 props가 늘어나고 모듈화를 하기가 어렵다는 단점이 있습니다. 이런건 직접 해보면서 느끼는 게 제일 좋죠! 간단한 궁금증이 생길때에는 AI를 통해 코드를 구현시켜보고 직접 몸으로 느껴보면 큰 도움이 됩니다. 코딩은 이론보다도 감각적인 부분이 있거든요. 수고하셨습니다. 6주차 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
 </body>
 </html>
