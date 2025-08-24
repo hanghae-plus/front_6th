@@ -48,7 +48,7 @@ export type AssignmentDetail = Pick<GithubPullRequest, "id" | "title" | "body"> 
 };
 
 export interface AppData {
-  users: Record<string, UserWIthCommonAssignments>;
+  users: Record<string, HanghaeUser>;
   assignmentDetails: Record<string, AssignmentDetail>;
   feedbacks: Record<string, string>;
 }

@@ -1,4 +1,4 @@
-import type { GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
+import type { GithubUser, HanghaeUser } from "@hanghae-plus/domain";
 import { type PropsWithChildren, useMemo } from "react";
 import { Link } from "react-router";
 import { Calendar, Clock, Github, StarIcon } from "lucide-react";
@@ -146,7 +146,7 @@ const UserProvider = ({ children }: PropsWithChildren) => {
 export const User = Object.assign(
   () => {
     const { assignments, ...user } = usePageData<
-      Omit<UserWIthCommonAssignments, "assignments"> & { assignments: Record<string, Assignment> }
+      Omit<HanghaeUser, "assignments"> & { assignments: Record<string, Assignment> }
     >();
 
     const assignmentList = Object.values(assignments);

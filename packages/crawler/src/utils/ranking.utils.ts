@@ -1,6 +1,7 @@
 import {
+  HanghaeUser,
   UserWIthCommonAssignments,
-  UserWIthCommonAssignmentsWithRanking,
+  Grade,
 } from '@hanghae-plus/domain';
 
 // 랭킹 시스템 상수
@@ -27,15 +28,6 @@ const RANKING_CONSTANTS = {
   BRONZE_SCORE_RATE: 25, // 브론즈 점수 비율
   LEARNER_SCORE_RATE: 10, // 학습자 점수 비율
 } as const;
-
-type Grade =
-  | '🏆 마스터'
-  | '💎 다이아몬드'
-  | '🥇 골드'
-  | '🥈 실버'
-  | '🥉 브론즈'
-  | '📚 학습자'
-  | '🌱 초보자';
 
 /**
  * 사용자의 점수를 계산합니다.
@@ -135,7 +127,7 @@ export function determineGrade(
 export function addRankingToUsers(
   users: Record<string, UserWIthCommonAssignments>,
   totalAssignments: number,
-): Record<string, UserWIthCommonAssignments> {
+): Record<string, HanghaeUser> {
   return Object.entries(users).reduce(
     (acc, [userId, user]) => {
       const score = calculateUserScore(user, totalAssignments);
@@ -149,6 +141,6 @@ export function addRankingToUsers(
 
       return acc;
     },
-    {} as Record<string, UserWIthCommonAssignmentsWithRanking>,
+    {} as Record<string, HanghaeUser>,
   );
 }

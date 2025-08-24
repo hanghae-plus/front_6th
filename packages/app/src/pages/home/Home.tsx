@@ -1,4 +1,4 @@
-import type { CommonAssignment, GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
+import type { CommonAssignment, GithubUser, HanghaeUser } from "@hanghae-plus/domain";
 import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
 import { mergeAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
@@ -46,7 +46,7 @@ const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: 
   );
 };
 
-const UsersGrid = ({ items }: { items: UserWIthCommonAssignments[] }) => {
+const UsersGrid = ({ items }: { items: HanghaeUser[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {items.map(({ assignments, ...user }) => (
@@ -69,7 +69,7 @@ const HomeProvider = ({ children }: PropsWithChildren) => {
 };
 
 const HomePage = () => {
-  const { users } = usePageData<{ users: Record<string, UserWIthCommonAssignments> }>();
+  const { users } = usePageData<{ users: Record<string, HanghaeUser> }>();
   const items = Object.values(users);
 
   return (

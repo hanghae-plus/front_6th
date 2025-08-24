@@ -8,6 +8,7 @@ import {
   AssignmentDetail,
   AssignmentResult,
   GithubPullRequest,
+  HanghaeUser,
   UserWIthCommonAssignments,
 } from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
@@ -153,7 +154,7 @@ const generateAppData = () => {
       if (!pull) {
         return acc;
       }
-      const value: UserWIthCommonAssignments =
+      const value: HanghaeUser =
         acc[pull.user.login] ?? createUserWithCommonAssignments(pull, info);
 
       value.assignments.push({
@@ -166,7 +167,7 @@ const generateAppData = () => {
         [value.github.id]: value,
       };
     },
-    {} as Record<string, UserWIthCommonAssignments>,
+    {} as Record<string, HanghaeUser>,
   );
 
   // 랭킹 데이터 추가
