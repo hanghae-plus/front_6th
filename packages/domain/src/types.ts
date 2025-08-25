@@ -29,6 +29,13 @@ export interface UserWIthCommonAssignments {
   assignments: CommonAssignment[];
 }
 
+export interface UserWIthCommonAssignmentsWithRanking extends UserWIthCommonAssignments {
+  grade: Grade;
+  score: number;
+}
+
+export type HanghaeUser = UserWIthCommonAssignmentsWithRanking;
+
 export interface CommonAssignment extends Pick<AssignmentResult, "passed" | "theBest"> {
   url: string;
 }
@@ -41,7 +48,10 @@ export type AssignmentDetail = Pick<GithubPullRequest, "id" | "title" | "body"> 
 };
 
 export interface AppData {
-  users: Record<string, UserWIthCommonAssignments>;
+  users: Record<string, HanghaeUser>;
   assignmentDetails: Record<string, AssignmentDetail>;
   feedbacks: Record<string, string>;
 }
+
+// 랭킹 시스템 관련 타입들
+export type Grade = "🏆 마스터" | "💎 다이아몬드" | "🥇 골드" | "🥈 실버" | "🥉 브론즈" | "📚 학습자" | "🌱 초보자";

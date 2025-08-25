@@ -8,9 +8,11 @@ import {
   AssignmentDetail,
   AssignmentResult,
   GithubPullRequest,
+  HanghaeUser,
   UserWIthCommonAssignments,
 } from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
+import { addRankingToUsers } from './utils/ranking.utils';
 import { omit } from 'es-toolkit/compat';
 
 const organization = 'hanghae-plus';
@@ -21,6 +23,7 @@ const repos = [
   'front_6th_chapter2-1',
   'front_6th_chapter2-2',
   'front_6th_chapter2-3',
+  'front_6th_chapter3-1',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {
@@ -151,7 +154,7 @@ const generateAppData = () => {
       if (!pull) {
         return acc;
       }
-      const value: UserWIthCommonAssignments =
+      const value: HanghaeUser =
         acc[pull.user.login] ?? createUserWithCommonAssignments(pull, info);
 
       value.assignments.push({
@@ -164,14 +167,20 @@ const generateAppData = () => {
         [value.github.id]: value,
       };
     },
-    {} as Record<string, UserWIthCommonAssignments>,
+    {} as Record<string, HanghaeUser>,
+  );
+
+  // 랭킹 데이터 추가
+  const usersWithRanking = addRankingToUsers(
+    userWithCommonAssignments,
+    repos.length,
   );
 
   fs.writeFileSync(
     path.join(dataDir, 'app-data.json'),
     JSON.stringify(
       {
-        users: userWithCommonAssignments,
+        users: usersWithRanking,
         feedbacks,
         assignmentDetails,
       },

@@ -7,3 +7,4 @@ export * from "./Skeleton";
 export * from "./Sheet";
 export * from "./Tooltip";
 export * from "./Sidebar";
+export * from "./select";
