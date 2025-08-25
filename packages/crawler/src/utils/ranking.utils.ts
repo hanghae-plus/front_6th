@@ -49,25 +49,24 @@ export function calculateUserScore(
 
   const completionRate = (completedAssignments / totalAssignments) * 100;
 
-  // 기본 점수 계산
-  let score =
+  const defaultScore =
     completedAssignments * RANKING_CONSTANTS.COMPLETION_SCORE +
     bestPracticeCount * RANKING_CONSTANTS.BEST_PRACTICE_SCORE;
 
   // 완료율 보너스 계산
   if (completionRate >= RANKING_CONSTANTS.COMPLETION_100_THRESHOLD) {
-    score += RANKING_CONSTANTS.COMPLETION_100_BONUS;
+    return defaultScore + RANKING_CONSTANTS.COMPLETION_100_BONUS;
   }
 
   if (completionRate >= RANKING_CONSTANTS.COMPLETION_90_THRESHOLD) {
-    score += RANKING_CONSTANTS.COMPLETION_90_BONUS;
+    return defaultScore + RANKING_CONSTANTS.COMPLETION_90_BONUS;
   }
 
   if (completionRate >= RANKING_CONSTANTS.COMPLETION_80_THRESHOLD) {
-    score += RANKING_CONSTANTS.COMPLETION_80_BONUS;
+    return defaultScore + RANKING_CONSTANTS.COMPLETION_80_BONUS;
   }
 
-  return score;
+  return defaultScore;
 }
 
 /**
