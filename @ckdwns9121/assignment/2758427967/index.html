@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-D-trimLw.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-CfASphmw.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/9e77bac3-53a8-43f1-a0d8-23d19c9a3269"/><link rel="preload" as="image" href="https://github.com/user-attachments/assets/8144426e-e3f3-4745-bebc-13095a5aa3d2"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@ckdwns9121/" data-discover="true">ckdwns9121<!-- --> 님의 상세페이지</a> ＞ <!-- -->[8팀 박창준] Chapter 3-1. 프론트엔드 테스트 코드 🧦 </h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter3-1/pull/44" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[8팀 박창준] Chapter 3-1. 프론트엔드 테스트 코드 🧦 </h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->ckdwns9121</span><span>2025. 8. 20.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="hard"><a class="anchor" aria-hidden="true" tabindex="-1" href="#hard"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>HARD</h1>
+<h2 id="7주차-과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#7주차-과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>7주차 과제 체크포인트</h2>
+<h3 id="기본과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 총 11개의 파일, 115개의 단위 테스트를 무사히 작성하고 통과시킨다.</li>
+</ul>
+<h4 id="질문"><a class="anchor" aria-hidden="true" tabindex="-1" href="#질문"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>질문</h4>
+<blockquote>
+<p>Q. handlersUtils에 남긴 질문에 답변해주세요.</p>
+</blockquote>
+<p>기존 핸들러는 정적 JSON만 돌려줘서, 생성/수정 후에 <code>fetch</code>를 다시 해도 최신 상태가 안 나왔고, 전역 상태를 공유해서 병렬 실행 시 데이터가 섞일 여지가 있었습니다.</p>
+<p>그래서 <strong>클로저 기반 <code>createMockHandlers</code> 팩토리</strong>를 넣었습니다. 테스트마다 <code>createMockHandlers(seed)()</code>를 호출해 독립적인 <code>mockEvents</code>를 갖도록 했고, 그 결과</p>
+<ol>
+<li><code>POST/PUT/DELETE</code>가 실제 <code>mockEvents</code>를 업데이트하고</li>
+<li><code>GET</code>은 항상 그 시점의 최신 상태를 반환하며</li>
+<li>테스트 간 상태가 섞이지 않아 병렬로 돌려도 안전하게 만들었습니다.</li>
+</ol>
+<p>이 패턴 덕분에 테스트 A/B 각각 완전히 분리된 인스턴스를 쉽게 만들 수 있었습니다.</p>
+<p>아래는 최종 코드입니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">createMockHandlers</span> <span class="token operator">=</span> <span class="token punctuation">(</span>initialEvents<span class="token operator">:</span> Event<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">let</span> mockEvents<span class="token operator">:</span> Event<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">structuredClone</span><span class="token punctuation">(</span>initialEvents<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">[</span>
+</span><span class="code-line">      http<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&#x27;/api/events&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> events<span class="token operator">:</span> mockEvents <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">      http<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">&#x27;/api/events&#x27;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> request <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> newEvent <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> Omit<span class="token operator">&lt;</span>Event<span class="token punctuation">,</span> <span class="token string">&#x27;id&#x27;</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> eventWithId<span class="token operator">:</span> Event <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token operator">...</span>newEvent<span class="token punctuation">,</span>
+</span><span class="code-line">          id<span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">36</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">        mockEvents<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>eventWithId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>
+</span><span class="code-line">          <span class="token punctuation">{</span>
+</span><span class="code-line">            success<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</span><span class="code-line">            event<span class="token operator">:</span> eventWithId<span class="token punctuation">,</span>
+</span><span class="code-line">            message<span class="token operator">:</span> <span class="token string">&#x27;일정이 성공적으로 추가되었습니다.&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">201</span> <span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">      http<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&#x27;/api/events/:id&#x27;</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> request<span class="token punctuation">,</span> params <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> updatedEvent <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> Partial<span class="token operator">&lt;</span>Event<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> index <span class="token operator">=</span> mockEvents<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> event<span class="token punctuation">.</span>id <span class="token operator">===</span> params<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token operator">:</span> <span class="token string">&#x27;이벤트를 찾을 수 없습니다.&#x27;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">404</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        mockEvents<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>mockEvents<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">...</span>updatedEvent<span class="token punctuation">,</span> id<span class="token operator">:</span> params<span class="token punctuation">.</span>id <span class="token keyword">as</span> <span class="token builtin">string</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span>
+</span><span class="code-line">          <span class="token punctuation">{</span>
+</span><span class="code-line">            success<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+</span><span class="code-line">            event<span class="token operator">:</span> mockEvents<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">            message<span class="token operator">:</span> <span class="token string">&#x27;일정이 성공적으로 수정되었습니다.&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">
+</span><span class="code-line">      http<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token string">&#x27;/api/events/:id&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> params <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> index <span class="token operator">=</span> mockEvents<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> event<span class="token punctuation">.</span>id <span class="token operator">===</span> params<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> error<span class="token operator">:</span> <span class="token string">&#x27;이벤트를 찾을 수 없습니다.&#x27;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">404</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">const</span> <span class="token punctuation">[</span>deletedEvent<span class="token punctuation">]</span> <span class="token operator">=</span> mockEvents<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span> event<span class="token operator">:</span> deletedEvent <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> status<span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="export const createMockHandlers = (initialEvents: Event[] = []) =&gt; {
+  return () =&gt; {
+    let mockEvents: Event[] = structuredClone(initialEvents);
+
+    return [
+      http.get(&#x27;/api/events&#x27;, () =&gt; {
+        return HttpResponse.json({ events: mockEvents }, { status: 200 });
+      }),
+
+      http.post(&#x27;/api/events&#x27;, async ({ request }) =&gt; {
+        const newEvent = (await request.json()) as Omit&lt;Event, &#x27;id&#x27;&gt;;
+        const eventWithId: Event = {
+          ...newEvent,
+          id: Math.random().toString(36).substring(2, 15),
+        };
+        mockEvents.push(eventWithId);
+        return HttpResponse.json(
+          {
+            success: true,
+            event: eventWithId,
+            message: &#x27;일정이 성공적으로 추가되었습니다.&#x27;,
+          },
+          { status: 201 }
+        );
+      }),
+
+      http.put(&#x27;/api/events/:id&#x27;, async ({ request, params }) =&gt; {
+        const updatedEvent = (await request.json()) as Partial&lt;Event&gt;;
+        const index = mockEvents.findIndex((event) =&gt; event.id === params.id);
+
+        if (index === -1) {
+          return HttpResponse.json({ error: &#x27;이벤트를 찾을 수 없습니다.&#x27; }, { status: 404 });
+        }
+
+        mockEvents[index] = { ...mockEvents[index], ...updatedEvent, id: params.id as string };
+        return HttpResponse.json(
+          {
+            success: true,
+            event: mockEvents[index],
+            message: &#x27;일정이 성공적으로 수정되었습니다.&#x27;,
+          },
+          { status: 200 }
+        );
+      }),
+
+      http.delete(&#x27;/api/events/:id&#x27;, ({ params }) =&gt; {
+        const index = mockEvents.findIndex((event) =&gt; event.id === params.id);
+
+        if (index === -1) {
+          return HttpResponse.json({ error: &#x27;이벤트를 찾을 수 없습니다.&#x27; }, { status: 404 });
+        }
+
+        const [deletedEvent] = mockEvents.splice(index, 1);
+        return HttpResponse.json({ event: deletedEvent }, { status: 200 });
+      }),
+    ];
+  };
+};
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<blockquote>
+<p>Q. 테스트를 독립적으로 구동시키기 위해 작성했던 설정들을 소개해주세요.</p>
+</blockquote>
+<p>현재 <code>createMockHandlers</code> 함수는 단순히 핸들러 배열을 바로 반환하지 않습니다. 대신 “<strong>핸들러 생성기(factory)</strong>”를 반환하도록 설계되어 있습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> createHandlers <span class="token operator">=</span> <span class="token function">createMockHandlers</span><span class="token punctuation">(</span>initialEvents<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 첫 번째 호출 → 생성기(factory) 생성</span>
+</span><span class="code-line"><span class="token keyword">const</span> handlers <span class="token operator">=</span> <span class="token function">createHandlers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// 두 번째 호출 → 실제 핸들러 배열 반환</span>
+</span></code><div class="copied" data-code="const createHandlers = createMockHandlers(initialEvents); // 첫 번째 호출 → 생성기(factory) 생성
+const handlers = createHandlers();                          // 두 번째 호출 → 실제 핸들러 배열 반환
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>그래서 처음 한 번 호출할 때는, 전달받은 초기 상태(<code>seed</code> 이벤트 배열)를 클로저에 담아두는 공장 같은 함수를 만들어내고, 두 번째 호출할 때 그 공장이 실제로 동작해서 핸들러 배열을 반환하게 만들었습니다.</p>
+<ul>
+<li>첫 호출: 초기 상태를 캡처한 <strong>생성기 함수</strong>를 만든다</li>
+<li>두 번째 호출: 그 생성기를 <strong>실행</strong>해서 실제 <strong>MSW 핸들러 배열</strong>을 받는다.</li>
+</ul>
+<p>이렇게 두 단계로 나눈 이유는 테스트 환경에서 <strong>여러 개의 독립적인 인스턴스</strong>를 쉽게 만들어내기 위해서인데요. 예를 들어 테스트 A와 테스트 B가 동시에 실행될 때, 각각 <code>createMockHandlers([])()</code>를 호출하면 서로 다른 메모리 공간을 가진 핸들러 인스턴스를 생성하게 되고, 덕분에 데이터 오염 없이 병렬로 안전하게 동작할 수 있게 되었습니다.</p>
+<p>또한 여기서 <code>structuredClone()</code>를 사용했는데, <strong>깊은 복사</strong>로 초기 데이터를 복제해 두 테스트가 같은 참조를 공유하지 않게 좀더 안전하게 막기 위해서 사용했습니다. 얕은 복사였다면 객체 참조가 이어져서 한쪽 변경이 다른 쪽에 새어 나올 수 있을거라 생각했어요. (하지만 지금 생각해보니 이미 클로저 환경이라 크게 상관없을 것 같습니다.)</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token string">&#x27;@testing-library/jest-dom&#x27;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> setupServer <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">&#x27;msw/node&#x27;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> handlers <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">&#x27;./__mocks__/handlers&#x27;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> server <span class="token operator">=</span> <span class="token function">setupServer</span><span class="token punctuation">(</span><span class="token spread operator">...</span>handlers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">afterEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  server<span class="token punctuation">.</span><span class="token method function property-access">resetHandlers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 이전 테스트의 핸들러 제거</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token function">afterAll</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  vi<span class="token punctuation">.</span><span class="token method function property-access">resetAllMocks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//  모든 모킹 리셋</span>
+</span><span class="code-line">  server<span class="token punctuation">.</span><span class="token method function property-access">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//  서버 인스턴스 정리</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="import &#x27;@testing-library/jest-dom&#x27;;
+import { setupServer } from &#x27;msw/node&#x27;;
+
+import { handlers } from &#x27;./__mocks__/handlers&#x27;;
+
+export const server = setupServer(...handlers);
+
+afterEach(() =&gt; {
+  server.resetHandlers(); // 이전 테스트의 핸들러 제거
+});
+
+afterAll(() =&gt; {
+  vi.resetAllMocks(); //  모든 모킹 리셋
+  server.close(); //  서버 인스턴스 정리
+});
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>그리고 setupTest.ts 파일에서  테스트가 끝나면 이전 테스트의 핸들러를 모두 제거하여 독립성을 확보했습니다.</p>
+<h3 id="심화-과제"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화-과제"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화 과제</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> App 컴포넌트 적절한 단위의 컴포넌트, 훅, 유틸 함수로 분리했는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 해당 모듈들에 대한 적절한 테스트를 5개 이상 작성했는가?</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<!-- -->
+<h3 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h3>
+<p>원래 저는 테스트코드를 작성해본 경험이 거의 없었습니다. 백엔드에서 로직 검증할 때. 몇 번 짰었는데 프론트에서 테스트코드는 처음이였어요. 단순히 테스트가 필요하다는것 만 알고있었지 실제로 어떻게 작성하고 어떤 원리로 동작하는지 알지 못했습니다.</p>
+<p>이번 과제를 통해서 테스트코드를 작성하는 기본 흐름을 배우면서 이게 실제로 필요한 테스트일까? 혹은 어떤 테스트가 꼭 필요할까? 라는 고민을 자연스럽게 해볼 수있어서 좋았습니다.</p>
+<p>그리고 <code>act</code>, <code>waitFor</code> 같은 도구가 <strong>비동기 로직과 UI 업데이트를 제어하는 역할</strong>을 한다는 것을 알게 되었고, 이를 활용해 실제 시나리오 기반의 테스트를 작성해보니 너무 재미있었습니다. 하지만 이부분은 여전히 헷갈리네요. act는 React의 상태관리를 래핑해주는 함수로만 알고있고 waitFor은 비동기나 useEffect처리처럼 바로 나타나지 않는 결과를 처리할때 쓰는거로 공부했는데 어떨때 적절하게 쓸지 아직 감은 못잡았습니다.</p>
+<p>또한 테스트 환경에서는 시간에 대한 모킹이 되게 중요하다고 느꼈는데 <code>vi.useFakeTimers</code>, <code>vi.setSystemTime</code>을 사용해 시간을 고정하거나 조작하면서 테스트 환경에서도 실제 시간에 의존하지 않고 안정적으로 검증하는 방법을 배웠습니다.</p>
+<p>그리고 MSW를 사용해 서버 없이도 네트워크 요청을 흉내 내고 독립적인 테스트 환경을 구성하는 방법을 배웠습니다. 특히 전역 상태를 그대로 두면 병렬 실행 시 데이터 오염 문제가 생기므로 <strong>클로저 기반 상태 관리와 테스트 격리</strong>의 중요성도 체감했습니다.</p>
+<p>무엇보다 단순히 테스트를 많이 작성하는 것이 아니라 어떤 것이 의미가 있고 어떤것이 불필요할지 구분하는 감각을 조금이나마 얻을 수 있게된것 같습니다.</p>
+<h3 id="코드-품질"><a class="anchor" aria-hidden="true" tabindex="-1" href="#코드-품질"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>코드 품질</h3>
+<!-- -->
+<h3 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h3>
+<p><strong>1. 불필요한 테스트를 과감히 제거하기</strong></p>
+<p>처음에는 알림시간이 0인건 즉시 알림이 발생하는줄 알고 “알림 시간이 0이면 즉시 알림이 발생한다.”와 같은 테스트를 작성했습니다. 하지만 해당 테스트는 실패했고 getUpcomingEvents를 확인해보니 알림시간이 0인 부분에 대해서는 따로 예외를 던지거나 처리하고 있는 로직이 없었습니다.</p>
+<p>그래서 아래와 같은 테스트를 추가했더니 통과가 되었습니다.</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;알림 시간이 0인 이벤트는 반환되지 않는다.&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> immediateEvent<span class="token operator">:</span> <span class="token maybe-class-name">Event</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    id<span class="token operator">:</span> <span class="token string">&#x27;6&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    title<span class="token operator">:</span> <span class="token string">&#x27;즉시 알림&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    date<span class="token operator">:</span> <span class="token string">&#x27;2025-07-01&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    startTime<span class="token operator">:</span> <span class="token string">&#x27;09:00&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    endTime<span class="token operator">:</span> <span class="token string">&#x27;10:00&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    description<span class="token operator">:</span> <span class="token string">&#x27;즉시 알림 이벤트&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token dom variable">location</span><span class="token operator">:</span> <span class="token string">&#x27;회의실 C&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    category<span class="token operator">:</span> <span class="token string">&#x27;회의&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    repeat<span class="token operator">:</span> <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">&#x27;none&#x27;</span><span class="token punctuation">,</span> interval<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    notificationTime<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> eventsWithImmediate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>mockEvents<span class="token punctuation">,</span> immediateEvent<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">&#x27;2025-07-01T09:00:00&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> notifiedEvents<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> upcomingEvents <span class="token operator">=</span> <span class="token function">getUpcomingEvents</span><span class="token punctuation">(</span>eventsWithImmediate<span class="token punctuation">,</span> now<span class="token punctuation">,</span> notifiedEvents<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>upcomingEvents<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveLength</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>upcomingEvents<span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> e<span class="token punctuation">.</span><span class="token property-access">notificationTime</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBeUndefined</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="it(&#x27;알림 시간이 0인 이벤트는 반환되지 않는다.&#x27;, () =&gt; {
+  const immediateEvent: Event = {
+    id: &#x27;6&#x27;,
+    title: &#x27;즉시 알림&#x27;,
+    date: &#x27;2025-07-01&#x27;,
+    startTime: &#x27;09:00&#x27;,
+    endTime: &#x27;10:00&#x27;,
+    description: &#x27;즉시 알림 이벤트&#x27;,
+    location: &#x27;회의실 C&#x27;,
+    category: &#x27;회의&#x27;,
+    repeat: { type: &#x27;none&#x27;, interval: 1 },
+    notificationTime: 0,
+  };
+  const eventsWithImmediate = [...mockEvents, immediateEvent];
+  const now = new Date(&#x27;2025-07-01T09:00:00&#x27;);
+  const notifiedEvents: string[] = [];
+
+  const upcomingEvents = getUpcomingEvents(eventsWithImmediate, now, notifiedEvents);
+
+  expect(upcomingEvents).toHaveLength(0);
+  expect(upcomingEvents.find((e) =&gt; e.notificationTime === 0)).toBeUndefined();
+});
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>하지만 곰곰히 생각해보니 이 테스트는 오히려 <strong>잘못된 동작을 올바른 결과로 착각하게 만들 위험</strong>이 있다고 생각했습니다.</p>
+<ul>
+<li>함수가 버그로 인해 잘못된 결과를 반환하더라도, 이 테스트가 그걸 &quot;맞다&quot;고 인정해버릴 수 있습니다.</li>
+<li>즉, 테스트 코드가 제 역할을 하지 못하고, 오히려 코드의 신뢰성을 떨어뜨리게 됩니다.</li>
+</ul>
+<p>이 경험을 통해 <strong>모든 케이스를 억지로 테스트하는 것보다, 의미 없는 테스트는 과감히 제거하는 것이 낫다</strong>는 점을 배웠습니다.</p>
+<p>다음으로는 알림 메시지 생성 로직을 검증하기 위해 여러 케이스를 추가했습니다.</p>
+<p><strong>2. 다양한 케이스 검증</strong></p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;특수 문자가 포함된 제목에 대해서도 올바른 메시지를 생성한다&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> event<span class="token operator">:</span> <span class="token maybe-class-name">Event</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    id<span class="token operator">:</span> <span class="token string">&#x27;3&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    title<span class="token operator">:</span> <span class="token string">&#x27;회의 &amp; 세미나 (중요)&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token spread operator">...</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> message <span class="token operator">=</span> <span class="token function">createNotificationMessage</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span><span class="token string">&#x27;30분 후 회의 &amp; 세미나 (중요) 일정이 시작됩니다.&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token comment">// 긴 텍스트에 대한 경계값 테스트</span>
+</span><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;긴 제목을 가진 이벤트에 대해서 긴 제목을 포함한 메시지를 생성한다&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> event<span class="token operator">:</span> <span class="token maybe-class-name">Event</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    id<span class="token operator">:</span> <span class="token string">&#x27;1&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    title<span class="token operator">:</span>
+</span><span class="code-line">      <span class="token string">&#x27;매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token spread operator">...</span><span class="token punctuation">.</span>
+</span><span class="code-line">    
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> message <span class="token operator">=</span> <span class="token function">createNotificationMessage</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token string">&#x27;45분 후 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 일정이 시작됩니다.&#x27;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 이모지 인코딩 테스트</span>
+</span><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;이모지를 포함한 이벤트에 대해서 이모지를 포함한 메시지를 생성한다&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> event<span class="token operator">:</span> <span class="token maybe-class-name">Event</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    id<span class="token operator">:</span> <span class="token string">&#x27;1&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    title<span class="token operator">:</span> <span class="token string">&#x27;🔥🚨👉 급한 중요한 회의🏢 💥💣💥 이벤트 1👐👈👊&#x27;</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> message <span class="token operator">=</span> <span class="token function">createNotificationMessage</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toBe</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token string">&#x27;45분 후 🔥🚨👉 급한 중요한 회의🏢 💥💣💥 이벤트 1👐👈👊 일정이 시작됩니다.&#x27;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="it(&#x27;특수 문자가 포함된 제목에 대해서도 올바른 메시지를 생성한다&#x27;, () =&gt; {
+  const event: Event = {
+    id: &#x27;3&#x27;,
+    title: &#x27;회의 &amp; 세미나 (중요)&#x27;,
+    ...
+  };
+  const message = createNotificationMessage(event);
+  expect(message).toBe(&#x27;30분 후 회의 &amp; 세미나 (중요) 일정이 시작됩니다.&#x27;);
+});
+// 긴 텍스트에 대한 경계값 테스트
+it(&#x27;긴 제목을 가진 이벤트에 대해서 긴 제목을 포함한 메시지를 생성한다&#x27;, () =&gt; {
+  const event: Event = {
+    id: &#x27;1&#x27;,
+    title:
+      &#x27;매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트&#x27;,
+    ....
+    
+  };
+
+  const message = createNotificationMessage(event);
+
+  expect(message).toBe(
+    &#x27;45분 후 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 매우 긴 제목을 가진 중요한 회의와 세미나가 동시에 진행되는 특별한 이벤트 일정이 시작됩니다.&#x27;
+  );
+});
+
+// 이모지 인코딩 테스트
+it(&#x27;이모지를 포함한 이벤트에 대해서 이모지를 포함한 메시지를 생성한다&#x27;, () =&gt; {
+  const event: Event = {
+    id: &#x27;1&#x27;,
+    title: &#x27;🔥🚨👉 급한 중요한 회의🏢 💥💣💥 이벤트 1👐👈👊&#x27;,
+  };
+
+  const message = createNotificationMessage(event);
+
+  expect(message).toBe(
+    &#x27;45분 후 🔥🚨👉 급한 중요한 회의🏢 💥💣💥 이벤트 1👐👈👊 일정이 시작됩니다.&#x27;
+  );
+});
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>여기서는 단순히 기능을 확인하는 것을 넘어서, <strong>실제 사용자가 마주할 수 있는 다양한 상황</strong>을 검증해보았습니다.</p>
+<ul>
+<li>특수문자(<code>&amp;</code>, 괄호 등)</li>
+<li>제목이 긴 경우</li>
+<li>이모지가 포함된 경우</li>
+</ul>
+<p>이런 테스트를 추가하면서, “테스트는 코드만 보는 게 아니라, 실제 사용자 경험을 뒷받침해야 한다”는 점을 다시 느꼈습니다.</p>
+<p><strong>3. 여러 이벤트 동시 처리</strong></p>
+<p>실제 서비스에서는 여러 이벤트의 알림이 동시에 도래하는 경우도 있습니다. 이를 검증하기 위해 다음과 같은 테스트를 작성했습니다.</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;여러 이벤트의 알림 시간이 동시에 도래하면 모두 반환한다&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> now <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">&#x27;2025-07-01T11:30:00&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> notifiedEvents<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> upcomingEvents <span class="token operator">=</span> <span class="token function">getUpcomingEvents</span><span class="token punctuation">(</span>mockEvents<span class="token punctuation">,</span> now<span class="token punctuation">,</span> notifiedEvents<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>upcomingEvents<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveLength</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>upcomingEvents<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> e<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toContain</span><span class="token punctuation">(</span><span class="token string">&#x27;2&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>upcomingEvents<span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> e<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toContain</span><span class="token punctuation">(</span><span class="token string">&#x27;3&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="it(&#x27;여러 이벤트의 알림 시간이 동시에 도래하면 모두 반환한다&#x27;, () =&gt; {
+  const now = new Date(&#x27;2025-07-01T11:30:00&#x27;);
+  const notifiedEvents: string[] = [];
+
+  const upcomingEvents = getUpcomingEvents(mockEvents, now, notifiedEvents);
+
+  expect(upcomingEvents).toHaveLength(2);
+  expect(upcomingEvents.map((e) =&gt; e.id)).toContain(&#x27;2&#x27;);
+  expect(upcomingEvents.map((e) =&gt; e.id)).toContain(&#x27;3&#x27;);
+});
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이 테스트는 <strong>동시성 상황에서도 함수가 안정적으로 동작하는지</strong> 확인해주는 장치라고 생각했습니다. 실제로 알림 시스템을 운영한다고 생각하면, 꼭 필요한 검증이라는 생각이 들었어요</p>
+<hr/>
+<p><strong>4. 경계값 테스트: 월을 넘어가는 주간 뷰</strong></p>
+<p>마지막으로 경계 조건을 검증하는 테스트도 추가했습니다.</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token function">it</span><span class="token punctuation">(</span><span class="token string">&#x27;주간 뷰에서 월 경계를 넘어가는 이벤트를 올바르게 포함해야 한다&#x27;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> result <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">renderHook</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">useSearch</span><span class="token punctuation">(</span>mockEvents<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">&#x27;2025-07-01&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&#x27;week&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">act</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    result<span class="token punctuation">.</span><span class="token property-access">current</span><span class="token punctuation">.</span><span class="token method function property-access">setSearchTerm</span><span class="token punctuation">(</span><span class="token string">&#x27;회의&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span><span class="token property-access">current</span><span class="token punctuation">.</span><span class="token property-access">filteredEvents</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toHaveLength</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span><span class="token property-access">current</span><span class="token punctuation">.</span><span class="token property-access">filteredEvents</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> e<span class="token punctuation">.</span><span class="token property-access">date</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toContain</span><span class="token punctuation">(</span><span class="token string">&#x27;2025-06-29&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span><span class="token property-access">current</span><span class="token punctuation">.</span><span class="token property-access">filteredEvents</span><span class="token punctuation">.</span><span class="token method function property-access">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> e<span class="token punctuation">.</span><span class="token property-access">date</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toContain</span><span class="token punctuation">(</span><span class="token string">&#x27;2025-07-05&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="it(&#x27;주간 뷰에서 월 경계를 넘어가는 이벤트를 올바르게 포함해야 한다&#x27;, () =&gt; {
+  const { result } = renderHook(() =&gt; useSearch(mockEvents, new Date(&#x27;2025-07-01&#x27;), &#x27;week&#x27;));
+
+  act(() =&gt; {
+    result.current.setSearchTerm(&#x27;회의&#x27;);
+  });
+
+  expect(result.current.filteredEvents).toHaveLength(2);
+  expect(result.current.filteredEvents.map((e) =&gt; e.date)).toContain(&#x27;2025-06-29&#x27;);
+  expect(result.current.filteredEvents.map((e) =&gt; e.date)).toContain(&#x27;2025-07-05&#x27;);
+});
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>달력 기반 UI에서 가장 자주 문제가 되는 부분은 <strong>월 말 ~ 월 초에 걸쳐 있는 부분</strong>입니다. 이 테스트를 통해 사용자가 실제로 볼 때 문제가 없도록 보장할 수 있었고, 이 부분만 테스트 해보면 적은 수의 테스트로 다른 케이스들의 안정성을 확보할 수 있었습니다.</p>
+<hr/>
+<p>이번 학습을 통해 크게 네 가지를 배웠습니다.</p>
+<ol>
+<li>잘못된 동작 A를 하면 tree다(?)고 인정하는 테스트는 오히려 독이 되므로, <strong>불필요한 테스트는 과감히 제거하자</strong>.</li>
+<li>다양한 입력(특수문자, 긴 제목, 이모지 등)을 넣어봄으로써 <strong>현실성 있는 안정성</strong>을 담보함</li>
+<li>동시성 상황, 즉 <strong>여러 이벤트가 한 번에 발생하는 케이스</strong>를 반드시 검증해보면 좋을 것 같다.,</li>
+<li>경계 조건(월 경계, 시간 경계 등)을 테스트하는 것은 단순 기능 확인보다 훨씬 <strong>실제 사용자 경험에 직결되는 테스트이기고 작은 수로 다른 테스트 케이스를 검증할 수 있어서 효과적인거 같다.</strong></li>
+</ol>
+<h3 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h3>
+<p>추가적으로 커버리지를 측정해봤습니다.
+<img width="1434" height="252" alt="image" src="https://github.com/user-attachments/assets/9e77bac3-53a8-43f1-a0d8-23d19c9a3269"/></p>
+<img width="2048" height="841" alt="image" src="https://github.com/user-attachments/assets/8144426e-e3f3-4745-bebc-13095a5aa3d2"/>
+<p><strong>전체 커버리지 요약</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>항목</th><th>커버리지</th><th>통과한 테스트 수</th><th>총 테스트 수</th></tr></thead><tbody><tr><td><strong>Statements</strong></td><td><strong>81.65%</strong></td><td>1,153</td><td>1,412</td></tr><tr><td><strong>Branches</strong></td><td><strong>81.03%</strong></td><td>141</td><td>174</td></tr><tr><td><strong>Functions</strong></td><td><strong>75.47%</strong></td><td>40</td><td>53</td></tr><tr><td><strong>Lines</strong></td><td><strong>81.65%</strong></td><td>1,153</td><td>1,412</td></tr></tbody></table>
+<hr/>
+<p><strong>테스트 실행 결과</strong></p>
+<ul>
+<li><strong>테스트 파일</strong>: 17개 (모두 통과)</li>
+<li><strong>테스트 케이스</strong>: 186개 (모두 통과)</li>
+<li><strong>실행 시간</strong>: 17.47초</li>
+<li><strong>환경</strong>: jsdom</li>
+</ul>
+<hr/>
+<p><strong>100% 커버리지 달성 파일</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>파일 경로</th><th>Statements</th><th>Branches</th><th>Functions</th><th>Lines</th><th>테스트 케이스 수</th><th>주요 기능</th></tr></thead><tbody><tr><td><code>fetchHolidays.ts</code></td><td>100% (33/33)</td><td>100% (2/2)</td><td>100% (0/0)</td><td>100% (33/33)</td><td>4개</td><td>공휴일 데이터 API 호출</td></tr><tr><td><code>dateUtils.ts</code></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>55개</td><td>날짜 계산/포맷 유틸</td></tr><tr><td><code>eventUtils.ts</code></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>9개</td><td>이벤트 유틸 로직</td></tr><tr><td><code>eventOverlap.ts</code></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>16개</td><td>이벤트 중복 검사</td></tr><tr><td><code>notificationUtils.ts</code></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>10개</td><td>알림 메시지 생성</td></tr><tr><td><code>timeValidation.ts</code></td><td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>6개</td><td>시간 유효성 검사</td></tr></tbody></table>
+<hr/>
+<p>그중에서도 <strong>utils 함수들</strong>은 다양한 케이스를 꼼꼼하게 테스트하기 위해 <strong>극단값·에러 케이스</strong>까지 고려해서 테스트를 짰습니다. 단순히 숫자 달성에 그치지 않고, 실제로 오류가 발생하기 쉬운 부분들을 세밀하게 커버했다는 점에서 의미가 있다고 생각합니다.</p>
+<p>특히 dateUtils는 윤년/월 경계/시작일·종료일 같은 예외 케이스까지 테스트했고, eventOverlap은 겹치는 구간·겹치지 않는 구간·완전히 포함되는 경우 등 분기별로 테스트했습니다. 이런 과정을 통해 단순히 커버리지를 높인 게 아니라 코드 로직의 안정성에 대한 신뢰도 확보할 수 있었습니다.</p>
+<p>다만 제가 심화과제때 작성한 컴포넌트에 대한 테스트는 커버리지가 낮았는데 컴포넌트에 대한 테스트들을 작성해본 경험이 많이 없어서 어떻게 하면 의미있는 테스트를 작성할지 좀더 고민을 해서 채워나가야할 것 같습니다</p>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<p><strong>Q1. 통합 테스트의 DOM 탐색 관련</strong></p>
+<p>MUI 같은 외부 UI 라이브러리를 쓰다 보면 포털, 비동기 렌더링 같은 특성 때문에 예상치 못한 DOM 구조가 생겨서 테스트 작성이 복잡해지는 경우가 있습니다. 특히 UI 라이브러리를 MUI에서 Antd나 shadcn 같은 다른 걸로 바꾸면 테스트 코드도 크게 수정해야 할 것 같은데요. 실제 실무에서는 이런 DOM 의존적인 테스트에 시간을 많이 쓰는 편인가요? 아니면 테스트 전략을 단순화하거나, UI 라이브러리에 덜 의존하는 방식으로 접근하는 경우가 더 일반적인가요?</p>
+<p><strong>Q2. TanStack Query 테스트 질문</strong>
+현업에서 TanStack Query를 많이 사용하는데, 이런 데이터 페칭 라이브러리를 사용하는 컴포넌트를 테스트할 때 테스트가 복잡하거나 관리하기 번거로운 편인지 궁금합니다.
+특히, 캐싱, 비동기 상태, 쿼리 무효화 같은 기능 때문에 테스트 작성이 어려울 것 같은데 이런부분은 어떻게 학습하고 대응하는지 궁금합니다..</p>
+<p><strong>Q3. CI에서 간헐적으로 실패하는 테스트가 있습니다.</strong>
+1주차에서도 그랬고 이번 과제에서도 그랬는데 로컬에서 돌리면 잘 통과하는 테스트들이 CI환경에서는 실패하는 경우가 종종 있더라구요. 이걸 플래키 테스트라고 부르던데 현업에서 이를 <strong>잘못된 테스트로 보고 반드시 리팩터링</strong>하는지, 아니면 리트라이 등 다른 방식으로 대응하는지 궁금합니다.</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>안녕하세요 창준님! 역시 믿고 보는 창준님의 과제네요 ㅎㅎ</p>
+<blockquote>
+<p>act는 React의 상태관리를 래핑해주는 함수로만 알고있고 waitFor은 비동기나 useEffect처리처럼 바로 나타나지 않는 결과를 처리할때 쓰는거로 공부했는데 어떨때 적절하게 쓸지 아직 감은 못잡았습니다.</p>
+</blockquote>
+<p>act는 React의 렌더링 시스템과 연관있는데요, 비동기로 동작하는 react의 렌더링을 동기적으로 치환해주는 역할을 해준답니다 ㅎㅎ
+waitFor은 일정한 시간동안 waitFor 내부에 정의된 코드가 정상적으로 동작할 때까지 기다리는거라서 큰 차이가 있어요.</p>
+<blockquote>
+<p>무엇보다 단순히 테스트를 많이 작성하는 것이 아니라 어떤 것이 의미가 있고 어떤것이 불필요할지 구분하는 감각을 조금이나마 얻을 수 있게된것 같습니다.</p>
+</blockquote>
+<p>좋은 인사이트를 얻어가셨군요!! 다행입니다!!</p>
+<blockquote>
+<p>MUI 같은 외부 UI 라이브러리를 쓰다 보면 포털, 비동기 렌더링 같은 특성 때문에 예상치 못한 DOM 구조가 생겨서 테스트 작성이 복잡해지는 경우가 있습니다. 특히 UI 라이브러리를 MUI에서 Antd나 shadcn 같은 다른 걸로 바꾸면 테스트 코드도 크게 수정해야 할 것 같은데요. 실제 실무에서는 이런 DOM 의존적인 테스트에 시간을 많이 쓰는 편인가요? 아니면 테스트 전략을 단순화하거나, UI 라이브러리에 덜 의존하는 방식으로 접근하는 경우가 더 일반적인가요?</p>
+</blockquote>
+<p>저는 UI에 대한 테스트는 딱히 하지 않고 있어요 ㅎㅎ
+컴포넌트(UI)는 결국 데이터를 표현하는 수단이라고 생각합니다. 그렇다면 컴포넌트가 아니라 컴포넌트 렌더링에 필요한 데이터와 데이터를 변경하는 함수에 대해 테스트를 한다면 컴포넌트에 대한 검증도 자연스럽게 어느정도는 이루어지지 않나!? 라는 생각이라서요.
+컴포넌트에 대해 테스트가 꼭 필요한 경우는 인터랙션의 연결이 자연스러운지 검증할때라고 생각해요.
+물론 이 부분도 e2e 테스트를 통해 커버하는게 더 자연스럽다고 생각하는 편입니다!</p>
+<p>그리고 보통 컴포넌트에 대한 테스트는 스토리북으로 대체하는 경우가 많은 것 같아요 ㅋㅋ</p>
+<blockquote>
+<p>현업에서 TanStack Query를 많이 사용하는데, 이런 데이터 페칭 라이브러리를 사용하는 컴포넌트를 테스트할 때 테스트가 복잡하거나 관리하기 번거로운 편인지 궁금합니다. 특히, 캐싱, 비동기 상태, 쿼리 무효화 같은 기능 때문에 테스트 작성이 어려울 것 같은데 이런부분은 어떻게 학습하고 대응하는지 궁금합니다..</p>
+</blockquote>
+<p>위의 내용과 연계되는 부분인데요, 컴포넌트 자체보단 tanstack-query로 만들어진 코드를 훅으로 래핑한 다음에 훅에 대해 테스트를 하는 편이랍니다!</p>
+<blockquote>
+<p>CI에서 간헐적으로 실패하는 테스트가 있습니다. 1주차에서도 그랬고 이번 과제에서도 그랬는데 로컬에서 돌리면 잘 통과하는 테스트들이 CI환경에서는 실패하는 경우가 종종 있더라구요. 이걸 플래키 테스트라고 부르던데 현업에서 이를 잘못된 테스트로 보고 반드시 리팩터링하는지, 아니면 리트라이 등 다른 방식으로 대응하는지 궁금합니다.</p>
+</blockquote>
+<p>대체로 이런 경우는 UI에 대해 테스트할 때 발생하는 것 같아요. e2e의 경우 패키지 버전에 따라 달라지기도 하고!?
+컴포넌트가 아닌 데이터를 다루는 함수에 대해서만 테스트 하는 경우에는 대체로 이런 문제가 발생하지 않았어서요..!
+그치만 원인 자체는 알아내고 이를 해결하면서 트러블슈팅을 하는 과정은 필요하다고 생각해요. 내가 알아낸 문제와 해결방법이 다른 사람들에게는 도움이 될 수 있으니까요!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>
