@@ -1,10 +1,11 @@
-import type { CommonAssignment, GithubUser, UserWIthCommonAssignments } from "@hanghae-plus/domain";
+import type { CommonAssignment, GithubUser, HanghaeUser } from "@hanghae-plus/domain";
 import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
 import { mergeAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
 import { Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
+import { SortFilter, useSortFilter } from "@/features/users";
 
 const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: CommonAssignment[]; name: string }) => {
   return (
@@ -46,7 +47,7 @@ const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: 
   );
 };
 
-const UsersGrid = ({ items }: { items: UserWIthCommonAssignments[] }) => {
+const UsersGrid = ({ items }: { items: HanghaeUser[] }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
       {items.map(({ assignments, ...user }) => (
@@ -69,13 +70,36 @@ const HomeProvider = ({ children }: PropsWithChildren) => {
 };
 
 const HomePage = () => {
-  const { users } = usePageData<{ users: Record<string, UserWIthCommonAssignments> }>();
-  const items = Object.values(users);
+  const { filterValues } = useSortFilter();
+
+  const { users } = usePageData<{ users: Record<string, HanghaeUser> }>();
+
+  const items = useMemo(() => {
+    const userArray = Object.values(users);
+
+    return userArray.sort((a, b) => {
+      if (filterValues.sortType === "name") {
+        const comparison = a.name.localeCompare(b.name);
+        return filterValues.sortDirection === "asc" ? comparison : -comparison;
+      }
+
+      if (filterValues.sortType === "score") {
+        return filterValues.sortDirection === "asc" ? a.score - b.score : b.score - a.score;
+      }
+
+      return 0;
+    });
+  }, [users, filterValues]);
 
   return (
     <div className="px-4 py-6">
       {/* 상단 통계 */}
       <div className="mb-6 space-y-4">
+        {/* 정렬 필터 */}
+        <div className="flex justify-end">
+          <SortFilter />
+        </div>
+
         {/* 통계 카드 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card className="p-4 bg-slate-800/50 border-slate-700">
