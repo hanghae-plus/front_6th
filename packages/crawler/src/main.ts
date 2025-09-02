@@ -7,6 +7,7 @@ import { INestApplication } from '@nestjs/common';
 import {
   AssignmentDetail,
   AssignmentResult,
+  GithubApiUsers,
   GithubPullRequest,
   HanghaeUser,
   UserWIthCommonAssignments,
@@ -63,8 +64,7 @@ const generatePulls = async (app: App) => {
   });
 };
 
-const generateUsers = (app: App) => {
-  const filename = path.join(dataDir, 'users.json');
+const generateUsers = async (app: App) => {
   const githubService = app.get(GithubService);
 
   const pulls = repos.map(
@@ -74,12 +74,34 @@ const generateUsers = (app: App) => {
       ) as GithubPullRequest,
   );
 
-  const users = pulls
-    .flat()
-    .map((v) => githubService.getUser(v))
-    .reduce((acc, user) => ({ ...acc, [user.id]: user }), {});
+  const githubUsers: Array<GithubApiUsers> = [];
+  const userIds = [
+    ...new Set(pulls.flat().map((v) => githubService.getUser(v).id)),
+  ];
 
-  fs.writeFileSync(filename, JSON.stringify(users, null, 2), 'utf-8');
+  for (let i = 0; i < userIds.length; i++) {
+    const id = userIds[i];
+    console.log(`Fetching user ${i + 1}/${userIds.length}: ${id}`);
+
+    try {
+      const user = await githubService.getGithubUser(id);
+      githubUsers.push(user);
+
+      // 인원이 많아 다음 api 요청까지 잠깐 대기 (rate limit 방지)
+      if (i < userIds.length - 1) {
+        await new Promise((resolve) => setTimeout(resolve, 500));
+      }
+    } catch (error) {
+      console.error(`Failed to fetch user ${id}:`, error);
+    }
+  }
+
+  const githubProfilesFilename = path.join(dataDir, 'github-profiles.json');
+  fs.writeFileSync(
+    githubProfilesFilename,
+    JSON.stringify(githubUsers, null, 2),
+    'utf-8',
+  );
 };
 
 const generateUserAssignmentInfos = async (app: App) => {
@@ -94,12 +116,23 @@ const generateUserAssignmentInfos = async (app: App) => {
 const createUserWithCommonAssignments = (
   pull: GithubPullRequest,
   info: AssignmentResult,
+  githubUsers: GithubApiUsers | null,
 ): UserWIthCommonAssignments => ({
   name: info.name,
   github: {
-    id: pull.user.login,
-    image: pull.user.avatar_url,
-    link: pull.user.html_url,
+    name: githubUsers?.name ?? info.name,
+    id: githubUsers?.id ?? pull.user.id.toString(),
+    login: githubUsers?.login ?? pull.user.login,
+    avatar_url: githubUsers?.avatar_url ?? pull.user.avatar_url,
+    html_url: githubUsers?.html_url ?? pull.user.html_url,
+    url: githubUsers?.url ?? '',
+    company: githubUsers?.company ?? '',
+    blog: githubUsers?.blog ?? '',
+    location: githubUsers?.location ?? '',
+    email: githubUsers?.email ?? '',
+    bio: githubUsers?.bio ?? '',
+    followers: githubUsers?.followers ?? 0,
+    following: githubUsers?.following ?? 0,
   },
   assignments: [],
 });
@@ -108,6 +141,15 @@ const generateAppData = () => {
   const assignmentInfos = JSON.parse(
     fs.readFileSync(path.join(dataDir, 'user-assignment-infos.json'), 'utf-8'),
   ) as AssignmentResult[];
+
+  const githubProfiles = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'github-profiles.json'), 'utf-8'),
+  ) as GithubApiUsers[];
+
+  const githubUsersMap = githubProfiles.reduce(
+    (acc, profile) => ({ ...acc, [profile.login]: profile }),
+    {} as Record<string, GithubApiUsers>,
+  );
 
   const pulls = repos
     .flatMap(
@@ -155,7 +197,12 @@ const generateAppData = () => {
         return acc;
       }
       const value: HanghaeUser =
-        acc[pull.user.login] ?? createUserWithCommonAssignments(pull, info);
+        acc[pull.user.login] ??
+        createUserWithCommonAssignments(
+          pull,
+          info,
+          githubUsersMap[pull.user.login],
+        );
 
       value.assignments.push({
         ...omit(info, ['name', 'feedback', 'assignment']),
@@ -164,7 +211,7 @@ const generateAppData = () => {
 
       return {
         ...acc,
-        [value.github.id]: value,
+        [pull.user.login]: value,
       };
     },
     {} as Record<string, HanghaeUser>,
@@ -194,7 +241,7 @@ const generateAppData = () => {
 const main = async () => {
   const app = await createApp();
   await generatePulls(app);
-  generateUsers(app);
+  await generateUsers(app);
   await generateUserAssignmentInfos(app);
   generateAppData();
 };
