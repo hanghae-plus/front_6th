@@ -1,4 +1,4 @@
-import type { CommonAssignment, GithubUser, HanghaeUser } from "@hanghae-plus/domain";
+import type { CommonAssignment, GithubApiUsers, HanghaeUser } from "@hanghae-plus/domain";
 import { BookOpen, CheckCircle, Star, Users } from "lucide-react";
 import { mergeAssignments, useUsers } from "@/features";
 import { Link } from "react-router";
@@ -7,23 +7,25 @@ import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
 import { SortFilter, useSortFilter } from "@/features/users";
 
-const UserCard = ({ id, name, image, assignments }: GithubUser & { assignments: CommonAssignment[]; name: string }) => {
+type UserCard = GithubApiUsers & { assignments: CommonAssignment[]; name: string };
+
+const UserCard = ({ login, name, avatar_url, assignments }: UserCard) => {
   return (
     <Card className="hover:shadow-glow transition-all duration-300 cursor-pointer animate-fade-in hover:scale-[1.02] group bg-card border border-border">
-      <Link to={`/@${id}/`} className="block">
+      <Link to={`/@${login}/`} className="block">
         <div className="p-3">
           {/* 프로필 섹션 */}
           <div className="flex flex-col items-center text-center space-y-2">
             <div className="relative">
               <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-orange-500/30 group-hover:ring-orange-400/50 transition-all">
-                <img src={image} alt={id} className="w-full h-full object-cover" />
+                <img src={avatar_url} alt={login} className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border border-slate-800"></div>
             </div>
 
             <div className="w-full">
               <h3 className="text-sm font-semibold text-white group-hover:text-orange-300 transition-colors break-words leading-tight">
-                {name}({id})
+                {name}({login})
               </h3>
               <div className="flex items-center justify-center space-x-2 text-xs text-slate-400 mt-2">
                 <div className="flex items-center space-x-1">

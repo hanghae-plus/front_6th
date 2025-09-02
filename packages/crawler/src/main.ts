@@ -7,13 +7,14 @@ import { INestApplication } from '@nestjs/common';
 import {
   AssignmentDetail,
   AssignmentResult,
+  GithubApiUsers,
   GithubPullRequest,
   HanghaeUser,
   UserWIthCommonAssignments,
 } from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
 import { addRankingToUsers } from './utils/ranking.utils';
-import { omit } from 'es-toolkit/compat';
+import { flatMap, flow, keyBy, omit, uniq } from 'es-toolkit/compat';
 
 const organization = 'hanghae-plus';
 const repos = [
@@ -24,6 +25,8 @@ const repos = [
   'front_6th_chapter2-2',
   'front_6th_chapter2-3',
   'front_6th_chapter3-1',
+  'front_6th_chapter3-2',
+  'front_6th_chapter4-1',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {
@@ -63,9 +66,14 @@ const generatePulls = async (app: App) => {
   });
 };
 
-const generateUsers = (app: App) => {
-  const filename = path.join(dataDir, 'users.json');
+const generateUsers = async (app: App) => {
+  const githubProfilesFilename = path.join(dataDir, 'github-profiles.json');
   const githubService = app.get(GithubService);
+
+  if (fs.existsSync(githubProfilesFilename)) {
+    console.log('github-profiles.json already exists. Skipping...');
+    return;
+  }
 
   const pulls = repos.map(
     (repo) =>
@@ -74,12 +82,20 @@ const generateUsers = (app: App) => {
       ) as GithubPullRequest,
   );
 
-  const users = pulls
-    .flat()
-    .map((v) => githubService.getUser(v))
-    .reduce((acc, user) => ({ ...acc, [user.id]: user }), {});
+  const userIds = uniq(pulls.flat().map((v) => githubService.getUser(v).id));
 
-  fs.writeFileSync(filename, JSON.stringify(users, null, 2), 'utf-8');
+  const githubUsers = await Promise.all(
+    userIds.map(async (id: string) => {
+      console.log(`Fetching user: ${id}`);
+      return githubService.getGithubUser(id);
+    }),
+  );
+
+  fs.writeFileSync(
+    githubProfilesFilename,
+    JSON.stringify(githubUsers, null, 2),
+    'utf-8',
+  );
 };
 
 const generateUserAssignmentInfos = async (app: App) => {
@@ -94,12 +110,23 @@ const generateUserAssignmentInfos = async (app: App) => {
 const createUserWithCommonAssignments = (
   pull: GithubPullRequest,
   info: AssignmentResult,
+  githubUsers: GithubApiUsers | null,
 ): UserWIthCommonAssignments => ({
   name: info.name,
   github: {
-    id: pull.user.login,
-    image: pull.user.avatar_url,
-    link: pull.user.html_url,
+    name: githubUsers?.name ?? info.name,
+    id: githubUsers?.id ?? pull.user.id.toString(),
+    login: githubUsers?.login ?? pull.user.login,
+    avatar_url: githubUsers?.avatar_url ?? pull.user.avatar_url,
+    html_url: githubUsers?.html_url ?? pull.user.html_url,
+    url: githubUsers?.url ?? '',
+    company: githubUsers?.company ?? '',
+    blog: githubUsers?.blog ?? '',
+    location: githubUsers?.location ?? '',
+    email: githubUsers?.email ?? '',
+    bio: githubUsers?.bio ?? '',
+    followers: githubUsers?.followers ?? 0,
+    following: githubUsers?.following ?? 0,
   },
   assignments: [],
 });
@@ -109,20 +136,23 @@ const generateAppData = () => {
     fs.readFileSync(path.join(dataDir, 'user-assignment-infos.json'), 'utf-8'),
   ) as AssignmentResult[];
 
-  const pulls = repos
-    .flatMap(
-      (repo) =>
-        JSON.parse(
-          fs.readFileSync(path.join(dataDir, `${repo}/pulls.json`), 'utf-8'),
-        ) as GithubPullRequest,
-    )
-    .reduce(
-      (acc, pull) => ({
-        ...acc,
-        [pull.html_url]: pull,
-      }),
-      {} as Record<string, GithubPullRequest>,
-    );
+  const githubProfiles = JSON.parse(
+    fs.readFileSync(path.join(dataDir, 'github-profiles.json'), 'utf-8'),
+  ) as GithubApiUsers[];
+
+  const githubUsersMap = keyBy(githubProfiles, 'login');
+
+  const pulls = flow(
+    (value: typeof repos) =>
+      flatMap(
+        value,
+        (repo) =>
+          JSON.parse(
+            fs.readFileSync(path.join(dataDir, `${repo}/pulls.json`), 'utf-8'),
+          ) as GithubPullRequest,
+      ),
+    (value) => keyBy(value, 'html_url'),
+  )(repos);
 
   const assignmentDetails = Object.values(pulls).reduce(
     (acc, pull) => ({
@@ -155,7 +185,12 @@ const generateAppData = () => {
         return acc;
       }
       const value: HanghaeUser =
-        acc[pull.user.login] ?? createUserWithCommonAssignments(pull, info);
+        acc[pull.user.login] ??
+        createUserWithCommonAssignments(
+          pull,
+          info,
+          githubUsersMap[pull.user.login],
+        );
 
       value.assignments.push({
         ...omit(info, ['name', 'feedback', 'assignment']),
@@ -164,7 +199,7 @@ const generateAppData = () => {
 
       return {
         ...acc,
-        [value.github.id]: value,
+        [pull.user.login]: value,
       };
     },
     {} as Record<string, HanghaeUser>,
@@ -194,7 +229,7 @@ const generateAppData = () => {
 const main = async () => {
   const app = await createApp();
   await generatePulls(app);
-  generateUsers(app);
+  await generateUsers(app);
   await generateUserAssignmentInfos(app);
   generateAppData();
 };

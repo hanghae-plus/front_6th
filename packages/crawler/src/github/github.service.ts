@@ -1,4 +1,8 @@
-import { GithubPullRequest, GithubUser } from '@hanghae-plus/domain';
+import {
+  GithubApiUsers,
+  GithubPullRequest,
+  GithubUser,
+} from '@hanghae-plus/domain';
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 
@@ -43,5 +47,11 @@ export class GithubService {
       image: pull.user.avatar_url,
       link: pull.user.html_url,
     };
+  }
+
+  async getGithubUser(id: string) {
+    return this.#client
+      .get<GithubApiUsers>(`/users/${id}`)
+      .then((res) => res.data);
   }
 }
