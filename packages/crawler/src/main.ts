@@ -14,7 +14,7 @@ import {
 } from '@hanghae-plus/domain';
 import { HanghaeService } from './hanghae/hanghae.service';
 import { addRankingToUsers } from './utils/ranking.utils';
-import { omit } from 'es-toolkit/compat';
+import { flatMap, flow, keyBy, omit, uniq } from 'es-toolkit/compat';
 
 const organization = 'hanghae-plus';
 const repos = [
@@ -25,6 +25,8 @@ const repos = [
   'front_6th_chapter2-2',
   'front_6th_chapter2-3',
   'front_6th_chapter3-1',
+  'front_6th_chapter3-2',
+  'front_6th_chapter4-1',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {
@@ -65,7 +67,13 @@ const generatePulls = async (app: App) => {
 };
 
 const generateUsers = async (app: App) => {
+  const githubProfilesFilename = path.join(dataDir, 'github-profiles.json');
   const githubService = app.get(GithubService);
+
+  if (fs.existsSync(githubProfilesFilename)) {
+    console.log('github-profiles.json already exists. Skipping...');
+    return;
+  }
 
   const pulls = repos.map(
     (repo) =>
@@ -74,29 +82,15 @@ const generateUsers = async (app: App) => {
       ) as GithubPullRequest,
   );
 
-  const githubUsers: Array<GithubApiUsers> = [];
-  const userIds = [
-    ...new Set(pulls.flat().map((v) => githubService.getUser(v).id)),
-  ];
+  const userIds = uniq(pulls.flat().map((v) => githubService.getUser(v).id));
 
-  for (let i = 0; i < userIds.length; i++) {
-    const id = userIds[i];
-    console.log(`Fetching user ${i + 1}/${userIds.length}: ${id}`);
+  const githubUsers = await Promise.all(
+    userIds.map(async (id: string) => {
+      console.log(`Fetching user: ${id}`);
+      return githubService.getGithubUser(id);
+    }),
+  );
 
-    try {
-      const user = await githubService.getGithubUser(id);
-      githubUsers.push(user);
-
-      // 인원이 많아 다음 api 요청까지 잠깐 대기 (rate limit 방지)
-      if (i < userIds.length - 1) {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-      }
-    } catch (error) {
-      console.error(`Failed to fetch user ${id}:`, error);
-    }
-  }
-
-  const githubProfilesFilename = path.join(dataDir, 'github-profiles.json');
   fs.writeFileSync(
     githubProfilesFilename,
     JSON.stringify(githubUsers, null, 2),
@@ -146,25 +140,19 @@ const generateAppData = () => {
     fs.readFileSync(path.join(dataDir, 'github-profiles.json'), 'utf-8'),
   ) as GithubApiUsers[];
 
-  const githubUsersMap = githubProfiles.reduce(
-    (acc, profile) => ({ ...acc, [profile.login]: profile }),
-    {} as Record<string, GithubApiUsers>,
-  );
+  const githubUsersMap = keyBy(githubProfiles, 'login');
 
-  const pulls = repos
-    .flatMap(
-      (repo) =>
-        JSON.parse(
-          fs.readFileSync(path.join(dataDir, `${repo}/pulls.json`), 'utf-8'),
-        ) as GithubPullRequest,
-    )
-    .reduce(
-      (acc, pull) => ({
-        ...acc,
-        [pull.html_url]: pull,
-      }),
-      {} as Record<string, GithubPullRequest>,
-    );
+  const pulls = flow(
+    (value: typeof repos) =>
+      flatMap(
+        value,
+        (repo) =>
+          JSON.parse(
+            fs.readFileSync(path.join(dataDir, `${repo}/pulls.json`), 'utf-8'),
+          ) as GithubPullRequest,
+      ),
+    (value) => keyBy(value, 'html_url'),
+  )(repos);
 
   const assignmentDetails = Object.values(pulls).reduce(
     (acc, pull) => ({
