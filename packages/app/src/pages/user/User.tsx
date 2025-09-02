@@ -1,4 +1,4 @@
-import type { GithubUser, HanghaeUser } from "@hanghae-plus/domain";
+import type { GithubApiUsers, HanghaeUser } from "@hanghae-plus/domain";
 import { type PropsWithChildren, useMemo } from "react";
 import { Link } from "react-router";
 import { Calendar, Clock, Github, StarIcon } from "lucide-react";
@@ -7,27 +7,50 @@ import { Badge, Card } from "@/components";
 import { formatDate, calculateReadingTime } from "@/lib";
 import { type Assignment, PageProvider, usePageData } from "@/providers";
 
-const UserProfile = ({ id, name, image, link }: GithubUser & { name: string }) => {
+const UserProfile = ({
+  login,
+  name,
+  blog,
+  bio,
+  followers,
+  following,
+  avatar_url,
+  html_url,
+}: GithubApiUsers & { name: string }) => {
   return (
     <div className="sticky top-6">
-      <a href={link} target="_blank">
-        <Card className="p-6">
-          <div className="flex flex-col items-center text-center space-y-4">
-            {/* 프로필 이미지 */}
+      <Card className="p-6">
+        <div className="flex flex-col items-center text-center space-y-4">
+          {/* 프로필 이미지 */}
+          <a href={html_url} target="_blank">
             <div className="relative">
               <div className="w-48 h-48 rounded-full overflow-hidden ring-4 ring-orange-500/30">
-                <img src={image} alt={id} className="w-full h-full object-cover" />
+                <img src={avatar_url} alt={login} className="w-full h-full object-cover" />
               </div>
             </div>
+          </a>
 
-            {/* 사용자 정보 */}
-            <div className="w-full">
-              <h3 className="text-2xl font-bold text-white mb-2">{id}</h3>
-              <p>{name}</p>
+          {/* 사용자 정보 */}
+          <div className="w-full">
+            <h3 className="text-2xl font-bold text-white mb-2">{login}</h3>
+            <div className="space-y-2">
+              <p className="text-slate-300">{name}</p>
+              {bio && <p>{bio}</p>}
+              {blog && <p className="text-blue-400 hover:underline">{blog}</p>}
+              <div className="flex justify-center space-x-4 text-slate-400">
+                <div className="flex flex-col items-center">
+                  <span>팔로워</span>
+                  <span className="font-semibold text-white">{followers}</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span>팔로잉</span>
+                  <span className="font-semibold text-white">{following}</span>
+                </div>
+              </div>
             </div>
           </div>
-        </Card>
-      </a>
+        </div>
+      </Card>
     </div>
   );
 };
@@ -137,7 +160,7 @@ const UserProvider = ({ children }: PropsWithChildren) => {
   const user = useUserWithAssignments(userId);
 
   return (
-    <PageProvider title={`${user.github.id} 님의 상세페이지`} data={user}>
+    <PageProvider title={`${user.name} 님의 상세페이지`} data={user}>
       {children}
     </PageProvider>
   );
