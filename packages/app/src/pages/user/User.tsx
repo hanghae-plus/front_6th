@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Calendar, Clock, Github, StarIcon } from "lucide-react";
 import { useUserIdByParam, useUserWithAssignments } from "@/features";
 import { Badge, Card } from "@/components";
-import { formatDate, calculateReadingTime } from "@/lib";
+import { calculateReadingTime, formatDate } from "@/lib";
 import { type Assignment, PageProvider, usePageData } from "@/providers";
 
 const UserProfile = ({
@@ -36,7 +36,11 @@ const UserProfile = ({
             <div className="space-y-2">
               <p className="text-slate-300">{name}</p>
               {bio && <p>{bio}</p>}
-              {blog && <p className="text-blue-400 hover:underline">{blog}</p>}
+              {blog && (
+                <a href={blog} target="_blank" className="text-blue-400 hover:underline">
+                  {blog}
+                </a>
+              )}
               <div className="flex justify-center space-x-4 text-slate-400">
                 <div className="flex flex-col items-center">
                   <span>팔로워</span>
