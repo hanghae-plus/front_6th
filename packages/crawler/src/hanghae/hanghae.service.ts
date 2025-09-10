@@ -73,6 +73,26 @@ export class HanghaeService {
         'https://github.com/hanghae-plus/front_6th_chapter2-2/pull/30';
       draft[515].assignment.url =
         'https://github.com/hanghae-plus/front_6th_chapter2-2/pull/30';
+
+      // 정민기님 7주차 과제 URL 제출 링크 조정
+      draft[679].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter3-1/pull/17';
+      draft[732].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter3-1/pull/17';
+
+      // 김상수님 8주차 과제 URL 제출 링크 조정
+      draft[745].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter3-2/pull/45';
+      draft[798].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter3-1/pull/17';
+
+      // 권지호님 8주차 과제 URL 제출 링크 조정
+      draft[796].assignment.url =
+        'https://github.com/hanghae-plus/front_6th_chapter3-2/pull/3';
+
+      // 양창훈님 9주차 과제 URL 제출 링크 조정
+      draft[868].assignment.url = '';
+      draft[921].assignment.url = '';
     });
   }
 
@@ -95,5 +115,6 @@ export class HanghaeService {
     ).then((v) => v.flat());
 
     return this.adjustResult(this.sortResults(results));
+    // return this.sortResults(results);
   }
 }
