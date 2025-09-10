@@ -321,5 +321,13 @@ FSD자체가 뭐 끝판왕은 아니지만 FSD가 어떤 고민이 있었고 그
 <p>Q. main.js 함수에서 이벤트에 대한 핸들러 함수를 만들었는데, 렌더링이 된 후 이벤트 위임하는 코드를 넣어줬습니다. (cursor이용) 보통은 렌더링이 된 후, 이벤트를 위임시키는 함수를 적용하는게 맞는 것인지 궁금합니다. (아직까지 AI가 짜주는 코드가 좋은 코드인지 아닌지 구분하는게 어렵습니다.)</p>
 <p>이벤트 위임(event delegation)은 렌더링 후에 적용하는 것이 맞습니다. 이는 DOM 요소가 실제로 존재해야 이벤트를 바인딩할 수 있으니까요~ 이벤트 위임이라는 기법은 상위 컨테이너에 이벤트 리스너를 붙이고, 이벤트가 발생했을 때 특정 조건(예: cursor나 dataset 속성 등)을 기반으로 이벤트 핸들러를 호출합니다. 이런 방식은 여러 개의 자식 요소가 동적으로 생성될 때 성능과 관리 측면에서 효율적이에요~ 사실 나중에 배우시겠지만 근본적으로는 리액트도 이 방법을 활용하고 있습니다!</p>
 <p>저도 vscode를 사용하지 않아서요 ㅜㅜ 익스텐션관련해서는 준일님에게 물어보시면 좋을 것 같아요!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J8QP7YK1E');
+</script>
 </body>
 </html>

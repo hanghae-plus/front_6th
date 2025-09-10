@@ -67,5 +67,13 @@
 <p>Q) 이렇게 계산된 파생 상태를 전역 상태로 관리하는게 괜찮은 선택인가요?? 실무에서도 이번 과제처럼 한 번에 페이지에 보여질 값들이 많이 바뀌어야할 때 이 모든 값들을 전역 상태로 관리하는지 궁금합니다!</p>
 <p>=&gt; 파생 상태를 전역상태로 관리하는 건 여러가지 측면에서 좋지 않습니다. 당장은 필요하지 않을 데이터를 미리 만들어 두는 것보다는 최대한 lazy하게 구성하는 편이 성능면에서도 좋으니까요. 그래서 지연평가라는 방식으로 파생 상태는 함수로 만들어 주고 원본 데이터들의 조합으로 필요할때에만 만들어두었다가 캐싱이나 메모제이션을 통해서 성능을 확보하는 방식을 쓰고 있습니다. 이미 React에서도 그러한 방법을 쓰고 있죠. 정말로 사용자 동작으로만 바뀌는 상태를 최소화하고 나머지는 useMemo등을 통해서 함수 호출이나 계산을 통해 파생상태를 관리하는 방식이 정배랍니다.</p>
 <p>수고많았습니다. 5주차 과제도 화이팅입니다!!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J8QP7YK1E');
+</script>
 </body>
 </html>

@@ -71,5 +71,13 @@
 <p>Q) setupMockHandlerUpdating 내에 존재하지 않는 이벤트를 처리할 시 에러를 반환하는 로직이 없어서 존재하지 않는 이벤트 수정 테스트를 위해 HttpResponse.error()를 반환하도록 추가해두었는데, 혹시 의도된 부분인지 궁금합니다.</p>
 <p>=&gt; 아주 좋은 발견이고 적절한 처리였습니다. 실제 API에서는 존재하지 않는 리소스에 대한 요청 시 404나 다른 에러를 반환하는 게 정상이니까요. 테스트 코드도 다른 코드처럼 일단 만들면 버그를 만나고 수정하고 점점 보강해가면서 점점 더 안정적인 코드가 되어 갑니다. 그렇게 추가되다보면 더 현실적인 시나리오에 가까운 테스트 코드가 될거에요.</p>
 <p>이번 경험이 현업에서도 이어져서 꼭 하나라도 만들어보면서 그 가치를 지속적으로 확인해보길 바라요. 테스트 코드 경험자가 많지 않다고 하셨는데, 그래서 더 귀한 경험을 쌓은 거라고 생각합니다. 다음 과제도 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6J8QP7YK1E');
+</script>
 </body>
 </html>
