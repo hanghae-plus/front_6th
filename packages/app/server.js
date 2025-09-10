@@ -170,11 +170,31 @@ async function generateSitemap(urls) {
   const urlElements = urls
     .map((url) => {
       const fullUrl = url === "/" ? baseUrl : `${baseUrl}${url}`;
+
+      // URL 타입에 따른 priority와 changefreq 설정
+      let priority = "0.8";
+      let changefreq = "weekly";
+
+      if (url === "/") {
+        priority = "1.0";
+        changefreq = "daily";
+      } else if (url === "/assignments/") {
+        priority = "0.9";
+        changefreq = "weekly";
+      } else if (url.includes("/assignment/")) {
+        priority = "0.7";
+        changefreq = "monthly";
+      } else if (url.match(/\/@[^/]+\/$/)) {
+        priority = "0.8";
+        changefreq = "weekly";
+      }
+
       return `
   <url>
     <loc>${fullUrl}</loc>
     <lastmod>${lastMod}</lastmod>
-    <priority>0.8</priority>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
   </url>`;
     })
     .join("");
