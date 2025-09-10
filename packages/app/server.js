@@ -20,6 +20,7 @@ const getUrls = async () => {
 
   return [
     "/",
+    "/assignments/",
     ...Object.keys(userIdWithAssignmentIds).flatMap((userId) => [
       `/@${userId}/`,
       ...userIdWithAssignmentIds[userId].map((id) => `/@${userId}/assignment/${id}/`),

@@ -14,9 +14,10 @@
     "tsc": "tsc --noEmit",
     "lint:fix": "eslint --fix",
     "prettier:write": "prettier --write ./src",
-    "preview": "vite preview --outDir dist/client",
     "generate": "NODE_ENV=production node ./server.js",
-    "generate:with-build": "pnpm run build && pnpm run generate"
+    "generate:with-build": "pnpm build && pnpm generate",
+    "preview": "vite preview --outDir dist/client",
+    "preview:with-generate": "pnpm generate:with-build && pnpm preview"
   },
   "dependencies": {
     "@hanghae-plus/domain": "workspace:*",

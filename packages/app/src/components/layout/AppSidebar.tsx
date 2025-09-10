@@ -21,7 +21,7 @@ const navigationItems = [
   },
   {
     title: "과제 목록",
-    url: "/assignments",
+    url: "/assignments/",
     icon: BookOpen,
   },
 ];
