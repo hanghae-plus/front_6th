@@ -17,6 +17,14 @@
     <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 최재환님이 제출한 [9팀 최재환] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
     <meta name="twitter:image" content="/defaultThumbnail.jpg" />
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
   <script type="module" crossorigin src="/front_6th/assets/index-DtEqFcg_.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
 </head>
@@ -393,13 +401,5 @@ const handleTextChange = (e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
 <p>Q) CartItemCard 같은 경우 완전한 Presenter는 아니고 약간의 로직을 가지고 있습니다. 하지만 굳이,, 이기도 하다고 생각합니다. 이럴 때는 적당한 타협을 해도 괜찮다 생각하는데 어떨까요?</p>
 <p>=&gt; 전역상태관리 체계안에서의 컴포넌트의 책임은 프레젠터만 있지는 않아요. 버튼이 자신의 UI적 책임이 있듯 CartItemCard의 경우 Cart의 동작의 책임도 부여해주면 됩니다. 전역상태관리를 통해서 이제 모든 로직을 컨테이너로 몰지 않아도 되지 가장 가까운 곳에서 그 기능을 해주면 되는거에요. 그래서 컴포넌트에서 로직을 가지는건 이상하지 않아요.</p>
 <p>=&gt; 컴포넌트에서 이벤트 핸들러의 책임이란 이벤트와 UI를 통해 얻을 수 있는 정보 (즉 event.value와 같은)나 해당 상황에서의 도메인과 관련없는 UI정보 처리들 (토스트) 등은 컴포넌트의 책임이랍니다. 이러한 정보를 도메인 훅으로 전달해서 도메인 훅은 UI와 상관없이 처리할 수 있도록 하게 해주는 것이죠.</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
-<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J8QP7YK1E');
-</script>
 </body>
 </html>

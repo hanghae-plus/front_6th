@@ -17,6 +17,14 @@
     <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 이은지님이 제출한 [1팀 이은지] Chapter 4-1 성능 최적화  과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
     <meta name="twitter:image" content="/defaultThumbnail.jpg" />
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
   <script type="module" crossorigin src="/front_6th/assets/index-DtEqFcg_.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
 </head>
@@ -409,13 +417,5 @@ export async function render(url) {
 <p>상대 경로 URL 파싱 문제도 흥미로운 케이스였어요. CSR과 SSR 환경에서 같은 <code>/api/products</code> 경로가 어떻게 다르게 해석되는지 명확하게 분석했고, <code>getApiBaseUrl()</code> 함수로 환경별 분기 처리한 해결책도 현실적입니다.</p>
 <p>특히 테스트 환경에서 발생한 상태 공유 문제 분석이 깊이 있었어요. &quot;홈 화면을 요청했는데 왜 상세 페이지가 보이지?&quot;라는 의문에서 시작해서 싱글톤 패턴의 부작용까지 찾아낸 과정이 훌륭했습니다. 각 SSR 렌더링마다 새로운 Router 인스턴스를 생성하는 해결책도 맞고요.</p>
 <p>이번 과제를 통해 단순히 기능을 구현하는 것을 넘어서 왜 이런 문제들이 발생하는지, 어떻게 해결해야 하는지까지 깊이 탐구해보신 경험이 앞으로 성능 최적화할 때 큰 자산이 될 거예요. 수고하셨습니다. 다음 과제도 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
-<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J8QP7YK1E');
-</script>
 </body>
 </html>

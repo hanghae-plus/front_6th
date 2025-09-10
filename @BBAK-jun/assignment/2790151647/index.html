@@ -17,6 +17,14 @@
     <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 박준형님이 제출한 [3팀 박준형] Chapter 4-1 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
     <meta name="twitter:image" content="/defaultThumbnail.jpg" />
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
   <script type="module" crossorigin src="/front_6th/assets/index-DtEqFcg_.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
 </head>
@@ -1473,13 +1481,5 @@ export const routeConfigs: RouteConfig[] = [
 제안해주신 것 처럼 CMS 툴에서 초기화한 다음에 다시 빌드하는 방법도 좋을 것 같은데, 아예 매번 빌드를 하기보다 api 캐시만 갱신하고 (데이터만 다시 생성해주고), 그 다음에 API를 호출해서 client 에서 렌더링하면 ssg의 장점과 csr의 장점을 함께 누릴 수 있을 것 같네요!</p>
 <p>아니면 만들어야 하는 페이지가 많지 않다면 그냥 대략 30 ~ 60초마다 SSR에서 만들어서 캐싱해주면 어떨까 싶기도합니다!
 캐싱된 결과물을 레디스에 올려놓고 사용한다거나!?</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
-<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J8QP7YK1E');
-</script>
 </body>
 </html>

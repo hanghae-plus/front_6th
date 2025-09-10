@@ -17,6 +17,14 @@
     <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 박소연님이 제출한 [2팀 박소연] Chapter 2-2. 디자인 패턴과 함수형 프로그래밍 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
     <meta name="twitter:image" content="/defaultThumbnail.jpg" />
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
   <script type="module" crossorigin src="/front_6th/assets/index-DtEqFcg_.js"></script>
   <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
 </head>
@@ -268,13 +276,5 @@ useAdminNotifications(addNotification)
 <p>A. useSyncExternalStore를 활용해서 로컬스토리지를 연동한 것은 좋아 보입니다. 이렇게 하면 렌더링시 문제점도 많이 개선될 수 있을 것 같아요. 현재 상황에서는 적절한 방법이었다고 생각합니다. 물론 이 훅을 이용하지 않아도 정상 동작은 하게 만들 수 있겠지만 지금 코드는 좀 더 나아보입니다 :) 멋집니다. 소연님 :)</p>
 <p>Q.현재 상태관리 라이브러리(Jotai)는 알림(Notification) 상태만 관리하는 데 사용하였고, 나머지 상태는 각 컴포넌트 내부 혹은 별도의 훅을 통해 관리했습니다. 또 다른 상태들도 atom으로 관리했어야 했을지 고민이 되었습니다. 다만, 상태관리 라이브러리가 단순히 props drilling을 해결하기 위한 수단만은 아니라고 생각하고 있어서 어디까지 상태관리 라이브러리에서 관리하면 괜찮을지 의견 궁금합니다..!</p>
 <p>A. 넵 맞아요 단순히 상태관리도구는 프롭드릴링을 해결하려고 사용한다기보다는 상태들을 다루는 로직이나 비즈니스 로직을 분리해 재사용할 수 있게 만드는 역할도 큽니다. 사실 사용하기 나름이에요. 그래서 상태관리도구를 억지로 쓴다기보다는 필요할때 쓴다가 적절할 것 같아요. 일부 데이터를 다루는 로직의 재사용을 위해서, 혹은 프롭드릴링을 위해서 등 필요할 때 고려하셔도 될 것 같아요. 요즘은 React Query같은 도구로 인해 프랍드릴링도 캐싱기반의 패칭과 재가공으로 공유하기 때문에 역할이 조금  더 줄었어요.</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
-<script src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J8QP7YK1E');
-</script>
 </body>
 </html>
