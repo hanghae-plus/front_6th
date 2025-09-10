@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>항해플러스 프론트엔드 6기 기술블로그</title>
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+  <script type="module" crossorigin src="/front_6th/assets/index-S6z1r9QJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/32066010-ba16-4319-a980-1121bae0ec43"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@Hwirin-Kim/" data-discover="true">Hwirin-Kim<!-- --> 님의 상세페이지</a> ＞ <!-- -->[1팀 김휘린] Chapter 4-1 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-1/pull/32" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[1팀 김휘린] Chapter 4-1 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->Hwirin-Kim</span><span>2025. 9. 4.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h2>
+<h3 id="배포-링크"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포-링크"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포 링크</h3>
+<p>리액트 : <a href="https://hwirin-kim.github.io/front_6th_chapter4-1/react/">https://hwirin-kim.github.io/front_6th_chapter4-1/react/</a>
+바닐라 : <a href="https://hwirin-kim.github.io/front_6th_chapter4-1/vanilla/">https://hwirin-kim.github.io/front_6th_chapter4-1/vanilla/</a></p>
+<!-- -->
+<h3 id="기본과제-vanilla-ssr--ssg"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기본과제-vanilla-ssr--ssg"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기본과제 (Vanilla SSR &amp; SSG)</h3>
+<h4 id="express-ssr-서버"><a class="anchor" aria-hidden="true" tabindex="-1" href="#express-ssr-서버"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Express SSR 서버</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Express 미들웨어 기반 서버 구현</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 개발/프로덕션 환경 분기 처리</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> HTML 템플릿 치환 (<code>&lt;!--app-html--&gt;</code>, <code>&lt;!--app-head--&gt;</code>)</li>
+</ul>
+<h4 id="서버-사이드-렌더링"><a class="anchor" aria-hidden="true" tabindex="-1" href="#서버-사이드-렌더링"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>서버 사이드 렌더링</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버에서 동작하는 Router 구현</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버 데이터 프리페칭 (상품 목록, 상품 상세)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버 상태관리 초기화</li>
+</ul>
+<h4 id="클라이언트-hydration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#클라이언트-hydration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>클라이언트 Hydration</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> <code>window.__INITIAL_DATA__</code> 스크립트 주입</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 클라이언트 상태 복원</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 서버-클라이언트 데이터 일치</li>
+</ul>
+<h4 id="static-site-generation"><a class="anchor" aria-hidden="true" tabindex="-1" href="#static-site-generation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Static Site Generation</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 동적 라우트 SSG (상품 상세 페이지들)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 빌드 타임 페이지 생성</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 파일 시스템 기반 배포</li>
+</ul>
+<h3 id="심화과제-react-ssr--ssg"><a class="anchor" aria-hidden="true" tabindex="-1" href="#심화과제-react-ssr--ssg"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>심화과제 (React SSR &amp; SSG)</h3>
+<h4 id="react-ssr"><a class="anchor" aria-hidden="true" tabindex="-1" href="#react-ssr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>React SSR</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> <code>renderToString</code> 서버 렌더링</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> TypeScript SSR 모듈 빌드</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Universal React Router (서버/클라이언트 분기)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> React 상태관리 서버 초기화</li>
+</ul>
+<h4 id="react-hydration"><a class="anchor" aria-hidden="true" tabindex="-1" href="#react-hydration"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>React Hydration</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> Hydration 불일치 방지</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 클라이언트 상태 복원</li>
+</ul>
+<h4 id="static-site-generation-1"><a class="anchor" aria-hidden="true" tabindex="-1" href="#static-site-generation-1"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Static Site Generation</h4>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 동적 라우트 SSG (상품 상세 페이지들)</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 빌드 타임 페이지 생성</li>
+<li class="task-list-item"><input type="checkbox" disabled="" checked=""/> 파일 시스템 기반 배포</li>
+</ul>
+<h2 id="구현-과정-돌아보기"><a class="anchor" aria-hidden="true" tabindex="-1" href="#구현-과정-돌아보기"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>구현 과정 돌아보기</h2>
+<h3 id="가장-어려웠던-부분과-해결-과정"><a class="anchor" aria-hidden="true" tabindex="-1" href="#가장-어려웠던-부분과-해결-과정"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>가장 어려웠던 부분과 해결 과정</h3>
+<p>가장 힘들었던점은 테스트가 통과하지 않았던점이였다.. 무엇이 문제였을까? 하지만 오직 테스트일뿐, 결국 이것저것 시도하다보니 테스트는 갑자기 잘 돌아가서 통과되었다.</p>
+<p>그 외 가장 어려웠던 부분은 SSG를 사용할 때, nextJS는 분명 빌드시 모든 경로를 정적으로 만들고 그 데이터를 기반으로 SSG가 되는것 같았는데, 우리 과제는 최초 1번만 SSG이고 상세페이지 이동은 CSR로 동작하는 구조였다.</p>
+<p>물론 무한스크롤로 이뤄진 사이트라서 모든 페이지를 정적으로 만들긴 어렵지만, 최초 로드되는 20개의 상세페이지라도 정적페이지로 만들고 이동시키고 싶었다.</p>
+<p>그래서 정적페이지로 만들고 html을 어떻게 뿌려주지..? 이미 만든 페이지를 어떻게 구분해서 주지? 생각을하다가 next는 어떻게 동작할까? 하고 팀원 및 여러 사람과 논의를 해봤다.</p>
+<p>그런데 알아낸것은 next 또한 최초 1번만 정적페이지이고 나머지는 어떤 데이터를 받는다는것을 알게되었다..  그런데 내가 만들어왔던 next는 분명 데이터를 fetch하지 않는것같았는데.. 어떤 이유인지 알아보니 내부적으로 data를 json형태로 저장해둔다는것을 알았다.</p>
+<p>그래서 그것에 힌트를 얻어 html뿐만 아니라 내부에서 사용될 데이터도 json으로 저장시켰다.
+그렇게 최초 접속에서는 SSG, 그 다음 이동시 json데이터가 존재하면 그때도 데이터 페칭 없이 SSG, 그리고 미리 빌드되지 않은 파일만 CSR로 이동되는 구조를 만들게 되었다.</p>
+<!-- -->
+<h3 id="구현하면서-새롭게-알게-된-개념"><a class="anchor" aria-hidden="true" tabindex="-1" href="#구현하면서-새롭게-알게-된-개념"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>구현하면서 새롭게 알게 된 개념</h3>
+<!-- -->
+<p>지금까지 나는 nextJS로 SSG사이트를 만들면서 빌드 시, html이 생성되니 내부적으로 해당 html을 잘 라우팅하며 보여준다고 생각했다. 하지만 생각해보니 next로 빌드된 사이트는 새로고침없이 CSR처럼 동작한다..  왜 나는 여기서 이상하다는것을 눈치채지 못했을까..</p>
+<p>알고보니 next또한 우리과제에서처럼 __NEXT_DATA__에 초기 하이드레이션용 데이터가 삽입된다. 이 후 브라우저가 JS번들을 로드하고 해당 데이터를 하이드레이션하여 리액트 앱으로 전환하게 된다.</p>
+<p>그 후 빌드시점에서 생성해뒀던 json데이터를 페이지라우터에서는 prefetch 혹은 클릭 직후 fetch하고
+앱라우터에서는 대상 경로의 RSC(Flight) 응답을 prefetch 한다.</p>
+<p>따라서 실제 빌드시점에 결정된 데이터들을 미리 저장해두고 내부 페이지 전환 시 백엔드 api를 호출할 필요 없이 바로 제공받아 CSR처럼 빠른 전환효과와 데이터 일관성, 그리고 불필요한 api 호출을 없앨 수 있다.</p>
+<p>즉 SSG의 장점인 SEO 및 초기 빠른로딩과 CSR의 장점인 빠른 내부전환을 매끄럽게 섞었다고 볼 수 있다.</p>
+<h3 id="성능-최적화-관점에서의-인사이트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#성능-최적화-관점에서의-인사이트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>성능 최적화 관점에서의 인사이트</h3>
+<!-- -->
+<p>위에서도 적었던것 처럼 CSR로 내부 이동을 할 때, 미리 몇 페이지정도를 json데이터를 만들어 불필요한 api요청을 제거하고 빠른 페이지 전환을 시도했습니다. (일단 이 과정은 vanilla에서만 진행했습니다. React에서도 적용하려했는데.. test오류로 인해 과제 제출 시간에 대한 압박이 너무 커서.. 중간에 포기하였습니다 ㅠㅠ)</p>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// static-site-generater.js</span>
+</span><span class="code-line"><span class="token comment">// 홈페이지 생성</span>
+</span><span class="code-line"><span class="token keyword">const</span> homeResult <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">fs<span class="token punctuation">.</span><span class="token method function property-access">writeFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;../../dist/vanilla/index.html&quot;</span><span class="token punctuation">,</span> homeResult<span class="token punctuation">.</span><span class="token property-access">html</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">fs<span class="token punctuation">.</span><span class="token method function property-access">writeFileSync</span><span class="token punctuation">(</span><span class="token string">&quot;../../dist/vanilla/index.json&quot;</span><span class="token punctuation">,</span> <span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">stringify</span><span class="token punctuation">(</span>homeResult<span class="token punctuation">.</span><span class="token property-access">initialData</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 상품 상세페이지들 생성</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">{</span> getProducts <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword control-flow">await</span> vite<span class="token punctuation">.</span><span class="token method function property-access">ssrLoadModule</span><span class="token punctuation">(</span><span class="token string">&quot;./src/api/productApi.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">{</span> products <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">getProducts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword control-flow">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> product <span class="token keyword">of</span> products<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> productResult <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/product/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> productDir <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../dist/vanilla/product/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">  fs<span class="token punctuation">.</span><span class="token method function property-access">mkdirSync</span><span class="token punctuation">(</span>productDir<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">recursive</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  fs<span class="token punctuation">.</span><span class="token method function property-access">writeFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>productDir<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/index.html</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> productResult<span class="token punctuation">.</span><span class="token property-access">html</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  fs<span class="token punctuation">.</span><span class="token method function property-access">writeFileSync</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../dist/vanilla/product/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>product<span class="token punctuation">.</span><span class="token property-access">productId</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">stringify</span><span class="token punctuation">(</span>productResult<span class="token punctuation">.</span><span class="token property-access">initialData</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// static-site-generater.js
+// 홈페이지 생성
+const homeResult = await render(&quot;/&quot;);
+fs.writeFileSync(&quot;../../dist/vanilla/index.html&quot;, homeResult.html);
+fs.writeFileSync(&quot;../../dist/vanilla/index.json&quot;, JSON.stringify(homeResult.initialData));
+
+// 상품 상세페이지들 생성
+const { getProducts } = await vite.ssrLoadModule(&quot;./src/api/productApi.js&quot;);
+const { products } = await getProducts();
+
+for (const product of products) {
+  const productResult = await render(`/product/${product.productId}/`);
+  const productDir = `../../dist/vanilla/product/${product.productId}`;
+  fs.mkdirSync(productDir, { recursive: true });
+  fs.writeFileSync(`${productDir}/index.html`, productResult.html);
+  fs.writeFileSync(`../../dist/vanilla/product/${product.productId}.json`, JSON.stringify(productResult.initialData));
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>위 코드처럼 일단 정적페이지와 함께 initialData를 json형태로 만들었습니다.
+html은 최초 진입 및 새로고침 시 사용하게 되고 json은 내부 전환시 사용하게 됩니다.</p>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// HomePage.js의 onMount</span>
+</span><span class="code-line"><span class="token function-variable function">onMount</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> state <span class="token operator">=</span> productStore<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// ✅ 이미 SSR 하이드레이션 된 경우 → 패스</span>
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>state<span class="token punctuation">.</span><span class="token property-access">products</span> <span class="token operator">&amp;&amp;</span> state<span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// ✅ SSG JSON 먼저 시도</span>
+</span><span class="code-line">  <span class="token keyword">const</span> staticData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">loadInitialData</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>staticData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">hydrateStores</span><span class="token punctuation">(</span>staticData<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 정적 데이터로 상태 복원</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// ✅ 없으면 API fallback</span>
+</span><span class="code-line">  <span class="token function">loadProductsAndCategories</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// HomePage.js의 onMount
+onMount: async () =&gt; {
+  const state = productStore.getState();
+  
+  // ✅ 이미 SSR 하이드레이션 된 경우 → 패스
+  if (state.products &amp;&amp; state.products.length &gt; 0) return;
+  
+  // ✅ SSG JSON 먼저 시도
+  const staticData = await loadInitialData(&quot;/&quot;);
+  if (staticData) {
+    hydrateStores(staticData);  // 정적 데이터로 상태 복원
+    return;
+  }
+  
+  // ✅ 없으면 API fallback
+  loadProductsAndCategories();
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// ProductDetailPage.js의 onMount</span>
+</span><span class="code-line"><span class="token function-variable function">onMount</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> state <span class="token operator">=</span> productStore<span class="token punctuation">.</span><span class="token method function property-access">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> currentId <span class="token operator">=</span> state<span class="token punctuation">.</span><span class="token property-access">currentProduct</span><span class="token operator">?.</span>productId<span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// 같은 상품이면 패스</span>
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>currentId <span class="token operator">===</span> router<span class="token punctuation">.</span><span class="token property-access">params</span><span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span> <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// ✅ SSG JSON 먼저 시도</span>
+</span><span class="code-line">  <span class="token keyword">const</span> staticData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">loadInitialData</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/product/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>router<span class="token punctuation">.</span><span class="token property-access">params</span><span class="token punctuation">.</span><span class="token property-access">id</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>staticData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">hydrateStores</span><span class="token punctuation">(</span>staticData<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 정적 데이터로 상태 복원</span>
+</span><span class="code-line">    <span class="token keyword control-flow">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token comment">// ✅ 없으면 API fallback</span>
+</span><span class="code-line">  <span class="token function">loadProductDetailForPage</span><span class="token punctuation">(</span>router<span class="token punctuation">.</span><span class="token property-access">params</span><span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// ProductDetailPage.js의 onMount
+onMount: async () =&gt; {
+  const state = productStore.getState();
+  const currentId = state.currentProduct?.productId;
+  
+  // 같은 상품이면 패스
+  if (currentId === router.params.id) return;
+  
+  // ✅ SSG JSON 먼저 시도
+  const staticData = await loadInitialData(`/product/${router.params.id}/`);
+  if (staticData) {
+    hydrateStores(staticData);  // 정적 데이터로 상태 복원
+    return;
+  }
+  
+  // ✅ 없으면 API fallback
+  loadProductDetailForPage(router.params.id);
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>위처럼 각 페이지가 mount될 때 하이드레이션이 되어있는 정보가 있는지 검사합니다.
+상세페이지의 경우 한 번 접속하면 하이드레이션 정보가 남아있게되므로 id값까지 비교하여 동일한 값인지 확인합니다.
+그렇지 않으면 계속 같은 상세페이지 정보를 보게 되는 문제가 있습니다.</p>
+<p>그리고 만약 스토어에 정보가 없다면 빌드된 json 데이터가 있는지 확인합니다.
+그 코드는 다음과 같습니다.</p>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// loadinitialData.js</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token constant">BASE_PATH</span> <span class="token operator">=</span> <span class="token string">&quot;/front_6th_chapter4-1/vanilla&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">const</span> <span class="token function-variable function">loadInitialData</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">pathname</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">let</span> jsonPath<span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token comment">// basePath 제거</span>
+</span><span class="code-line">    <span class="token keyword">const</span> relativePath <span class="token operator">=</span> pathname<span class="token punctuation">.</span><span class="token method function property-access">replace</span><span class="token punctuation">(</span><span class="token constant">BASE_PATH</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>relativePath <span class="token operator">===</span> <span class="token string">&quot;/&quot;</span> <span class="token operator">||</span> relativePath <span class="token operator">===</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token comment">// 홈</span>
+</span><span class="code-line">      jsonPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">location</span><span class="token punctuation">.</span><span class="token property-access">origin</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">BASE_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/index.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>relativePath<span class="token punctuation">.</span><span class="token method function property-access">startsWith</span><span class="token punctuation">(</span><span class="token string">&quot;/product/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token comment">// 상세</span>
+</span><span class="code-line">      <span class="token keyword">const</span> segments <span class="token operator">=</span> relativePath<span class="token punctuation">.</span><span class="token method function property-access">split</span><span class="token punctuation">(</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">filter</span><span class="token punctuation">(</span><span class="token known-class-name class-name">Boolean</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [&quot;product&quot;, &quot;85067212996&quot;]</span>
+</span><span class="code-line">      <span class="token keyword">const</span> productId <span class="token operator">=</span> segments<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">      jsonPath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">location</span><span class="token punctuation">.</span><span class="token property-access">origin</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">BASE_PATH</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/product/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>productId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>jsonPath<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span>jsonPath<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">cache</span><span class="token operator">:</span> <span class="token string">&quot;force-cache&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span><span class="token property-access">ok</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword control-flow">await</span> res<span class="token punctuation">.</span><span class="token method function property-access">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword control-flow">return</span> data<span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token punctuation">}</span> <span class="token keyword control-flow">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">warn</span><span class="token punctuation">(</span><span class="token string">&quot;👉 Static JSON not found, falling back to API:&quot;</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword control-flow">return</span> <span class="token keyword null nil">null</span><span class="token punctuation">;</span> <span class="token comment">// JSON 없으면 API fallback</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// loadinitialData.js
+const BASE_PATH = &quot;/front_6th_chapter4-1/vanilla&quot;;
+
+export const loadInitialData = async (pathname) =&gt; {
+  try {
+    let jsonPath;
+
+    // basePath 제거
+    const relativePath = pathname.replace(BASE_PATH, &quot;&quot;) || &quot;/&quot;;
+
+    if (relativePath === &quot;/&quot; || relativePath === &quot;&quot;) {
+      // 홈
+      jsonPath = `${window.location.origin}${BASE_PATH}/index.json`;
+    } else if (relativePath.startsWith(&quot;/product/&quot;)) {
+      // 상세
+      const segments = relativePath.split(&quot;/&quot;).filter(Boolean); // [&quot;product&quot;, &quot;85067212996&quot;]
+      const productId = segments[1];
+      jsonPath = `${window.location.origin}${BASE_PATH}/product/${productId}.json`;
+    }
+
+    if (jsonPath) {
+      const res = await fetch(jsonPath, { cache: &quot;force-cache&quot; });
+      if (res.ok) {
+        const data = await res.json();
+        return data;
+      }
+    }
+  } catch (e) {
+    console.warn(&quot;👉 Static JSON not found, falling back to API:&quot;, e);
+  }
+
+  return null; // JSON 없으면 API fallback
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>입력받은 경로에 해당하는 json을 찾는 함수입니다. 없다면 null을 반환합니다.</p>
+<p>그래서 위 함수를 토대로 만약 store가 비어있는데 정적빌드된 데이터가 있다면 또 다시 하이드레이션을 하게 됩니다.</p>
+<pre><code class="language-javacript code-highlight"><span class="code-line">// hydrateStore.js
+</span><span class="code-line">import { PRODUCT_ACTIONS, productStore } from &quot;../stores&quot;;
+</span><span class="code-line">
+</span><span class="code-line">export const hydrateStores = (data) =&gt; {
+</span><span class="code-line">  if (data.products) {
+</span><span class="code-line">    productStore.dispatch({
+</span><span class="code-line">      type: PRODUCT_ACTIONS.SETUP,
+</span><span class="code-line">      payload: {
+</span><span class="code-line">        products: data.products,
+</span><span class="code-line">        categories: data.categories,
+</span><span class="code-line">        totalCount: data.totalCount,
+</span><span class="code-line">        loading: false,
+</span><span class="code-line">        status: &quot;done&quot;,
+</span><span class="code-line">        error: null,
+</span><span class="code-line">      },
+</span><span class="code-line">    });
+</span><span class="code-line">  }
+</span><span class="code-line">
+</span><span class="code-line">  if (data.currentProduct) {
+</span><span class="code-line">    productStore.dispatch({
+</span><span class="code-line">      type: PRODUCT_ACTIONS.SET_CURRENT_PRODUCT,
+</span><span class="code-line">      payload: data.currentProduct,
+</span><span class="code-line">    });
+</span><span class="code-line">
+</span><span class="code-line">    if (data.relatedProducts) {
+</span><span class="code-line">      productStore.dispatch({
+</span><span class="code-line">        type: PRODUCT_ACTIONS.SET_RELATED_PRODUCTS,
+</span><span class="code-line">        payload: data.relatedProducts,
+</span><span class="code-line">      });
+</span><span class="code-line">    }
+</span><span class="code-line">  }
+</span><span class="code-line">};
+</span></code><div class="copied" data-code="// hydrateStore.js
+import { PRODUCT_ACTIONS, productStore } from &quot;../stores&quot;;
+
+export const hydrateStores = (data) =&gt; {
+  if (data.products) {
+    productStore.dispatch({
+      type: PRODUCT_ACTIONS.SETUP,
+      payload: {
+        products: data.products,
+        categories: data.categories,
+        totalCount: data.totalCount,
+        loading: false,
+        status: &quot;done&quot;,
+        error: null,
+      },
+    });
+  }
+
+  if (data.currentProduct) {
+    productStore.dispatch({
+      type: PRODUCT_ACTIONS.SET_CURRENT_PRODUCT,
+      payload: data.currentProduct,
+    });
+
+    if (data.relatedProducts) {
+      productStore.dispatch({
+        type: PRODUCT_ACTIONS.SET_RELATED_PRODUCTS,
+        payload: data.relatedProducts,
+      });
+    }
+  }
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이렇게 데이터를 하이드레이션 시키고, 만약 정적빌드된 데이터조차 없다면 그때서야 data fetch를 시도하는 구조입니다.</p>
+<p>위 과정을 통해 미리 빌드된 페이지로의 이동은 로딩없이 매우 빠르고, 마치 next js의 동작 과정과 매우 비슷한 효과를 낼 수 있었습니다.</p>
+<h2 id="학습-갈무리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-갈무리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 갈무리</h2>
+<h3 id="q1-현재-구현한-ssrssg-아키텍처에서-확장성을-고려할-때-어떤-부분을-개선하시겠습니까"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q1-현재-구현한-ssrssg-아키텍처에서-확장성을-고려할-때-어떤-부분을-개선하시겠습니까"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q1. 현재 구현한 SSR/SSG 아키텍처에서 확장성을 고려할 때 어떤 부분을 개선하시겠습니까?</h3>
+<!-- -->
+<p>제가 구현한 SSG에서 좀 더 확장성있게 구현해보려고 한 부분은 무한스크롤로 데이터를 새롭게 fetch를 받을 때, 미리 여분의 상품 상세 데이터를 20개 정도 구비하여 <strong>PREFETCH_DATA</strong> 이런식으로 올려두고, 상세페이지 이동을 하는 시점에 데이터를 따로 받아오는것이 아닌 prefetch data로 또한번 빠른 이동을 할 수 있겠다는 생각이 들었습니다.</p>
+<p>그렇다면 즉시 전환되는 화면을 통해 UX를 증가시킬 수 있고, 여러번 왔다갔다 해도 받아둔 데이터를 재활용하므로 api 부하가 감소할 수 있습니다.</p>
+<p>하지만 메모리 사용량이 증가되고 데이터 최신성의 문제가 있을 수 있으며 때에 따라서 오히려 네트워크 낭비가 될 수도 있습니다.</p>
+<h3 id="q2-express-서버-대신-다른-런타임cloudflare-workers-vercel-edge-functions-등을-사용한다면-어떤-점을-수정해야-할까요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q2-express-서버-대신-다른-런타임cloudflare-workers-vercel-edge-functions-등을-사용한다면-어떤-점을-수정해야-할까요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q2. Express 서버 대신 다른 런타임(Cloudflare Workers, Vercel Edge Functions 등)을 사용한다면 어떤 점을 수정해야 할까요?</h3>
+<!-- -->
+<p>서버 대신 다른 런타임을 사용하면 로컬환경에 직접 접근할 수 없으므로 정적데이터를 클라우드 스토리지에 배포해두고 해당 스토리지에서 가져오는 방식을 취할 수 있습니다.</p>
+<h3 id="q3-현재-구현에서-성능-병목이-될-수-있는-지점은-어디이고-어떻게-개선하시겠습니까"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q3-현재-구현에서-성능-병목이-될-수-있는-지점은-어디이고-어떻게-개선하시겠습니까"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q3. 현재 구현에서 성능 병목이 될 수 있는 지점은 어디이고, 어떻게 개선하시겠습니까?</h3>
+<!-- -->
+<p>이번 구현 과정에서도 많이 고민했던 부분인데, 모든 상품을 빌드해두려면 빌드 시간 자체가 오래걸리게 됩니다.<br/>
+그래서 아까 위에서 언급했던것처럼 최근 데이터만 정적으로 빌드하고 나머지는 prefetch 개념을 도입할 수 있을것 같습니다.
+이때 ISR을 적용하여, 빌드되어있는 데이터의 최신성을 보장해준다면 더욱 좋다고 생각이 듭니다.
+또한 캐시된 데이터의 만료 정책을 구성하여 메모리 누수를 막을 수 있을것으로 생각됩니다.</p>
+<h3 id="q4-1000개-이상의-상품-페이지를-ssg로-생성할-때-고려해야-할-사항은-무엇입니까"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q4-1000개-이상의-상품-페이지를-ssg로-생성할-때-고려해야-할-사항은-무엇입니까"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q4. 1000개 이상의 상품 페이지를 SSG로 생성할 때 고려해야 할 사항은 무엇입니까?</h3>
+<!-- -->
+<p>아마도 빌드시간이 굉장히 오래 걸릴것으로 생각됩니다.  만약 한번에 많은 데이터를 빌드해야한다면 백그라운드에서 빌드 될 수 있도록 합니다. 하지만 이미 1000개의 데이터가 있고, 점차 늘려가는 상황이라면 증분 빌드를 활용할 수 있습니다. 변경된 페이지만 빠르게 다시 빌드하는 방식으로 전체 대신 부분 갱신을 노리는 방식입니다.  또한 ISR방식은 증분빌드 방식에 데이터 최신성까지 유지시켜주는데, 설정해둔 주기마다 페이지를 백그라운드에서 갱신하고 CDN 캐시를 무효화 시켜 다시 최신성을 유지하게 해줍니다.
+부분 재빌드를 구현하는 방식으로는 변경된 데이터만 감지해서 빌드하거나, Webhook 기반의 온디맨드 빌드를 도입해 특정 상품만 재생성하는 방법이 있습니다. 이렇게 하면 전체 빌드 시간이 길어지더라도 확장성 있게 대응할 수 있습니다.</p>
+<h3 id="q5-hydration-과정에서-사용자가-느낄-수-있는-ux-이슈는-무엇이고-어떻게-개선할-수-있을까요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q5-hydration-과정에서-사용자가-느낄-수-있는-ux-이슈는-무엇이고-어떻게-개선할-수-있을까요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q5. Hydration 과정에서 사용자가 느낄 수 있는 UX 이슈는 무엇이고, 어떻게 개선할 수 있을까요?</h3>
+<!-- -->
+<p>만약 하이드레이션해야할 데이터가 너무 많으면 해당 하이드레이션이 완료될 때 까지 JS가 동작하지 않는것처럼 느껴질 것입니다. 그렇게 되면 사용자 인터랙션이 동작하지 않을 것이고, 이는 사용자로 하여금 페이지가 고장난 것 같은 느낌을 주어 UX에 치명적일 수 있습니다.
+따라서 너무 많은 데이터를 한 번에 내려주지 않고, 페이지 진입에 꼭 필요한 정도만 보내주는 것이 좋습니다.
+또한 하이드레이션이 되는 시간동안 로딩 인디케이터, 스켈레톤UI 등을 통해 마치 아직은 인터랙션 하지 마세요!~ 하는 느낌을 주어 UX를 올릴 수 있을것이다.
+또한 Progressive Enhancement를 적용하여, 가장 중요한 부분 (블로그로 치면 글 내용 등)은 바로 보여주고, 그 다음 글씨 크기나 색상등 덜 중요한 부분을 적용시킨 다음, 마지막으로 없어도 페이지 자체의 본질은 유지되는 일들 (좋아요, 댓글 등)을 수행할 수 있도록 만들면 그래도 사용자가 필요한 일은 할 수 있어 UX가 높아진다.</p>
+<h3 id="q6-이번-과제에서-학습한-내용을-실제-프로덕션-환경에-적용할-때-추가로-고려해야-할-사항은"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q6-이번-과제에서-학습한-내용을-실제-프로덕션-환경에-적용할-때-추가로-고려해야-할-사항은"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q6. 이번 과제에서 학습한 내용을 실제 프로덕션 환경에 적용할 때 추가로 고려해야 할 사항은?</h3>
+<!-- -->
+<p>정적페이지라면 실제 서버응답시간이나 CPU부하 보다는 빌드 및 배포, 캐시 등의 모니터링이 필요할 것이다.
+상품의 수가 많아질수록 빌드 시간이 매우 오래걸릴 수 있고, 실패한 페이지가 존재할 수 있으므로 로그로 남겨야 한다. 또한 총 빌드시간을 기록하여 다음 배포시 유리한 전략을 채택해야한다.
+또한 캐시된 데이터가 언제 무효화 되었는지 기록하여 데이터의 최신성을 관리해야한다.
+그리고 캐시가 만료된 데이터등이 존재할 때, API Fallback을 통해 직접 서버에서 데이터를 로드해줄 필요가 있고, 아예 사라져버렸다면 404페이지를 보여주거나 에러메시지를 띄워주는 전략을 사용할 수 있다.
+또한 A/B테스트를 적용한다면 빌드시점에 두 가지 정적 버전을 모두 만든 뒤, 사용자마다 다른 페이지를 주는 방법, 혹은 정적페이지는 그대로 내려주되 JS에서 사용자별로 다른 UI렌더하도록 하는 방식도 있을 수 있다. 목적은 더 나은 방안은 무엇인지 비교해야하므로 꼭 로깅체계를 갖추고 데이터를 모아야 한다.
+정적페이지는 보안에 안전할 것 같지만 그렇지 않다. XSS(cross-site scripting)은 사용자 입력이 들어가면 스크립트같은 악성 코드도 함께 유입될 수 있는데, 리액트에서 dangerouslySetInnerHTML을 사용하는 경우 발생할 수 있고, 빌드 단계에서 사용자 입력 데이터에 악성 코드가 유입된다면 escape처리 되도록 하는것이 중요하다.
+또한 CSP(content security policy)로 막을 수 있는데, 이는 브라우저가 어떤 자원을 실행해도 되는지 정책을 정해두고 내 서버 혹은 지정된 CDN에서 온 스크립트만 허용하는 방식이 있다.
+또한 정적빌드된 json안에 민감한 데이터가 포함되면 그대로 노출이 되므로 꼭 화면 표시와 관련된 데이터만 포함하는것이 좋다.</p>
+<h3 id="q7-nextjs-같은-프레임워크-대신-직접-구현한-ssrssg의-장단점은-무엇인가요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q7-nextjs-같은-프레임워크-대신-직접-구현한-ssrssg의-장단점은-무엇인가요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q7. Next.js 같은 프레임워크 대신 직접 구현한 SSR/SSG의 장단점은 무엇인가요?</h3>
+<!-- -->
+<p>일단 학습 효과 면에서 next의 구현 원리까지 살펴보는 등 스스로 궁금증을 많이 자아내는 과제였다. 그리고 하이드레이션과 정적 데이터 구성등을 미리 구현해보고, json데이터를 통한 빠른 화면전환을 구현해보는 등 스스로 깊은 이해를 했다고 느껴진다.
+그리고 내가 직접 구현한 코드인 만큼 prefetch방식이나 여러가지 적용하고 싶은 방식을 자유롭게 구성할 수 있다는 점에서 장점이 있다고 생각한다.
+하지만 개발은 대부분 혼자서 하는것이 아니고, 유지보수가 제일 큰 비용이 드는 부분인 만큼 직접 구현한 SSR/SSG보다는 next와 같은 인기있는 프레임워크를 사용하는것이 더욱 좋다고 생각한다. 생태계 면에서  매우 큰 next는 활용할 수 있는 인원도 손쉽게 구할 수 있고, 커뮤니티도 매우 커서 어려움을 쉽게 극복해 나갈 수 있다는 장점이 있다.</p>
+<h3 id="q8-nextjs-를-이용하여-ssg-방식으로-배포하려면-어떻게-해야-좋을까요"><a class="anchor" aria-hidden="true" tabindex="-1" href="#q8-nextjs-를-이용하여-ssg-방식으로-배포하려면-어떻게-해야-좋을까요"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Q8. Next.js 를 이용하여 SSG 방식으로 배포하려면 어떻게 해야 좋을까요?</h3>
+<!-- -->
+<p>과거 Page Router방식에서는 getStaticProps로 빌드시 데이터를 불러와 html과 json데이터를 생성했고, getStaticPaths로 동적 라우트의 모든 경로를 미리 지정했다.
+하지만 Next.js 13이후 도입된 App Router에서는 generateStaticParams로 빌드 시 정적으로 생성할 경로를 반환하고, server component내부에서 fetch를 실행하면 기본적으로 &quot;&quot;&quot;cache: &#x27;force-cache&#x27;&quot;&quot;&quot;가 설정되어 빌드 시 데이터를 불러와 정적으로 캐시하게 된다.
+이렇게 빌드된 파일은 CDN과 같은 정적 호스팅에 올려두는것이 좋다. vercel에 배포한다면 ISR을 지원받을 수 있고, S3+CloudFront를 이용한다면 빌드 후 s3업로드 시 CloudFront의 캐시를 무효화 시켜줘야 한다. 만약 vercel처럼 ISR을 쓰려면 next server 와 ISR핸들러를 배포하여 사용해야한다.
+s3+CloudFront조합은 저렴하고 안정적이며 데이터가 자주 바뀌지 않을때 유리하고, Vercel은 ISR 지원이 되어야하거나 배포 자동화가 필요한 경우 유리하다.</p>
+<h2 id="코드-품질-향상"><a class="anchor" aria-hidden="true" tabindex="-1" href="#코드-품질-향상"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>코드 품질 향상</h2>
+<h3 id="자랑하고-싶은-구현"><a class="anchor" aria-hidden="true" tabindex="-1" href="#자랑하고-싶은-구현"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>자랑하고 싶은 구현</h3>
+<!-- -->
+<p>이미 위에서도 계속 언급해왔던 빌드시 json데이터를 저장하여 로딩없는 빠른 화면 전환을 한 부분을 자랑하고 싶습니다..
+이미 위에서 코드를 다 자랑했기때문에 이곳에 다시 언급하진 않겠습니다..😅😅</p>
+<h3 id="개선하고-싶은-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#개선하고-싶은-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>개선하고 싶은 부분</h3>
+<!-- -->
+<p>해당 프로젝트가 상세페이지가 상당히 많으면서 무한스크롤로 구현되어 있으므로 prefetch 방식을 도입하고 싶었습니다.
+최초에 20개 데이터 + 다음페이지 20개 데이터까지 미리 가져와서 <strong>INITIAL_DATA</strong>, <strong>PREFETCH_DATA</strong> 이렇게 가져오고, 미리 상세페이지까지 데이터로 가지고 있는다면 사용자 입장에서 계속하여 로딩없는 빠른 화면을 볼 수 있을거라고 생각합니다.</p>
+<p>만약 상세데이터를 모두 가지고 있기 어렵다면 뷰포트 앞뒤로 몇 개의 데이터만 prefetch 받는 전략을 쓸 수 있을것같습니다.</p>
+<p>또한 무한 스크롤에서 문제가 되는 DOM의 거대화를 막기 위해 가상스크롤링을 적용하여 특정 구간만큼만 UI로 가지고 있고 나머지는 데이터로만 가지고 있는 전략을 취해볼 수 있을것 같습니다.</p>
+<h3 id="리팩토링-계획"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리팩토링-계획"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리팩토링 계획</h3>
+<!-- -->
+<p>데이터 페칭 로직을 직접 하드코딩하여 분기하였는데, 그 방식보다 라우트 핸들러 방식을 사용하여 라우트별로 fetchData, hydrateStore, getPageTitle등을 모아놨더라면 더욱 깔끔한 코드가 될것 같습니다.</p>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// main-server.tsx - 기존</span>
+</span><span class="code-line"><span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>path <span class="token operator">===</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  initialData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">fetchProductsDataSSR</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  pageTitle <span class="token operator">=</span> <span class="token string">&quot;쇼핑몰 - 홈&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SETUP</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token literal-property property">payload</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token literal-property property">products</span><span class="token operator">:</span> initialData<span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">categories</span><span class="token operator">:</span> initialData<span class="token punctuation">.</span><span class="token property-access">categories</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">totalCount</span><span class="token operator">:</span> initialData<span class="token punctuation">.</span><span class="token property-access">totalCount</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">&quot;done&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>path <span class="token operator">===</span> <span class="token string">&quot;/product/:id/&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  initialData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token function">fetchProductDataSSR</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  pageTitle <span class="token operator">=</span> initialData<span class="token operator">?.</span>currentProduct<span class="token operator">?.</span>title <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>initialData<span class="token operator">?.</span>currentProduct<span class="token operator">?.</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> - 쇼핑몰</span><span class="token template-punctuation string">`</span></span> <span class="token operator">:</span> <span class="token string">&quot;쇼핑몰&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SET_CURRENT_PRODUCT</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token literal-property property">payload</span><span class="token operator">:</span> initialData<span class="token punctuation">.</span><span class="token property-access">currentProduct</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>initialData<span class="token punctuation">.</span><span class="token property-access">relatedProducts</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SET_RELATED_PRODUCTS</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">payload</span><span class="token operator">:</span> initialData<span class="token punctuation">.</span><span class="token property-access">relatedProducts</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// main-server.tsx - 기존
+if (path === &quot;/&quot;) {
+  initialData = await fetchProductsDataSSR(query);
+  pageTitle = &quot;쇼핑몰 - 홈&quot;;
+  
+  productStore.dispatch({
+    type: PRODUCT_ACTIONS.SETUP,
+    payload: {
+      products: initialData.products,
+      categories: initialData.categories,
+      totalCount: initialData.totalCount,
+      loading: false,
+      status: &quot;done&quot;,
+      error: null,
+    },
+  });
+} else if (path === &quot;/product/:id/&quot;) {
+  initialData = await fetchProductDataSSR(params.id);
+  pageTitle = initialData?.currentProduct?.title ? `${initialData?.currentProduct?.title} - 쇼핑몰` : &quot;쇼핑몰&quot;;
+  
+  productStore.dispatch({
+    type: PRODUCT_ACTIONS.SET_CURRENT_PRODUCT,
+    payload: initialData.currentProduct,
+  });
+  
+  if (initialData.relatedProducts) {
+    productStore.dispatch({
+      type: PRODUCT_ACTIONS.SET_RELATED_PRODUCTS,
+      payload: initialData.relatedProducts,
+    });
+  }
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>기존은 위처럼 라우트마다 비슷한 패턴이 반복되는 구조입니다. 또한 새 라우트가 추가되면 이 파일까지 수정해줘야 합니다.</p>
+<p>그래서 아래와 같이 개선할 수 있을것 같습니다.</p>
+<pre class="language-javascript"><code class="language-javascript code-highlight"><span class="code-line"><span class="token comment">// 개선된 방식</span>
+</span><span class="code-line"><span class="token keyword">interface</span> <span class="token class-name">RouteHandler</span><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token operator">=</span> any<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function-variable function">fetchData</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">params</span><span class="token operator">:</span> any<span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token known-class-name class-name">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function-variable function">hydrateStore</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token constant">T</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function-variable function">getPageTitle</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token constant">T</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> string<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token literal-property property">routeHandlers</span><span class="token operator">:</span> <span class="token maybe-class-name">Record</span><span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token maybe-class-name">RouteHandler</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token string-property property">&quot;/&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token literal-property property">fetchData</span><span class="token operator">:</span> fetchProductsDataSSR<span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token function-variable function">hydrateStore</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SETUP</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token literal-property property">payload</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token literal-property property">products</span><span class="token operator">:</span> data<span class="token punctuation">.</span><span class="token property-access">products</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">categories</span><span class="token operator">:</span> data<span class="token punctuation">.</span><span class="token property-access">categories</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">totalCount</span><span class="token operator">:</span> data<span class="token punctuation">.</span><span class="token property-access">totalCount</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">status</span><span class="token operator">:</span> <span class="token string">&quot;done&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token function-variable function">getPageTitle</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token string">&quot;쇼핑몰 - 홈&quot;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token string-property property">&quot;/product/:id/&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function-variable function">fetchData</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token function">fetchProductDataSSR</span><span class="token punctuation">(</span>params<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token function-variable function">hydrateStore</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SET_CURRENT_PRODUCT</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token literal-property property">payload</span><span class="token operator">:</span> data<span class="token punctuation">.</span><span class="token property-access">currentProduct</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      
+</span><span class="code-line">      <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token property-access">relatedProducts</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        productStore<span class="token punctuation">.</span><span class="token method function property-access">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token constant">PRODUCT_ACTIONS</span><span class="token punctuation">.</span><span class="token constant">SET_RELATED_PRODUCTS</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token literal-property property">payload</span><span class="token operator">:</span> data<span class="token punctuation">.</span><span class="token property-access">relatedProducts</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token function-variable function">getPageTitle</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> data<span class="token operator">?.</span>currentProduct<span class="token operator">?.</span>title 
+</span><span class="code-line">      <span class="token operator">?</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span><span class="token property-access">currentProduct</span><span class="token punctuation">.</span><span class="token property-access">title</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> - 쇼핑몰</span><span class="token template-punctuation string">`</span></span> 
+</span><span class="code-line">      <span class="token operator">:</span> <span class="token string">&quot;쇼핑몰&quot;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 렌더링 로직 단순화</span>
+</span><span class="code-line"><span class="token keyword module">export</span> <span class="token keyword">const</span> <span class="token function-variable function">render</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">url</span><span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> matched <span class="token operator">=</span> router<span class="token punctuation">.</span><span class="token method function property-access">match</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>matched<span class="token punctuation">)</span> <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">head</span><span class="token operator">:</span> <span class="token string">&quot;&lt;title&gt;404&lt;/title&gt;&quot;</span><span class="token punctuation">,</span> <span class="token literal-property property">html</span><span class="token operator">:</span> <span class="token function"><span class="token maybe-class-name">NotFoundPage</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token literal-property property">initialData</span><span class="token operator">:</span> <span class="token keyword null nil">null</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> path<span class="token punctuation">,</span> params<span class="token punctuation">,</span> component<span class="token punctuation">,</span> query <span class="token punctuation">}</span> <span class="token operator">=</span> matched<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> handler <span class="token operator">=</span> routeHandlers<span class="token punctuation">[</span>path<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword control-flow">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">No handler found for route: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> initialData <span class="token operator">=</span> <span class="token keyword control-flow">await</span> handler<span class="token punctuation">.</span><span class="token method function property-access">fetchData</span><span class="token punctuation">(</span>params<span class="token punctuation">,</span> query<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  handler<span class="token punctuation">.</span><span class="token method function property-access">hydrateStore</span><span class="token punctuation">(</span>initialData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> pageTitle <span class="token operator">=</span> handler<span class="token punctuation">.</span><span class="token method function property-access">getPageTitle</span><span class="token punctuation">(</span>initialData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword control-flow">return</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token literal-property property">head</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;title&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>pageTitle<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/title&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token literal-property property">html</span><span class="token operator">:</span> <span class="token function">renderToString</span><span class="token punctuation">(</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token maybe-class-name">QueryProvider</span> initialQuery<span class="token operator">=</span><span class="token punctuation">{</span>query<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span><span class="token maybe-class-name">PageComponent</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token maybe-class-name">QueryProvider</span><span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token literal-property property">initialData</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token spread operator">...</span>initialData<span class="token punctuation">,</span> query <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 개선된 방식
+interface RouteHandler&lt;T = any&gt; {
+  fetchData: (params: any, query: any) =&gt; Promise&lt;T&gt;;
+  hydrateStore: (data: T) =&gt; void;
+  getPageTitle: (data: T) =&gt; string;
+}
+
+const routeHandlers: Record&lt;string, RouteHandler&gt; = {
+  &quot;/&quot;: {
+    fetchData: fetchProductsDataSSR,
+    hydrateStore: (data) =&gt; productStore.dispatch({
+      type: PRODUCT_ACTIONS.SETUP,
+      payload: {
+        products: data.products,
+        categories: data.categories,
+        totalCount: data.totalCount,
+        loading: false,
+        status: &quot;done&quot;,
+        error: null,
+      },
+    }),
+    getPageTitle: () =&gt; &quot;쇼핑몰 - 홈&quot;
+  },
+  
+  &quot;/product/:id/&quot;: {
+    fetchData: (params) =&gt; fetchProductDataSSR(params.id),
+    hydrateStore: (data) =&gt; {
+      productStore.dispatch({
+        type: PRODUCT_ACTIONS.SET_CURRENT_PRODUCT,
+        payload: data.currentProduct,
+      });
+      
+      if (data.relatedProducts) {
+        productStore.dispatch({
+          type: PRODUCT_ACTIONS.SET_RELATED_PRODUCTS,
+          payload: data.relatedProducts,
+        });
+      }
+    },
+    getPageTitle: (data) =&gt; data?.currentProduct?.title 
+      ? `${data.currentProduct.title} - 쇼핑몰` 
+      : &quot;쇼핑몰&quot;
+  }
+};
+
+// 렌더링 로직 단순화
+export const render = async (url: string) =&gt; {
+  const matched = router.match(url);
+  if (!matched) return { head: &quot;&lt;title&gt;404&lt;/title&gt;&quot;, html: NotFoundPage(), initialData: null };
+
+  const { path, params, component, query } = matched;
+  const handler = routeHandlers[path];
+  
+  if (!handler) {
+    throw new Error(`No handler found for route: ${path}`);
+  }
+
+  const initialData = await handler.fetchData(params, query);
+  handler.hydrateStore(initialData);
+  const pageTitle = handler.getPageTitle(initialData);
+
+  return {
+    head: `&lt;title&gt;${pageTitle}&lt;/title&gt;`,
+    html: renderToString(
+      &lt;QueryProvider initialQuery={query}&gt;
+        &lt;PageComponent /&gt;
+      &lt;/QueryProvider&gt;
+    ),
+    initialData: { ...initialData, query },
+  };
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이렇게 하면 각 라우트의 로직이 분리되고 새 라우트가 추가되어도 라우트핸들러에만 추가하면 되어 main-server를 수정할 일이 없습니다.</p>
+<h2 id="학습-연계"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-연계"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 연계</h2>
+<h3 id="다음-학습-목표"><a class="anchor" aria-hidden="true" tabindex="-1" href="#다음-학습-목표"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>다음 학습 목표</h3>
+<!-- -->
+<p>SSG에 대한 이해와 확장성은 많이 살펴 보았는데 SSR에 대한 성능 최적화 방식등은 많이 살펴보지 않은것같습니다.
+실제로 SSR이 다시금 많이 쓰이는 만큼 데이터 페칭 전략이라던지 어느것을 SSG, CSR, SSR로 해야 유리한지를 더욱 면밀하게 공부해 보도록 하겠습니다.</p>
+<h3 id="실무-적용-계획"><a class="anchor" aria-hidden="true" tabindex="-1" href="#실무-적용-계획"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>실무 적용 계획</h3>
+<!-- -->
+<p>그동안 nextJS를 활용하여 단순히 SSG페이지를 많이 만들어왔는데,
+이제는 단순히 SSG로만 만드는 것이 아닌 상황에 알맞게 SSG/SSR/ISR을 고민하여 설계하도록 하고, 하이드레이션 최적화를 적용해 초기 로딩 시 사용자 인터랙션 차단을 최소화하거나 스켈레톤UI등을 도입하여 UX를 개선해 나갈 계획입니다.</p>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<!-- -->
+<p>이번 과제중에 e2e테스트를 진행하면 playwright에서도 간헐적 실패가 존재하고, 배포후 CI를 통한 검사에서도 같은 코드에서 어쩔땐 실패 어쩔땐 성공하는 운에 맡기는? 현상이 자주 발생하였습니다.
+내 코드가 문제인지, 테스트의 오류인지 초반엔 알 수 없어서 테스트코드에 대한 불편함이 더 많았던것같습니다.
+이런 경우 오히려 테스트코드가 개발 유지보수 비용을 늘린다고 생각이 드는데, 어떤 이유로 실패했을까요..?
+<img width="798" height="503" alt="스크린샷 2025-09-05 오후 1 38 05" src="https://github.com/user-attachments/assets/32066010-ba16-4319-a980-1121bae0ec43"/>
+위 사진과 같은 오류였고, 제 코드 기준으로 로컬에서는 10번 시도하여 8번정도가 실패하였고, CI에서는 50%정도 확률로 통과가 되었습니다.
+디스코드와 ZEP에서 보니 저 말고도 이러한 문제를 겪은 사람이 꽤 많았던것 같은데, 아무도 원인을 찾지 못했습니다.. ㅠㅠ</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>수고했습니다. 이번 과제는 SSR과 SSG를 직접 구현해보면서 렌더링 전략의 차이점과 성능 최적화 방법을 체험하는데 목적이 있었습니다.</p>
+<p>NextJS 동작 원리를 궁금해서 직접 파보다가 <code>__NEXT_DATA__</code>까지 발견하고 JSON 저장 방식을 구현한 부분 잘했어요. 과제가 의도한 바가 단순히 이론의 내용이 아니라 아주 구체적이 구현 부분등을 발견하면서 왜 이렇게 했을까에 대해 온전히 이해하는데 있었는데 잘 해주었네요.</p>
+<p>HTML과 JSON을 분리해서 SSG + CSR 장점을 섞은 하이브리드 방식 좋습니다. 실제 프레임워크들이 쓰는 패턴을 스스로 잘 발견했어요.</p>
+<p><code>loadInitialData.js</code>에서 정적 JSON 먼저 찾고 없으면 API fallback 하는 전략도 현실적이고 실용적이에요. 이런 점진적 향상 패턴이 실무에서도 중요한데 잘 적용했네요.</p>
+<p>React 쪽에서 테스트 오류로 중간에 포기한 건 시간 압박이 있어서 어쩔 수 없었겠지만, Vanilla에서라도 제대로 구현해본 게 의미있었다고 생각해요. 다음에 기회 되면 한 번 더 도전해보세요.</p>
+<p>테스트 간헐적 실패는 정말 골치아픈 문제죠. 이런 게 쌓이면 테스트에 대한 신뢰가 떨어지게 되는데요. 저도 자세히 알 수는 없지만 e2e의 경우 네트워크의 지연 속도나 타이밍 그리고 실행 순서가 꼬이는 등의 문제라 대개 초반에 대기 시간을 준다거나 모든 데이터의 로딩이 끝나고 ready가 된 이후에 실행한다거나 하는 식으로 조정해볼 수 있겠네요.</p>
+<p>&quot;이제는 단순히 SSG로만 만드는 것이 아닌 상황에 알맞게 SSG/SSR/ISR을 고민하여 설계하도록 하고, 하이드레이션 최적화를 적용해 초기 로딩 시 사용자 인터랙션 차단을 최소화하거나 스켈레톤UI등을 도입하여 UX를 개선해 나갈 계획입니다.&quot; 훌륭합니다.</p>
+<p>이번 과제를 통해서 프레임워크가 왜 이렇게 만들어졌는지 직접 체험해보셨을 텐데, 이런 경험이 앞으로 성능 최적화할 때 큰 자산이 될 거예요. 수고하셨습니다. 다음 과제도 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>
