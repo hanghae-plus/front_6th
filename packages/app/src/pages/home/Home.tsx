@@ -6,6 +6,7 @@ import { Card } from "@/components";
 import { type PropsWithChildren, Suspense, useMemo } from "react";
 import { PageProvider, usePageData } from "@/providers";
 import { SortFilter, useSortFilter } from "@/features/users";
+import { baseMetadata, type MetadataConfig } from "@/utils/metadata";
 
 type UserCard = GithubApiUsers & { assignments: CommonAssignment[]; name: string };
 
@@ -138,6 +139,18 @@ const HomePage = () => {
   );
 };
 
+// Home 페이지 메타데이터 생성 함수
+export function generateHomeMetadata(): MetadataConfig {
+  return {
+    ...baseMetadata,
+    title: "수강생 목록 - 항해플러스 프론트엔드 6기",
+    description:
+      "항해플러스 프론트엔드 6기 수강생들의 프로필과 과제 진행 현황을 한눈에 확인하세요. 각 수강생의 GitHub 정보, 제출한 과제 수, 합격 현황을 살펴보실 수 있습니다.",
+    keywords: `${baseMetadata.keywords}, 수강생목록, 프로필, GitHub, 과제현황, 개발자포트폴리오`,
+  };
+}
+
 export const Home = Object.assign(HomePage, {
   Provider: HomeProvider,
+  generateMetadata: generateHomeMetadata,
 });

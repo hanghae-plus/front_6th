@@ -6,6 +6,7 @@ import MarkdownPreview from "@uiw/react-markdown-preview";
 import { IconGithub } from "@/assets";
 import { Card } from "@/components";
 import { AssignmentComment } from "./AssignmentComment";
+import { baseMetadata, type MetadataConfig } from "@/utils/metadata";
 
 const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
   const { assignmentId = "" } = useParams<{ assignmentId: string }>();
@@ -26,6 +27,26 @@ const AssignmentDetailProvider = ({ children }: PropsWithChildren) => {
     </PageProvider>
   );
 };
+
+// AssignmentDetail 페이지 메타데이터 생성 함수
+export interface AssignmentMetadataParams {
+  assignmentId: string;
+  assignmentTitle: string;
+  userName: string;
+}
+
+export function generateAssignmentDetailMetadata({
+  assignmentTitle,
+  userName,
+}: AssignmentMetadataParams): MetadataConfig {
+  return {
+    ...baseMetadata,
+    title: `${assignmentTitle} - ${userName} | 항해플러스 프론트엔드 6기`,
+    description: ` [항해플러스 프론트엔드 6기] ${userName}님이 제출한 ${assignmentTitle} 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다.`,
+    ogImage: "/defaultThumbnail.jpg",
+    keywords: `${baseMetadata.keywords}, ${userName}, ${assignmentTitle}, 과제상세, 코드리뷰, 피드백, Pull Request`,
+  };
+}
 
 export const AssignmentDetail = Object.assign(
   () => {
@@ -89,5 +110,6 @@ export const AssignmentDetail = Object.assign(
   },
   {
     Provider: AssignmentDetailProvider,
+    generateMetadata: generateAssignmentDetailMetadata,
   },
 );
