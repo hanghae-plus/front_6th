@@ -165,7 +165,7 @@ async function generate(url) {
 
 async function generateSitemap(urls) {
   const baseUrl = "https://hanghae-plus.github.io/front_6th";
-  const lastMod = new Date().toISOString().split("T")[0]; // YYYY-MM-DD 형식
+  const lastMod = new Date().toISOString();
 
   const urlElements = urls
     .map((url) => {
