@@ -189,7 +189,21 @@ ${urlElements}
   console.log("✅ sitemap.xml 생성 완료");
 }
 
+async function generateRobotsTxt() {
+  const baseUrl = "https://hanghae-plus.github.io/front_6th";
+
+  const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml`;
+
+  const robotsPath = "./dist/client/robots.txt";
+  fs.writeFileSync(robotsPath, robotsTxt, "utf-8");
+  console.log("✅ robots.txt 생성 완료");
+}
+
 getUrls().then(async (urls) => {
   urls.forEach(generate);
   await generateSitemap(urls);
+  await generateRobotsTxt();
 });
