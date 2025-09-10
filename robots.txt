@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hanghae-plus.github.io/front_6th/sitemap.xml
