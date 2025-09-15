@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+    <title>[1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 - 신희원 | 항해플러스 프론트엔드 6기</title>
+    <meta name="description" content=" [항해플러스 프론트엔드 6기] 신희원님이 제출한 [1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="keywords" content="항해플러스, 프론트엔드, 개발자교육, React, TypeScript, JavaScript, 기술면접, 웹개발, 신희원, [1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화, 과제상세, 코드리뷰, 피드백, Pull Request" />
+    <meta property="og:title" content="[1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 - 신희원 | 항해플러스 프론트엔드 6기" />
+    <meta property="og:description" content=" [항해플러스 프론트엔드 6기] 신희원님이 제출한 [1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta property="og:image" content="/defaultThumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 - 신희원 | 항해플러스 프론트엔드 6기" />
+    <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 신희원님이 제출한 [1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="twitter:image" content="/defaultThumbnail.jpg" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
+  <script type="module" crossorigin src="/front_6th/assets/index-B12XiTr6.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/42123b43-c475-48a6-bf65-ad5553e08647"/><link rel="preload" as="image" href="https://github.com/user-attachments/assets/c1b90368-ea83-4fd1-8e4c-4c32efe6ad68"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@Amelia-Shin/" data-discover="true">Amelia-Shin<!-- --> 님의 상세페이지</a> ＞ <!-- -->[1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-2/pull/15" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[1팀 신희원] Chapter 4-2 코드 관점의 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->Amelia-Shin</span><span>2025. 9. 8.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h1>
+<p>배포링크: <a href="https://amelia-shin.github.io/front_6th_chapter4-2/">https://amelia-shin.github.io/front_6th_chapter4-2/</a></p>
+<h2 id="과제-요구사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-요구사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 요구사항</h2>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 배포 후 url 제출</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> API 호출 최적화(<code>Promise.all</code> 이해)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 연산 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 리렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드래그시 렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드롭시 렌더링 최적화</p>
+</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<!-- -->
+<h3 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h3>
+<h4 id="1-promiseall의-올바른-사용법"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-promiseall의-올바른-사용법"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. Promise.all의 올바른 사용법</h4>
+<ul>
+<li><strong>문제점 발견</strong>: 기존 코드에서 <code>Promise.all</code> 안에서 <code>await</code>를 사용하여 병렬성 파괴</li>
+</ul>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">// 문제가 있던 코드</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">fetchAllLectures</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">  <span class="token keyword">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token keyword">await</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 순차 실행됨</span>
+</span><span class="code-line">    <span class="token keyword">await</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token comment">// ...</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 문제가 있던 코드
+const fetchAllLectures = async () =&gt;
+  await Promise.all([
+    await fetchMajors(), // 순차 실행됨
+    await fetchLiberalArts(),
+    // ...
+  ]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li><strong>해결 방법</strong>: <code>await</code> 제거하여 진정한 병렬 실행 구현</li>
+</ul>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token comment">// 개선된 코드</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">fetchAllLectures</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>majorsResult<span class="token punctuation">,</span> liberalArtsResult<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 병렬 실행</span>
+</span><span class="code-line">    <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token spread operator">...</span>majorsResult<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">,</span> <span class="token spread operator">...</span>liberalArtsResult<span class="token punctuation">.</span><span class="token property-access">data</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 개선된 코드
+const fetchAllLectures = async () =&gt; {
+  const [majorsResult, liberalArtsResult] = await Promise.all([
+    fetchMajors(), // 병렬 실행
+    fetchLiberalArts(),
+  ]);
+  return [...majorsResult.data, ...liberalArtsResult.data];
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h4 id="2-react-메모이제이션-전략"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-react-메모이제이션-전략"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. React 메모이제이션 전략</h4>
+<ul>
+<li><strong>React.memo</strong>: 컴포넌트 레벨에서 불필요한 리렌더링 방지</li>
+<li><strong>useMemo</strong>: 계산 비용이 큰 연산 결과 캐싱</li>
+<li><strong>useCallback</strong>: 함수 참조 안정화로 자식 컴포넌트 리렌더링 최적화</li>
+<li><strong>useAutoCallback</strong>: 커스텀 훅으로 함수 참조 문제 해결</li>
+</ul>
+<h4 id="3-캐시-관리-시스템-구축"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-캐시-관리-시스템-구축"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 캐시 관리 시스템 구축</h4>
+<ul>
+<li><strong>TTL(Time To Live) 기반 캐시</strong>: 시간 기반 캐시 만료 정책</li>
+<li><strong>중복 요청 방지</strong>: 동일한 요청이 진행 중일 때 대기 메커니즘</li>
+<li><strong>캐시 통계</strong>: 캐시 히트율 및 성능 모니터링</li>
+</ul>
+<h4 id="4-컴포넌트-분리-전략"><a class="anchor" aria-hidden="true" tabindex="-1" href="#4-컴포넌트-분리-전략"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>4. 컴포넌트 분리 전략</h4>
+<ul>
+<li><strong>단일 책임 원칙</strong>: 각 컴포넌트가 하나의 명확한 역할만 담당</li>
+<li><strong>커스텀 훅 패턴</strong>: 비즈니스 로직과 UI 로직 분리</li>
+<li><strong>관심사 분리</strong>: 검색, 필터링, 무한스크롤 등 기능별 모듈화</li>
+</ul>
+<h3 id="코드-품질"><a class="anchor" aria-hidden="true" tabindex="-1" href="#코드-품질"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>코드 품질</h3>
+<h4 id="1-usereducer-vs-usestate"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-usereducer-vs-usestate"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. useReducer vs useState</h4>
+<ul>
+<li><strong>복잡한 상태 관리</strong>: 여러 필드가 연관된 상태에서는 <code>useReducer</code>가 더 적합</li>
+<li><strong>성능 최적화</strong>: <code>useReducer</code>의 dispatch는 항상 동일한 참조를 유지</li>
+<li><strong>타입 안정성</strong>: 액션 기반 상태 변경으로 타입 안전성 향상</li>
+</ul>
+<h4 id="2-디바운싱의-중요성"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-디바운싱의-중요성"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 디바운싱의 중요성</h4>
+<ul>
+<li><strong>사용자 경험</strong>: 입력 중 불필요한 API 호출 방지</li>
+<li><strong>성능 최적화</strong>: 검색어 입력 시 실시간 필터링 대신 지연된 처리</li>
+<li><strong>리소스 절약</strong>: 서버 부하 감소 및 네트워크 트래픽 최적화</li>
+<li></li>
+</ul>
+<h3 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h3>
+<p>기존 코드 (searchDialog.tsx)</p>
+<ol>
+<li>Promise.all 안에서 await 사용 (병렬성 파괴)</li>
+</ol>
+<blockquote>
+<p>문제점 : 이렇게 하면 각 API 호출이 순차적으로 실행.</p>
+</blockquote>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">fetchAllLectures</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">  <span class="token keyword">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 1&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 2&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 3&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 4&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 5&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 6&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="const fetchAllLectures = async () =&gt;
+  await Promise.all([
+    (console.log(&quot;API Call 1&quot;, performance.now()), await fetchMajors()),
+    (console.log(&quot;API Call 2&quot;, performance.now()), await fetchLiberalArts()),
+    (console.log(&quot;API Call 3&quot;, performance.now()), await fetchMajors()),
+    (console.log(&quot;API Call 4&quot;, performance.now()), await fetchLiberalArts()),
+    (console.log(&quot;API Call 5&quot;, performance.now()), await fetchMajors()),
+    (console.log(&quot;API Call 6&quot;, performance.now()), await fetchLiberalArts()),
+  ]);
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<img width="297" height="194" alt="image" src="https://github.com/user-attachments/assets/42123b43-c475-48a6-bf65-ad5553e08647"/>
+[await 사용]
+<img width="296" height="198" alt="image" src="https://github.com/user-attachments/assets/c1b90368-ea83-4fd1-8e4c-4c32efe6ad68"/>
+[await 제거]
+<h3 id="가장-큰-배움이-있었던-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#가장-큰-배움이-있었던-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>가장 큰 배움이 있었던 부분</h3>
+<h4 id="1-성능-최적화의-체계적-접근"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-성능-최적화의-체계적-접근"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 성능 최적화의 체계적 접근</h4>
+<ul>
+<li><strong>측정 우선</strong>: 최적화 전후 성능 측정의 중요성</li>
+<li><strong>점진적 개선</strong>: 한 번에 모든 것을 최적화하지 않고 단계적 접근</li>
+<li><strong>사용자 경험 중심</strong>: 기술적 최적화보다 사용자 경험 개선에 집중</li>
+</ul>
+<h4 id="2-react-생태계의-깊은-이해"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-react-생태계의-깊은-이해"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. React 생태계의 깊은 이해</h4>
+<ul>
+<li><strong>렌더링 메커니즘</strong>: React의 렌더링 사이클과 최적화 포인트</li>
+<li><strong>메모이제이션 전략</strong>: 언제, 어떻게 메모이제이션을 적용할지</li>
+<li><strong>컴포넌트 설계</strong>: 재사용 가능하고 테스트 가능한 컴포넌트 설계</li>
+</ul>
+<h4 id="3-실무에서의-성능-고려사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-실무에서의-성능-고려사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 실무에서의 성능 고려사항</h4>
+<ul>
+<li><strong>네트워크 최적화</strong>: API 호출 최소화 및 캐싱 전략</li>
+<li><strong>번들 크기</strong>: 불필요한 라이브러리 제거 및 코드 스플리팅</li>
+<li><strong>사용자 피드백</strong>: 로딩 상태 및 에러 처리의 중요성</li>
+</ul>
+<p>기타사항
+렌더링을 유발하는 요소 : 객체/배열/함수
+메모이제이션 해서 보내거나, 아니면 최대한 직접 값 자체를 보내거나해야한다.</p>
+<h3 id="리팩토링이-필요한-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리팩토링이-필요한-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리팩토링이 필요한 부분</h3>
+<h4 id="1-타입-정의-중복"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-타입-정의-중복"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 타입 정의 중복</h4>
+<ul>
+<li><strong>문제</strong>: <code>Lecture</code> 타입이 여러 파일에 중복 정의</li>
+<li><strong>개선 방향</strong>: 공통 타입 파일로 통합 필요</li>
+</ul>
+<h4 id="2-에러-처리-부족"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-에러-처리-부족"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 에러 처리 부족</h4>
+<ul>
+<li><strong>문제</strong>: API 호출 실패 시 사용자 피드백 부족</li>
+<li><strong>개선 방향</strong>: 에러 바운더리 및 로딩 상태 관리 강화</li>
+</ul>
+<h4 id="3-접근성accessibility-고려-부족"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-접근성accessibility-고려-부족"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 접근성(Accessibility) 고려 부족</h4>
+<ul>
+<li><strong>문제</strong>: 키보드 네비게이션 및 스크린 리더 지원 미흡</li>
+<li><strong>개선 방향</strong>: ARIA 속성 및 키보드 이벤트 처리 추가</li>
+</ul>
+<h3 id="실무-적용-가능성"><a class="anchor" aria-hidden="true" tabindex="-1" href="#실무-적용-가능성"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>실무 적용 가능성</h3>
+<h4 id="1-즉시-적용-가능한-기술"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-즉시-적용-가능한-기술"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 즉시 적용 가능한 기술</h4>
+<ul>
+<li><strong>메모이제이션</strong>: 성능이 중요한 컴포넌트에 즉시 적용</li>
+<li><strong>컴포넌트 분리</strong>: 유지보수성 향상을 위한 아키텍처 개선</li>
+<li><strong>캐싱 전략</strong>: API 호출 최적화로 서버 비용 절약</li>
+</ul>
+<h4 id="2-장기적-개선-방향"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-장기적-개선-방향"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 장기적 개선 방향</h4>
+<ul>
+<li><strong>마이크로 프론트엔드</strong>: 대규모 애플리케이션의 모듈화</li>
+<li><strong>성능 모니터링</strong>: 실시간 성능 지표 수집 및 분석</li>
+<li><strong>접근성 개선</strong>: 웹 접근성 가이드라인 준수</li>
+</ul>
+<h4 id="3-팀-차원의-적용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-팀-차원의-적용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 팀 차원의 적용</h4>
+<ul>
+<li><strong>코드 리뷰</strong>: 성능 최적화 관점의 코드 리뷰 프로세스</li>
+<li><strong>성능 가이드라인</strong>: 팀 내 성능 최적화 가이드라인 수립</li>
+<li><strong>지식 공유</strong>: 성능 최적화 경험 및 노하우 공유</li>
+</ul>
+<h3 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h3>
+<h3 id="과제에서-좋았던-부분"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제에서-좋았던-부분"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제에서 좋았던 부분</h3>
+<h4 id="1-실무-중심의-문제-설정"><a class="anchor" aria-hidden="true" tabindex="-1" href="#1-실무-중심의-문제-설정"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>1. 실무 중심의 문제 설정</h4>
+<ul>
+<li><strong>장점</strong>: 실제 개발에서 마주치는 성능 문제를 다룸</li>
+<li><strong>효과</strong>: 실무 적용 가능한 경험 습득</li>
+</ul>
+<h4 id="2-점진적-개선-과정"><a class="anchor" aria-hidden="true" tabindex="-1" href="#2-점진적-개선-과정"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>2. 점진적 개선 과정</h4>
+<ul>
+<li><strong>장점</strong>: 한 번에 모든 것을 바꾸지 않고 단계적 개선</li>
+<li><strong>효과</strong>: 안정적인 리팩토링과 학습 효과 극대화</li>
+</ul>
+<h4 id="3-성능-측정-도구-활용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#3-성능-측정-도구-활용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>3. 성능 측정 도구 활용</h4>
+<ul>
+<li><strong>장점</strong>: React DevTools, Performance API 등 실제 도구 사용</li>
+<li><strong>효과</strong>: 정량적 성능 개선 확인 가능</li>
+</ul>
+<hr/>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<p>성능 최적화</p>
+<ul>
+<li><strong>메모이제이션</strong>: <code>React.memo</code>, <code>useMemo</code>, <code>useCallback</code>을 어디에 적용해야 하는지 판단 기준</li>
+<li><strong>렌더링 최적화</strong>: 모든 컴포넌트에 <code>React.memo</code>를 적용하는 것이 좋은가?</li>
+<li><strong>계산 비용</strong>: <code>useMemo</code>를 언제 사용해야 하는지, 계산 비용이 얼마나 클 때 사용해야 하는가?</li>
+</ul>
+<p>Context API 활용</p>
+<ul>
+<li><strong>전역 상태 관리</strong>: <code>ScheduleContext</code>를 사용한 것이 과도한 전역 상태 관리인지</li>
+<li><strong>props drilling vs Context</strong>: 이런 경우에 Context API 대신 props drilling을 사용하는 것이 나은가?</li>
+<li><strong>Context 도입 시점</strong>: 언제 Context API를 도입해야 하는가?</li>
+</ul>
+<p>상태 관리</p>
+<ul>
+<li><strong>useReducer vs useState</strong>: 복잡한 상태에서 <code>useReducer</code>를 사용한 것이 적절한가?</li>
+<li><strong>상태 설계</strong>: 상태가 몇 개의 필드 이상일 때 <code>useReducer</code>를 고려해야 하는가?</li>
+<li><strong>상태 정규화</strong>: 복잡한 상태 구조를 어떻게 설계해야 하는가?</li>
+</ul>
+<p>10주간 함께 해주셔서 감사합니다 :-) 고생많으셨고 건강하시고 행복하세요 ~</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>안녕하세요 희원님! 마지막 과제 너무 잘 진행해주셨네요 ㅎㅎ 고생하셨습니다!!</p>
+<hr/>
+<blockquote>
+<p>메모이제이션: React.memo, useMemo, useCallback을 어디에 적용해야 하는지 판단 기준</p>
+</blockquote>
+<p>항상 적용할 필요는 없고, 대체로 memo를 한 번 적용하기 시작하면, memo에 전달하는 props를 메모이제이션 하기위해 연달아 useMemo, useCallback 을 사용해서 props로 내려주는 연계 과정이 필요합니다.</p>
+<p>서로 연결이 되어있는거죠.. ㅎㅎ
+그리고 memo는 렌더링이 많이 발생하는 컴포넌트에 적용하면 되겠죠..!? 특별한 정답이 있진 않다고 생각해요.</p>
+<blockquote>
+<p>렌더링 최적화: 모든 컴포넌트에 React.memo를 적용하는 것이 좋은가?</p>
+</blockquote>
+<p>커뮤니케이션을 할 때 유용하답니다 ㅋㅋ
+&quot;우리는 그냥 다 메모이제이션해~&quot; 라고 의사결정을 하고 진행하면 고민을 하는 비용을 줄일 수 있어요.</p>
+<blockquote>
+<p>계산 비용: useMemo를 언제 사용해야 하는지, 계산 비용이 얼마나 클 때 사용해야 하는가?</p>
+</blockquote>
+<p>대체로 배열과 관련된 연산을 할 때 유용해요! 한 번의 연산이 16.66ms 이상 걸린다면... (1frame) 적용할 필요가 있다고 생각합니다.</p>
+<blockquote>
+<p>전역 상태 관리: ScheduleContext를 사용한 것이 과도한 전역 상태 관리인지</p>
+</blockquote>
+<p>지금은 과도하지 않다고 생각해요 ㅎㅎ 다만 이 context를 의존하는 컴포넌트가 많을 때에는 과도할 수 있죠.. 아이러니 하지만 전역상태를 의존하는 컴포넌트가 많다는건 전역상태가 변경되었을 때 렌더링이 전파된다는 이야기이니까요.</p>
+<blockquote>
+<p>props drilling vs Context: 이런 경우에 Context API 대신 props drilling을 사용하는 것이 나은가?</p>
+</blockquote>
+<p>무조건 좋은건 없어요. 상황에 따라 다르답니다! context api의 경우 특히 디자인 시스템을 만들 때 유용해요 ㅎㅎ</p>
+<blockquote>
+<p>Context 도입 시점: 언제 Context API를 도입해야 하는가?</p>
+</blockquote>
+<p>전역상태로 사용할 때 보단... 특정 컴포넌트에 필요한 데이터를 정의할때 유용해요. 가령 폼데이터라거나?</p>
+<blockquote>
+<p>useReducer vs useState: 복잡한 상태에서 useReducer를 사용한 것이 적절한가?</p>
+</blockquote>
+<p>적절하다고 생각합니다. 테스트 하기가 좋아요!</p>
+<blockquote>
+<p>상태 설계: 상태가 몇 개의 필드 이상일 때 useReducer를 고려해야 하는가?</p>
+</blockquote>
+<p>한 번에 엮여서 쓰이는게 3~4개 이상일 때 적절하지 않을까요!? 이건 reducer를 많이 써보면서 익혀야 한다고 생각해요.</p>
+<blockquote>
+<p>상태 정규화: 복잡한 상태 구조를 어떻게 설계해야 하는가?</p>
+</blockquote>
+<p>흠... 어떤 모습의 상태냐에 따라 다르겠네요.. ㅎㅎ</p>
+<p>질문이 대체로 포괄적이여서 양질의 답변을 드리기가 조금 어렵네요 ㅎㅎ ㅠㅠ
+대체로 정답이 있는 질문이 아니라서요. 희원님께서 경험을 해보고 판단을 하는 과정이 필요하다고 생각합니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

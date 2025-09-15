@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+    <title>[9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 - 임두현 | 항해플러스 프론트엔드 6기</title>
+    <meta name="description" content=" [항해플러스 프론트엔드 6기] 임두현님이 제출한 [9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="keywords" content="항해플러스, 프론트엔드, 개발자교육, React, TypeScript, JavaScript, 기술면접, 웹개발, 임두현, [9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화, 과제상세, 코드리뷰, 피드백, Pull Request" />
+    <meta property="og:title" content="[9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 - 임두현 | 항해플러스 프론트엔드 6기" />
+    <meta property="og:description" content=" [항해플러스 프론트엔드 6기] 임두현님이 제출한 [9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta property="og:image" content="/defaultThumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 - 임두현 | 항해플러스 프론트엔드 6기" />
+    <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 임두현님이 제출한 [9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="twitter:image" content="/defaultThumbnail.jpg" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
+  <script type="module" crossorigin src="/front_6th/assets/index-B12XiTr6.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/3f712def-3938-4a24-9c15-fb4657efa1e6"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@ldhldh07/" data-discover="true">ldhldh07<!-- --> 님의 상세페이지</a> ＞ <!-- -->[9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-2/pull/31" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[9팀 임두현] Chapter 4-2 코드 관점의 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->ldhldh07</span><span>2025. 9. 11.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h1>
+<h2 id="과제-요구사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-요구사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 요구사항</h2>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 배포 후 url 제출</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> API 호출 최적화(<code>Promise.all</code> 이해)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 연산 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 리렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드래그시 렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드롭시 렌더링 최적화</p>
+</li>
+</ul>
+<h2 id="배포"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포</h2>
+<p><a href="https://ldhldh07.github.io/front_6th_chapter4-2/">https://ldhldh07.github.io/front_6th_chapter4-2/</a></p>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<!-- -->
+<p>리액트 최적화를 위한 과제를 수행했습니다.
+시간표 프로젝트를 메모이제이션, 캐싱을 이용해 최적화하고 사용자 경험을 개선하는 과제입니다.</p>
+<h3 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h3>
+<!-- -->
+<p>최적화가 가능한 범위는 그 폭이 넓습니다.
+그중에서 리액트의 특성상 문제를 일으키기 쉬운 지점은 두가지입니다.</p>
+<ul>
+<li>메모이제이션이 안되어서 데이터의 변화가 없음에도 다시 렌더링이 되는 경우</li>
+<li>컴포넌트의 생명주기마다 큰 데이터를 호출하는 경우</li>
+</ul>
+<p>과제를 통해 이 문제들을 찾아내고 해결하는 경험을 했습니다.</p>
+<h3 id="reactusememo-reactusecallback"><a class="anchor" aria-hidden="true" tabindex="-1" href="#reactusememo-reactusecallback"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>React.useMemo, React.useCallback</h3>
+<p>그중 비교적 익숙한 최적화 방식은 useMemo, useCallback을 이용한 최적화였습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">
+</span><span class="code-line">              <span class="token operator">&lt;</span>GridItem
+</span><span class="code-line">                key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>day<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>timeIndex <span class="token operator">+</span> <span class="token number">2</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">                borderWidth<span class="token operator">=</span><span class="token string">&quot;1px 0 0 1px&quot;</span>
+</span><span class="code-line">                borderColor<span class="token operator">=</span><span class="token string">&quot;gray.300&quot;</span>
+</span><span class="code-line">                bg<span class="token operator">=</span><span class="token punctuation">{</span>timeIndex <span class="token operator">&gt;</span> <span class="token number">17</span> <span class="token operator">?</span> <span class="token string">&#x27;gray.100&#x27;</span> <span class="token operator">:</span> <span class="token string">&#x27;white&#x27;</span><span class="token punctuation">}</span>
+</span><span class="code-line">                cursor<span class="token operator">=</span><span class="token string">&quot;pointer&quot;</span>
+</span><span class="code-line">                _hover<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> bg<span class="token operator">:</span> <span class="token string">&#x27;yellow.100&#x27;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span><span class="code-line">                onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> onScheduleTimeClick<span class="token operator">?.</span><span class="token punctuation">(</span><span class="token punctuation">{</span> day<span class="token punctuation">,</span> time<span class="token operator">:</span> timeIndex <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>DraggableSchedule
+</span><span class="code-line">          key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>schedule<span class="token punctuation">.</span>lecture<span class="token punctuation">.</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">          id<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tableId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">          data<span class="token operator">=</span><span class="token punctuation">{</span>schedule<span class="token punctuation">}</span>
+</span><span class="code-line">          bg<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">getColor</span><span class="token punctuation">(</span>schedule<span class="token punctuation">.</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">          onDeleteButtonClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> onDeleteButtonClick<span class="token operator">?.</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">            day<span class="token operator">:</span> schedule<span class="token punctuation">.</span>day<span class="token punctuation">,</span>
+</span><span class="code-line">            time<span class="token operator">:</span> schedule<span class="token punctuation">.</span>range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span></code><div class="copied" data-code="
+              &lt;GridItem
+                key={`${day}-${timeIndex + 2}`}
+                borderWidth=&quot;1px 0 0 1px&quot;
+                borderColor=&quot;gray.300&quot;
+                bg={timeIndex &gt; 17 ? &#x27;gray.100&#x27; : &#x27;white&#x27;}
+                cursor=&quot;pointer&quot;
+                _hover={{ bg: &#x27;yellow.100&#x27; }}
+                onClick={() =&gt; onScheduleTimeClick?.({ day, time: timeIndex + 1 })}
+              /&gt;
+
+        &lt;DraggableSchedule
+          key={`${schedule.lecture.title}-${index}`}
+          id={`${tableId}:${index}`}
+          data={schedule}
+          bg={getColor(schedule.lecture.id)}
+          onDeleteButtonClick={() =&gt; onDeleteButtonClick?.({
+            day: schedule.day,
+            time: schedule.range[0],
+          })}
+        /&gt;
+
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">    <span class="token keyword">const</span> onScheduleTimeClick <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span>
+</span><span class="code-line">      <span class="token punctuation">(</span>timeInfo<span class="token operator">:</span> <span class="token punctuation">{</span> day<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> time<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">openSearch</span><span class="token punctuation">(</span>tableId<span class="token punctuation">,</span> timeInfo<span class="token punctuation">.</span>day<span class="token punctuation">,</span> timeInfo<span class="token punctuation">.</span>time<span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">[</span>openSearch<span class="token punctuation">,</span> tableId<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">const</span> onDeleteButtonClick <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span>
+</span><span class="code-line">      <span class="token punctuation">(</span><span class="token punctuation">{</span> day<span class="token punctuation">,</span> time <span class="token punctuation">}</span><span class="token operator">:</span> <span class="token punctuation">{</span> day<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span> time<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">        <span class="token function">updateTable</span><span class="token punctuation">(</span>tableId<span class="token punctuation">,</span> <span class="token punctuation">(</span>prev<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+</span><span class="code-line">          prev<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> s<span class="token punctuation">.</span>day <span class="token operator">!==</span> day <span class="token operator">||</span> <span class="token operator">!</span>s<span class="token punctuation">.</span>range<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">      <span class="token punctuation">[</span>updateTable<span class="token punctuation">,</span> tableId<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token operator">&lt;</span>TableGrid onScheduleTimeClick<span class="token operator">=</span><span class="token punctuation">{</span>handleScheduleTimeClock<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token punctuation">{</span>schedules<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>schedule<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span>DraggableSchedule
+</span><span class="code-line">          key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>schedule<span class="token punctuation">.</span>lecture<span class="token punctuation">.</span>title<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">          id<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tableId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">          data<span class="token operator">=</span><span class="token punctuation">{</span>schedule<span class="token punctuation">}</span>
+</span><span class="code-line">          bg<span class="token operator">=</span><span class="token punctuation">{</span><span class="token function">getColor</span><span class="token punctuation">(</span>schedule<span class="token punctuation">.</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">          onDeleteButtonClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>schedule<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleDeleteSchedule</span><span class="token punctuation">(</span>schedule<span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">        <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="    const onScheduleTimeClick = useCallback(
+      (timeInfo: { day: string; time: number }) =&gt; openSearch(tableId, timeInfo.day, timeInfo.time),
+      [openSearch, tableId],
+    );
+
+
+    const onDeleteButtonClick = useCallback(
+      ({ day, time }: { day: string; time: number }) =&gt;
+        updateTable(tableId, (prev) =&gt;
+          prev.filter((s) =&gt; s.day !== day || !s.range.includes(time)),
+        ),
+      [updateTable, tableId],
+    );
+
+      &lt;TableGrid onScheduleTimeClick={handleScheduleTimeClock} /&gt;
+
+      {schedules.map((schedule, index) =&gt; (
+        &lt;DraggableSchedule
+          key={`${schedule.lecture.title}-${index}`}
+          id={`${tableId}:${index}`}
+          data={schedule}
+          bg={getColor(schedule.lecture.id)}
+          onDeleteButtonClick={(schedule) =&gt; handleDeleteSchedule(schedule)}
+        /&gt;
+      ))}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>매번 다시 생성할 필요가 없는 함수들을 useCallback을 통해 메모이제이션 해줍니다.</p>
+<h3 id="reactmemo"><a class="anchor" aria-hidden="true" tabindex="-1" href="#reactmemo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>React.memo</h3>
+<p>memo를 통한 컴포넌트 최적화는 사실 이전까지는 많이 간과했던 부분입니다.
+과제를 통해 memo를 통한 최적화의 유용성을 체감했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">                  <span class="token operator">&lt;</span>Tbody<span class="token operator">&gt;</span>
+</span><span class="code-line">                    <span class="token punctuation">{</span>visibleLectures<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>lecture<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">                      <span class="token operator">&lt;</span>Tr key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>lecture<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;100px&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;50px&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>grade<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;200px&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;50px&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>credits<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;150px&quot;</span> dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token operator">:</span> lecture<span class="token punctuation">.</span>major <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;150px&quot;</span> dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token operator">:</span> lecture<span class="token punctuation">.</span>schedule <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span>Td width<span class="token operator">=</span><span class="token string">&quot;80px&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">                          <span class="token operator">&lt;</span>Button size<span class="token operator">=</span><span class="token string">&quot;sm&quot;</span> colorScheme<span class="token operator">=</span><span class="token string">&quot;green&quot;</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">addSchedule</span><span class="token punctuation">(</span>lecture<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>추가<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+</span><span class="code-line">                        <span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">                      <span class="token operator">&lt;</span><span class="token operator">/</span>Tr<span class="token operator">&gt;</span>
+</span><span class="code-line">                    <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">                  <span class="token operator">&lt;</span><span class="token operator">/</span>Tbody<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="                  &lt;Tbody&gt;
+                    {visibleLectures.map((lecture, index) =&gt; (
+                      &lt;Tr key={`${lecture.id}-${index}`}&gt;
+                        &lt;Td width=&quot;100px&quot;&gt;{lecture.id}&lt;/Td&gt;
+                        &lt;Td width=&quot;50px&quot;&gt;{lecture.grade}&lt;/Td&gt;
+                        &lt;Td width=&quot;200px&quot;&gt;{lecture.title}&lt;/Td&gt;
+                        &lt;Td width=&quot;50px&quot;&gt;{lecture.credits}&lt;/Td&gt;
+                        &lt;Td width=&quot;150px&quot; dangerouslySetInnerHTML={{ __html: lecture.major }}/&gt;
+                        &lt;Td width=&quot;150px&quot; dangerouslySetInnerHTML={{ __html: lecture.schedule }}/&gt;
+                        &lt;Td width=&quot;80px&quot;&gt;
+                          &lt;Button size=&quot;sm&quot; colorScheme=&quot;green&quot; onClick={() =&gt; addSchedule(lecture)}&gt;추가&lt;/Button&gt;
+                        &lt;/Td&gt;
+                      &lt;/Tr&gt;
+                    ))}
+                  &lt;/Tbody&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> SearchItem <span class="token operator">=</span> <span class="token function">memo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> lecture<span class="token punctuation">,</span> addSchedule <span class="token punctuation">}</span><span class="token operator">:</span> SearchItemProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>tr style<span class="token operator">=</span><span class="token punctuation">{</span>tableRowStyles<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;100px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;50px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>grade<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;200px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;50px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>credits<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td
+</span><span class="code-line">        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;150px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span><span class="code-line">        dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token operator">:</span> lecture<span class="token punctuation">.</span>major <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td
+</span><span class="code-line">        style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;150px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span><span class="code-line">        dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token operator">:</span> lecture<span class="token punctuation">.</span>schedule <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;80px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span>Button size<span class="token operator">=</span><span class="token string">&quot;sm&quot;</span> colorScheme<span class="token operator">=</span><span class="token string">&quot;green&quot;</span> onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">addSchedule</span><span class="token punctuation">(</span>lecture<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">          추가
+</span><span class="code-line">        <span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">SearchItem<span class="token punctuation">.</span>displayName <span class="token operator">=</span> <span class="token string">&quot;SearchItem&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token operator">...</span>
+</span><span class="code-line">                  <span class="token operator">&lt;</span>Tbody<span class="token operator">&gt;</span>
+</span><span class="code-line">                    <span class="token punctuation">{</span>visibleLectures<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>lecture<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">                      <span class="token operator">&lt;</span>SearchItem
+</span><span class="code-line">                        key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>lecture<span class="token punctuation">.</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">                        lecture<span class="token operator">=</span><span class="token punctuation">{</span>lecture<span class="token punctuation">}</span>
+</span><span class="code-line">                        addSchedule<span class="token operator">=</span><span class="token punctuation">{</span>addSchedule<span class="token punctuation">}</span>
+</span><span class="code-line">                      <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">                    <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">                  <span class="token operator">&lt;</span><span class="token operator">/</span>Tbody<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="const SearchItem = memo(({ lecture, addSchedule }: SearchItemProps) =&gt; {
+  return (
+    &lt;tr style={tableRowStyles}&gt;
+      &lt;td style={{ ...tableCellStyles, width: &quot;100px&quot; }}&gt;{lecture.id}&lt;/td&gt;
+      &lt;td style={{ ...tableCellStyles, width: &quot;50px&quot; }}&gt;{lecture.grade}&lt;/td&gt;
+      &lt;td style={{ ...tableCellStyles, width: &quot;200px&quot; }}&gt;{lecture.title}&lt;/td&gt;
+      &lt;td style={{ ...tableCellStyles, width: &quot;50px&quot; }}&gt;{lecture.credits}&lt;/td&gt;
+      &lt;td
+        style={{ ...tableCellStyles, width: &quot;150px&quot; }}
+        dangerouslySetInnerHTML={{ __html: lecture.major }}
+      /&gt;
+      &lt;td
+        style={{ ...tableCellStyles, width: &quot;150px&quot; }}
+        dangerouslySetInnerHTML={{ __html: lecture.schedule }}
+      /&gt;
+      &lt;td style={{ ...tableCellStyles, width: &quot;80px&quot; }}&gt;
+        &lt;Button size=&quot;sm&quot; colorScheme=&quot;green&quot; onClick={() =&gt; addSchedule(lecture)}&gt;
+          추가
+        &lt;/Button&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  );
+});
+
+SearchItem.displayName = &quot;SearchItem&quot;;
+
+...
+                  &lt;Tbody&gt;
+                    {visibleLectures.map((lecture, index) =&gt; (
+                      &lt;SearchItem
+                        key={`${lecture.id}-${index}`}
+                        lecture={lecture}
+                        addSchedule={addSchedule}
+                      /&gt;
+                    ))}
+                  &lt;/Tbody&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>memo는 props가 변화하지 않는다면 메모이제이션으로 리렌더링하지 않도록 합니다.
+이 컴포넌트에 영향을 끼치지 않는 값의 변경으로 컴포넌트가 리렌더링되는 것을 방지합니다.</p>
+<p>이때 props가 변화하지 않는다는 조건을 통해 해야하는 작업이 있습니다.
+prop에 들어가는 computed값이나 함수들의 경우 useMemo나 useCallback을 통해 메모이제이션을 해야합니다.</p>
+<ul>
+<li>memo할 컴포넌트를 판단</li>
+<li>분리 후 메모이제이션</li>
+<li>props에 포함된 함수들에 대한 메모이제이션</li>
+</ul>
+<p>이런 작업 흐름을 익힐 수 있었습니다.</p>
+<h3 id="네이티브"><a class="anchor" aria-hidden="true" tabindex="-1" href="#네이티브"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>네이티브</h3>
+<p>UI 라이브러리 컴포넌트 대신 브라우저 네이티브 태그를 사용했습니다.
+필요한 최소한의 스타일만 직접 지정해 렌더링 오버헤드를 줄였습니다.</p>
+<p>반복 렌더가 매우 많은 영역(테이블/그리드/셀)에 우선 적용했습니다.
+적용 기준</p>
+<ul>
+<li>반복 렌더 수가 많고 구조가 고정된 영역</li>
+<li>스타일 계산이 단순하고 재사용 비용이 낮은 영역</li>
+<li>접근성 요구가 단순하거나 직접 제어 가능한 영역</li>
+</ul>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token operator">&lt;</span>Tr<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>Td<span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>Td<span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Td<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">{</span><span class="token comment">/* ... */</span><span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>Tr<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="&lt;Tr&gt;
+  &lt;Td&gt;{lecture.id}&lt;/Td&gt;
+  &lt;Td&gt;{lecture.title}&lt;/Td&gt;
+  {/* ... */}
+&lt;/Tr&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token operator">&lt;</span>tr style<span class="token operator">=</span><span class="token punctuation">{</span>tableRowStyles<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;100px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>td style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token operator">...</span>tableCellStyles<span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">&quot;200px&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>td<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">{</span><span class="token comment">/* ... */</span><span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>tr<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="&lt;tr style={tableRowStyles}&gt;
+  &lt;td style={{ ...tableCellStyles, width: &quot;100px&quot; }}&gt;{lecture.id}&lt;/td&gt;
+  &lt;td style={{ ...tableCellStyles, width: &quot;200px&quot; }}&gt;{lecture.title}&lt;/td&gt;
+  {/* ... */}
+&lt;/tr&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="context-범위를-통한-리렌더링-방지-및-전파"><a class="anchor" aria-hidden="true" tabindex="-1" href="#context-범위를-통한-리렌더링-방지-및-전파"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>context 범위를 통한 리렌더링 방지 및 전파</h3>
+<p>단일 컨텍스트에 상태와 액션을 함께 넣으면, 액션만 쓰는 컴포넌트도 상태 변경마다 리렌더링됩니다.
+이를 피하기 위해 상태와 액션 컨텍스트를 분리하고, Provider value를 useMemo로 고정해 전파 범위를 최소화했습니다.</p>
+<ul>
+<li>상태 컨텍스트: 상태를 읽는 컴포넌트만 구독</li>
+<li>액션 컨텍스트: 업데이트 함수만 제공, 상태 변경에 재구독되지 않음</li>
+<li>테이블 단위 업데이트: 특정 tableId 배열만 새 참조로 교체, 나머지는 참조 보존</li>
+</ul>
+<h3 id="컨텍스트-분리와-provider-구성"><a class="anchor" aria-hidden="true" tabindex="-1" href="#컨텍스트-분리와-provider-구성"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>컨텍스트 분리와 Provider 구성</h3>
+<p>드래그/드롭 시 비활성 카드까지 리렌더되는 문제를 줄이기 위해 DnD 구독 범위를 카드 단위로 축소하고, 드롭 처리에서도 해당 테이블만 부분 업데이트하도록 변경했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">    <span class="token operator">&lt;</span>ChakraProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>ScheduleProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">          <span class="token operator">&lt;</span>ScheduleTables<span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span><span class="token operator">/</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span>ScheduleProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>ChakraProvider<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="    &lt;ChakraProvider&gt;
+      &lt;ScheduleProvider&gt;
+        &lt;ScheduleDndProvider&gt;
+          &lt;ScheduleTables/&gt;
+        &lt;/ScheduleDndProvider&gt;
+      &lt;/ScheduleProvider&gt;
+    &lt;/ChakraProvider&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">        <span class="token operator">&lt;</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">          <span class="token operator">&lt;</span>ScheduleTable
+</span><span class="code-line">            key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">schedule-table-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tableId<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">}</span>
+</span><span class="code-line">            schedules<span class="token operator">=</span><span class="token punctuation">{</span>schedules<span class="token punctuation">}</span>
+</span><span class="code-line">            tableId<span class="token operator">=</span><span class="token punctuation">{</span>tableId<span class="token punctuation">}</span>
+</span><span class="code-line">            onScheduleTimeClick<span class="token operator">=</span><span class="token punctuation">{</span>onScheduleTimeClick<span class="token punctuation">}</span>
+</span><span class="code-line">            onDeleteButtonClick<span class="token operator">=</span><span class="token punctuation">{</span>onDeleteButtonClick<span class="token punctuation">}</span>
+</span><span class="code-line">          <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span><span class="token operator">/</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="        &lt;ScheduleDndProvider&gt;
+          &lt;ScheduleTable
+            key={`schedule-table-${tableId}`}
+            schedules={schedules}
+            tableId={tableId}
+            onScheduleTimeClick={onScheduleTimeClick}
+            onDeleteButtonClick={onDeleteButtonClick}
+          /&gt;
+        &lt;/ScheduleDndProvider&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>테이블별로 각각의 context를 형성하게 합니다.
+그럼으로써 독립적으로 상태에 의존하고 다른 컨텍스트의 상태 변화에 다른 컨텍스트를 가진 테이블이 리렌더링하는 동작을 방지해줍니다.</p>
+<p>Provider 환경에서 state 컨텍스트와 action 컨텍스트를 분리하여 action 컨텍스트만 구독하는 방식으로 최적화를 이뤄낸 것도 새로운 발견이었습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> createContext<span class="token punctuation">,</span> useContext<span class="token punctuation">,</span> useMemo<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> Schedule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./types&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">type</span> <span class="token class-name">SchedulesMap</span> <span class="token operator">=</span> Record<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token punctuation">,</span> Schedule<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">interface</span> <span class="token class-name">ScheduleContextType</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  schedulesMap<span class="token operator">:</span> SchedulesMap<span class="token punctuation">;</span>
+</span><span class="code-line">  setSchedulesMap<span class="token operator">:</span> React<span class="token punctuation">.</span>Dispatch<span class="token operator">&lt;</span>React<span class="token punctuation">.</span>SetStateAction<span class="token operator">&lt;</span>SchedulesMap<span class="token operator">&gt;&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function-variable function">duplicate</span><span class="token operator">:</span> <span class="token punctuation">(</span>tableId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function-variable function">remove</span><span class="token operator">:</span> <span class="token punctuation">(</span>tableId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> ScheduleContext <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span>ScheduleContextType <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">useScheduleContext</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> ctx <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>ScheduleContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ctx<span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;useScheduleContext must be used within a ScheduleProvider&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> ctx<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> ScheduleProvider<span class="token operator">:</span> React<span class="token punctuation">.</span><span class="token constant">FC</span><span class="token operator">&lt;</span>React<span class="token punctuation">.</span>PropsWithChildren<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>schedulesMap<span class="token punctuation">,</span> setSchedulesMap<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>SchedulesMap<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">duplicate</span> <span class="token operator">=</span> <span class="token punctuation">(</span>tableId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setSchedulesMap</span><span class="token punctuation">(</span>prev <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>prev<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;schedule-&quot;</span> <span class="token operator">+</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">(</span>prev<span class="token punctuation">[</span>tableId<span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">remove</span> <span class="token operator">=</span> <span class="token punctuation">(</span>tableId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setSchedulesMap</span><span class="token punctuation">(</span>prev <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> copy <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>prev <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">delete</span> copy<span class="token punctuation">[</span>tableId<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">return</span> copy<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> schedulesMap<span class="token punctuation">,</span> setSchedulesMap<span class="token punctuation">,</span> duplicate<span class="token punctuation">,</span> remove <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">[</span>schedulesMap<span class="token punctuation">,</span> duplicate<span class="token punctuation">,</span> remove<span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token operator">&lt;</span>ScheduleContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>ScheduleContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="import React, { createContext, useContext, useMemo, useState } from &quot;react&quot;;
+import { Schedule } from &quot;./types&quot;;
+
+type SchedulesMap = Record&lt;string, Schedule[]&gt;;
+
+interface ScheduleContextType {
+  schedulesMap: SchedulesMap;
+  setSchedulesMap: React.Dispatch&lt;React.SetStateAction&lt;SchedulesMap&gt;&gt;;
+  duplicate: (tableId: string) =&gt; void;
+  remove: (tableId: string) =&gt; void;
+}
+
+const ScheduleContext = createContext&lt;ScheduleContextType | undefined&gt;(undefined);
+
+export const useScheduleContext = () =&gt; {
+  const ctx = useContext(ScheduleContext);
+  if (!ctx) throw new Error(&quot;useScheduleContext must be used within a ScheduleProvider&quot;);
+  return ctx;
+};
+
+export const ScheduleProvider: React.FC&lt;React.PropsWithChildren&gt; = ({ children }) =&gt; {
+  const [schedulesMap, setSchedulesMap] = useState&lt;SchedulesMap&gt;({});
+
+  const duplicate = (tableId: string) =&gt; {
+    setSchedulesMap(prev =&gt; ({ ...prev, [&quot;schedule-&quot; + Date.now()]: [...(prev[tableId] ?? [])] }));
+  };
+
+  const remove = (tableId: string) =&gt; {
+    setSchedulesMap(prev =&gt; {
+      const copy = { ...prev };
+      delete copy[tableId];
+      return copy;
+    });
+  };
+
+  const value = useMemo(
+    () =&gt; ({ schedulesMap, setSchedulesMap, duplicate, remove }),
+    [schedulesMap, duplicate, remove],
+  );
+
+  return &lt;ScheduleContext.Provider value={value}&gt;{children}&lt;/ScheduleContext.Provider&gt;;
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> useScheduleContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;./ScheduleContext&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">ScheduleDndProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token operator">:</span> <span class="token punctuation">{</span> children<span class="token operator">:</span> React<span class="token punctuation">.</span>ReactNode <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> setSchedulesMap <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useScheduleContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 상태+액션 컨텍스트 전체 구독 → schedulesMap 변경마다 재렌더</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token comment">// ...</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="import { useScheduleContext } from &quot;./ScheduleContext&quot;;
+
+export default function ScheduleDndProvider({ children }: { children: React.ReactNode }) {
+  const { setSchedulesMap } = useScheduleContext(); // 상태+액션 컨텍스트 전체 구독 → schedulesMap 변경마다 재렌더
+
+  // ...
+  return &lt;div&gt;{children}&lt;/div&gt;;
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>변경후</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">const</span> ScheduleStateContext <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span>ScheduleStateContextType <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> ScheduleActionsContext <span class="token operator">=</span> <span class="token generic-function"><span class="token function">createContext</span><span class="token generic class-name"><span class="token operator">&lt;</span>ScheduleActionsContextType <span class="token operator">|</span> <span class="token keyword">undefined</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">useScheduleState</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>ScheduleStateContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>context <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;useScheduleState must be used within a ScheduleProvider&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> context<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">useScheduleActions</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> context <span class="token operator">=</span> <span class="token function">useContext</span><span class="token punctuation">(</span>ScheduleActionsContext<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>context <span class="token operator">===</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;useScheduleActions must be used within a ScheduleProvider&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">  <span class="token keyword">return</span> context<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const ScheduleStateContext = createContext&lt;ScheduleStateContextType | undefined&gt;(undefined);
+const ScheduleActionsContext = createContext&lt;ScheduleActionsContextType | undefined&gt;(undefined);
+
+export const useScheduleState = () =&gt; {
+  const context = useContext(ScheduleStateContext);
+  if (context === undefined) {
+    throw new Error(&quot;useScheduleState must be used within a ScheduleProvider&quot;);
+  }
+  return context;
+};
+
+export const useScheduleActions = () =&gt; {
+  const context = useContext(ScheduleActionsContext);
+  if (context === undefined) {
+    throw new Error(&quot;useScheduleActions must be used within a ScheduleProvider&quot;);
+  }
+  return context;
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">ScheduleDndProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> children <span class="token punctuation">}</span><span class="token operator">:</span> PropsWithChildren<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> setSchedulesMap <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useScheduleActions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="export default function ScheduleDndProvider({ children }: PropsWithChildren) {
+  const { setSchedulesMap } = useScheduleActions();
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h3>
+<!-- -->
+<p>최적화를 하는 워크플로우에 익숙해지고자 했습니다.</p>
+<ul>
+<li>문제를 인식</li>
+<li>성능 측정</li>
+<li>도구를 이용해 문제가 되는 지점을 파악</li>
+<li>해결 수 다시 성능 측정</li>
+<li>장기적인 레퍼런스 및 지표로 사용</li>
+</ul>
+<p>코딩을 하고 다음 이슈를 빨리 해결하는 과정에서 단순히 눈에 의존하고 위와 같은 절차를 지나치게 됩니다.
+이런 과정을 하고자 하는 의지는 있었지만 실천을 하진 않았습니다.</p>
+<img width="887" height="717" alt="Pasted image 20250910150740" src="https://github.com/user-attachments/assets/3f712def-3938-4a24-9c15-fb4657efa1e6"/>
+<p>콘솔, 프로파일러를 통한 성능 측정을 하는것을 학습했습니다.
+그 과정에서 어느 부분에 문제가 생기는지 어떻게 측정하고 결과값을 어떻게 봐야 하는지 알았습니다.</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>두현님 벌써 10주차가 지나갔습니다.
+회고문서도 잘 작성해주셨고 과제도 잘 해주셨네요!
+수고 많으셨습니다.
+앞으로 항상 좋은 일만 가득하길 빌게요!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

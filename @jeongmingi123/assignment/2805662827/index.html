@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+    <title>[2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 - 정민기 | 항해플러스 프론트엔드 6기</title>
+    <meta name="description" content=" [항해플러스 프론트엔드 6기] 정민기님이 제출한 [2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="keywords" content="항해플러스, 프론트엔드, 개발자교육, React, TypeScript, JavaScript, 기술면접, 웹개발, 정민기, [2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화, 과제상세, 코드리뷰, 피드백, Pull Request" />
+    <meta property="og:title" content="[2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 - 정민기 | 항해플러스 프론트엔드 6기" />
+    <meta property="og:description" content=" [항해플러스 프론트엔드 6기] 정민기님이 제출한 [2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta property="og:image" content="/defaultThumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 - 정민기 | 항해플러스 프론트엔드 6기" />
+    <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 정민기님이 제출한 [2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="twitter:image" content="/defaultThumbnail.jpg" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
+  <script type="module" crossorigin src="/front_6th/assets/index-B12XiTr6.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@jeongmingi123/" data-discover="true">jeongmingi123<!-- --> 님의 상세페이지</a> ＞ <!-- -->[2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-2/pull/1" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[2팀 정민기] Chapter 4-2 코드 관점의 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->jeongmingi123</span><span>2025. 9. 7.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h1>
+<h2 id="과제-요구사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-요구사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 요구사항</h2>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 배포 후 url 제출
+<a href="https://jeongmingi123.github.io/front_6th_chapter4-2/">https://jeongmingi123.github.io/front_6th_chapter4-2/</a></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> API 호출 최적화(<code>Promise.all</code> 이해)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 연산 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 리렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드래그시 렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드롭시 렌더링 최적화</p>
+</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<p>이전에 react에서 props 얕은 비교를 어떻게 하는지, 3주차에서 공부했던 부분이 정말 도움이 많이 되었던거같다.
+<a href="https://github.com/jeongmingi123/front_6th_chapter1-3/issues/5">https://github.com/jeongmingi123/front_6th_chapter1-3/issues/5</a></p>
+<p>최적화 방식에 여러 방식이 있지만 useMemo, useCallback, memo와 같은 함수를 이전에 어떻게 비교하는지 몰라서 프로젝트를 할 때마다
+최적화를 어떻게 해야할까 고민이 많았다. 얕은 비교에 대한 개념이 많이 부족했지만, 이전에 공부했던게 도움이 많이 되었던 것 같다.</p>
+<h2 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h2>
+<!-- -->
+<h3 id="promiseall을-다시-보게-되었다"><a class="anchor" aria-hidden="true" tabindex="-1" href="#promiseall을-다시-보게-되었다"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Promise.all을 다시 보게 되었다..</h3>
+<p>Promise.all은 여러 프로미스를 동시에 실행하고, 모든 프로미스가 성공(fulfilled)할 때까지 기다림.</p>
+<ol>
+<li>인자: 프로미스들의 배열을 받습니다. 배열의 요소가 프로미스가 아니면 Promise.resolve()로 변환됩니다.</li>
+<li>성공: 배열의 모든 프로미스가 성공하면, 그 결과들을 원래 순서 그대로 담은 배열로 반환(resolve)합니다.</li>
+<li>실패: 하나라도 프로미스가 실패(rejected)하면, 가장 먼저 발생한 실패 이유를 즉시 반환(reject)합니다.</li>
+<li>병렬성: 모든 작업을 동시에 시작하기 때문에, 총 소요 시간은 가장 오래 걸리는 작업의 시간과 동일합니다.</li>
+</ol>
+<h3 id="문제점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#문제점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>문제점</h3>
+<p>제공된 fetchAllLectures 함수는 Promise.all을 사용했음에도 다음과 같은 문제가 있습니다.</p>
+<ol>
+<li>직렬 실행
+await 키워드가 배열 내부의 각 항목에 사용되고 있습니다.</li>
+</ol>
+<p>이로 인해 Promise.all이 시작되기도 전에 각 API 호출이 순차적으로(직렬로) 완료될 때까지 기다리게 되어, Promise.all의 병렬 처리 장점이 사라짐</p>
+<ol start="2">
+<li>중복 API 호출
+동일한 API 호출(fetchMajors, fetchLiberalArts)이 각각 3번씩 반복됨 이는 네트워크 자원을 낭비하고, 서버에 불필요한 부하를 주며, 전체 응답 시간을 지연시킴</li>
+</ol>
+<h2 id="코드-품질"><a class="anchor" aria-hidden="true" tabindex="-1" href="#코드-품질"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>코드 품질</h2>
+<!-- -->
+<p>리렌더링을 방지하기 위해 렌더링이 많이 되는 부분을 먼저 체크하고, 렌더링이 자주 발생하는 부분을 잘개 쪼갠거같습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line">    <span class="token operator">&lt;</span>VStack spacing<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">}</span> align<span class="token operator">=</span><span class="token string">&quot;stretch&quot;</span><span class="token operator">&gt;</span>
+</span><span class="code-line">            <span class="token operator">&lt;</span>HStack spacing<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>SearchInput
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>query <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleQueryChange<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>CreditsSelect
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>credits <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleCreditsChange<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">            <span class="token operator">&lt;</span><span class="token operator">/</span>HStack<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">            <span class="token operator">&lt;</span>HStack spacing<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>GradeFilter
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>grades<span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleGradeChange<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>DayFilter
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>days<span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleDayChange<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">            <span class="token operator">&lt;</span><span class="token operator">/</span>HStack<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">            <span class="token operator">&lt;</span>HStack spacing<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>TimeFilter
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>times<span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleTimeChange<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">              <span class="token operator">&lt;</span>SearchControls<span class="token punctuation">.</span>MajorFilter
+</span><span class="code-line">                value<span class="token operator">=</span><span class="token punctuation">{</span>searchOptions<span class="token punctuation">.</span>majors<span class="token punctuation">}</span>
+</span><span class="code-line">                onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleMajorChange<span class="token punctuation">}</span>
+</span><span class="code-line">                allMajors<span class="token operator">=</span><span class="token punctuation">{</span>allMajors<span class="token punctuation">}</span>
+</span><span class="code-line">              <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">            <span class="token operator">&lt;</span><span class="token operator">/</span>HStack<span class="token operator">&gt;</span>
+</span></code><div class="copied" data-code="    &lt;VStack spacing={4} align=&quot;stretch&quot;&gt;
+            &lt;HStack spacing={4}&gt;
+              &lt;SearchControls.SearchInput
+                value={searchOptions.query || &quot;&quot;}
+                onChange={handleQueryChange}
+              /&gt;
+              &lt;SearchControls.CreditsSelect
+                value={searchOptions.credits || &quot;&quot;}
+                onChange={handleCreditsChange}
+              /&gt;
+            &lt;/HStack&gt;
+
+            &lt;HStack spacing={4}&gt;
+              &lt;SearchControls.GradeFilter
+                value={searchOptions.grades}
+                onChange={handleGradeChange}
+              /&gt;
+              &lt;SearchControls.DayFilter
+                value={searchOptions.days}
+                onChange={handleDayChange}
+              /&gt;
+            &lt;/HStack&gt;
+
+            &lt;HStack spacing={4}&gt;
+              &lt;SearchControls.TimeFilter
+                value={searchOptions.times}
+                onChange={handleTimeChange}
+              /&gt;
+              &lt;SearchControls.MajorFilter
+                value={searchOptions.majors}
+                onChange={handleMajorChange}
+                allMajors={allMajors}
+              /&gt;
+            &lt;/HStack&gt;
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>비슷한 컴포넌트들을 Modal Filter 부분을 SearchControls 하나로 묶어서 관리하여 좀더 가독성을 높인거같습니다.</p>
+<h2 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h2>
+<!-- -->
+<p>Intersection Observer에 대해 몰랐는데, 무한 스크롤중 성능 저하가 되었고, 과제 발제자료중 해당 부분을 찾아봤고, 처음 알게되어 내용을 정리했음.</p>
+<h3 id="intersection-observer를-활용한-스크롤-성능-최적화"><a class="anchor" aria-hidden="true" tabindex="-1" href="#intersection-observer를-활용한-스크롤-성능-최적화"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Intersection Observer를 활용한 스크롤 성능 최적화</h3>
+<p>Intersection Observer는 특정 요소가 뷰포트(브라우저 화면)에 노출되었는지 여부를 비동기적으로 감지하는 JavaScript API입니다. 이 API는 스크롤 이벤트 리스너를 직접 사용하는 것보다 훨씬 효율적으로 스크롤 성능을 최적화하는 데 사용됨.</p>
+<h3 id="스크롤-이벤트-사용의-문제점"><a class="anchor" aria-hidden="true" tabindex="-1" href="#스크롤-이벤트-사용의-문제점"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>스크롤 이벤트 사용의 문제점</h3>
+<p>일반적으로 스크롤을 감지하여 특정 작업을 수행할 때 scroll 이벤트 리스너를 사용함.</p>
+<ol>
+<li>빈번한 이벤트 발생: 스크롤은 매우 짧은 시간 안에 수십, 수백 번 발생할 수 있음.</li>
+<li>잦은 계산: 이벤트가 발생할 때마다 getBoundingClientRect() 같은 메서드로 요소의 위치를 계산하면, **레이아웃 스래싱(Layout Thrashing)**이 발생하여 렌더링 성능이 저하됨.</li>
+</ol>
+<h3 id="intersection-observer의-해결책"><a class="anchor" aria-hidden="true" tabindex="-1" href="#intersection-observer의-해결책"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Intersection Observer의 해결책</h3>
+<p>Intersection Observer는 스크롤 이벤트 자체를 직접 관찰하지 않음. 대신, 요소의 교차 상태 변화에 대한 콜백 함수를 한 번만 등록해 두면 시스템이 자동으로 효율적으로 처리함.</p>
+<ol>
+<li>비동기 처리: 메인 스레드에서 분리되어 비동기적으로 동작하므로 렌더링 성능에 영향을 주지 않음.</li>
+<li>콜백 호출: 콜백 함수는 요소가 뷰포트에 진입하거나 이탈할 때만 호출됨. 이 덕분에 불필요한 연산을 대폭 줄일 수 있음.</li>
+</ol>
+<h3 id="주요-활용-사례"><a class="anchor" aria-hidden="true" tabindex="-1" href="#주요-활용-사례"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>주요 활용 사례</h3>
+<ol>
+<li>지연 로딩 (Lazy Loading): 이미지가 화면에 보일 때만 로드하여 초기 로딩 시간을 단축함.</li>
+<li>무한 스크롤: 페이지 하단에 도달했을 때 다음 콘텐츠를 자동으로 불러옴.</li>
+<li>애니메이션 효과: 특정 요소가 화면에 나타날 때만 애니메이션을 실행함.</li>
+</ol>
+<h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<!-- -->
+<p>공유해주신 코드 관점의 성능 최적화 사례의 부분이 많은 도움이 된거같습니다.
+<a href="https://www.notion.so/10-3-21b2dc3ef514805bb2d1f90028280f32?source=copy_link">https://www.notion.so/10-3-21b2dc3ef514805bb2d1f90028280f32?source=copy_link</a>
+최적화를 어떻게 진행해야할지, 어떤식으로 해야할지 고민이 많았는데 해당글 보면서 많은 도움이 되었던거 같습니다.</p>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<p>안녕하세요 첫번쨰 코드와 두번째 코드 질문이있습니다. 매우 단순한 코드인데 궁금한 부분이 있어 코드 첨부드립니다.</p>
+<p>첫번째 코드</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token keyword">const</span> CreditsSelect <span class="token operator">=</span> <span class="token function">memo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> value<span class="token punctuation">,</span> onChange <span class="token punctuation">}</span><span class="token operator">:</span> CreditsSelectProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>FormLabel<span class="token operator">&gt;</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>FormLabel<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token operator">&lt;</span>Select value<span class="token operator">=</span><span class="token punctuation">{</span>value <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>전체<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token operator">&gt;</span><span class="token number">1</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;2&quot;</span><span class="token operator">&gt;</span><span class="token number">2</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;3&quot;</span><span class="token operator">&gt;</span><span class="token number">3</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span>Select<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const CreditsSelect = memo(({ value, onChange }: CreditsSelectProps) =&gt; {
+  return (
+    &lt;FormControl&gt;
+      &lt;FormLabel&gt;학점&lt;/FormLabel&gt;
+
+      &lt;Select value={value || &quot;&quot;} onChange={(e) =&gt; onChange(e.target.value)}&gt;
+        &lt;option value=&quot;&quot;&gt;전체&lt;/option&gt;
+
+        &lt;option value=&quot;1&quot;&gt;1학점&lt;/option&gt;
+
+        &lt;option value=&quot;2&quot;&gt;2학점&lt;/option&gt;
+
+        &lt;option value=&quot;3&quot;&gt;3학점&lt;/option&gt;
+      &lt;/Select&gt;
+    &lt;/FormControl&gt;
+  );
+});
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>두번째 코드</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token keyword">const</span> CreditsSelect <span class="token operator">=</span> <span class="token function">memo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> value<span class="token punctuation">,</span> onChange <span class="token punctuation">}</span><span class="token operator">:</span> CreditsSelectProps<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token function-variable function">handleChange</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> React<span class="token punctuation">.</span>ChangeEvent<span class="token operator">&lt;</span>HTMLSelectElement<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">onChange</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>FormLabel<span class="token operator">&gt;</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>FormLabel<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token operator">&lt;</span>Select value<span class="token operator">=</span><span class="token punctuation">{</span>value <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">}</span> onChange<span class="token operator">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>전체<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token operator">&gt;</span><span class="token number">1</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;2&quot;</span><span class="token operator">&gt;</span><span class="token number">2</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token operator">&lt;</span>option value<span class="token operator">=</span><span class="token string">&quot;3&quot;</span><span class="token operator">&gt;</span><span class="token number">3</span>학점<span class="token operator">&lt;</span><span class="token operator">/</span>option<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span><span class="token operator">/</span>Select<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const CreditsSelect = memo(({ value, onChange }: CreditsSelectProps) =&gt; {
+  const handleChange = (e: React.ChangeEvent&lt;HTMLSelectElement&gt;) =&gt; {
+    onChange(e.target.value);
+  };
+
+  return (
+    &lt;FormControl&gt;
+      &lt;FormLabel&gt;학점&lt;/FormLabel&gt;
+
+      &lt;Select value={value || &quot;&quot;} onChange={handleChange}&gt;
+        &lt;option value=&quot;&quot;&gt;전체&lt;/option&gt;
+
+        &lt;option value=&quot;1&quot;&gt;1학점&lt;/option&gt;
+
+        &lt;option value=&quot;2&quot;&gt;2학점&lt;/option&gt;
+
+        &lt;option value=&quot;3&quot;&gt;3학점&lt;/option&gt;
+      &lt;/Select&gt;
+    &lt;/FormControl&gt;
+  );
+});
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>인라인 화살표함수랑, handle 함수로 묶었을 때 궁금한 부분이 있습니다.</p>
+<p>첫번째 코드 인라인 함수의 경우 컴포넌트가 렌더링될 때마다 새로운 화살표 함수를 생성해서 onChange prop으로 전달함.
+두번째 코드는 handleChange라는 별도의 함수를 정의하고, onChange prop에 함수 자체의 참조를 전달함. 컴포넌트가 리렌더링되어도 handleChange 함수는 다시 생성되지 않고, 동일한 함수를 참조하게 되어 memo를 했을 때, 리렌더링이 안됨.</p>
+<p>제가 첫번째 코드와 두번째 코드를 이해한게 맞을까요.? 그리고 두번째 코드의 경우 인라인 함수로 작성을 하게되면, 렌더링될 때마다 새로운 함수 생성이 되어, 불필요하게 리렌더링이 발생하는거같습니다. 그러면 이렇게 인라인 함수를 작성하지 않고, 위에처럼 handle 함수로 만드는게 좋을까요?</p></div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>안녕하세요 민기님! 10주차 과제 잘 진행해주셨네요 ㅎㅎ 고생하셨습니다!!</p>
+<p>--</p>
+<p>안녕하세요 민기님! 10주차 과제 잘 진행해주셨네요 ㅎㅎ 고생하셨습니다!!</p>
+<p>심화과제의 경우 지금 drop을 했을 때 전체적으로 렌더링이 다시 발생하고 있어요..! 이 부분만 잘 개선해주시면 좋았을 것 같네요.. ㅠㅠ 아쉽지만 불합격으로 남겨놓도록 하겠습니다..</p>
+<p>그리고 질문에 대한 답변을 드리자면,
+handleChange로 함수를 정의하여도 함수가 렌더링 되면서 결국 새로운 메모리에 함수가 할당된답니다 ㅎㅎ
+참조를 유지하고 싶다면 메모이제이션을 해야해요!</p>
+<p>결국, 메모이제이션을 해주지 않으면 두 코드의 동작은 큰 차이가 없답니다..!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

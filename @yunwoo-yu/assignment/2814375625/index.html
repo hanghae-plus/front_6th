@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+    <title>[2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 - 유윤우 | 항해플러스 프론트엔드 6기</title>
+    <meta name="description" content=" [항해플러스 프론트엔드 6기] 유윤우님이 제출한 [2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="keywords" content="항해플러스, 프론트엔드, 개발자교육, React, TypeScript, JavaScript, 기술면접, 웹개발, 유윤우, [2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화, 과제상세, 코드리뷰, 피드백, Pull Request" />
+    <meta property="og:title" content="[2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 - 유윤우 | 항해플러스 프론트엔드 6기" />
+    <meta property="og:description" content=" [항해플러스 프론트엔드 6기] 유윤우님이 제출한 [2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta property="og:image" content="/defaultThumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 - 유윤우 | 항해플러스 프론트엔드 6기" />
+    <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 유윤우님이 제출한 [2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="twitter:image" content="/defaultThumbnail.jpg" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
+  <script type="module" crossorigin src="/front_6th/assets/index-B12XiTr6.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/065bb51f-3e01-428c-9333-e612ff64d542"/><link rel="preload" as="image" href="https://github.com/lodash/lodash/issues/3298"/><link rel="preload" as="image" href="https://github.com/user-attachments/assets/75e6f8e8-e521-47cb-bcd3-01d6a8b81330"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@yunwoo-yu/" data-discover="true">yunwoo-yu<!-- --> 님의 상세페이지</a> ＞ <!-- -->[2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-2/pull/24" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[2팀 유윤우] Chapter 4-2 코드 관점의 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->yunwoo-yu</span><span>2025. 9. 10.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h1>
+<h2 id="배포-링크"><a class="anchor" aria-hidden="true" tabindex="-1" href="#배포-링크"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>배포 링크</h2>
+<p><a href="https://yunwoo-yu.github.io/front_6th_chapter4-2/">https://yunwoo-yu.github.io/front_6th_chapter4-2/</a></p>
+<h2 id="과제-요구사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-요구사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 요구사항</h2>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 배포 후 url 제출</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> API 호출 최적화(<code>Promise.all</code> 이해)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 연산 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 리렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드래그시 렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드롭시 렌더링 최적화</p>
+</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<h3 id="마지막-과제를-진행하며"><a class="anchor" aria-hidden="true" tabindex="-1" href="#마지막-과제를-진행하며"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>마지막 과제를 진행하며</h3>
+<p>마지막 과제를 진행하며 &quot;끝이 다가온다&quot;는 아쉬움을 달래고, 끝까지 완주하자는 마음으로 임했습니다.</p>
+<p>처음 항해에 합류했을 때 예상했던 것보다 훨씬 높은 난이도에 당황했습니다. BP도 받고 모든 과제를 올패스하며 많은 것을 배우겠다던 당초 목표와 달리, 거의 매일 밤을 새가며 과제 통과에만 매달린 제 모습이 아직도 생생합니다. 🥹</p>
+<p>제가 느낀 BP의 핵심 기준은 단순한 코드 품질을 넘어서, 과제의 본질을 얼마나 깊이 이해하고 이를 글로 명확히 표현했는가, 그리고 학습 과정을 PR에서 얼마나 체계적으로 정리했는가에 있다고 생각합니다.</p>
+<p>평소 글쓰기에 자신이 없었던 터라, 과제 완료 후 PR을 작성할 때면 이미 체력이 바닥나 있어 겪었던 경험들이 제대로 정리되지 않아 생략하는 경우가 많았습니다. 동료들로부터 &quot;윤우님은 개발 잘 하시는데 아쉽네요&quot;라는 말을 여러 번 들으면서, 항해 10주 동안 가장 성장하지 못한 부분이 바로 이 지점이었다는 아쉬움이 남습니다.</p>
+<p>하지만 글을 거의 쓰지 않던 저였음에도 매주 PR 회고와 WIL 작성을 통해 예전보다 훨씬 자연스럽게 글을 쓸 수 있게 되었습니다. 회고의 중요성, 학습 내용을 체계적으로 정리하는 방법, 그리고 읽는 이를 배려하는 글쓰기 등 10주간 배운 소중한 경험들을 바탕으로 앞으로도 꾸준히 글을 써나가며 성장해나갈 계획입니다.</p>
+<p>취업 준비 시절, 아낌없이 지식을 나눠주신 분을 만나 &quot;저분처럼 지식을 공유하는 개발자가 되자&quot;고 다짐했었는데, 다행히 팀원분들께 작은 도움이라도 드릴 수 있는 순간들이 있어서 그 다짐을 조금이나마 실천할 수 있었다고 생각합니다. 앞으로는 더 많은 분들께 실질적인 도움을 드릴 수 있도록 더욱 성장하겠습니다.</p>
+<p>10주간 정말 많은 것을 배우고 경험할 수 있었습니다. 코치님들께 진심으로 감사드립니다. 😄🙇‍♂️</p>
+<!-- -->
+<h2 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h2>
+<h3 id="promise-란"><a class="anchor" aria-hidden="true" tabindex="-1" href="#promise-란"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Promise 란</h3>
+<p>Promise는 JavaScript에서 비동기 연산의 &quot;최종 상태&quot;와 &quot;결과 값&quot;을 표현하는 객체입니다. 가장 중요한 특징은 한 번 정해진 상태(성공 또는 실패)는 절대 변하지 않는다는 점입니다. 이는 Promise가 제공하는 신뢰성의 핵심이기도 합니다.</p>
+<h3 id="then-catch-finally"><a class="anchor" aria-hidden="true" tabindex="-1" href="#then-catch-finally"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>then, catch, finally</h3>
+<p>Promise의 힘은 체이닝에서 나옵니다. then, catch, finally 메서드는 각각 새로운 Promise를 반환하기 때문에 연쇄적으로 연결할 수 있습니다.</p>
+<p>then(onFulfilled, onRejected)는 성공과 실패 모두를 처리할 수 있지만, 가독성을 위해 보통 성공 케이스만 처리하고 catch를 별도로 사용합니다. catch(onRejected)는 실패 케이스만 분리해서 처리할 때 사용하고, finally(onFinally)는 성공과 실패에 관계없이 정리 작업을 수행할 때 유용합니다.</p>
+<p>finally는 결과 값을 변경하지 않습니다! 이는 정리 작업의 본질을 잘 표현한 설계라고 생각합니다.</p>
+<h3 id="promiseresolve와-promisereject"><a class="anchor" aria-hidden="true" tabindex="-1" href="#promiseresolve와-promisereject"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Promise.resolve와 Promise.reject</h3>
+<p>Promise.resolve(value)는 값을 Promise로 감싸는 유틸리티입니다. 만약 value가 thenable(then 메서드를 가진) 객체라면 동화(assimilate) 과정을 거쳐 해당 객체의 상태를 따라갑니다. 그렇지 않다면 즉시 성공 상태로 감쌉니다.</p>
+<p>Promise.reject(error)는 항상 <strong>즉시</strong> 실패 상태의 Promise를 만듭니다. 이 차이점을 이해하는 것이 중요합니다.</p>
+<h3 id="promise-메서드들"><a class="anchor" aria-hidden="true" tabindex="-1" href="#promise-메서드들"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Promise 메서드들</h3>
+<p><strong>Promise.all</strong></p>
+<p>Promise.all은 모든 입력이 성공해야만 성공하는 fail-fast 전략을 취합니다. 모든 Promise가 성공하면 입력 순서 그대로 결과 배열을 반환하고, 하나라도 실패하면 즉시 실패합니다.</p>
+<p>과제를 진행하면서 잘못된 부분이 여기 있었습니다. 병렬 실행을 원한다면 &quot;이미 시작된 Promise&quot;들을 배열로 만들어 넘겨야 하는데, 배열 요소 내부에서 await를 사용하면 직렬 실행이 되어버립니다.</p>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token comment">// 병렬(권장) - Promise를 먼저 만들어서 동시에 시작</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">fetchA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 직렬(지양) - 배열 요소 안에서 await 사용으로 순차 실행</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token keyword control-flow">await</span> <span class="token function">fetchA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword control-flow">await</span> <span class="token function">fetchB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 병렬(권장) - Promise를 먼저 만들어서 동시에 시작
+const [a, b] = await Promise.all([fetchA(), fetchB()]);
+
+// 직렬(지양) - 배열 요소 안에서 await 사용으로 순차 실행
+const [a, b] = await Promise.all([await fetchA(), await fetchB()]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p><strong>Promise.allSettled</strong></p>
+<p>Promise.allSettled는 모든 입력이 완료될 때까지 기다린 후, 각 항목의 상태와 값을 모두 돌려줍니다. 일부 실패를 허용하면서 최대한의 결과를 수집하고 싶을 때 매우 유용합니다.</p>
+<p><strong>Promise.race와 Promise.any</strong></p>
+<p>Promise.race는 가장 먼저 완료된 하나만 반환합니다(성공/실패 구분 없음). 타임아웃 제어나 &quot;최초 응답 우선&quot; 전략에 사용할 수 있습니다.</p>
+<p>Promise.any는 첫 번째 &quot;성공&quot;만 반환합니다. 모두 실패하면 AggregateError가 발생하는데, 여러 백업 엔드포인트 중 하나의 성공만 필요할 때 유용합니다.</p>
+<h3 id="고려하면-좋을-포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#고려하면-좋을-포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>고려하면 좋을 포인트</h3>
+<p>실제 프로덕션 환경에서는 네트워크 요청의 취소가 중요합니다. fetch는 AbortController를 통해 취소할 수 있습니다.</p>
+<pre class="language-js"><code class="language-js code-highlight"><span class="code-line"><span class="token keyword">const</span> ac <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AbortController</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token function">fetch</span><span class="token punctuation">(</span>urlA<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">signal</span><span class="token operator">:</span> ac<span class="token punctuation">.</span><span class="token property-access">signal</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token function">fetch</span><span class="token punctuation">(</span>urlB<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">signal</span><span class="token operator">:</span> ac<span class="token punctuation">.</span><span class="token property-access">signal</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token keyword control-flow">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  ac<span class="token punctuation">.</span><span class="token method function property-access">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 하나 실패 시 나머지 요청도 중단</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="const ac = new AbortController();
+try {
+  const [a, b] = await Promise.all([
+    fetch(urlA, { signal: ac.signal }),
+    fetch(urlB, { signal: ac.signal }),
+  ]);
+} catch (e) {
+  ac.abort(); // 하나 실패 시 나머지 요청도 중단
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="클로저를-이용한-캐시처리"><a class="anchor" aria-hidden="true" tabindex="-1" href="#클로저를-이용한-캐시처리"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>클로저를 이용한 캐시처리</h3>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> createCachedFetcher <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+</span><span class="code-line">  <span class="token function-variable function">fetchFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>AxiosResponse<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;&gt;</span>
+</span><span class="code-line"><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">let</span> cache<span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>AxiosResponse<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;&gt;</span> <span class="token operator">|</span> <span class="token keyword">null</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>AxiosResponse<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;&gt;</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;캐시 사용&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">return</span> cache<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;새로운 Promise 생성&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    cache <span class="token operator">=</span> <span class="token function">fetchFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> cache<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="export const createCachedFetcher = &lt;T&gt;(
+  fetchFn: () =&gt; Promise&lt;AxiosResponse&lt;T&gt;&gt;
+) =&gt; {
+  let cache: Promise&lt;AxiosResponse&lt;T&gt;&gt; | null = null;
+
+  return (): Promise&lt;AxiosResponse&lt;T&gt;&gt; =&gt; {
+    if (cache) {
+      console.log(&quot;캐시 사용&quot;);
+      return cache;
+    }
+
+    console.log(&quot;새로운 Promise 생성&quot;);
+    cache = fetchFn();
+
+    return cache;
+  };
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>Promise.all을 개선하는 방향으로 저는 다양한 곳에서 재사용 가능하도록 createCachedFetcher 유틸 함수를 만들어 진행했습니다!</p>
+<p>함수를 반환하는 클로저 형태이며 캐시를 체크하고 있다면 return. 없다면 콜백 함수의 호출 결과를 cache에 넣고 return 합니다</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> fetchMajors <span class="token operator">=</span> <span class="token function">createCachedFetcher</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">  axios<span class="token punctuation">.</span><span class="token property-access">get</span><span class="token operator">&lt;</span><span class="token maybe-class-name">Lecture</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>base<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">schedules-majors.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> fetchLiberalArts <span class="token operator">=</span> <span class="token function">createCachedFetcher</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">  axios<span class="token punctuation">.</span><span class="token property-access">get</span><span class="token operator">&lt;</span><span class="token maybe-class-name">Lecture</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>base<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">schedules-liberal-arts.json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// TODO: 이 코드를 개선해서 API 호출을 최소화 해보세요 + Promise.all이 현재 잘못 사용되고 있습니다. 같이 개선해주세요.</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">fetchAllLectures</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span>
+</span><span class="code-line">  <span class="token keyword">await</span> <span class="token known-class-name class-name">Promise</span><span class="token punctuation">.</span><span class="token method function property-access">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 1&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 2&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 3&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 4&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 5&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;API Call 6&quot;</span><span class="token punctuation">,</span> <span class="token dom variable">performance</span><span class="token punctuation">.</span><span class="token method function property-access">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="const fetchMajors = createCachedFetcher(() =&gt;
+  axios.get&lt;Lecture[]&gt;(`${base}schedules-majors.json`)
+);
+const fetchLiberalArts = createCachedFetcher(() =&gt;
+  axios.get&lt;Lecture[]&gt;(`${base}schedules-liberal-arts.json`)
+);
+
+// TODO: 이 코드를 개선해서 API 호출을 최소화 해보세요 + Promise.all이 현재 잘못 사용되고 있습니다. 같이 개선해주세요.
+const fetchAllLectures = async () =&gt;
+  await Promise.all([
+    (console.log(&quot;API Call 1&quot;, performance.now()), fetchMajors()),
+    (console.log(&quot;API Call 2&quot;, performance.now()), fetchLiberalArts()),
+    (console.log(&quot;API Call 3&quot;, performance.now()), fetchMajors()),
+    (console.log(&quot;API Call 4&quot;, performance.now()), fetchLiberalArts()),
+    (console.log(&quot;API Call 5&quot;, performance.now()), fetchMajors()),
+    (console.log(&quot;API Call 6&quot;, performance.now()), fetchLiberalArts()),
+  ]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<img width="320" height="331" alt="image" src="https://github.com/user-attachments/assets/065bb51f-3e01-428c-9333-e612ff64d542"/>
+<p>이 부분에서 모든 API 호출 완료가 굉장히 늦은 시간으로 뜨는 이슈가 있었는데 이 이슈는 SearchDialog가 open 상태값이 falsy한 값임에도 먼저 마운트 되어 발생하는 문제였습니다.</p>
+<p>해당 이슈는 SearchDialog를 조건부 렌더링 처리하여 searchInfo가 있을때만 마운트 되도록 변경하여 해결했습니다 👍</p>
+<h3 id="불필요한-연산-개선"><a class="anchor" aria-hidden="true" tabindex="-1" href="#불필요한-연산-개선"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>불필요한 연산 개선</h3>
+<p>검색 필터링은 “필요할 때, 필요한 만큼만” 수행되어야 합니다. 기존에는 매 타이핑과 페이지 증가마다 모든 강의를 전부 다시 거르고, 각 강의의 스케줄 문자열을 매번 파싱해 불필요한 비용이 컸습니다. 이를 다음과 같이 정리했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">import</span> <span class="token punctuation">{</span> useEffect<span class="token punctuation">,</span> useState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">useDebounce</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> delay<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>debouncedValue<span class="token punctuation">,</span> setDebouncedValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token function">setDebouncedValue</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> delay<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> debouncedValue<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">SearchDialog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> searchInfo<span class="token punctuation">,</span> onClose <span class="token punctuation">}</span><span class="token operator">:</span> Props<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> setSchedulesMap <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useScheduleActions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> loaderWrapperRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLDivElement<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> loaderRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLDivElement<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>lectures<span class="token punctuation">,</span> setLectures<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>Lecture<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>page<span class="token punctuation">,</span> setPage<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>searchOptions<span class="token punctuation">,</span> setSearchOptions<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>SearchOption<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+</span><span class="code-line">    query<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    grades<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    days<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    times<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">    majors<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> debouncedQuery <span class="token operator">=</span> <span class="token function">useDebounce</span><span class="token punctuation">(</span>searchOptions<span class="token punctuation">.</span>query<span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// query에 debounce 적용</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// ...etc</span>
+</span></code><div class="copied" data-code="import { useEffect, useState } from &quot;react&quot;;
+
+export function useDebounce&lt;T&gt;(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState&lt;T&gt;(value);
+
+  useEffect(() =&gt; {
+    const handler = setTimeout(() =&gt; {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () =&gt; {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+const SearchDialog = ({ searchInfo, onClose }: Props) =&gt; {
+  const { setSchedulesMap } = useScheduleActions();
+
+  const loaderWrapperRef = useRef&lt;HTMLDivElement&gt;(null);
+  const loaderRef = useRef&lt;HTMLDivElement&gt;(null);
+  const [lectures, setLectures] = useState&lt;Lecture[]&gt;([]);
+  const [page, setPage] = useState(1);
+  const [searchOptions, setSearchOptions] = useState&lt;SearchOption&gt;({
+    query: &quot;&quot;,
+    grades: [],
+    days: [],
+    times: [],
+    majors: [],
+  });
+  const debouncedQuery = useDebounce(searchOptions.query, 300); // query에 debounce 적용
+
+// ...etc
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>입력 안정화(useDebounce): 검색어는 useDebounce로 300ms 지연시켜 타이핑 중간중간의 불필요한 필터링을 막았습니다. “언제 필터링을 할지”를 제어해 연산 빈도를 낮춥니다.</li>
+</ul>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">  <span class="token comment">// 검색 옵션 + 캐시를 캡처한 매칭 함수</span>
+</span><span class="code-line">  <span class="token keyword">const</span> filterFn <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token punctuation">{</span> credits<span class="token punctuation">,</span> grades<span class="token punctuation">,</span> days<span class="token punctuation">,</span> times<span class="token punctuation">,</span> majors <span class="token punctuation">}</span> <span class="token operator">=</span> searchOptions<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> queryText <span class="token operator">=</span> debouncedQuery<span class="token operator">?.</span><span class="token method function property-access">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> gradesSet <span class="token operator">=</span> grades<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">?</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>grades<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> majorsSet <span class="token operator">=</span> majors<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">?</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>majors<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> daysSet <span class="token operator">=</span> days<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">?</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>days<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> timesSet <span class="token operator">=</span> times<span class="token punctuation">.</span><span class="token property-access">length</span> <span class="token operator">?</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>times<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">const</span> creditsPrefix <span class="token operator">=</span> credits <span class="token operator">?</span> <span class="token known-class-name class-name">String</span><span class="token punctuation">(</span>credits<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token punctuation">(</span>lecture<span class="token operator">:</span> <span class="token maybe-class-name">Lecture</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>queryText<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> title <span class="token operator">=</span> lecture<span class="token punctuation">.</span><span class="token property-access">title</span><span class="token punctuation">.</span><span class="token method function property-access">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token keyword">const</span> idText <span class="token operator">=</span> lecture<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">.</span><span class="token method function property-access">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>title<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span>queryText<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>idText<span class="token punctuation">.</span><span class="token method function property-access">includes</span><span class="token punctuation">(</span>queryText<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>gradesSet <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>gradesSet<span class="token punctuation">.</span><span class="token method function property-access">has</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span><span class="token property-access">grade</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>majorsSet <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>majorsSet<span class="token punctuation">.</span><span class="token method function property-access">has</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span><span class="token property-access">major</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>creditsPrefix <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>lecture<span class="token punctuation">.</span><span class="token property-access">credits</span><span class="token punctuation">.</span><span class="token method function property-access">startsWith</span><span class="token punctuation">(</span>creditsPrefix<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>daysSet <span class="token operator">||</span> timesSet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">        <span class="token keyword">const</span> schedules <span class="token operator">=</span> lecture<span class="token punctuation">.</span><span class="token property-access">schedule</span>
+</span><span class="code-line">          <span class="token operator">?</span> <span class="token function">parseSchedule</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span><span class="token property-access">schedule</span><span class="token punctuation">)</span>
+</span><span class="code-line">          <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span>daysSet <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>schedules<span class="token punctuation">.</span><span class="token method function property-access">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> daysSet<span class="token punctuation">.</span><span class="token method function property-access">has</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token property-access">day</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">        <span class="token keyword">if</span> <span class="token punctuation">(</span>
+</span><span class="code-line">          timesSet <span class="token operator">&amp;&amp;</span>
+</span><span class="code-line">          <span class="token operator">!</span>schedules<span class="token punctuation">.</span><span class="token method function property-access">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> s<span class="token punctuation">.</span><span class="token property-access">range</span><span class="token punctuation">.</span><span class="token method function property-access">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> timesSet<span class="token punctuation">.</span><span class="token method function property-access">has</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">        <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">          <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+</span><span class="code-line">        <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+</span><span class="code-line">    debouncedQuery<span class="token punctuation">,</span>
+</span><span class="code-line">    searchOptions<span class="token punctuation">.</span><span class="token property-access">credits</span><span class="token punctuation">,</span>
+</span><span class="code-line">    searchOptions<span class="token punctuation">.</span><span class="token property-access">grades</span><span class="token punctuation">,</span>
+</span><span class="code-line">    searchOptions<span class="token punctuation">.</span><span class="token property-access">days</span><span class="token punctuation">,</span>
+</span><span class="code-line">    searchOptions<span class="token punctuation">.</span><span class="token property-access">times</span><span class="token punctuation">,</span>
+</span><span class="code-line">    searchOptions<span class="token punctuation">.</span><span class="token property-access">majors</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="  // 검색 옵션 + 캐시를 캡처한 매칭 함수
+  const filterFn = useMemo(() =&gt; {
+    const { credits, grades, days, times, majors } = searchOptions;
+    const queryText = debouncedQuery?.trim().toLowerCase();
+    const gradesSet = grades.length ? new Set(grades) : null;
+    const majorsSet = majors.length ? new Set(majors) : null;
+    const daysSet = days.length ? new Set(days) : null;
+    const timesSet = times.length ? new Set(times) : null;
+    const creditsPrefix = credits ? String(credits) : null;
+
+    return (lecture: Lecture) =&gt; {
+      if (queryText) {
+        const title = lecture.title.toLowerCase();
+        const idText = lecture.id.toLowerCase();
+
+        if (!title.includes(queryText) &amp;&amp; !idText.includes(queryText)) {
+          return false;
+        }
+      }
+      if (gradesSet &amp;&amp; !gradesSet.has(lecture.grade)) {
+        return false;
+      }
+
+      if (majorsSet &amp;&amp; !majorsSet.has(lecture.major)) {
+        return false;
+      }
+      if (creditsPrefix &amp;&amp; !lecture.credits.startsWith(creditsPrefix)) {
+        return false;
+      }
+
+      if (daysSet || timesSet) {
+        const schedules = lecture.schedule
+          ? parseSchedule(lecture.schedule)
+          : [];
+
+        if (daysSet &amp;&amp; !schedules.some((s) =&gt; daysSet.has(s.day))) {
+          return false;
+        }
+
+        if (
+          timesSet &amp;&amp;
+          !schedules.some((s) =&gt; s.range.some((t) =&gt; timesSet.has(t)))
+        ) {
+          return false;
+        }
+      }
+      return true;
+    };
+  }, [
+    debouncedQuery,
+    searchOptions.credits,
+    searchOptions.grades,
+    searchOptions.days,
+    searchOptions.times,
+    searchOptions.majors,
+  ]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<ul>
+<li>필터 함수 분리(useMemo): searchOptions와 디바운스된 쿼리를 캡처한 “필터 함수”만 useMemo로 생성하고, 실제 필터링은 나중에 수행합니다. 이렇게 하면 옵션이 바뀌지 않는 한 동일한 함수가 재사용되어 불필요한 재생성을 줄입니다. (클로저 이용) 이후 totalCount, visibleLectures은 useMemo로 메모이제이션 해주었습니다.</li>
+</ul>
+<h3 id="지연-평가lazy-evaluation"><a class="anchor" aria-hidden="true" tabindex="-1" href="#지연-평가lazy-evaluation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>지연 평가(Lazy evaluation)</h3>
+<blockquote>
+<p>컴퓨터 프로그래밍에서 느긋한 계산법(Lazy evaluation)은 결과가 “필요해지는 순간”까지 계산을 미루는 기법입니다.</p>
+</blockquote>
+<p>lazy load와 달리, “데이터 로드”가 아니라 “연산 자체”를 미루는 데 초점을 둡니다. 반대 개념은 엄격한 평가(strict evaluation)로, 호출 즉시 전부 계산합니다. 저는 이번에 지연 평가에 대해 처음 알게 되어 아래와 같이 공부하고, 문제를 해결해봤습니다.</p>
+<h3 id="제너레이터로-구현하는-지연-평가"><a class="anchor" aria-hidden="true" tabindex="-1" href="#제너레이터로-구현하는-지연-평가"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>제너레이터로 구현하는 지연 평가</h3>
+<p><strong>제네레이터란?</strong></p>
+<p>function*로 선언하는 “중단 가능한 함수”. 호출 시 즉시 실행되지 않고, 이터레이터를 반환합니다.
+이터레이터의 next()가 호출될 때마다 내부 실행이 진행되며, yield에서 값을 내보내고 “일시 정지”합니다. 다음 next()가 오면 정지했던 지점부터 다시 이어서 실행합니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> step <span class="token operator">=</span> <span class="token keyword">yield</span> i<span class="token punctuation">;</span> <span class="token comment">// 값을 내보내고 일시 정지</span>
+</span><span class="code-line">    i <span class="token operator">+=</span> step <span class="token operator">??</span> <span class="token number">1</span><span class="token punctuation">;</span>       <span class="token comment">// next(step)으로 외부 값 수신 가능</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> it <span class="token operator">=</span> <span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// { value: 0, done: false }</span>
+</span><span class="code-line">it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// { value: 2, done: false }</span>
+</span><span class="code-line">it<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// { value: 4, done: false }</span>
+</span></code><div class="copied" data-code="function* counter() {
+  let i = 0;
+  while (true) {
+    const step = yield i; // 값을 내보내고 일시 정지
+    i += step ?? 1;       // next(step)으로 외부 값 수신 가능
+  }
+}
+
+const it = counter();
+it.next();      // { value: 0, done: false }
+it.next(2);     // { value: 2, done: false }
+it.next(2);     // { value: 4, done: false }
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>JavaScript 제너레이터는 이터러블을 “한 개씩” 흘려보내며 필요할 때만 다음 값을 계산합니다. 이를 이용하면 filter → map → take 같은 파이프라인을 전부 지연된 상태로 구성할 수 있습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 지연 map</span>
+</span><span class="code-line"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token generic-function"><span class="token function">lazyMap</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">U</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>iter<span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token function-variable function">fn</span><span class="token operator">:</span> <span class="token punctuation">(</span>v<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> i<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">U</span><span class="token punctuation">)</span><span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">U</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> v <span class="token keyword">of</span> iter<span class="token punctuation">)</span> <span class="token keyword">yield</span> <span class="token function">fn</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 지연 filter</span>
+</span><span class="code-line"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token generic-function"><span class="token function">lazyFilter</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>iter<span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token function-variable function">pred</span><span class="token operator">:</span> <span class="token punctuation">(</span>v<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> i<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">boolean</span><span class="token punctuation">)</span><span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> v <span class="token keyword">of</span> iter<span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">pred</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">yield</span> v<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 앞에서부터 최대 N개만 수집 (지연)</span>
+</span><span class="code-line"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token generic-function"><span class="token function">lazyTake</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>iter<span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> n<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> v <span class="token keyword">of</span> iter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">yield</span> v<span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">++</span>i <span class="token operator">&gt;=</span> n<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// Array로 변환(최종 단계에서만 수행)</span>
+</span><span class="code-line"><span class="token keyword">const</span> toArray <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>iter<span class="token operator">:</span> Iterable<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>iter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 지연 map
+function* lazyMap&lt;T, U&gt;(iter: Iterable&lt;T&gt;, fn: (v: T, i: number) =&gt; U): Iterable&lt;U&gt; {
+  let i = 0;
+  for (const v of iter) yield fn(v, i++);
+}
+
+// 지연 filter
+function* lazyFilter&lt;T&gt;(iter: Iterable&lt;T&gt;, pred: (v: T, i: number) =&gt; boolean): Iterable&lt;T&gt; {
+  let i = 0;
+  for (const v of iter) if (pred(v, i++)) yield v;
+}
+
+// 앞에서부터 최대 N개만 수집 (지연)
+function* lazyTake&lt;T&gt;(iter: Iterable&lt;T&gt;, n: number): Iterable&lt;T&gt; {
+  if (n &lt;= 0) return;
+  let i = 0;
+  for (const v of iter) {
+    yield v;
+    if (++i &gt;= n) return;
+  }
+}
+
+// Array로 변환(최종 단계에서만 수행)
+const toArray = &lt;T&gt;(iter: Iterable&lt;T&gt;) =&gt; Array.from(iter);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token comment">// 사용 예시</span>
+</span><span class="code-line"><span class="token keyword">const</span> src <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> pipeline <span class="token operator">=</span>
+</span><span class="code-line">  <span class="token function">lazyTake</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token function">lazyMap</span><span class="token punctuation">(</span>
+</span><span class="code-line">      <span class="token function">lazyFilter</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> x <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 2, 4, 6</span>
+</span><span class="code-line">      <span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> x <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">,</span>                      <span class="token comment">// 20, 40, 60</span>
+</span><span class="code-line">    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token number">2</span>                                       <span class="token comment">// 앞에서 2개만</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">const</span> out <span class="token operator">=</span> <span class="token function">toArray</span><span class="token punctuation">(</span>pipeline<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [20, 40]</span>
+</span></code><div class="copied" data-code="// 사용 예시
+const src = [1, 2, 3, 4, 5, 6];
+
+const pipeline =
+  lazyTake(
+    lazyMap(
+      lazyFilter(src, (x) =&gt; x % 2 === 0), // 2, 4, 6
+      (x) =&gt; x * 10,                      // 20, 40, 60
+    ),
+    2                                       // 앞에서 2개만
+  );
+
+const out = toArray(pipeline); // [20, 40]
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>이렇게 제너레이터를 이용해 함수를 구성하면
+필터/맵이 “당장” 전체를 돌지 않습니다. take(2)가 만족되면 나머지는 아예 계산하지 않습니다.</p>
+<p>하지만 과제에서는 totalCount가 필요하기에 전체 데이터를 가져와야해서 제너레이터 함수는 사용하지 않았습니다.</p>
+<p>처음 채택한 방법은 es-lodash 의 chain 메서드를 이용해서 지연평가를 적용하려 했습니다. 하지만 production 환경에서 chain 기반 API에 문제가 생겼습니다. <img src="https://github.com/lodash/lodash/issues/3298" alt="이슈"/>를 발견했고 내용은 아래와 같습니다.</p>
+<p>체인 가능한 메서드들이 래퍼에 동적으로 결합되는 구조라, 번들러의 정적 분석과 상충합니다. 그 결과 사용하지 않는 메서드가 번들에 포함되거나, 프로덕션 번들에서 메서드가 잘려 나가 “wrapper.filter is not a function” 같은 런타임 에러가 발생한다는 내용이였습니다.</p>
+<p><code>import _ from &#x27;lodash-es</code> 형태로 사용하거나 tree shaking이 되지않도록 제외하는 방법도 있었지만, 거대한 lodash-es 라이브러리를 tree shaking 없이 사용하는건.. 마이너스가 크다고 생각했습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line">  <span class="token keyword">import</span> <span class="token punctuation">{</span> filter<span class="token punctuation">,</span> take <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;lodash-es&#x27;</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">const</span> visible <span class="token operator">=</span> <span class="token function">take</span><span class="token punctuation">(</span><span class="token function">filter</span><span class="token punctuation">(</span>lectures<span class="token punctuation">,</span> pred<span class="token punctuation">)</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 트리 셰이킹 우호적</span>
+</span></code><div class="copied" data-code="  import { filter, take } from &#x27;lodash-es&#x27;;
+  const visible = take(filter(lectures, pred), n); // 트리 셰이킹 우호적
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>조금 더 서칭해봤을 때 <code>chain</code> 메서드 없이 해당 코드로 사용할 경우 tree shaking도 가능했습니다만,, 이미 함수를 통해 구현했기에 고려하지 않았습니다.</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token generic-function"><span class="token function">collectMatchingUpTo</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+</span><span class="code-line">  items<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token function-variable function">matches</span><span class="token operator">:</span> <span class="token punctuation">(</span>item<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">boolean</span><span class="token punctuation">,</span>
+</span><span class="code-line">  maxCount<span class="token operator">:</span> <span class="token builtin">number</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> result<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> items<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> result<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> maxCount<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">matches</span><span class="token punctuation">(</span>items<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>items<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="export function collectMatchingUpTo&lt;T&gt;(
+  items: T[],
+  matches: (item: T) =&gt; boolean,
+  maxCount: number
+): T[] {
+  const result: T[] = [];
+
+  for (let i = 0; i &lt; items.length &amp;&amp; result.length &lt; maxCount; i++) {
+    if (matches(items[i])) result.push(items[i]);
+  }
+
+  return result;
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>filter된 lecture 리스트, 메모이제이션된 매칭 함수, 필요한 count를 받아 반복문을 통해 필요한 개수만큼 반환해 렌더링을 진행했습니다. 아쉬운 점은 totalCount가 필요해 필터링 된 리스트를 한번 계산하긴 해야한다는 점이 아쉬웠습니다.</p>
+<h3 id="왜-chakra--가-느릴-수-있는가"><a class="anchor" aria-hidden="true" tabindex="-1" href="#왜-chakra--가-느릴-수-있는가"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>왜 Chakra , 가 느릴 수 있는가</h3>
+<p>준일 코치님이 Q&amp;A 시간에 왜 느린지에 대해 설명해주셨지만 정확히 이해가 가지 않아 한번 코드를 찾아보았습니다. 저는 Tr 컴포넌트를 기준으로 어떻게 구성되어있는지를 한번 파헤쳐보았습니다!</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token maybe-class-name">StylesProvider</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token maybe-class-name">ClassNamesProvider</span><span class="token punctuation">,</span>
+</span><span class="code-line">  useRecipeResult<span class="token punctuation">,</span>
+</span><span class="code-line">  withContext<span class="token punctuation">,</span>
+</span><span class="code-line">  useStyles<span class="token operator">:</span> useTableStyles<span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token maybe-class-name">PropsProvider</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">createSlotRecipeContext</span><span class="token punctuation">(</span><span class="token punctuation">{</span> key<span class="token operator">:</span> <span class="token string">&quot;table&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">TableRowProps</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLChakraProps<span class="token operator">&lt;</span><span class="token string">&quot;tr&quot;</span><span class="token operator">&gt;</span></span><span class="token punctuation">,</span> <span class="token maybe-class-name">UnstyledProp</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token maybe-class-name">TableRow</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">withContext</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLTableRowElement<span class="token punctuation">,</span> TableRowProps<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>
+</span><span class="code-line">  <span class="token string">&quot;tr&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token string">&quot;row&quot;</span><span class="token punctuation">,</span>
+</span><span class="code-line"><span class="token punctuation">)</span>
+</span></code><div class="copied" data-code="const {
+  StylesProvider,
+  ClassNamesProvider,
+  useRecipeResult,
+  withContext,
+  useStyles: useTableStyles,
+  PropsProvider,
+} = createSlotRecipeContext({ key: &quot;table&quot; })
+
+export interface TableRowProps extends HTMLChakraProps&lt;&quot;tr&quot;&gt;, UnstyledProp {}
+
+export const TableRow = withContext&lt;HTMLTableRowElement, TableRowProps&gt;(
+  &quot;tr&quot;,
+  &quot;row&quot;,
+)
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>TableRow는 createSlotRecipeContext({ key: &quot;table&quot; })가 만들어준 컨텍스트 유틸을 써서 생성됩니다.</p>
+<pre class="language-tsx"><code class="language-tsx code-highlight"><span class="code-line">  <span class="token keyword">const</span> withContext <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">P</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token maybe-class-name">Component</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">ElementType</span></span><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+</span><span class="code-line">    slot<span class="token operator">?</span><span class="token operator">:</span> <span class="token constant">R</span> <span class="token keyword">extends</span> <span class="token keyword">keyof</span> <span class="token maybe-class-name">ConfigRecipeSlots</span> <span class="token operator">?</span> <span class="token maybe-class-name">ConfigRecipeSlots</span><span class="token punctuation">[</span><span class="token constant">R</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span>
+</span><span class="code-line">    options<span class="token operator">?</span><span class="token operator">:</span> <span class="token maybe-class-name">WithContextOptions</span><span class="token operator">&lt;</span><span class="token constant">P</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">ForwardRefExoticComponent</span></span><span class="token operator">&lt;</span>
+</span><span class="code-line">    <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">PropsWithoutRef</span></span><span class="token operator">&lt;</span><span class="token constant">P</span><span class="token operator">&gt;</span> <span class="token operator">&amp;</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">RefAttributes</span></span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&gt;</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token maybe-class-name">SuperComponent</span> <span class="token operator">=</span> <span class="token function">chakra</span><span class="token punctuation">(</span><span class="token maybe-class-name">Component</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> options <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token keyword">const</span> <span class="token maybe-class-name">StyledComponent</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">forwardRef</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>props<span class="token punctuation">,</span> ref<span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">const</span> <span class="token punctuation">{</span> unstyled<span class="token punctuation">,</span> <span class="token spread operator">...</span>restProps <span class="token punctuation">}</span> <span class="token operator">=</span> props
+</span><span class="code-line">      <span class="token keyword">const</span> styles <span class="token operator">=</span> <span class="token function">useStyles</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span><span class="code-line">      <span class="token keyword">const</span> classNames <span class="token operator">=</span> <span class="token function">useClassNames</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span><span class="code-line">      <span class="token keyword">const</span> className <span class="token operator">=</span> classNames<span class="token operator">?.</span><span class="token punctuation">[</span>slot <span class="token keyword">as</span> <span class="token keyword">keyof</span> <span class="token keyword">typeof</span> classNames<span class="token punctuation">]</span>
+</span><span class="code-line">
+</span><span class="code-line">      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">SuperComponent</span></span>
+</span></span><span class="code-line"><span class="token tag">          <span class="token spread"><span class="token punctuation">{</span><span class="token spread operator">...</span>restProps<span class="token punctuation">}</span></span>
+</span></span><span class="code-line"><span class="token tag">          <span class="token attr-name">css</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token operator">!</span>unstyled <span class="token operator">&amp;&amp;</span> slot <span class="token operator">?</span> styles<span class="token punctuation">[</span>slot<span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> props<span class="token punctuation">.</span><span class="token property-access">css</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span>
+</span></span><span class="code-line"><span class="token tag">          <span class="token attr-name">ref</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>ref<span class="token punctuation">}</span></span>
+</span></span><span class="code-line"><span class="token tag">          <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">cx</span><span class="token punctuation">(</span>props<span class="token punctuation">.</span><span class="token property-access">className</span><span class="token punctuation">,</span> className<span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+</span></span><span class="code-line"><span class="token tag">        <span class="token punctuation">/&gt;</span></span>
+</span><span class="code-line">      <span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">
+</span><span class="code-line">    <span class="token comment">// @ts-expect-error</span>
+</span><span class="code-line">    <span class="token maybe-class-name">StyledComponent</span><span class="token punctuation">.</span><span class="token property-access">displayName</span> <span class="token operator">=</span> <span class="token maybe-class-name">Component</span><span class="token punctuation">.</span><span class="token property-access">displayName</span> <span class="token operator">||</span> <span class="token maybe-class-name">Component</span><span class="token punctuation">.</span><span class="token property-access">name</span>
+</span><span class="code-line">    <span class="token keyword">return</span> <span class="token maybe-class-name">StyledComponent</span> <span class="token keyword">as</span> <span class="token builtin">any</span>
+</span><span class="code-line">  <span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="  const withContext = &lt;T, P&gt;(
+    Component: React.ElementType&lt;any&gt;,
+    slot?: R extends keyof ConfigRecipeSlots ? ConfigRecipeSlots[R] : string,
+    options?: WithContextOptions&lt;P&gt;,
+  ): React.ForwardRefExoticComponent&lt;
+    React.PropsWithoutRef&lt;P&gt; &amp; React.RefAttributes&lt;T&gt;
+  &gt; =&gt; {
+    const SuperComponent = chakra(Component, {}, options as any)
+    const StyledComponent = forwardRef&lt;any, any&gt;((props, ref) =&gt; {
+      const { unstyled, ...restProps } = props
+      const styles = useStyles()
+      const classNames = useClassNames()
+      const className = classNames?.[slot as keyof typeof classNames]
+
+      return (
+        &lt;SuperComponent
+          {...restProps}
+          css={[!unstyled &amp;&amp; slot ? styles[slot] : undefined, props.css]}
+          ref={ref}
+          className={cx(props.className, className)}
+        /&gt;
+      )
+    })
+
+    // @ts-expect-error
+    StyledComponent.displayName = Component.displayName || Component.name
+    return StyledComponent as any
+  }
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>withContext(&quot;tr&quot;, &quot;row&quot;)가 내부적으로 chakra(Component)로 한 번 감싸고(SuperComponent), 다시 한 번 forwardRef한 StyledComponent를 반환합니다. StyledComponent는 매 렌더마다</p>
+<ul>
+<li>useStyles()로 테이블의 멀티-슬롯 스타일 객체(variant/size/theme 토큰 반영)를 컨텍스트에서 읽고</li>
+<li>useClassNames()로 슬롯별 클래스 네임을 얻고</li>
+<li>css prop에 슬롯 스타일과 사용자 props.css를 배열로 병합해 넘기며</li>
+<li>className도 cx()로 병합합니다.</li>
+<li>최종적으로 chakra(&#x27;tr&#x27;) 래퍼(SuperComponent)에 전달합니다.</li>
+</ul>
+<p>이 형태만 봐도 왜 느려지는지 알 것 같지만.. 추측을 해보자면 느려지는 이유는</p>
+<ul>
+<li>두 겹 래핑 비용: chakra(Component) + forwardRef  1개 렌더에 “훅 실행 + 스타일 파싱 + 프롭 필터링 + 병합”이 누적됩니다.</li>
+<li>테이블은 멀티-슬롯 레시피(행/셀/헤더 등)를 사용합니다 상위 Table의 variant/size/colorMode가 바뀌면 레시피 결과가 바뀌고, useStyles()를 구독하는 모든 슬롯(Tr, Td)이 리렌더됩니다.</li>
+<li>컨텍스트 기반 리렌더 전파가 됩니다. useStyles()/useClassNames()는 컨텍스트 값 변화에 반응합니다. 테이블 레벨의 작은 변화(예: 사이즈/variant/색상 모드)가 전체 슬롯 트리를 다시 그리게 만듭니다.</li>
+</ul>
+<p>이걸 개선 하려면 바디 영역은 /로, 스타일은 정적 className(사전 CSS)로 처리하고 동적 스타일 최소화하며 가능한 클래스 분기로 처리하고, 스타일 계산은 상위에서 한 번만하는 방법들이 있습니다.</p>
+<p>결론은 Tr/Td는 “컨텍스트 기반 스타일 레시피 + 스타일 프롭 파싱 + Emotion 직렬화”를 매 셀마다 수행하는 구조라, 대량 렌더/자주 리렌더 환경에서 네이티브 엘리먼트보다 느려집니다.</p>
+<h3 id="리스트-가상화-기법"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리스트-가상화-기법"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리스트 가상화 기법</h3>
+<p>리스트 가상화(Windowing)는 &quot;사용자가 보고 있는 부분만 실제로 렌더링하자&quot;는 이상적인 기법입니다.</p>
+<p>화면 높이가 500px이고 각 항목이 50px라면, 동시에 볼 수 있는 항목은 최대 10개입니다. 그렇다면 1만 개 데이터가 있어도 실제 DOM에는 10~15개 정도만 존재하면 충분합니다. 사용자가 스크롤하면 보이지 않게 된 항목은 DOM에서 제거하고, 새로 보이게 될 항목을 동적으로 생성합니다.</p>
+<p>대부분의 이 가상화 기법을 쓸 수 있는 라이브러리들은 아래와 같은 방식으로 설계되었습니다.</p>
+<ol>
+<li>가상 높이 계산: 전체 항목 수 × 항목 높이로 스크롤바 영역 결정</li>
+<li>뷰포트 추적: 현재 스크롤 위치에서 보이는 항목 범위 계산</li>
+<li>동적 렌더링: 보이는 범위의 항목 + 1~2만 실제 DOM으로 렌더링</li>
+<li>위치 조정: CSS transform으로 항목들을 정확한 위치에 배치</li>
+<li>스크롤 연동: 스크롤 이벤트에 따라 렌더링 범위 업데이트</li>
+</ol>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token punctuation">{</span>visibleLectures<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>lecture<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>SearchItem key<span class="token operator">=</span><span class="token punctuation">{</span>lecture<span class="token punctuation">.</span>id<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token operator">...</span>lecture<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token comment">// 1000개 결과 → 1000개 DOM 노드</span>
+</span></code><div class="copied" data-code="{visibleLectures.map((lecture, index) =&gt; (
+  &lt;SearchItem key={lecture.id} {...lecture} /&gt;
+))}
+// 1000개 결과 → 1000개 DOM 노드
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>원래 성능 이슈가 있던 이 SearchItem을</p>
+<pre class="language-ts"><code class="language-ts code-highlight"><span class="code-line"><span class="token operator">&lt;</span>TableVirtuoso
+</span><span class="code-line">  data<span class="token operator">=</span><span class="token punctuation">{</span>visibleLectures<span class="token punctuation">}</span>
+</span><span class="code-line">  itemContent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> lecture<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>SearchItem <span class="token punctuation">{</span><span class="token operator">...</span>lecture<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line"><span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token comment">// 1000개 결과 → ~20개 DOM 노드 (화면에 보이는 만큼만)</span>
+</span></code><div class="copied" data-code="&lt;TableVirtuoso
+  data={visibleLectures}
+  itemContent={(index, lecture) =&gt; (
+    &lt;SearchItem {...lecture} /&gt;
+  )}
+/&gt;
+// 1000개 결과 → ~20개 DOM 노드 (화면에 보이는 만큼만)
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<p>리스트 가상화는 &quot;보이는 것만 렌더링한다&quot;는 단순한 아이디어에서 출발하지만, 대량 데이터 처리에서 혁신적인 성능 개선을 가져다줍니다. 특히 사용자 경험이 중요한 현대 웹 애플리케이션에서는 필수적인 기술 중 하나라고 생각합니다.</p>
+<p>다만 모든 리스트에 가상화를 적용할 필요는 없습니다. 데이터 규모와 사용 패턴을 고려해 적절한 시점에 도입하는 것이 중요합니다. 작은 리스트에서는 오히려 복잡도만 증가시킬 수 있으니까요.</p>
+<p>마지막으로 react-virtuoso 라이브러리를 통해 리스트 가상화를 진행(아래 GIF 참고)했지만 프로파일러로 확인 시 과제의 불합 여부 체크가 어려울 것 같아 현재 코드에서는 제거해서 올려두었습니다.🙇‍♂️</p>
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<p><img src="https://github.com/user-attachments/assets/75e6f8e8-e521-47cb-bcd3-01d6a8b81330" alt="화면-기록-2025-09-11-오후-6 52 22"/></p>
+<p>gif를 보시면 현재 리스트 windowing (가상화)를 적용해봤습니다. 과제 제출은 제거한 버전으로 올려놨는데 현재 100개씩 데이터를 가져오는데 모바일 환경에서는 DOM의 갯수가 많아질 수록 영향이 있을 것 같아 한번 적용해보았습니다!</p>
+<p>궁금한 점이 현재 상황에서 이 리스트 가상화를 적용해 DOM의 갯수를 줄인것과 리렌더링 시 메모이제이션을 통해 이전 데이터는 리렌더링 하지 않는 구조 중 어떤게 더 성능적으로 이득일까요?</p>
+<p>DOM의 갯수는 10개지만 스크롤마다 동적으로 index가 바뀌어야 하는 방식과, DOM의 갯수는 1000개 지만 한번 불러오고 더 이상 영향을 주지 않는 현재 메모이제이션 방식 중 이 리스트의 경우 어떤게 올바른 선택일 지 궁금합니다!</p>
+</div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>안녕하세요 윤우님! 마지막 과제 너무 잘 진행해주셨네요 ㅎㅎ 그동안 고생하셨어요!!</p>
+<hr/>
+<blockquote>
+<p>gif를 보시면 현재 리스트 windowing (가상화)를 적용해봤습니다. 과제 제출은 제거한 버전으로 올려놨는데 현재 100개씩 데이터를 가져오는데 모바일 환경에서는 DOM의 갯수가 많아질 수록 영향이 있을 것 같아 한번 적용해보았습니다! 궁금한 점이 현재 상황에서 이 리스트 가상화를 적용해 DOM의 갯수를 줄인것과 리렌더링 시 메모이제이션을 통해 이전 데이터는 리렌더링 하지 않는 구조 중 어떤게 더 성능적으로 이득일까요? DOM의 갯수는 10개지만 스크롤마다 동적으로 index가 바뀌어야 하는 방식과, DOM의 갯수는 1000개 지만 한번 불러오고 더 이상 영향을 주지 않는 현재 메모이제이션 방식 중 이 리스트의 경우 어떤게 올바른 선택일 지 궁금합니다!</p>
+</blockquote>
+<p>지금은 react 렌더링 성능을 토대로 측정하고 있는데요, 아예 개발자 도구에 있는 성능 측정 도구를 이용해서 DOM 렌더링 시간을 측정해본 다음에 비교해보시면 좋답니다 ㅎㅎ
+사실 대부분의 경우에 가상화 스크롤을 적용하는게 좋을 수 있다고 생각해요 ㅋㅋ
+다만 성능에 대한 격차가 크지 않으면, 가령 1회 렌더링에 200ms 이상 걸리는게 아니라면 굳이 적용할필요는 없다고 생각해요! 어차피 체감이 크진 않을테니까요 ㅎㅎ</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>

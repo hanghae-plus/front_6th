@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/front_6th/favicon.ico"/>
+  
+    <title>[4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 - 김지혜 | 항해플러스 프론트엔드 6기</title>
+    <meta name="description" content=" [항해플러스 프론트엔드 6기] 김지혜님이 제출한 [4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="keywords" content="항해플러스, 프론트엔드, 개발자교육, React, TypeScript, JavaScript, 기술면접, 웹개발, 김지혜, [4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화, 과제상세, 코드리뷰, 피드백, Pull Request" />
+    <meta property="og:title" content="[4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 - 김지혜 | 항해플러스 프론트엔드 6기" />
+    <meta property="og:description" content=" [항해플러스 프론트엔드 6기] 김지혜님이 제출한 [4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta property="og:image" content="/defaultThumbnail.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 - 김지혜 | 항해플러스 프론트엔드 6기" />
+    <meta name="twitter:description" content=" [항해플러스 프론트엔드 6기] 김지혜님이 제출한 [4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화 과제를 확인하세요. 코드 구현, 문제 해결 과정, 피드백 내용을 상세히 살펴볼 수 있습니다." />
+    <meta name="twitter:image" content="/defaultThumbnail.jpg" />
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8QP7YK1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6J8QP7YK1E');
+  </script>
+  <script type="module" crossorigin src="/front_6th/assets/index-B12XiTr6.js"></script>
+  <link rel="stylesheet" crossorigin href="/front_6th/assets/index-BXO68frB.css">
+</head>
+<body>
+<div id="root"><link rel="preload" as="image" href="https://github.com/user-attachments/assets/344c0811-b7f9-47d4-af72-8509658ea3ef"/><div data-slot="sidebar-wrapper" style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"><div class="min-h-screen flex w-full"><div class="group peer text-sidebar-foreground hidden md:block" data-state="expanded" data-collapsible="" data-variant="sidebar" data-side="left" data-slot="sidebar"><div data-slot="sidebar-gap" class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"></div><div data-slot="sidebar-container" class="fixed inset-y-0 z-10 hidden h-svh transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l w-64"><div data-sidebar="sidebar" data-slot="sidebar-inner" class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"><div data-slot="sidebar-content" data-sidebar="content" class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden bg-card border-r border-border"><a class="p-4" href="/front_6th/" data-discover="true"><div class="flex items-center space-x-2 mb-6"><div class="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">6기</span></div><h4 class="text-lg font-bold text-primary">항해플러스 프론트엔드</h4></div></a><div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2"><div data-slot="sidebar-group-label" data-sidebar="group-label" class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md text-xs font-medium outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground px-4">학습 관리</div><div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm"><ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1 px-2"><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users h-5 w-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span class="ml-3">수강생 목록</span></a></li><li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative"><a data-slot="sidebar-menu-button" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sm h-12 text-foreground hover:bg-secondary hover:text-secondary-foreground rounded-lg transition-all duration-300" href="/front_6th/assignments/" data-discover="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open h-5 w-5" aria-hidden="true"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span class="ml-3">과제 목록</span></a></li></ul></div></div></div></div></div></div><div class="flex-1 min-w-0"><header class="h-12 flex items-center border-b border-border bg-card px-4"><button data-slot="sidebar-trigger" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#x27;size-&#x27;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7 mr-4 text-white" data-sidebar="trigger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-panel-left" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg><span class="sr-only">Toggle Sidebar</span></button><h4 class="text-lg font-semibold "><a href="/front_6th/@adds9810/" data-discover="true">adds9810<!-- --> 님의 상세페이지</a> ＞ <!-- -->[4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화</h4></header><main class="p-6"><div><div class="card-wrap"><div data-slot="card" class="card text-card-foreground flex flex-col gap-6 shadow-sm mb-6 p-6 border border-gray-700 bg-gray-800 rounded-lg"><a href="https://github.com/hanghae-plus/front_6th_chapter4-2/pull/42" target="_blank"><div class="flex items-start gap-4"><div class="flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" height="32" aria-hidden="true" viewBox="0 0 24 24" width="32" fill="white" class="w-8 h-8"><path d="M12 1C5.923 1 1 5.923 1 12c0 4.867 3.149 8.979 7.521 10.436.55.096.756-.233.756-.522 0-.262-.013-1.128-.013-2.049-2.764.509-3.479-.674-3.699-1.292-.124-.317-.66-1.293-1.127-1.554-.385-.207-.936-.715-.014-.729.866-.014 1.485.797 1.691 1.128.99 1.663 2.571 1.196 3.204.907.096-.715.385-1.196.701-1.471-2.448-.275-5.005-1.224-5.005-5.432 0-1.196.426-2.186 1.128-2.956-.111-.275-.496-1.402.11-2.915 0 0 .921-.288 3.024 1.128a10.193 10.193 0 0 1 2.75-.371c.936 0 1.871.123 2.75.371 2.104-1.43 3.025-1.128 3.025-1.128.605 1.513.221 2.64.111 2.915.701.77 1.127 1.747 1.127 2.956 0 4.222-2.571 5.157-5.019 5.432.399.344.743 1.004.743 2.035 0 1.471-.014 2.654-.014 3.025 0 .289.206.632.756.522C19.851 20.979 23 16.854 23 12c0-6.077-4.922-11-11-11Z"></path></svg></div><div class="flex-1 min-w-0"><div class="flex items-center gap-2 mb-2"><h3 class="text-lg font-semibold text-white truncate">[4팀 김지혜] Chapter 4-2 코드 관점의 성능 최적화</h3></div><div class="flex items-center gap-4 text-xs text-gray-500"><span>by <!-- -->adds9810</span><span>2025. 9. 12.</span></div></div></div></a></div></div><div class="overflow-auto"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h1 id="과제-체크포인트"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-체크포인트"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 체크포인트</h1>
+<p><a href="https://adds9810.github.io/front_6th_chapter4-2/">https://adds9810.github.io/front_6th_chapter4-2/</a></p>
+<h2 id="과제-요구사항"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-요구사항"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 요구사항</h2>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 배포 후 url 제출</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> API 호출 최적화(<code>Promise.all</code> 이해)</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 연산 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> SearchDialog 불필요한 리렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드래그시 렌더링 최적화</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled="" checked=""/> 시간표 블록 드롭시 렌더링 최적화</p>
+</li>
+</ul>
+<h2 id="과제-셀프회고"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-셀프회고"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 셀프회고</h2>
+<!-- -->
+<!-- -->
+<h2 id="기술적-성장"><a class="anchor" aria-hidden="true" tabindex="-1" href="#기술적-성장"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>기술적 성장</h2>
+<h3 id="api-호출-최적화---promiseall의-올바른-사용법"><a class="anchor" aria-hidden="true" tabindex="-1" href="#api-호출-최적화---promiseall의-올바른-사용법"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>API 호출 최적화 - Promise.all의 올바른 사용법</h3>
+<p>await 키워드를 제거하여 진정한 병렬 실행을 구현하는 방법을 학습했습니다. 이를 통해 API 호출이 6번에서 2번으로 66% 감소하고, 실행 시간이 101.6ms에서 56.8ms로 약 44.8ms 단축되는 성능 개선을 달성했습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 최적화 전: 직렬 실행 + 중복 호출 (6번)</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">fetchAllLectures</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">await</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">  <span class="token punctuation">(</span><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#x27;API Call 1&#x27;</span><span class="token punctuation">,</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">(</span><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&#x27;API Call 2&#x27;</span><span class="token punctuation">,</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">await</span> <span class="token function">fetchLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token comment">// ... 6번 중복 호출</span>
+</span><span class="code-line"><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 최적화 후: 병렬 실행 + 캐시 활용 (2번)</span>
+</span><span class="code-line"><span class="token keyword">const</span> fetchAllLectures <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Lecture<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>majorsData<span class="token punctuation">,</span> liberalData<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+</span><span class="code-line">    <span class="token function">getCachedMajors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>      <span class="token comment">// 캐시된 전공 데이터</span>
+</span><span class="code-line">    <span class="token function">getCachedLiberalArts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 캐시된 교양 데이터</span>
+</span><span class="code-line">  <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">...</span>majorsData<span class="token punctuation">,</span> <span class="token operator">...</span>liberalData<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 최적화 전: 직렬 실행 + 중복 호출 (6번)
+const fetchAllLectures = async () =&gt; await Promise.all([
+  (console.log(&#x27;API Call 1&#x27;, performance.now()), await fetchMajors()),
+  (console.log(&#x27;API Call 2&#x27;, performance.now()), await fetchLiberalArts()),
+  // ... 6번 중복 호출
+]);
+
+// 최적화 후: 병렬 실행 + 캐시 활용 (2번)
+const fetchAllLectures = async (): Promise&lt;Lecture[]&gt; =&gt; {
+  const [majorsData, liberalData] = await Promise.all([
+    getCachedMajors(),      // 캐시된 전공 데이터
+    getCachedLiberalArts(), // 캐시된 교양 데이터
+  ]);
+  return [...majorsData, ...liberalData];
+};
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<img width="720" height="467" alt="image" src="https://github.com/user-attachments/assets/344c0811-b7f9-47d4-af72-8509658ea3ef"/>
+<h3 id="searchdialog-불필요한-연산-최적화---usememo-활용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#searchdialog-불필요한-연산-최적화---usememo-활용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SearchDialog 불필요한 연산 최적화 - useMemo 활용</h3>
+<p>복잡한 필터링 로직이 매번 렌더링 될 때마다 실행되는 문제를 useMemo로 해결했습니다. 이를 통해 의존성 배열 값이 변경될 때만 필터링 로직이 재실행되도록 최적화했습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 최적화 전: 매 렌더링마다 복잡한 필터링 실행</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">getFilteredLectures</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">{</span> query <span class="token operator">=</span> <span class="token string">&#x27;&#x27;</span><span class="token punctuation">,</span> credits<span class="token punctuation">,</span> grades<span class="token punctuation">,</span> days<span class="token punctuation">,</span> times<span class="token punctuation">,</span> majors <span class="token punctuation">}</span> <span class="token operator">=</span> searchOptions<span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token keyword">return</span> lectures
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> lecture<span class="token punctuation">.</span>title<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> lecture<span class="token punctuation">.</span>id<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> grades<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> grades<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>grade<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> majors<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> majors<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>major<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> <span class="token operator">!</span>credits <span class="token operator">||</span> lecture<span class="token punctuation">.</span>credits<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>credits<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>days<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">const</span> schedules <span class="token operator">=</span> lecture<span class="token punctuation">.</span>schedule <span class="token operator">?</span> <span class="token function">parseSchedule</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>schedule<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">return</span> schedules<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>s <span class="token operator">=&gt;</span> days<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>day<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">      <span class="token keyword">if</span> <span class="token punctuation">(</span>times<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">const</span> schedules <span class="token operator">=</span> lecture<span class="token punctuation">.</span>schedule <span class="token operator">?</span> <span class="token function">parseSchedule</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>schedule<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</span><span class="code-line">      <span class="token keyword">return</span> schedules<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>s <span class="token operator">=&gt;</span> s<span class="token punctuation">.</span>range<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>time <span class="token operator">=&gt;</span> times<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token keyword">const</span> filteredLectures <span class="token operator">=</span> <span class="token function">getFilteredLectures</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 매 렌더링마다 실행</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 최적화 후: useMemo로 메모이제이션</span>
+</span><span class="code-line"><span class="token keyword">const</span> filteredLectures <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> lectures
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> lecture<span class="token punctuation">.</span>title<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> grades<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> grades<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>grade<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</span><span class="code-line">    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>lecture <span class="token operator">=&gt;</span> majors<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">||</span> majors<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>lecture<span class="token punctuation">.</span>major<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>lectures<span class="token punctuation">,</span> query<span class="token punctuation">,</span> grades<span class="token punctuation">,</span> majors<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 최적화 전: 매 렌더링마다 복잡한 필터링 실행
+const getFilteredLectures = () =&gt; {
+  const { query = &#x27;&#x27;, credits, grades, days, times, majors } = searchOptions;
+  return lectures
+    .filter(lecture =&gt; lecture.title.toLowerCase().includes(query.toLowerCase()) || lecture.id.toLowerCase().includes(query.toLowerCase()))
+    .filter(lecture =&gt; grades.length === 0 || grades.includes(lecture.grade))
+    .filter(lecture =&gt; majors.length === 0 || majors.includes(lecture.major))
+    .filter(lecture =&gt; !credits || lecture.credits.startsWith(String(credits)))
+    .filter(lecture =&gt; {
+      if (days.length === 0) return true;
+      const schedules = lecture.schedule ? parseSchedule(lecture.schedule) : [];
+      return schedules.some(s =&gt; days.includes(s.day));
+    })
+    .filter(lecture =&gt; {
+      if (times.length === 0) return true;
+      const schedules = lecture.schedule ? parseSchedule(lecture.schedule) : [];
+      return schedules.some(s =&gt; s.range.some(time =&gt; times.includes(time)));
+    });
+};
+const filteredLectures = getFilteredLectures(); // 매 렌더링마다 실행
+
+// 최적화 후: useMemo로 메모이제이션
+const filteredLectures = useMemo(() =&gt; {
+  return lectures
+    .filter(lecture =&gt; lecture.title.toLowerCase().includes(query.toLowerCase()))
+    .filter(lecture =&gt; grades.length === 0 || grades.includes(lecture.grade))
+    .filter(lecture =&gt; majors.length === 0 || majors.includes(lecture.major));
+}, [lectures, query, grades, majors]);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="searchdialog-불필요한-리렌더링-최적화---usecallback과-reactmemo"><a class="anchor" aria-hidden="true" tabindex="-1" href="#searchdialog-불필요한-리렌더링-최적화---usecallback과-reactmemo"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>SearchDialog 불필요한 리렌더링 최적화 - useCallback과 React.memo</h3>
+<p>이벤트 핸들러 함수들이 매 렌더링마다 새로 생성되어 자식 컴포넌트들이 계속 리렌더링되는 문제를 해결했습니다. useCallback으로 함수 참조를 안정화하고, 각 필터 섹션을 useMemo로 분리하여 독립적인 리렌더링을 보장했습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 최적화 전: 매 렌더링마다 새 함수 생성</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token function-variable function">changeSearchOption</span> <span class="token operator">=</span> <span class="token punctuation">(</span>field<span class="token operator">:</span> <span class="token keyword">keyof</span> SearchOption<span class="token punctuation">,</span> value<span class="token operator">:</span> SearchOption<span class="token punctuation">[</span><span class="token keyword">typeof</span> field<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">setPage</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">setSearchOptions</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span>searchOptions<span class="token punctuation">,</span> <span class="token punctuation">[</span>field<span class="token punctuation">]</span><span class="token operator">:</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  loaderWrapperRef<span class="token punctuation">.</span>current<span class="token operator">?.</span><span class="token function">scrollTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 최적화 후: useCallback으로 메모이제이션</span>
+</span><span class="code-line"><span class="token keyword">const</span> handleQueryChange <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token function">setPage</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token function">setQuery</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  loaderWrapperRef<span class="token punctuation">.</span>current<span class="token operator">?.</span><span class="token function">scrollTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 각 필터 섹션을 useMemo로 메모이제이션</span>
+</span><span class="code-line"><span class="token keyword">const</span> querySection <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span>
+</span><span class="code-line">  <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>FormLabel<span class="token operator">&gt;</span>검색어<span class="token operator">&lt;</span><span class="token operator">/</span>FormLabel<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>Input
+</span><span class="code-line">        placeholder<span class="token operator">=</span><span class="token string">&quot;과목명 또는 과목코드&quot;</span>
+</span><span class="code-line">        value<span class="token operator">=</span><span class="token punctuation">{</span>query<span class="token punctuation">}</span>
+</span><span class="code-line">        onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">handleQueryChange</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span>
+</span><span class="code-line">      <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>FormControl<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">  <span class="token punctuation">[</span>query<span class="token punctuation">,</span> handleQueryChange<span class="token punctuation">]</span>
+</span><span class="code-line"><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 최적화 전: 매 렌더링마다 새 함수 생성
+const changeSearchOption = (field: keyof SearchOption, value: SearchOption[typeof field]) =&gt; {
+  setPage(1);
+  setSearchOptions({ ...searchOptions, [field]: value });
+  loaderWrapperRef.current?.scrollTo(0, 0);
+};
+
+// 최적화 후: useCallback으로 메모이제이션
+const handleQueryChange = useCallback((value: string) =&gt; {
+  setPage(1);
+  setQuery(value);
+  loaderWrapperRef.current?.scrollTo(0, 0);
+}, []);
+
+// 각 필터 섹션을 useMemo로 메모이제이션
+const querySection = useMemo(
+  () =&gt; (
+    &lt;FormControl&gt;
+      &lt;FormLabel&gt;검색어&lt;/FormLabel&gt;
+      &lt;Input
+        placeholder=&quot;과목명 또는 과목코드&quot;
+        value={query}
+        onChange={(e) =&gt; handleQueryChange(e.target.value)}
+      /&gt;
+    &lt;/FormControl&gt;
+  ),
+  [query, handleQueryChange]
+);
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="시간표-블록-드래그시-렌더링-최적화---islazy-prop과-메모이제이션"><a class="anchor" aria-hidden="true" tabindex="-1" href="#시간표-블록-드래그시-렌더링-최적화---islazy-prop과-메모이제이션"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>시간표 블록 드래그시 렌더링 최적화 - isLazy prop과 메모이제이션</h3>
+<p>드래그 중에도 Popover 컴포넌트가 계속 리렌더링되는 문제를 해결했습니다. isLazy prop을 사용하여 PopoverContent가 실제로 열릴 때만 렌더링되도록 하고, React.memo의 커스텀 비교 함수를 통해 드래그하는 블록만 리렌더링되도록 최적화했습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 최적화 전: 드래그 중에도 Popover 렌더링</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>Popover<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>PopoverTrigger<span class="token operator">&gt;</span><span class="token operator">&lt;</span>Box <span class="token comment">/* ... */</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>PopoverTrigger<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>PopoverContent<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>PopoverBody<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>Text<span class="token operator">&gt;</span>강의를 삭제하시겠습니까<span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>Text<span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token operator">&lt;</span>Button onClick<span class="token operator">=</span><span class="token punctuation">{</span>onDeleteButtonClick<span class="token punctuation">}</span><span class="token operator">&gt;</span>삭제<span class="token operator">&lt;</span><span class="token operator">/</span>Button<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>PopoverBody<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span><span class="token operator">/</span>PopoverContent<span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>Popover<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 최적화 후: isLazy prop + 조건부 렌더링</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>Popover isLazy<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>PopoverTrigger<span class="token operator">&gt;</span><span class="token operator">&lt;</span>Box <span class="token comment">/* ... */</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>PopoverTrigger<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>MemoizedPopoverContent onDeleteButtonClick<span class="token operator">=</span><span class="token punctuation">{</span>onDeleteButtonClick<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>Popover<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 드래그 중일 때는 Popover 없이 렌더링</span>
+</span><span class="code-line"><span class="token keyword">if</span> <span class="token punctuation">(</span>isDragging<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token operator">&lt;</span>Box <span class="token comment">/* ... */</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span>
+</span></code><div class="copied" data-code="// 최적화 전: 드래그 중에도 Popover 렌더링
+&lt;Popover&gt;
+  &lt;PopoverTrigger&gt;&lt;Box /* ... */ /&gt;&lt;/PopoverTrigger&gt;
+  &lt;PopoverContent&gt;
+    &lt;PopoverBody&gt;
+      &lt;Text&gt;강의를 삭제하시겠습니까?&lt;/Text&gt;
+      &lt;Button onClick={onDeleteButtonClick}&gt;삭제&lt;/Button&gt;
+    &lt;/PopoverBody&gt;
+  &lt;/PopoverContent&gt;
+&lt;/Popover&gt;
+
+// 최적화 후: isLazy prop + 조건부 렌더링
+&lt;Popover isLazy&gt;
+  &lt;PopoverTrigger&gt;&lt;Box /* ... */ /&gt;&lt;/PopoverTrigger&gt;
+  &lt;MemoizedPopoverContent onDeleteButtonClick={onDeleteButtonClick} /&gt;
+&lt;/Popover&gt;
+
+// 드래그 중일 때는 Popover 없이 렌더링
+if (isDragging) {
+  return &lt;Box /* ... */ /&gt;;
+}
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<h3 id="시간표-블록-드롭시-렌더링-최적화---context-분리-패턴"><a class="anchor" aria-hidden="true" tabindex="-1" href="#시간표-블록-드롭시-렌더링-최적화---context-분리-패턴"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>시간표 블록 드롭시 렌더링 최적화 - Context 분리 패턴</h3>
+<p>드래그 앤 드롭으로 스케줄을 이동할 때, 변경되지 않은 다른 시간표들도 모두 리렌더링되는 문제를 해결했습니다. 각 테이블마다 독립적인 TableContext를 생성하여 완전히 격리된 상태 관리로 해결했습니다. 이를 통해 드롭한 시간표만 리렌더링되고 다른 시간표는 영향받지 않는 최적화를 달성했습니다.</p>
+<pre class="language-typescript"><code class="language-typescript code-highlight"><span class="code-line"><span class="token comment">// 최적화 전: 전역 상태로 인한 모든 테이블 리렌더링</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">{</span> schedules <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useScheduleContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 최적화 후: TableContext 분리로 독립적인 상태 관리</span>
+</span><span class="code-line"><span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">TableProvider</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> children<span class="token punctuation">,</span> initialSchedules <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">  <span class="token keyword">const</span> <span class="token punctuation">[</span>schedules<span class="token punctuation">,</span> setSchedules<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useState</span><span class="token generic class-name"><span class="token operator">&lt;</span>Schedule<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>initialSchedules<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  
+</span><span class="code-line">  <span class="token keyword">const</span> updateSchedules <span class="token operator">=</span> <span class="token function">useCallback</span><span class="token punctuation">(</span><span class="token punctuation">(</span>newSchedules<span class="token operator">:</span> Schedule<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+</span><span class="code-line">    <span class="token function">setSchedules</span><span class="token punctuation">(</span>newSchedules<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">const</span> contextValue <span class="token operator">=</span> <span class="token function">useMemo</span><span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> schedules<span class="token punctuation">,</span> updateSchedules <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</span><span class="code-line">    <span class="token punctuation">[</span>schedules<span class="token punctuation">,</span> updateSchedules<span class="token punctuation">]</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line">  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>TableContext<span class="token punctuation">.</span>Provider value<span class="token operator">=</span><span class="token punctuation">{</span>contextValue<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span><span class="token operator">/</span>TableContext<span class="token punctuation">.</span>Provider<span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="code-line"><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// 각 테이블을 TableProvider로 감싸기</span>
+</span><span class="code-line"><span class="token operator">&lt;</span>TableProvider tableId<span class="token operator">=</span><span class="token punctuation">{</span>tableId<span class="token punctuation">}</span> initialSchedules<span class="token operator">=</span><span class="token punctuation">{</span>schedules<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">    <span class="token operator">&lt;</span>ScheduleTable <span class="token operator">/</span><span class="token operator">&gt;</span>
+</span><span class="code-line">  <span class="token operator">&lt;</span><span class="token operator">/</span>ScheduleDndProvider<span class="token operator">&gt;</span>
+</span><span class="code-line"><span class="token operator">&lt;</span><span class="token operator">/</span>TableProvider<span class="token operator">&gt;</span>
+</span><span class="code-line">
+</span><span class="code-line"><span class="token comment">// ScheduleTable에서 독립적인 TableContext 구독</span>
+</span><span class="code-line"><span class="token keyword">const</span> <span class="token punctuation">{</span> schedules <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useTableContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></code><div class="copied" data-code="// 최적화 전: 전역 상태로 인한 모든 테이블 리렌더링
+const { schedules } = useScheduleContext();
+
+// 최적화 후: TableContext 분리로 독립적인 상태 관리
+export const TableProvider = ({ children, initialSchedules = [] }) =&gt; {
+  const [schedules, setSchedules] = useState&lt;Schedule[]&gt;(initialSchedules);
+  
+  const updateSchedules = useCallback((newSchedules: Schedule[]) =&gt; {
+    setSchedules(newSchedules);
+  }, []);
+
+  const contextValue = useMemo(
+    () =&gt; ({ schedules, updateSchedules }),
+    [schedules, updateSchedules]
+  );
+
+  return (
+    &lt;TableContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/TableContext.Provider&gt;
+  );
+};
+
+// 각 테이블을 TableProvider로 감싸기
+&lt;TableProvider tableId={tableId} initialSchedules={schedules}&gt;
+  &lt;ScheduleDndProvider&gt;
+    &lt;ScheduleTable /&gt;
+  &lt;/ScheduleDndProvider&gt;
+&lt;/TableProvider&gt;
+
+// ScheduleTable에서 독립적인 TableContext 구독
+const { schedules } = useTableContext();
+"><svg class="octicon-copy" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path></svg><svg class="octicon-check" aria-hidden="true" viewBox="0 0 16 16" fill="currentColor" height="12" width="12"><path fill-rule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg></div></pre>
+<!-- -->
+<h3 id="학습-효과-분석"><a class="anchor" aria-hidden="true" tabindex="-1" href="#학습-효과-분석"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>학습 효과 분석</h3>
+<ul>
+<li><strong>가장 큰 배움이 있었던 부분</strong>: React Profiler를 사용해 렌더링 병목 지점을 직접 확인하고, 최적화 기법을 적용했을 때 실제로 렌더링 횟수와 시간이 줄어드는 것을 보며 최적화의 필요성과 효과를 체감한 경험입니다. 이론으로만 알던 개념을 실제로 적용하고 검증하는 과정에서 가장 크게 성장했습니다.</li>
+<li><strong>추가 학습이 필요한 영역</strong>: 현재 Context API로 충분하지만, 애플리케이션 규모가 더 커질 경우를 대비해 Zustand나 Recoil 같은 상태 관리 라이브러리들이 어떻게 렌더링 최적화 문제를 해결하는지 비교 분석하며 학습하고 싶습니다.</li>
+<li><strong>실무 적용 가능성</strong>: 이번에 학습한 렌더링 최적화 기법과 Context 분리 패턴은 실무에서 복잡하고 인터랙티브한 UI를 개발할 때 발생할 수 있는 성능 문제를 해결하는 데 직접적으로 도움이 될 것이라 확신합니다.</li>
+</ul>
+<!-- -->
+<h3 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h3>
+<p><strong>과제에서 좋았던 부분</strong> : React DevTools를 활용해 성능 최적화를 눈으로 볼 수 있어서 좋았습니다. 드롭 시 해당 시간표만 리렌더링되는 것을 직접 확인하고, API 호출이 6번에서 2번으로 줄어드는 것을 네트워크 탭에서 확인할 수 있어서 최적화의 효과를 체감할 수 있었습니다. 또한 React Profiler로 렌더링 횟수와 시간을 직접 측정해보면서 React.memo, useMemo, useCallback 같은 메모이제이션의 효과를 실시간으로 확인할 수 있어서 이론으로만 알던 개념을 실제로 적용하고 검증하는 과정에서 깊게 이해하게 되었습니다.</p>
+<!-- -->
+<h2 id="리뷰-받고-싶은-내용"><a class="anchor" aria-hidden="true" tabindex="-1" href="#리뷰-받고-싶은-내용"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>리뷰 받고 싶은 내용</h2>
+<ul>
+<li><strong>SearchDialog 메모이제이션 검증</strong>: SearchDialog.tsx에서 React.memo와 useMemo를 가장 많이 사용했는데, 혹시 과도하게 사용한 부분이 있을까요? 특히 filteredLectures useMemo의 의존성 배열이 과도하게 많은지, useCallback으로 감싼 이벤트 핸들러들이 실제로 리렌더링을 방지하는 효과가 있는지, SearchItem 컴포넌트의 memo 사용이 적절한지 검토해주실 수 있을까요? 현재 코드에서 제거해도 되는 메모이제이션이나, 오히려 추가해야 하는 부분이 있다면 조언해주세요.</li>
+<li><strong>Context 분리 패턴</strong>: 각 테이블마다 독립적인 Context를 생성하여 리렌더링을 최적화했습니다. 이 접근 방식이 효과적이었는지, 그리고 혹시 발생할 수 있는 잠재적인 문제점이나 더 나은 설계 방식이 있는지에 대한 피드백을 받고 싶습니다.</li>
+<li><strong>커스텀 훅 구조화</strong>: useTableSchedules, useTableKeys 등 여러 커스텀 훅을 만들어 로직을 분리했습니다. 이런 방식의 추상화가 적절했는지, 혹은 애플리케이션이 더 복잡해질 경우를 대비해 더 나은 구조화 방식이 있을지 조언을 구하고 싶습니다.</li>
+<li><strong>과제 복습 전략</strong>: 10주간의 모든 과제들을 체계적으로 복습하고 싶습니다. 각 과제별로 정리한다고 정리했지만, 혹 효과적인 복습 방법이 있을지 여쭤봅니다. 예를 들면 React 최적화, 상태 관리, 컴포넌트 설계 등 핵심 개념들을 어떻게 연결해서 학습하면 좋을지, 그리고 실무에서 바로 적용할 수 있는 지식으로 만드는 방법에 대해 조언을 구하고 싶습니다.</li>
+</ul>
+</div></div><div class="overflow-auto mt-9"><div data-color-mode="dark" class="wmde-markdown wmde-markdown-color p-6 max-w-full" style="word-wrap:break-word;overflow-wrap:break-word"><h2 id="과제-피드백"><a class="anchor" aria-hidden="true" tabindex="-1" href="#과제-피드백"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>과제 피드백</h2>
+<p>수고했어요 지혜!! 이번 과제는 React 애플리케이션에서 실제 성능 병목 지점을 찾고 최적화하는 것이 목표였습니다.</p>
+<p>잘했어요. API 호출의 병렬 호출 방식과 캐싱을 이용하는 방식으로 잘 해결했습니다. 이런 방식이 바로 TanStack Query가 내부적으로 QueryKey를 활용해 최적화를 제공하는 원리와 같다는 걸 기억해두세요.</p>
+<p>SearchDialog에서 복잡한 필터링 로직을 useMemo로 메모이제이션도 잘했어요. 시간표 블록 드래그 시 Popover 컴포넌트가 계속 리렌더링되는 문제를 isLazy prop으로 해결한 것도 좋았습니다. 자주 발생되는 이벤트시 필요없는 리렌더링은 격리를 시키는건 큰 도움이 되죠.</p>
+<p>React Profiler를 적극 활용해서 렌더링 병목 지점을 직접 확인하고 최적화 효과를 체감한 것도 좋은 경험이 되었을거라 생각해요.</p>
+<p>성능 최적화는 어떻게 하는지 방법보다도 어디서 병목이 생기는지를 이해하고 찾는 게 더 큰 실력이라고 생각해요. 심심할 때마다 어디가 병목이 될까 등을 한 번씩 고민해보다 보면 이러한 경험이 쌓여 나중에 복잡한 성능 문제를 만났을 때 어디서부터 접근할지 감이 생기는 거라 생각해요.</p>
+<p>너무 너무 잘했습니다.</p>
+<p><strong>Q) SearchDialog 메모이제이션이 과도하게 사용된 부분이 있을까요?</strong></p>
+<p>=&gt; 시간 관계상 코드를 세부적으로 보질 못했어요. (오늘이 종강인데 채점을 빨리 해줘야 하잖아요? ^^;) 과도하게 느껴진다고 생각이 들면 하나씩 제거하고 분리하면서 수정해볼 수 있겠네요. 과도하게 느껴진다면 아마 책임이 너무 많은 구조로 설계되었기 때문일 수도 있어요. 설계상 결함이 없어 보인다면 과도하게라는 건 어쩔 수 없다라는 말이기도 해요. 그러니 해당 과제를 더 큰 관점에서 더 나은 설계로 한번 만들어보고 그래도 성능이 문제가 생긴다면 변화면 설계에서 한번 더 도전해보길 바래요.</p>
+<p><strong>Q) Context 분리 패턴에 대한 피드백</strong></p>
+<p>=&gt; Context는 업데이트가 필요하면 자신의 영역을 전부 리렌더링을 호출하는 방식인 만큼 렌더링 범위에 맞게 격리시키는 접근법은 잘 했습니다. Context는 의존성보다는 Context에 포함된 모든 범위을 전부 리렌더링 시키는 만큼 규모가 커지거나 코드 변경이 많아 지는 경우 비슷한 작업을 관리해야 하는 경우가 있죠. 그래서 다른 상태관리들은 실제 사용과 접근하는 값의 의존성에 따라 업데이트를 하는 방식으로 되어 있습니다. 그래서 Zustand의 slice 패턴처럼 하나의 store에서 영역별로 분리하는 방법을 더 선호하게 되었습니다.</p>
+<p><strong>Q) 효과적인 복습 방법</strong></p>
+<p>=&gt; 우선 코치들이 왜 이러한 커리큘럼을 만들고자 했는지 왜 이러한 과제들을 줬는지 과제의 취지를 곰곰히 이해보기를 바래요. 이걸 이론으로써 확립하기 보다는 배경을 이해하고 나면 실무에서 그 취지에 맞게 더 나은 코드나 접근을 할 수 있을 거라고 생각합니다. 그렇게 하나씩 어떤 점을 실전응용으로 했는지를 한번 회고하면서 남겨보면 훨씬 더 좋은 방법이 될거게요</p>
+<p>=&gt; 우리가 지난 10주간 배운것들은 결국 실무를 잘하기 위함이니 어떻게 하면 지금의 업무를 더 잘 할 수 있을까의 힌트를 지난 10주간의 배움에 찾아보고 또 그 키워드들을 실마리 삼아 AI에게 구글에게 물어가며 찾아가면서 &quot;알면 더 나은 방식으로 만들 수 있다!&quot; 라는 사실을 기억하며 항상 &quot;어떻게 하면...  ... 할 수 있을까?&quot; 하는 생각을 떠올려보면서 적용해나가길 바래요.</p>
+<p>=&gt; 끝으로 회고의 효과를 기억하면서 블로그나 TIL이나 실무에서 적용해본 경험이나 혹은 막연하게 떠오로는 생각들을 글로 말로 정리해보는 것도 크게 도움이 될거에요.</p>
+<p>지난 10주간 너무 너무 수고 많았어요! 이번 경험들이 앞으로 개발하는 데 있어서 나 스스로 충분히 잘하려고 노력할 수 있구나, 해냈구나 하는 마음으로 새로운 것에 도전하고 성장하는 데 있어 더 쉽게 도전할 수 있게 되는 계기가 되기를 바랍니다. 화이팅입니다!</p></div></div><div class="mt-9"></div></div></main></div></div></div></div>
+</body>
+</html>
