@@ -27,6 +27,7 @@ const repos = [
   'front_6th_chapter3-1',
   'front_6th_chapter3-2',
   'front_6th_chapter4-1',
+  'front_6th_chapter4-2',
 ];
 const dataDir = path.join(__dirname, '../../../docs/data');
 const createApp = (() => {
